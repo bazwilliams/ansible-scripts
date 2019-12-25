@@ -1,0 +1,80 @@
+# Configure a default setup of Home Assistant (frontend, api, etc)
+default_config:
+
+# Text to speech
+tts:
+  - platform: google_translate
+
+group: !include groups.yaml
+automation: !include automations.yaml
+script: !include scripts.yaml
+scene: !include scenes.yaml
+
+homeassistant:
+  name: Home
+  latitude: 55.850258
+  longitude: -4.100229
+  elevation: 78
+  unit_system: metric
+  time_zone: Europe/London
+
+cloud:
+  alexa:
+    filter:
+      include_entities:
+      - light.kitchen
+      - light.worktop_lights
+      - light.outside_light
+      - light.bathroom
+      - light.bedroom
+      - light.downstairs_hallway
+      - light.downstairs_toilet
+      - light.ensuite
+      - light.guest_room
+      - light.ethans_room
+      - light.living_room
+      - light.marcuss_room
+      - media_player.hifi
+      - light.snug
+      - light.upstairs_hallway
+      - light.christmas_tree
+
+discovery:
+
+hue:
+  bridges:
+    - host: 192.168.1.122
+
+media_player:
+  - platform: openhome
+
+rfxtrx:
+  device: /dev/rfxtrx
+  #debug: true
+
+light:
+  platform: rfxtrx
+  devices:
+    "0710080041030000":
+      name: Worktop Lights
+
+sensor:
+  - platform: darksky
+    api_key: {{homeassistant.darksky_api_key}}
+    monitored_conditions:
+      - summary
+      - icon
+      - temperature
+      - precip_probability
+      - apparent_temperature
+      - wind_speed
+      - wind_gust
+      - wind_bearing
+      - cloud_cover
+      - temperature_low
+      - temperature_high
+      - daily_summary
+      - alerts
+      - humidity
+    scan_interval:
+      minutes: 2

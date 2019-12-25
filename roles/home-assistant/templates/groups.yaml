@@ -1,0 +1,61 @@
+kitchen:
+  name: Kitchen
+  entities:
+  - binary_sensor.kitchen_motion_motion
+  - sensor.kitchen_motion_light_level
+  - sensor.kitchen_motion_temperature
+  - light.kitchen
+  - light.worktop_lights
+garden:
+  name: Garden
+  entities:
+  - binary_sensor.front_garden_motion_motion
+  - sensor.front_garden_motion_light_level
+  - sensor.front_garden_motion_temperature
+  - light.outside_light
+bathroom:
+  name: Bathroom
+  entities:
+  - light.bathroom
+bedroom:
+  name: Bedroom
+  entities:
+  - light.bedroom
+downstairs_hallway:
+  name: Downstairs Hallway
+  entities:
+  - light.downstairs_hallway
+downstairs_toilet:
+  name: Downstairs Toilet
+  entities:
+  - light.downstairs_toilet
+ensuite:
+  name: Ensuite
+  entities:
+  - light.ensuite
+guest_room:
+  name: Guest Room
+  entities:
+  - light.guest_room
+ethans_room:
+  name: Ethan's Room
+  entities:
+  - light.ethans_room
+living_room:
+  name: Living Room
+  entities:
+  - light.living_room
+  - media_player.living_room_roku
+marcuss_room:
+  name: Marcus' Room
+  entities:
+  - light.marcuss_room
+snug:
+  name: Snug
+  entities:
+  - media_player.hifi
+  - light.snug
+upstairs_hallway:
+  name: Upstairs Hallway
+  entities:
+  - light.upstairs_hallway

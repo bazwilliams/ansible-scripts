@@ -1,0 +1,22 @@
+---
+- name: Update repositories cache
+  become: yes
+  apt:
+    update_cache: yes
+    cache_valid_time: 3600
+
+- name: Install latest package versions
+  become: yes
+  apt:
+    upgrade: true
+    state: latest
+
+- name: Remove dependencies that are no longer required
+  become: yes
+  apt:
+    autoremove: yes
+
+- name: Remove useless packages from the cache
+  become: yes
+  apt:
+    autoclean: yes

@@ -1,0 +1,32 @@
+---
+- name: Create nginx data directory
+  become: yes
+  file:
+    path: /opt/docker/data/nginx
+    state: directory
+
+- name: Upload site data
+  become: yes
+  template:
+    src: index.html
+    dest: /opt/docker/data/nginx/index.html
+
+- name: Start nginx
+  docker_compose:
+    project_name: nginx
+    remove_orphans: yes
+    definition:
+        version: "3"
+        services:
+            nginx:
+                restart: unless-stopped
+                container_name: nginx
+                image: nginx
+                ports:
+                    - 80:80
+                environment:
+                    TZ: Europe/London
+                volumes:
+                    - /opt/docker/data/nginx:/usr/share/nginx/html:ro
+                    - /etc/localtime:/etc/localtime:ro
+    state: absent

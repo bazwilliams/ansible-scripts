@@ -1,0 +1,91 @@
+---
+- name: Create data directory
+  become: yes
+  file:
+    path: /opt/docker/data/home-assistant/config
+    state: directory
+
+- name: Upload configuration
+  become: yes
+  template:
+    src: configuration.yaml
+    dest: /opt/docker/data/home-assistant/config/configuration.yaml
+
+- name: Upload groups
+  become: yes
+  template:
+    src: groups.yaml
+    dest: /opt/docker/data/home-assistant/config/groups.yaml
+
+- name: Upload automations
+  become: yes
+  template:
+    src: automations.yaml
+    dest: /opt/docker/data/home-assistant/config/automations.yaml
+
+- name: Upload scripts
+  become: yes
+  template:
+    src: scripts.yaml
+    dest: /opt/docker/data/home-assistant/config/scripts.yaml
+
+- name: Upload scenes
+  become: yes
+  template:
+    src: scenes.yaml
+    dest: /opt/docker/data/home-assistant/config/scenes.yaml
+
+- name: Tear down existing service
+  docker_compose:
+    project_name: home-assistant
+    state: absent
+    definition:
+        version: "3"
+        services:
+            home-assistant:
+                image: ""
+
+- name: Add firewall rule to open port
+  become: yes
+  firewalld:
+    port: 8123/tcp
+    permanent: yes
+    immediate: yes
+    state: enabled
+
+- name: Add firewall rule to open ports above 1025 to permit TCP SSDP
+  become: yes
+  firewalld:
+    port: 1025-65535/tcp
+    permanent: yes
+    immediate: yes
+    state: enabled
+
+- name: Add firewall rule to open ports above 1025 to permit UDP SSDP
+  become: yes
+  firewalld:
+    port: 1025-65535/udp
+    permanent: yes
+    immediate: yes
+    state: enabled
+
+- name: Start service
+  docker_compose:
+    project_name: home-assistant
+    remove_orphans: yes
+    state: present
+    definition:
+        version: "3"
+        services:
+            home-assistant:
+                container_name: home-assistant
+                image: homeassistant/home-assistant:0.103.3
+                volumes:
+                  - /opt/docker/data/home-assistant/config:/config
+                  - /etc/localtime:/etc/localtime:ro
+                environment:
+                  - TZ=Europe/London
+                network_mode: host
+                restart: unless-stopped
+                devices:
+                - "/dev/ttyUSB0:/dev/rfxtrx"

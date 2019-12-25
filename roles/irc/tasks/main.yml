@@ -1,0 +1,42 @@
+---
+- name: Create irssi data directory
+  become: yes
+  file:
+    path: /opt/docker/data/irssi
+    state: directory
+
+- name: Upload configuration
+  become: yes
+  template:
+    src: config
+    dest: /opt/docker/data/irssi/config
+
+- name: Upload theme
+  become: yes
+  template:
+    src: default.theme
+    dest: /opt/docker/data/irssi/default.theme
+
+- name: Start irssi
+  docker_compose:
+    project_name: irssi
+    remove_orphans: yes
+    state: present
+    definition:
+        version: "3"
+
+        services:
+            irssi:
+                restart: unless-stopped
+                container_name: irssi
+                image: irssi
+                environment:
+                    TERM: xterm
+                    TZ: Europe/London
+                volumes:
+                    - /opt/docker/data/irssi:/home/user/.irssi
+                    - /etc/localtime:/etc/localtime:ro
+                logging:
+                    driver: none
+                stdin_open: true
+                tty: true

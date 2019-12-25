@@ -1,0 +1,227 @@
+- alias: Getting Dark Outside
+  hide_entity: true
+  initial_state: true
+  trigger:
+    platform: numeric_state
+    entity_id: sensor.front_garden_motion_light_level
+    below: 1000
+  action:
+  - service: hue.hue_activate_scene
+    data:
+      group_name: Garden
+      scene_name: Dimmed
+
+- alias: Getting Bright Outside
+  hide_entity: true
+  initial_state: true
+  trigger:
+    platform: numeric_state
+    entity_id: sensor.front_garden_motion_light_level
+    above: 1000
+  action:
+  - service: light.turn_off
+    data:
+      entity_id:
+      - light.garden
+
+- alias: Wakeup
+  hide_entity: true
+  initial_state: true
+  trigger:
+    platform: time
+    at: "06:00:00"
+  action:
+  - service: hue.hue_activate_scene
+    data:
+      group_name: Downstairs Hallway
+      scene_name: Morning Variation
+  - service: hue.hue_activate_scene
+    data:
+      group_name: Upstairs Hallway
+      scene_name: Morning
+  - service: hue.hue_activate_scene
+    data:
+      group_name: Living room
+      scene_name: Morning
+  - service: hue.hue_activate_scene
+    data:
+      group_name: Kitchen
+      scene_name: Morning
+  - service: light.turn_off
+    data:
+      entity_id:
+      - light.ethans_room
+      - light.marcuss_room
+
+- alias: Daytime
+  hide_entity: true
+  initial_state: true
+  trigger:
+    platform: time
+    at: "08:00:00"
+  action:
+  - service: hue.hue_activate_scene
+    data:
+      group_name: Downstairs Hallway
+      scene_name: Daytime Presence
+  - service: hue.hue_activate_scene
+    data:
+      group_name: Upstairs Hallway
+      scene_name: Daytime Presence
+  - service: light.turn_off
+    data:
+      entity_id:
+      - group.kitchen
+      - light.living_room
+
+- alias: Sunset
+  hide_entity: true
+  initial_state: true
+  trigger:
+    platform: numeric_state
+    entity_id: sensor.front_garden_motion_light_level
+    below: 1000
+  condition:
+    condition: time
+    before: '21:00:00'
+  action:
+  - service: hue.hue_activate_scene
+    data:
+      group_name: Downstairs Hallway
+      scene_name: Colourful Evening
+  - service: hue.hue_activate_scene
+    data:
+      group_name: Upstairs Hallway
+      scene_name: Evening
+  - service: hue.hue_activate_scene
+    data:
+      group_name: "Marcus’s Room"
+      scene_name: "Tropical Twilight"
+  - service: hue.hue_activate_scene
+    data:
+      group_name: "Ethan’s Room"
+      scene_name: "Arctic Aurora"
+  - service: hue.hue_activate_scene
+    data:
+      group_name: "Bedroom"
+      scene_name: "Bedroom evening"
+  - service: hue.hue_activate_scene
+    data:
+      group_name: "Living room"
+      scene_name: "Living Room Evening"
+
+- alias: Dinner
+  hide_entity: true
+  initial_state: true
+  trigger:
+    platform: time
+    at: "17:00:00"
+  action:
+  - service: hue.hue_activate_scene
+    data:
+      group_name: Kitchen
+      scene_name: Dinner
+
+- alias: Kids Bedtime
+  hide_entity: true
+  initial_state: true
+  trigger:
+    platform: time
+    at: '21:00:00'
+  action:
+  - service: hue.hue_activate_scene
+    data:
+      group_name: "Marcus’s Room"
+      scene_name: "Marcus's Bed"
+  - service: hue.hue_activate_scene
+    data:
+      group_name: "Ethan’s Room"
+      scene_name: "Ethan's Bedtime"
+
+- alias: Late Evening
+  hide_entity: true
+  initial_state: true
+  trigger:
+    platform: time
+    at: '21:00:00'
+  action:
+  - service: hue.hue_activate_scene
+    data:
+      group_name: Upstairs Hallway
+      scene_name: Night
+  - service: hue.hue_activate_scene
+    data:
+      group_name: Kitchen
+      scene_name: Evening
+  - service: hue.hue_activate_scene
+    data:
+      group_name: Bedroom
+      scene_name: Bedside Light
+
+- alias: Late Night
+  hide_entity: true
+  initial_state: true
+  trigger:
+    platform: time
+    at: "22:30:00"
+  action:
+  - service: hue.hue_activate_scene
+    data:
+      group_name: Downstairs Hallway
+      scene_name: Late Night
+
+- alias: Lights Out
+  hide_entity: true
+  initial_state: true
+  trigger:
+    platform: time
+    at: "00:00:00"
+  action:
+  - service: hue.hue_activate_scene
+    data:
+      group_name: Downstairs Hallway
+      scene_name: Night
+  - service: light.turn_off
+    data:
+      entity_id:
+      - group.kitchen
+      - light.living_room
+      - light.bedroom
+
+- alias: Front Garden Motion
+  hide_entity: true
+  initial_state: true
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.front_garden_motion_motion
+      from: 'off'
+      to: 'on'
+  condition:
+    condition: numeric_state
+    entity_id: sensor.front_garden_motion_light_level
+    below: 1000
+  action:
+  - service: scene.create
+    data:
+      scene_id: before
+      snapshot_entities:
+      - light.garden
+  - service: hue.hue_activate_scene
+    data:
+      group_name: Garden
+      scene_name: Bright
+
+- alias: Front Garden No Motion
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.front_garden_motion_motion
+      from: 'on'
+      to: 'off'
+  condition:
+    condition: numeric_state
+    entity_id: sensor.front_garden_motion_light_level
+    below: 1000
+  action:
+  - service: scene.turn_on
+    data:
+      entity_id: scene.before

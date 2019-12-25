@@ -1,0 +1,7 @@
+---
+- hosts: lightsail
+  roles:
+    - update-packages-ubuntu
+    - install-docker-ubuntu
+    # - owncloud
+    - irc

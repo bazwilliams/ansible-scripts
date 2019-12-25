@@ -1,0 +1,6 @@
+---
+- name: Update repositories cache
+  become: yes
+  zypper:
+    name: '*'
+    state: latest
