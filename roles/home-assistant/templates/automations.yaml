@@ -50,8 +50,8 @@
   - service: light.turn_off
     data:
       entity_id:
-      - light.ethans_room
-      - light.marcuss_room
+      - group.ethans_room
+      - group.marcuss_room
 
 - alias: Daytime
   hide_entity: true
@@ -72,7 +72,7 @@
     data:
       entity_id:
       - group.kitchen
-      - light.living_room
+      - group.living_room
 
 - alias: Sunset
   hide_entity: true
@@ -80,7 +80,7 @@
   trigger:
     platform: numeric_state
     entity_id: sensor.front_garden_motion_light_level
-    below: 1000
+    below: 750
   condition:
     condition: time
     before: '21:00:00'
@@ -96,11 +96,11 @@
   - service: hue.hue_activate_scene
     data:
       group_name: "Marcus’s Room"
-      scene_name: "Tropical Twilight"
+      scene_name: "Tropical twilight"
   - service: hue.hue_activate_scene
     data:
       group_name: "Ethan’s Room"
-      scene_name: "Arctic Aurora"
+      scene_name: "Arctic aurora"
   - service: hue.hue_activate_scene
     data:
       group_name: "Bedroom"
@@ -188,6 +188,53 @@
       - light.living_room
       - light.bedroom
 
+# - alias: Kitchen Motion
+#   hide_entity: true
+#   initial_state: true
+#   trigger:
+#     - platform: state
+#       entity_id: binary_sensor.kitchen_motion_motion
+#       from: 'off'
+#       to: 'on'
+#   condition:
+#     condition: numeric_state
+#     entity_id: sensor.kitchen_motion_light_level
+#     below: 20
+#   action:
+#   - service: scene.create
+#     data:
+#       scene_id: kitchen_before
+#       snapshot_entities:
+#       - light.worktop_lights
+#       - light.kitchen_main
+#       - light.kitchen_under_cupboards
+#       - light.kitchen_under_tall_cupboards
+#   - service: hue.hue_activate_scene
+#     data:
+#       group_name: Kitchen
+#       scene_name: Dinner
+#   - service: light.turn_on
+#     data:
+#       entity_id:
+#       - light.worktop_lights
+
+# - alias: Kitchen No Motion
+#   trigger:
+#     - platform: state
+#       entity_id: binary_sensor.kitchen_motion_motion
+#       from: 'on'
+#       to: 'off'
+#       for:
+#         minutes: 10
+#   condition:
+#     condition: numeric_state
+#     entity_id: sensor.front_garden_motion_light_level
+#     below: 20
+#   action:
+#   - service: scene.turn_on
+#     data:
+#       entity_id: scene.kitchen_before
+      
 - alias: Front Garden Motion
   hide_entity: true
   initial_state: true
@@ -203,7 +250,7 @@
   action:
   - service: scene.create
     data:
-      scene_id: before
+      scene_id: garden_before
       snapshot_entities:
       - light.garden
   - service: hue.hue_activate_scene
@@ -224,4 +271,4 @@
   action:
   - service: scene.turn_on
     data:
-      entity_id: scene.before
+      entity_id: scene.garden_before
