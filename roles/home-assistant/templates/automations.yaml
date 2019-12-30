@@ -4,7 +4,7 @@
   trigger:
     platform: numeric_state
     entity_id: sensor.front_garden_motion_light_level
-    below: 1000
+    below: 750
   action:
   - service: hue.hue_activate_scene
     data:
@@ -17,7 +17,7 @@
   trigger:
     platform: numeric_state
     entity_id: sensor.front_garden_motion_light_level
-    above: 1000
+    above: 750
   action:
   - service: light.turn_off
     data:
@@ -187,53 +187,6 @@
       - group.kitchen
       - light.living_room
       - light.bedroom
-
-# - alias: Kitchen Motion
-#   hide_entity: true
-#   initial_state: true
-#   trigger:
-#     - platform: state
-#       entity_id: binary_sensor.kitchen_motion_motion
-#       from: 'off'
-#       to: 'on'
-#   condition:
-#     condition: numeric_state
-#     entity_id: sensor.kitchen_motion_light_level
-#     below: 20
-#   action:
-#   - service: scene.create
-#     data:
-#       scene_id: kitchen_before
-#       snapshot_entities:
-#       - light.worktop_lights
-#       - light.kitchen_main
-#       - light.kitchen_under_cupboards
-#       - light.kitchen_under_tall_cupboards
-#   - service: hue.hue_activate_scene
-#     data:
-#       group_name: Kitchen
-#       scene_name: Dinner
-#   - service: light.turn_on
-#     data:
-#       entity_id:
-#       - light.worktop_lights
-
-# - alias: Kitchen No Motion
-#   trigger:
-#     - platform: state
-#       entity_id: binary_sensor.kitchen_motion_motion
-#       from: 'on'
-#       to: 'off'
-#       for:
-#         minutes: 10
-#   condition:
-#     condition: numeric_state
-#     entity_id: sensor.front_garden_motion_light_level
-#     below: 20
-#   action:
-#   - service: scene.turn_on
-#     data:
-#       entity_id: scene.kitchen_before
       
 - alias: Front Garden Motion
   hide_entity: true
@@ -244,9 +197,19 @@
       from: 'off'
       to: 'on'
   condition:
-    condition: numeric_state
-    entity_id: sensor.front_garden_motion_light_level
-    below: 1000
+    - condition: numeric_state
+      entity_id: sensor.front_garden_motion_light_level
+      below: 500
+  action:
+    - service: timer.start
+      entity_id: timer.garden_light
+
+- alias: Front Garden Light Timer Started
+  trigger:
+  - platform: event
+    event_type: timer.started
+    event_data:
+      entity_id: timer.garden_light
   action:
   - service: scene.create
     data:
@@ -258,16 +221,16 @@
       group_name: Garden
       scene_name: Bright
 
-- alias: Front Garden No Motion
+- alias: Front Garden Light Timer Stopped
   trigger:
-    - platform: state
-      entity_id: binary_sensor.front_garden_motion_motion
-      from: 'on'
-      to: 'off'
-  condition:
-    condition: numeric_state
-    entity_id: sensor.front_garden_motion_light_level
-    below: 1000
+  - platform: event
+    event_type: timer.finished
+    event_data:
+      entity_id: timer.garden_light
+  - platform: event
+    event_type: timer.cancelled
+    event_data:
+      entity_id: timer.garden_light
   action:
   - service: scene.turn_on
     data:

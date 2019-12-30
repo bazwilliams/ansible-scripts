@@ -78,3 +78,7 @@ sensor:
       - humidity
     scan_interval:
       minutes: 2
+
+timer:
+  garden_light:
+    duration: '00:01:00'
