@@ -1,0 +1,20 @@
+---
+- name: Create Temporary build directory
+  delegate_to: 127.0.0.1
+  tempfile:
+    state: directory
+    suffix: build
+  register: tempdir
+
+- name: Pull Home Connect Custom Component
+  delegate_to: 127.0.0.1
+  git:
+    repo: 'https://github.com/DavidMStraub/homeassistant-homeconnect'
+    dest: "{{ tempdir.path }}"
+
+- name: Copy latest custom component to home-assistant role
+  delegate_to: 127.0.0.1
+  copy:
+    src: "{{ tempdir.path }}/custom_components/homeconnect"
+    dest: ./roles/home-assistant/files/custom_components
+    

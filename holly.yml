@@ -3,4 +3,5 @@
   roles:
     # - update-packages-suse
     # - install-docker-suse
+    # - homeassistant-homeconnect-update
     - home-assistant
