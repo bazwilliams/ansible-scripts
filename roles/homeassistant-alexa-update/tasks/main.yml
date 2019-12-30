@@ -17,4 +17,9 @@
   copy:
     src: "{{ tempdir.path }}/custom_components/alexa_media"
     dest: ./roles/home-assistant/files/custom_components
-    
+
+- name: Cleanup
+  file:
+    path: "{{ tempdir.path }}"
+    state: absent
+  when: tempdir.path is defined
