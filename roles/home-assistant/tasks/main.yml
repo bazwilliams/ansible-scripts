@@ -41,6 +41,12 @@
     src: custom_components/homeconnect
     dest: /opt/docker/data/home-assistant/config/custom_components
 
+- name: Upload Alexa Media custom component
+  become: yes
+  copy:
+    src: custom_components/alexa_media
+    dest: /opt/docker/data/home-assistant/config/custom_components
+
 - name: Tear down existing service
   docker_compose:
     project_name: home-assistant

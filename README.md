@@ -12,13 +12,17 @@ homeassistant:
   darksky_api_key: ${api_key}
 ```
 
-There is a custom component for homeconnect in the home-assistant role's files folder. This is copied from https://github.com/DavidMStraub/homeassistant-homeconnect Should the upstream repo be updated, the local copy can also be updated by running:
+The following custom components for homeconnect exist in the home-assistant role's files folder. 
+
+These are copied from
+* https://github.com/DavidMStraub/homeassistant-homeconnect 
+* https://github.com/custom-components/alexa_media_player. 
+
+Should the upstream repos be updated, the local copies can be updated by running:
 
 ```sh
-ansible-playbook update-homeassistant-homeconnect.yaml
+ansible-playbook update-homeassistant-custom-components.yaml
 ```
-
-Equally, the `homeassistant-homeconnect-update` role could also be added to the playbook... 
 
 # Lightsail
 

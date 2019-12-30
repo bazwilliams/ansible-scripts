@@ -1,20 +1,20 @@
 ---
-- name: Create Temporary homeconnect directory
+- name: Create Temporary alexa directory
   delegate_to: 127.0.0.1
   tempfile:
     state: directory
-    suffix: homeconnect
+    suffix: alexa
   register: tempdir
 
-- name: Pull Home Connect Custom Component
+- name: Pull Alexa Custom Component
   delegate_to: 127.0.0.1
   git:
-    repo: 'https://github.com/DavidMStraub/homeassistant-homeconnect'
+    repo: 'https://github.com/custom-components/alexa_media_player'
     dest: "{{ tempdir.path }}"
 
 - name: Copy latest custom component to home-assistant role
   delegate_to: 127.0.0.1
   copy:
-    src: "{{ tempdir.path }}/custom_components/homeconnect"
+    src: "{{ tempdir.path }}/custom_components/alexa_media"
     dest: ./roles/home-assistant/files/custom_components
     
