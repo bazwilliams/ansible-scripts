@@ -4,7 +4,7 @@
   trigger:
     platform: numeric_state
     entity_id: sensor.front_garden_motion_light_level
-    below: 750
+    below: 250
   action:
   - service: hue.hue_activate_scene
     data:
@@ -17,7 +17,7 @@
   trigger:
     platform: numeric_state
     entity_id: sensor.front_garden_motion_light_level
-    above: 750
+    above: 250
   action:
   - service: light.turn_off
     data:
@@ -80,10 +80,11 @@
   trigger:
     platform: numeric_state
     entity_id: sensor.front_garden_motion_light_level
-    below: 750
+    below: 250
   condition:
     condition: time
     before: '21:00:00'
+    after: '13:00:00'
   action:
   - service: hue.hue_activate_scene
     data:
@@ -199,17 +200,17 @@
   condition:
     - condition: numeric_state
       entity_id: sensor.front_garden_motion_light_level
-      below: 500
+      below: 50
   action:
     - service: timer.start
       entity_id: timer.garden_light
 
 - alias: Front Garden Light Timer Started
   trigger:
-  - platform: event
-    event_type: timer.started
-    event_data:
-      entity_id: timer.garden_light
+  - platform: state
+    entity_id: timer.garden_light
+    from: 'idle'
+    to: 'active'
   action:
   - service: scene.create
     data:

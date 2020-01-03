@@ -10,6 +10,9 @@ Setup `group_vars/holly.yaml` with the following configuration
 ---
 homeassistant:
   darksky_api_key: ${api_key}
+  latitude: ${lat}
+  longitude: ${long}
+  elevation: ${elevation}
 ```
 
 The following custom components for homeconnect exist in the home-assistant role's files folder. 
