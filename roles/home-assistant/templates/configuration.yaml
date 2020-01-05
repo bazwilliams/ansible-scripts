@@ -1,6 +1,9 @@
 # Configure a default setup of Home Assistant (frontend, api, etc)
 default_config:
 
+http:
+  base_url: {{ homeassistant.base_url }}
+
 tts:
   - platform: google_translate
 
@@ -99,3 +102,7 @@ alexa_media:
         - Kitchen Show
         - Downstairs
         - Kids Rooms
+
+homeconnect:
+  client_id: {{ homeconnect.client_id }}
+  client_secret: {{ homeconnect.client_secret }}

@@ -16,6 +16,10 @@ homeassistant:
 darksky:
   api_key: ${api_key}
 
+homeconnect:
+  client_id:  ${client_id}
+  client_secret:  ${client_secret}
+
 alexa:
   username: ${email}
   password: ${password}
