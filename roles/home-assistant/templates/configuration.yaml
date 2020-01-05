@@ -11,9 +11,9 @@ scene: !include scenes.yaml
 
 homeassistant:
   name: Home
-  latitude: {{homeassistant.latitude}}
-  longitude: {{homeassistant.longitude}}
-  elevation: {{homeassistant.elevation}}
+  latitude: {{ homeassistant.latitude }}
+  longitude: {{ homeassistant.longitude }}
+  elevation: {{ homeassistant.elevation }}
   unit_system: metric
   time_zone: Europe/London
 
@@ -21,22 +21,22 @@ cloud:
   alexa:
     filter:
       include_entities:
-      - light.kitchen
-      - light.worktop_lights
-      - light.outside_light
-      - light.bathroom
-      - light.bedroom
-      - light.downstairs_hallway
-      - light.downstairs_toilet
-      - light.ensuite
-      - light.guest_room
-      - light.ethans_room
-      - light.living_room
-      - light.marcuss_room
-      - media_player.hifi
-      - light.snug
-      - light.upstairs_hallway
-      - light.christmas_tree
+        - light.kitchen
+        - light.worktop_lights
+        - light.outside_light
+        - light.bathroom
+        - light.bedroom
+        - light.downstairs_hallway
+        - light.downstairs_toilet
+        - light.ensuite
+        - light.guest_room
+        - light.ethans_room
+        - light.living_room
+        - light.marcuss_room
+        - media_player.hifi
+        - light.snug
+        - light.upstairs_hallway
+        - light.christmas_tree
 
 discovery:
 
@@ -56,7 +56,7 @@ light:
 
 sensor:
   - platform: darksky
-    api_key: {{homeassistant.darksky_api_key}}
+    api_key: {{ homeassistant.darksky_api_key }}
     monitored_conditions:
       - summary
       - icon
@@ -77,4 +77,25 @@ sensor:
 
 timer:
   garden_light:
-    duration: '00:01:00'
+    duration: "00:01:00"
+
+notify:
+  - platform: alexa_media
+    name: alexa_media
+
+alexa_media:
+  accounts:
+    - email: {{ alexa.email }}
+      password: {{ alexa.password }}
+      url: {{ alexa.region }}
+      include_devices:
+        - 4k Fire TV
+        - Fire TV Stick
+        - Bedroom
+        - "Ethan's Room"
+        - "Marcus' Room"
+        - Snug Echo
+        - Kiko Echo
+        - Kitchen Show
+        - Downstairs
+        - Kids Rooms

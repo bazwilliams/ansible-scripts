@@ -13,6 +13,11 @@ homeassistant:
   latitude: ${lat}
   longitude: ${long}
   elevation: ${elevation}
+
+alexa:
+  username: ${email}
+  password: ${password}
+  region: amazon.co.uk
 ```
 
 The following custom components for homeconnect exist in the home-assistant role's files folder. 
