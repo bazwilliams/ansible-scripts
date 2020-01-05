@@ -56,7 +56,7 @@ light:
 
 sensor:
   - platform: darksky
-    api_key: "{{ darksky.api_key }}"
+    api_key: {{ darksky.api_key }}
     monitored_conditions:
       - summary
       - icon
@@ -85,9 +85,9 @@ notify:
 
 alexa_media:
   accounts:
-    - email: "{{ alexa.email }}"
-      password: "{{ alexa.password }}"
-      url: "{{ alexa.region }}"
+    - email: {{ alexa.email }}
+      password: {{ alexa.password }}
+      url: {{ alexa.region }}
       include_devices:
         - 4k Fire TV
         - Fire TV Stick
