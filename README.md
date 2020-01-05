@@ -9,10 +9,12 @@ Setup `group_vars/holly.yaml` with the following configuration
 ```yaml
 ---
 homeassistant:
-  darksky_api_key: ${api_key}
   latitude: ${lat}
   longitude: ${long}
   elevation: ${elevation}
+
+darksky:
+  api_key: ${api_key}
 
 alexa:
   username: ${email}
