@@ -4,7 +4,6 @@ kitchen:
     - binary_sensor.kitchen_motion_motion
     - sensor.kitchen_motion_light_level
     - sensor.kitchen_motion_temperature
-    - light.kitchen
     - light.worktop_lights
     - light.kitchen_main
     - light.kitchen_under_cupboards
@@ -22,7 +21,6 @@ garden:
     - sensor.front_garden_motion_light_level
     - sensor.front_garden_motion_temperature
     - light.outside_light
-    - light.garden
     - timer.garden_light
 bathroom:
   name: Bathroom
