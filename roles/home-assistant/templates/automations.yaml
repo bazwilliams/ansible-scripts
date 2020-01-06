@@ -204,3 +204,45 @@
     - service: scene.turn_on
       data:
         entity_id: scene.garden_before
+
+- alias: Bathroom Light Left On
+  hide_entity: true
+  initial_state: true
+  trigger:
+    - platform: state
+      entity_id: light.bathroom_2
+      to: "On"
+      for:
+        minutes: 30
+  action:
+    - service: notify.mobile_app_barrys_iphone
+      data:
+        message: 'Bathroom Light Left On'
+
+- alias: Ensuite Light Left On
+  hide_entity: true
+  initial_state: true
+  trigger:
+    - platform: state
+      entity_id: light.ensuite_2
+      to: "On"
+      for:
+        minutes: 30
+  action:
+    - service: notify.mobile_app_barrys_iphone
+      data:
+        message: 'Ensuite Light Left On'
+
+- alias: Downstairs Toilet Light Left On
+  hide_entity: true
+  initial_state: true
+  trigger:
+    - platform: state
+      entity_id: light.downstairs_toilet_2
+      to: "On"
+      for:
+        minutes: 30
+  action:
+    - service: notify.mobile_app_barrys_iphone
+      data:
+        message: 'Downstairs Toilet Light Left On'
