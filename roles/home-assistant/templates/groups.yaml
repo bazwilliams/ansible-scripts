@@ -23,63 +23,64 @@ garden:
     - sensor.front_garden_motion_temperature
     - light.outside_light
     - light.garden
+    - timer.garden_light
 bathroom:
   name: Bathroom
   entities:
-    - light.bathroom
+    - light.bathroom_2
 bedroom:
   name: Bedroom
   entities:
-    - light.bedroom
+    - sensor.bedroom_humidity
+    - sensor.bedroom_temperature 
     - light.bedroom_big_light
     - light.bedside_lamp
 downstairs_hallway:
   name: Downstairs Hallway
   entities:
-    - light.downstairs_hallway
     - light.play_left
     - light.play_right
     - light.downstairs_hallway_ceiling
 downstairs_toilet:
   name: Downstairs Toilet
   entities:
-    - light.downstairs_toilet
+    - light.downstairs_toilet_2
 ensuite:
   name: Ensuite
   entities:
-    - light.ensuite
     - light.ensuite_shower
     - light.ensuite_2
 guest_room:
   name: Guest Room
   entities:
-    - light.guest_room
+    - sensor.guest_room_temperature
+    - sensor.guest_room_humidity
     - light.silver_lamp
     - light.guest_big_light
 ethans_room:
   name: Ethan's Room
   entities:
-    - light.ethans_room
+    - sensor.ethan_s_room_temperature
+    - sensor.ethan_s_room_humidity
     - light.ethans_big_light
     - light.ethans_globe
 living_room:
   name: Living Room
   entities:
-    - light.living_room
     - media_player.living_room_roku
     - light.mushroom_lamp
     - light.copper_lamp
 marcuss_room:
   name: Marcus' Room
   entities:
-    - light.marcuss_room
+    - sensor.marcus_room_humidity
+    - sensor.marcus_room_temperature
     - light.marcuss_big_light
     - light.marcuss_globe
 snug:
   name: Snug
   entities:
     - media_player.hifi
-    - light.snug
     - light.egg_lamp
     - light.steampunk_lamp
     - light.tripod_lamp

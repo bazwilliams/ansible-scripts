@@ -58,25 +58,33 @@ light:
       name: Worktop Lights
 
 sensor:
+  - platform: rfxtrx
+    automatic_add: true
+    devices:
+      0a520a02930200b8120279:
+        name: Guest Room
+        data_type:
+        - Humidity
+        - Temperature
+      0a520a01880200b4340179:
+        name: "Ethan's Room"
+        data_type:
+        - Humidity
+        - Temperature
+      0a520a03810300b9310179:
+        name: "Marcus' Room"
+        data_type:
+        - Humidity
+        - Temperature
+      0a520a04a80300b5320179:
+        name: Bedroom
+        data_type:
+        - Humidity
+        - Temperature
+
+weather:
   - platform: darksky
     api_key: {{ darksky.api_key }}
-    monitored_conditions:
-      - summary
-      - icon
-      - temperature
-      - precip_probability
-      - apparent_temperature
-      - wind_speed
-      - wind_gust
-      - wind_bearing
-      - cloud_cover
-      - temperature_low
-      - temperature_high
-      - daily_summary
-      - alerts
-      - humidity
-    scan_interval:
-      minutes: 2
 
 timer:
   garden_light:
