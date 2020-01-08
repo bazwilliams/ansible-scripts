@@ -57,7 +57,11 @@ light:
     "0710080041030000":
       name: Worktop Lights
 
+binary_sensor:
+  - platform: ring
+
 sensor:
+  - platform: ring
   - platform: rfxtrx
     automatic_add: true
     devices:
@@ -114,3 +118,10 @@ alexa_media:
 homeconnect:
   client_id: {{ homeconnect.client_id }}
   client_secret: {{ homeconnect.client_secret }}
+
+ring:
+  username: {{ ring.username }}
+  password: {{ ring.password }}
+
+camera:
+  - platform: ring

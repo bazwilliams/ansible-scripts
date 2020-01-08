@@ -1,10 +1,10 @@
-- alias: Getting Dark Outside
+- alias: Dark Outside
   hide_entity: true
   initial_state: true
   trigger:
     platform: numeric_state
     entity_id: sensor.front_garden_motion_light_level
-    below: 1000
+    below: 700
   condition:
     condition: time
     before: "21:00:00"
@@ -27,13 +27,13 @@
         group_name: "Living room"
         scene_name: "Living Room Evening"
 
-- alias: Getting Bright Outside
+- alias: Bright Outside
   hide_entity: true
   initial_state: true
   trigger:
     platform: numeric_state
     entity_id: sensor.front_garden_motion_light_level
-    above: 1000
+    above: 700
   condition:
     condition: time
     before: "21:00:00"
@@ -81,27 +81,6 @@
         entity_id:
           - group.ethans_room
           - group.marcuss_room
-
-- alias: Daytime
-  hide_entity: true
-  initial_state: true
-  trigger:
-    platform: time
-    at: "08:00:00"
-  action:
-    - service: hue.hue_activate_scene
-      data:
-        group_name: Downstairs Hallway
-        scene_name: Daytime Presence
-    - service: hue.hue_activate_scene
-      data:
-        group_name: Upstairs Hallway
-        scene_name: Daytime Presence
-    - service: light.turn_off
-      data:
-        entity_id:
-          - group.kitchen
-          - group.living_room
 
 - alias: Kids Bedtime
   hide_entity: true

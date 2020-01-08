@@ -24,6 +24,10 @@ alexa:
   username: ${email}
   password: ${password}
   region: amazon.co.uk
+
+ring:
+  username: YOUR_USERNAME
+  password: YOUR_PASSWORD
 ```
 
 The following custom components for homeconnect exist in the home-assistant role's files folder. 

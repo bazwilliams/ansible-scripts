@@ -91,7 +91,7 @@
         services:
             home-assistant:
                 container_name: home-assistant
-                image: homeassistant/home-assistant:0.103.3
+                image: homeassistant/home-assistant:0.103.6
                 volumes:
                   - /opt/docker/data/home-assistant/config:/config
                   - /etc/localtime:/etc/localtime:ro
