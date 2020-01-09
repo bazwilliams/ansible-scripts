@@ -81,6 +81,11 @@
         entity_id:
           - group.ethans_room
           - group.marcuss_room
+    - service: media_player.media_pause
+      data:
+        entity_id:
+          - media_player.ethan_s_room
+          - media_player.marcus_room
 
 - alias: Kids Bedtime
   hide_entity: true
