@@ -14,6 +14,7 @@ kitchen:
     - sensor.dishwasher_program_progress
     - sensor.dishwasher_remaining_program_time
     - switch.dishwasher
+    - timer.kitchen_light
 garden:
   name: Garden
   entities:

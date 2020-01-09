@@ -93,6 +93,8 @@ weather:
 timer:
   garden_light:
     duration: "00:01:00"
+  kitchen_light:
+    duration: "00:10:00"
 
 notify:
   - platform: alexa_media

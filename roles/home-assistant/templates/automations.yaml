@@ -4,7 +4,7 @@
   trigger:
     platform: numeric_state
     entity_id: sensor.front_garden_motion_light_level
-    below: 700
+    below: 600
   condition:
     condition: time
     before: "21:00:00"
@@ -33,16 +33,11 @@
   trigger:
     platform: numeric_state
     entity_id: sensor.front_garden_motion_light_level
-    above: 700
+    above: 600
   condition:
     condition: time
     before: "21:00:00"
-    after: "08:00:00"
   action:
-    - service: light.turn_off
-      data:
-        entity_id:
-          - light.garden
     - service: hue.hue_activate_scene
       data:
         group_name: Downstairs Hallway
@@ -54,8 +49,13 @@
     - service: light.turn_off
       data:
         entity_id:
-          - group.kitchen
+          - group.garden
           - group.living_room
+          - group.ethans_room
+          - group.marcuss_room
+          - group.bedroom
+          - group.guest_room
+          - group.snug
 
 - alias: Wakeup
   hide_entity: true
@@ -91,14 +91,6 @@
   action:
     - service: hue.hue_activate_scene
       data:
-        group_name: "Marcus’s Room"
-        scene_name: "Marcus's Bed"
-    - service: hue.hue_activate_scene
-      data:
-        group_name: "Ethan’s Room"
-        scene_name: "Ethan's Bedtime"
-    - service: hue.hue_activate_scene
-      data:
         group_name: Upstairs Hallway
         scene_name: Night
 
@@ -128,9 +120,50 @@
     - service: light.turn_off
       data:
         entity_id:
-          - group.kitchen
           - light.living_room
           - light.bedroom
+
+- alias: Start Kitchen Light Timer
+  hide_entity: true
+  initial_state: true
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.kitchen_motion_motion
+      from: "off"
+      to: "on"
+  action:
+    - service: timer.cancel
+      entity_id: timer.kitchen_light
+    - service: timer.start
+      entity_id: timer.kitchen_light
+
+- alias: Kitchen Worktop Lights On
+  hide_entity: true
+  initial_state: true
+  trigger:
+    - platform: state
+      entity_id: timer.kitchen_light
+      from: "idle"
+      to: "active"
+  action:
+    - service: light.turn_on
+      data:
+        entity_id:
+          - light.worktop_lights
+
+- alias: Kitchen Worktop Lights Off
+  hide_entity: true
+  initial_state: true
+  trigger:
+    - platform: event
+      event_type: timer.finished
+      event_data:
+        entity_id: timer.kitchen_light
+  action:
+    - service: light.turn_off
+      data:
+        entity_id:
+          - light.worktop_lights
 
 - alias: Start Garden Light Timer
   hide_entity: true
@@ -145,6 +178,8 @@
       entity_id: sensor.front_garden_motion_light_level
       below: 50
   action:
+    - service: timer.cancel
+      entity_id: timer.garden_light
     - service: timer.start
       entity_id: timer.garden_light
 
@@ -173,10 +208,6 @@
   trigger:
     - platform: event
       event_type: timer.finished
-      event_data:
-        entity_id: timer.garden_light
-    - platform: event
-      event_type: timer.cancelled
       event_data:
         entity_id: timer.garden_light
   action:
