@@ -34,6 +34,7 @@
     platform: numeric_state
     entity_id: sensor.front_garden_motion_light_level
     above: 600
+    below: 3000
   condition:
     condition: time
     before: "21:00:00"
@@ -49,6 +50,27 @@
     - service: light.turn_off
       data:
         entity_id:
+          - group.garden
+          - group.living_room
+          - group.ethans_room
+          - group.marcuss_room
+          - group.bedroom
+          - group.guest_room
+          - group.snug
+
+- alias: Very Bright Outside
+  hide_entity: true
+  initial_state: true
+  trigger:
+    platform: numeric_state
+    entity_id: sensor.front_garden_motion_light_level
+    above: 3000
+  action:
+    - service: light.turn_off
+      data:
+        entity_id:
+          - group.downstairs_hallway
+          - group.upstairs_hallway
           - group.garden
           - group.living_room
           - group.ethans_room
