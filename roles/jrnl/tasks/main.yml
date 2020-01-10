@@ -1,0 +1,52 @@
+---
+- name: Create jrnl data directory
+  become: yes
+  file:
+    path: /opt/docker/data/jrnl
+    owner: 1000
+    group: 1000
+    state: directory
+
+- name: Create jrnl data directory
+  tempfile:
+    state: directory
+    suffix: .jrnl
+  register: buildcontext
+
+- name: Upload Dockerfile
+  copy:
+    src: Dockerfile
+    dest: "{{ buildcontext.path }}"
+
+- name: Start jrnl
+  docker_compose:
+    project_name: jrnl
+    remove_orphans: yes
+    state: present
+    definition:
+        version: "3.7"
+
+        services:
+            jrnl:
+                restart: unless-stopped
+                build: "{{ buildcontext.path }}"
+                container_name: jrnl
+                image: jrnl
+                environment:
+                    TERM: xterm
+                    TZ: Europe/London
+                volumes:
+                    - type: bind
+                      source: /opt/docker/data/jrnl
+                      target: /home/user/.local/share/jrnl
+                    - /etc/localtime:/etc/localtime:ro
+                logging:
+                    driver: none
+                stdin_open: true
+                tty: true
+
+- name: Cleanup
+  file:
+    path: "{{ buildcontext.path }}"
+    state: absent
+  when: buildcontext.path is defined

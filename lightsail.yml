@@ -1,7 +1,8 @@
 ---
 - hosts: lightsail
   roles:
-    - update-packages-ubuntu
+    # - update-packages-ubuntu
     # - install-docker-ubuntu
     # - owncloud
-    - irc
+    - jrnl
+    # - irc
