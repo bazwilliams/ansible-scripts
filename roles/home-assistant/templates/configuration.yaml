@@ -26,6 +26,7 @@ cloud:
       include_entities:
         - light.kitchen
         - light.worktop_lights
+        - light.dining_table
         - light.outside_light
         - light.bathroom
         - light.bedroom
