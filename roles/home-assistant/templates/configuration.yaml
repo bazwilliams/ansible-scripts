@@ -58,11 +58,11 @@ light:
     "0710080041030000":
       name: Worktop Lights
 
-binary_sensor:
-  - platform: ring
+# binary_sensor:
+  # - platform: ring
 
 sensor:
-  - platform: ring
+  # - platform: ring
   - platform: rfxtrx
     automatic_add: true
     devices:
@@ -126,5 +126,5 @@ ring:
   username: {{ ring.username }}
   password: {{ ring.password }}
 
-camera:
-  - platform: ring
+# camera:
+  # - platform: ring
