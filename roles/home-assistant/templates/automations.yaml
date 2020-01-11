@@ -292,3 +292,29 @@
     - service: notify.mobile_app_barrys_iphone
       data:
         message: 'Downstairs Toilet Light Left On'
+
+- alias: Turn Power Amp On
+  hide_entity:  true
+  initial_state: true
+  trigger:
+    - platform: state
+      entity_id: media_player.hifi
+      from: "off"
+      for:
+        seconds: 2
+  action:
+    - service: switch.turn_on
+      entity_id: switch.power_amplifier
+
+- alias: Turn Power Amp Off
+  hide_entity:  true
+  initial_state: true
+  trigger:
+    - platform: state
+      entity_id: media_player.hifi
+      to: "off"
+      for:
+        seconds: 30
+  action:
+    - service: switch.turn_off
+      entity_id: switch.power_amplifier

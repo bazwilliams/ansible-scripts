@@ -58,6 +58,12 @@ light:
     "0710080041030000":
       name: Worktop Lights
 
+switch:
+  platform: rfxtrx
+  devices:
+    "0710080041050000":
+      name: Power Amplifier
+
 # binary_sensor:
   # - platform: ring
 
@@ -122,9 +128,9 @@ homeconnect:
   client_id: {{ homeconnect.client_id }}
   client_secret: {{ homeconnect.client_secret }}
 
-ring:
-  username: {{ ring.username }}
-  password: {{ ring.password }}
+# ring:
+#   username: {{ ring.username }}
+#   password: {{ ring.password }}
 
 # camera:
   # - platform: ring
