@@ -216,6 +216,12 @@
 - alias: Brighten the Garden
   hide_entity: true
   initial_state: true
+  condition:
+    - condition: state
+      entity_id: timer.garden_light
+      state: "idle"
+      for:
+        seconds: 5
   trigger:
     - platform: state
       entity_id: timer.garden_light
