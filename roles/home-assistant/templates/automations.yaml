@@ -162,6 +162,8 @@
       from: "off"
       to: "on"
   action:
+    - service: script.turn_on
+      entity_id: script.blacklisted_kitchen_scene
     - service: timer.cancel
       entity_id: timer.kitchen_light
     - service: timer.start
@@ -175,6 +177,10 @@
       entity_id: timer.kitchen_light
       from: "idle"
       to: "active"
+  condition:
+    - condition: state
+      entity_id: script.blacklisted_kitchen_scene
+      state: "off"
   action:
     - service: light.turn_on
       data:
@@ -208,6 +214,8 @@
       entity_id: sensor.front_garden_motion_light_level
       below: 50
   action:
+    - service: script.turn_on
+      entity_id: script.blacklisted_garden_scene
     - service: timer.cancel
       entity_id: timer.garden_light
     - service: timer.start
@@ -218,10 +226,8 @@
   initial_state: true
   condition:
     - condition: state
-      entity_id: timer.garden_light
-      state: "idle"
-      for:
-        seconds: 5
+      entity_id: script.blacklisted_garden_scene
+      state: "off"
   trigger:
     - platform: state
       entity_id: timer.garden_light
@@ -299,7 +305,17 @@
   trigger:
     - platform: state
       entity_id: media_player.hifi
-      from: "off"
+      to: "playing"
+      for:
+        seconds: 2
+    - platform: state
+      entity_id: media_player.hifi
+      to: "idle"
+      for:
+        seconds: 2
+    - platform: state
+      entity_id: media_player.hifi
+      to: "paused"
       for:
         seconds: 2
   action:
@@ -314,7 +330,7 @@
       entity_id: media_player.hifi
       to: "off"
       for:
-        seconds: 30
+        seconds: 5
   action:
     - service: switch.turn_off
       entity_id: switch.power_amplifier
