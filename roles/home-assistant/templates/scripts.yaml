@@ -1,9 +1,0 @@
-blacklisted_garden_scene:
-  sequence:
-    - delay:
-        seconds: 10
-
-blacklisted_kitchen_scene:
-  sequence:
-    - delay:
-        seconds: 10

@@ -105,9 +105,12 @@ weather:
   - platform: darksky
     api_key: {{ darksky.api_key }}
 
+input_boolean:
+  garden_scene_saved:
+    name: Garden Scene Saved
+    initial: off
+
 timer:
-  garden_light:
-    duration: "00:01:00"
   kitchen_light:
     duration: "00:10:00"
 

@@ -162,8 +162,6 @@
       from: "off"
       to: "on"
   action:
-    - service: script.turn_on
-      entity_id: script.blacklisted_kitchen_scene
     - service: timer.cancel
       entity_id: timer.kitchen_light
     - service: timer.start
@@ -173,14 +171,10 @@
   hide_entity: true
   initial_state: true
   trigger:
-    - platform: state
-      entity_id: timer.kitchen_light
-      from: "idle"
-      to: "active"
-  condition:
-    - condition: state
-      entity_id: script.blacklisted_kitchen_scene
-      state: "off"
+    - platform: event
+      event_type: timer.started
+      event_data:
+        entity_id: timer.kitchen_light
   action:
     - service: light.turn_on
       data:
@@ -201,61 +195,45 @@
         entity_id:
           - light.worktop_lights
 
-- alias: Start Garden Light Timer
-  hide_entity: true
-  initial_state: true
-  trigger:
-    - platform: state
-      entity_id: binary_sensor.front_garden_motion_motion
-      from: "off"
-      to: "on"
-  condition:
-    - condition: numeric_state
-      entity_id: sensor.front_garden_motion_light_level
-      below: 50
-  action:
-    - service: script.turn_on
-      entity_id: script.blacklisted_garden_scene
-    - service: timer.cancel
-      entity_id: timer.garden_light
-    - service: timer.start
-      entity_id: timer.garden_light
-
 - alias: Brighten the Garden
   hide_entity: true
   initial_state: true
-  condition:
-    - condition: state
-      entity_id: script.blacklisted_garden_scene
-      state: "off"
   trigger:
-    - platform: state
-      entity_id: timer.garden_light
-      from: "idle"
-      to: "active"
+    platform: state
+    entity_id: binary_sensor.front_garden_motion_motion
+    to: 'on'
+  condition:
+    condition: state
+    entity_id: input_boolean.garden_scene_saved # prevents overwriting the before scene with the bright scene on motion repeat
+    state: 'off'
   action:
-    - service: scene.create
-      data:
-        scene_id: garden_before
-        snapshot_entities:
-          - light.garden
-    - service: hue.hue_activate_scene
-      data:
-        group_name: Garden
-        scene_name: Bright
+  - service: scene.create
+    data:
+      scene_id: garden_before
+      snapshot_entities:
+      - light.garden
+  - service: hue.hue_activate_scene
+    data:
+      group_name: Garden
+      scene_name: Bright
+  - service: input_boolean.turn_on  # to prevent overwriting the before scene with the bright scene on motion repeat
+    entity_id: input_boolean.garden_scene_saved
 
 - alias: Restore garden lights
   hide_entity: true
   initial_state: true
   trigger:
-    - platform: event
-      event_type: timer.finished
-      event_data:
-        entity_id: timer.garden_light
+    platform: state
+    entity_id: binary_sensor.front_garden_motion_motion
+    to: 'off'
+    for:
+      minutes: 2
   action:
-    - service: scene.turn_on
-      data:
-        entity_id: scene.garden_before
+  - service: scene.turn_on
+    data:
+      entity_id: scene.garden_before
+  - service: input_boolean.turn_off  # allow saving of the before scene again.
+    entity_id: input_boolean.garden_scene_saved
 
 - alias: Bathroom Light Left On
   hide_entity: true
