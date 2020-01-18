@@ -203,9 +203,12 @@
     entity_id: binary_sensor.front_garden_motion_motion
     to: 'on'
   condition:
-    condition: state
-    entity_id: input_boolean.garden_scene_saved # prevents overwriting the before scene with the bright scene on motion repeat
-    state: 'off'
+    - condition: numeric_state
+      entity_id: sensor.front_garden_motion_light_level
+      below: 50
+    - condition: state
+      entity_id: input_boolean.garden_scene_saved # prevents overwriting the before scene with the bright scene on motion repeat
+      state: 'off'
   action:
   - service: scene.create
     data:
