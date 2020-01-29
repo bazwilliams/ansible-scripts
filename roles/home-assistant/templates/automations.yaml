@@ -201,42 +201,46 @@
   trigger:
     platform: state
     entity_id: binary_sensor.front_garden_motion_motion
-    to: 'on'
+    to: "on"
   condition:
     - condition: numeric_state
       entity_id: sensor.front_garden_motion_light_level
       below: 50
     - condition: state
       entity_id: input_boolean.garden_scene_saved # prevents overwriting the before scene with the bright scene on motion repeat
-      state: 'off'
+      state: "off"
   action:
-  - service: scene.create
-    data:
-      scene_id: garden_before
-      snapshot_entities:
-      - light.garden
-  - service: hue.hue_activate_scene
-    data:
-      group_name: Garden
-      scene_name: Bright
-  - service: input_boolean.turn_on  # to prevent overwriting the before scene with the bright scene on motion repeat
-    entity_id: input_boolean.garden_scene_saved
+    - service: scene.create
+      data:
+        scene_id: garden_before
+        snapshot_entities:
+          - light.garden
+    - service: hue.hue_activate_scene
+      data:
+        group_name: Garden
+        scene_name: Bright
+    - service: input_boolean.turn_on # to prevent overwriting the before scene with the bright scene on motion repeat
+      entity_id: input_boolean.garden_scene_saved
 
 - alias: Restore garden lights
   hide_entity: true
   initial_state: true
+  condition:
+    - condition: numeric_state
+      entity_id: sensor.front_garden_motion_light_level
+      below: 50
   trigger:
     platform: state
     entity_id: binary_sensor.front_garden_motion_motion
-    to: 'off'
+    to: "off"
     for:
       minutes: 2
   action:
-  - service: scene.turn_on
-    data:
-      entity_id: scene.garden_before
-  - service: input_boolean.turn_off  # allow saving of the before scene again.
-    entity_id: input_boolean.garden_scene_saved
+    - service: scene.turn_on
+      data:
+        entity_id: scene.garden_before
+    - service: input_boolean.turn_off # allow saving of the before scene again.
+      entity_id: input_boolean.garden_scene_saved
 
 - alias: Bathroom Light Left On
   hide_entity: true
@@ -250,7 +254,7 @@
   action:
     - service: notify.mobile_app_barrys_iphone
       data:
-        message: 'Bathroom Light Left On'
+        message: "Bathroom Light Left On"
 
 - alias: Ensuite Light Left On
   hide_entity: true
@@ -264,7 +268,7 @@
   action:
     - service: notify.mobile_app_barrys_iphone
       data:
-        message: 'Ensuite Light Left On'
+        message: "Ensuite Light Left On"
 
 - alias: Downstairs Toilet Light Left On
   hide_entity: true
@@ -278,10 +282,10 @@
   action:
     - service: notify.mobile_app_barrys_iphone
       data:
-        message: 'Downstairs Toilet Light Left On'
+        message: "Downstairs Toilet Light Left On"
 
 - alias: Turn Power Amp On
-  hide_entity:  true
+  hide_entity: true
   initial_state: true
   trigger:
     - platform: state
@@ -304,7 +308,7 @@
       entity_id: switch.power_amplifier
 
 - alias: Turn Power Amp Off
-  hide_entity:  true
+  hide_entity: true
   initial_state: true
   trigger:
     - platform: state

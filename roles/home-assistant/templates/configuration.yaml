@@ -72,11 +72,11 @@ switch:
     "0710080041040000":
       name: Power Amplifier
 
-# binary_sensor:
-  # - platform: ring
+binary_sensor:
+  - platform: ring
 
 sensor:
-  # - platform: ring
+  - platform: ring
   - platform: rfxtrx
     automatic_add: true
     devices:
@@ -139,9 +139,9 @@ homeconnect:
   client_id: {{ homeconnect.client_id }}
   client_secret: {{ homeconnect.client_secret }}
 
-# ring:
-#   username: {{ ring.username }}
-#   password: {{ ring.password }}
+ring:
+  username: {{ ring.username }}
+  password: {{ ring.password }}
 
-# camera:
-  # - platform: ring
+camera:
+  - platform: ring

@@ -23,7 +23,6 @@ garden:
     - sensor.front_garden_motion_light_level
     - sensor.front_garden_motion_temperature
     - light.outside_light
-    - timer.garden_light
     - binary_sensor.ring_front_door_motion
     - camera.front_door
 bathroom:
