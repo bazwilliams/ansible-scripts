@@ -4,7 +4,7 @@
   trigger:
     platform: numeric_state
     entity_id: sensor.front_garden_motion_light_level
-    below: 600
+    below: 200
   condition:
     condition: time
     before: "21:00:00"
@@ -26,6 +26,35 @@
       data:
         group_name: "Living room"
         scene_name: "Living Room Evening"
+
+- alias: Dull Outside
+  hide_entity: true
+  initial_state: true
+  trigger:
+    platform: numeric_state
+    entity_id: sensor.front_garden_motion_light_level
+    below: 600
+  condition:
+    condition: time
+    before: "21:00:00"
+    after: "08:00:00"
+  action:
+    - service: hue.hue_activate_scene
+      data:
+        group_name: Downstairs Hallway
+        scene_name: Daytime Presence
+    - service: hue.hue_activate_scene
+      data:
+        group_name: Upstairs Hallway
+        scene_name: Daytime Presence
+    - service: hue.hue_activate_scene
+      data:
+        group_name: "Living room"
+        scene_name: "Dull Outside"
+    - service: light.turn_off
+      data:
+        entity_id:
+          - group.garden
 
 - alias: Bright Outside
   hide_entity: true
