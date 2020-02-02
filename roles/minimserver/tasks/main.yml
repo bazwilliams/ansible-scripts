@@ -1,0 +1,76 @@
+---
+- name: Create data directory
+  become: yes
+  file:
+    path: /opt/docker/data/minimserver
+    state: directory
+
+- name: Upload configuration
+  become: yes
+  copy:
+    src: minimserver.config
+    dest: /opt/docker/data/minimserver
+
+- name: Create minimserver temp directory
+  tempfile:
+    state: directory
+    suffix: .minimserver
+  register: buildcontext
+
+- name: Upload Dockerfile
+  copy:
+    src: Dockerfile
+    dest: "{{ buildcontext.path }}"
+
+- name: Tear down existing service
+  docker_compose:
+    project_name: minimserver
+    state: absent
+    definition:
+        version: "3"
+        services:
+            minimserver:
+                image: ""
+
+- name: Add firewall rule to open port 9790
+  become: yes
+  firewalld:
+    port: 9790/tcp
+    permanent: yes
+    immediate: yes
+    state: enabled
+
+- name: Add firewall rule to open port 9791
+  become: yes
+  firewalld:
+    port: 9791/tcp
+    permanent: yes
+    immediate: yes
+    state: enabled
+
+- name: Start service
+  docker_compose:
+    project_name: minimserver
+    remove_orphans: yes
+    state: present
+    definition:
+        version: "3"
+        services:
+          minimserver:
+            restart: unless-stopped
+            build: "{{ buildcontext.path }}"
+            ports:
+              - 9790:9790
+              - 9791:9791
+            environment:
+              TZ: Europe/London
+            volumes:
+              - /mnt/media/music:/mnt/media/music:ro
+              - /opt/docker/data/minimserver:/opt/minimserver/data
+            network_mode: host
+
+- name: Cleanup
+  file:
+    path: "{{ buildcontext.path }}"
+    state: absent
+  when: buildcontext.path is defined
