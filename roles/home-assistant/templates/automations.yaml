@@ -33,7 +33,8 @@
   trigger:
     platform: numeric_state
     entity_id: sensor.front_garden_motion_light_level
-    below: 600
+    above: 200
+    below: 700
   condition:
     condition: time
     before: "21:00:00"
@@ -62,7 +63,7 @@
   trigger:
     platform: numeric_state
     entity_id: sensor.front_garden_motion_light_level
-    above: 600
+    above: 700
     below: 3000
   condition:
     condition: time
