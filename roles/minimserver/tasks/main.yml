@@ -77,7 +77,7 @@
             environment:
               TZ: Europe/London
             volumes:
-              - /mnt/media/music:/mnt/media/music:ro
+              - /data/music:/data/music:ro
               - /opt/docker/data/minimserver:/opt/minimserver/data
             network_mode: host
 
