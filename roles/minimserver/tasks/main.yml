@@ -11,18 +11,6 @@
     src: minimserver.config
     dest: /opt/docker/data/minimserver
 
-- name: Create music directory
-  become: yes
-  file:
-    owner: barry
-    path: /data/music/
-    state: directory
-
-- name: Upload music
-  synchronize:
-    src: music/
-    dest: /data/music/
-
 - name: Create minimserver temp directory
   tempfile:
     state: directory

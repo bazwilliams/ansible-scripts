@@ -1,0 +1,12 @@
+---
+- name: Create music directory
+  become: yes
+  file:
+    owner: barry
+    path: /data/music/
+    state: directory
+
+- name: Upload music
+  synchronize:
+    src: music/
+    dest: /data/music/
