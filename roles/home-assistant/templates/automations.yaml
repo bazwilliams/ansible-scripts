@@ -1,5 +1,4 @@
 - alias: Dark Outside
-  hide_entity: true
   initial_state: true
   trigger:
     platform: numeric_state
@@ -28,7 +27,6 @@
         scene_name: "Living Room Evening"
 
 - alias: Dull Outside
-  hide_entity: true
   initial_state: true
   trigger:
     platform: numeric_state
@@ -58,7 +56,6 @@
           - group.garden
 
 - alias: Bright Outside
-  hide_entity: true
   initial_state: true
   trigger:
     platform: numeric_state
@@ -89,7 +86,6 @@
           - group.snug
 
 - alias: Very Bright Outside
-  hide_entity: true
   initial_state: true
   trigger:
     platform: numeric_state
@@ -113,7 +109,6 @@
           - group.snug
 
 - alias: Wakeup
-  hide_entity: true
   initial_state: true
   trigger:
     platform: time
@@ -143,7 +138,6 @@
           - media_player.marcus_room
 
 - alias: Kids Bedtime
-  hide_entity: true
   initial_state: true
   trigger:
     platform: time
@@ -155,7 +149,6 @@
         scene_name: Night
 
 - alias: Late Night
-  hide_entity: true
   initial_state: true
   trigger:
     platform: time
@@ -167,7 +160,6 @@
         scene_name: Late Night
 
 - alias: Lights Out
-  hide_entity: true
   initial_state: true
   trigger:
     platform: time
@@ -184,7 +176,6 @@
           - light.bedroom
 
 - alias: Start Kitchen Light Timer
-  hide_entity: true
   initial_state: true
   trigger:
     - platform: state
@@ -198,7 +189,6 @@
       entity_id: timer.kitchen_light
 
 - alias: Kitchen Worktop Lights On
-  hide_entity: true
   initial_state: true
   trigger:
     - platform: event
@@ -212,7 +202,6 @@
           - light.worktop_lights
 
 - alias: Kitchen Worktop Lights Off
-  hide_entity: true
   initial_state: true
   trigger:
     - platform: event
@@ -226,7 +215,6 @@
           - light.worktop_lights
 
 - alias: Brighten the Garden
-  hide_entity: true
   initial_state: true
   trigger:
     platform: state
@@ -253,7 +241,6 @@
       entity_id: input_boolean.garden_scene_saved
 
 - alias: Restore garden lights
-  hide_entity: true
   initial_state: true
   condition:
     - condition: numeric_state
@@ -273,7 +260,6 @@
       entity_id: input_boolean.garden_scene_saved
 
 - alias: Bathroom Light Left On
-  hide_entity: true
   initial_state: true
   trigger:
     - platform: state
@@ -287,7 +273,6 @@
         message: "Bathroom Light Left On"
 
 - alias: Ensuite Light Left On
-  hide_entity: true
   initial_state: true
   trigger:
     - platform: state
@@ -301,7 +286,6 @@
         message: "Ensuite Light Left On"
 
 - alias: Downstairs Toilet Light Left On
-  hide_entity: true
   initial_state: true
   trigger:
     - platform: state
@@ -315,7 +299,6 @@
         message: "Downstairs Toilet Light Left On"
 
 - alias: Turn Power Amp On
-  hide_entity: true
   initial_state: true
   trigger:
     - platform: state
@@ -338,7 +321,6 @@
       entity_id: switch.power_amplifier
 
 - alias: Turn Power Amp Off
-  hide_entity: true
   initial_state: true
   trigger:
     - platform: state
