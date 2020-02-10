@@ -86,6 +86,7 @@ snug:
     - light.steampunk_lamp
     - light.tripod_lamp
     - light.lava_lamp
+    - light.snug_main
     - switch.power_amplifier
 upstairs_hallway:
   name: Upstairs Hallway

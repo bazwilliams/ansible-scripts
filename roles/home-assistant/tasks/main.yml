@@ -13,25 +13,25 @@
 
 - name: Upload groups
   become: yes
-  template:
+  copy:
     src: groups.yaml
     dest: /opt/docker/data/home-assistant/config/groups.yaml
 
 - name: Upload automations
   become: yes
-  template:
+  copy:
     src: automations.yaml
     dest: /opt/docker/data/home-assistant/config/automations.yaml
 
 - name: Upload scripts
   become: yes
-  template:
+  copy:
     src: scripts.yaml
     dest: /opt/docker/data/home-assistant/config/scripts.yaml
 
 - name: Upload scenes
   become: yes
-  template:
+  copy:
     src: scenes.yaml
     dest: /opt/docker/data/home-assistant/config/scenes.yaml
 

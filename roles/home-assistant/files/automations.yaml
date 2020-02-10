@@ -264,7 +264,7 @@
   trigger:
     - platform: state
       entity_id: light.bathroom_2
-      to: "On"
+      to: "on"
       for:
         minutes: 30
   action:
@@ -277,7 +277,7 @@
   trigger:
     - platform: state
       entity_id: light.ensuite_2
-      to: "On"
+      to: "on"
       for:
         minutes: 30
   action:
@@ -290,7 +290,7 @@
   trigger:
     - platform: state
       entity_id: light.downstairs_toilet_2
-      to: "On"
+      to: "on"
       for:
         minutes: 30
   action:
@@ -331,3 +331,51 @@
   action:
     - service: switch.turn_off
       entity_id: switch.power_amplifier
+  action:
+    - service: hue.hue_activate_scene
+      data:
+        group_name: Snug
+        scene_name: Relax
+
+- alias: Listening to Music
+  initial_state: true
+  trigger:
+    - platform: state
+      entity_id: media_player.hifi
+      to: "playing"
+      for:
+        seconds: 2
+    - platform: template
+      value_template: "{{ is_state_attr('media_player.hifi', 'source', 'Playlist') }}"
+      for:
+        seconds: 2
+  action:
+    - service: hue.hue_activate_scene
+      data:
+        group_name: Snug
+        scene_name: Chill
+
+- alias: Listening to Records
+  initial_state: true
+  trigger:
+    - platform: template
+      value_template: "{{ is_state_attr('media_player.hifi', 'source', 'LP12') }}"
+      for:
+        seconds: 2
+  action:
+    - service: hue.hue_activate_scene
+      data:
+        group_name: Snug
+        scene_name: LP12
+
+- alias: Watching the Big Screen
+  initial_state: true
+  trigger:
+    - platform: state
+      entity_id: media_player.epson_projector
+      to: "on"
+  action:
+    - service: hue.hue_activate_scene
+      data:
+        group_name: Snug
+        scene_name: Movie
