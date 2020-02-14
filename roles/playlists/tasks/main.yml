@@ -1,0 +1,42 @@
+---
+- name: Create config directory
+  become: yes
+  file:
+    path: /opt/docker/data/playlists
+    state: directory
+
+- name: Upload playlists
+  become: yes
+  copy:
+    src: data/
+    dest: /opt/docker/data/playlists
+
+- name: Tear down existing service
+  docker_compose:
+    project_name: playlists
+    state: absent
+    definition:
+        version: "3"
+        services:
+            playlists:
+                image: ""
+
+- name: Start service
+  docker_compose:
+    project_name: playlists
+    remove_orphans: yes
+    state: present
+    definition:
+        version: "3"
+        services:
+          playlists:
+            restart: unless-stopped
+            image: bazwilliams/upnp-playlist-service:79
+            container_name: playlists
+            volumes:
+              - /opt/docker/data/playlists:/data
+            environment:
+              TZ: Europe/London
+              PORT: 18080
+              DATA_LOCATION: /data
+            network_mode: host

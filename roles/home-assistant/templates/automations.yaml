@@ -278,7 +278,7 @@
   trigger:
     - platform: state
       entity_id: light.bathroom_2
-      to: "On"
+      to: "on"
       for:
         minutes: 30
   action:
@@ -292,7 +292,7 @@
   trigger:
     - platform: state
       entity_id: light.ensuite_2
-      to: "On"
+      to: "on"
       for:
         minutes: 30
   action:
@@ -306,7 +306,7 @@
   trigger:
     - platform: state
       entity_id: light.downstairs_toilet_2
-      to: "On"
+      to: "on"
       for:
         minutes: 30
   action:

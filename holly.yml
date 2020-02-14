@@ -5,6 +5,7 @@
      #- install-docker-suse
      #- homeassistant-homeconnect-update
      #- home-assistant
-     - music
-     - minimserver
-     - plex
+    #  - music
+    #  - minimserver
+    #  - plex
+    - playlists
