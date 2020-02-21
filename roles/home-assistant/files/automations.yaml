@@ -331,10 +331,6 @@
   action:
     - service: switch.turn_off
       entity_id: switch.power_amplifier
-    - service: hue.hue_activate_scene
-      data:
-        group_name: Snug
-        scene_name: Relax
 
 - alias: Listening to Music
   initial_state: true
@@ -373,3 +369,32 @@
       data:
         group_name: Snug
         scene_name: Movie
+
+- alias: Upstairs Hall Cupboard Door Open
+  initial_state: true
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.upstairs_hall_cupboard_door
+      to: "on"
+  action:
+    - service: scene.create
+      data:
+        scene_id: upstairs_spot_2_before
+        snapshot_entities:
+          - light.upstairs_spot_2
+    - service: light.turn_on
+      data:
+        entity_id: light.upstairs_spot_2
+        color_temp: 153
+        brightness: 254
+
+- alias: Upstairs Hall Cupboard Door Closed
+  initial_state: true
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.upstairs_hall_cupboard_door
+      to: "off"
+  action:
+    - service: scene.turn_on
+      data:
+        entity_id: scene.upstairs_spot_2_before

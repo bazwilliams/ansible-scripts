@@ -81,6 +81,7 @@ marcuss_room:
 snug:
   name: Snug
   entities:
+    - media_player.epson_projector
     - media_player.hifi
     - light.egg_lamp
     - light.steampunk_lamp
@@ -92,3 +93,4 @@ upstairs_hallway:
   name: Upstairs Hallway
   entities:
     - light.upstairs_hallway
+    - binary_sensor.upstairs_hall_cupboard_door
