@@ -259,45 +259,6 @@
     - service: input_boolean.turn_off # allow saving of the before scene again.
       entity_id: input_boolean.garden_scene_saved
 
-- alias: Bathroom Light Left On
-  initial_state: true
-  trigger:
-    - platform: state
-      entity_id: light.bathroom_2
-      to: "on"
-      for:
-        minutes: 30
-  action:
-    - service: notify.mobile_app_barrys_iphone
-      data:
-        message: "Bathroom Light Left On"
-
-- alias: Ensuite Light Left On
-  initial_state: true
-  trigger:
-    - platform: state
-      entity_id: light.ensuite_2
-      to: "on"
-      for:
-        minutes: 30
-  action:
-    - service: notify.mobile_app_barrys_iphone
-      data:
-        message: "Ensuite Light Left On"
-
-- alias: Downstairs Toilet Light Left On
-  initial_state: true
-  trigger:
-    - platform: state
-      entity_id: light.downstairs_toilet_2
-      to: "on"
-      for:
-        minutes: 30
-  action:
-    - service: notify.mobile_app_barrys_iphone
-      data:
-        message: "Downstairs Toilet Light Left On"
-
 - alias: Turn Power Amp On
   initial_state: true
   trigger:
