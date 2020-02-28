@@ -1,0 +1,25 @@
+---
+- name: Create Temporary securitas direct directory
+  delegate_to: 127.0.0.1
+  tempfile:
+    state: directory
+    suffix: securitasdirect
+  register: tempdir
+
+- name: Pull Securitas Direct Custom Component
+  delegate_to: 127.0.0.1
+  git:
+    repo: 'https://github.com/segalion/securitasdirect'
+    dest: "{{ tempdir.path }}"
+
+- name: Copy latest custom component to home-assistant role
+  delegate_to: 127.0.0.1
+  copy:
+    src: "{{ tempdir.path }}/custom_components/securitas_direct"
+    dest: ./roles/home-assistant/files/custom_components
+
+- name: Cleanup
+  file:
+    path: "{{ tempdir.path }}"
+    state: absent
+  when: tempdir.path is defined

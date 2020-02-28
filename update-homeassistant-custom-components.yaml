@@ -3,3 +3,4 @@
   roles:
     - homeassistant-homeconnect-update
     - homeassistant-alexa-update
+    - homeassistant-securitasdirect-update
