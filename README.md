@@ -41,7 +41,8 @@ The following custom components for homeconnect exist in the home-assistant role
 
 These are copied from
 * https://github.com/DavidMStraub/homeassistant-homeconnect 
-* https://github.com/custom-components/alexa_media_player. 
+* https://github.com/custom-components/alexa_media_player
+* https://github.com/segalion/securitasdirect
 
 Should the upstream repos be updated, the local copies can be updated by running:
 
