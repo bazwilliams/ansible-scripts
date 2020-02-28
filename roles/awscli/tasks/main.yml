@@ -1,0 +1,11 @@
+---
+- name: install python-pip
+  become: yes
+  apt:
+    name: python3-pip
+    state: latest
+
+- name: install awscli
+  become: yes
+  pip:
+    name: awscli

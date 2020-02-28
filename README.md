@@ -63,3 +63,9 @@ irc:
 ```sh
 ansible-playbook -i inventory/hosts.ini lightsail.yml -K --user $USER
 ```
+
+# Octocam
+
+```sh
+ansible-playbook -i inventory/hosts.ini octocam.yml -K --user $USER
+```

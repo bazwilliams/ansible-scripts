@@ -1,0 +1,29 @@
+---
+- name: Create photo directory
+  file:
+    path: /home/pi/timelapse
+    state: directory
+
+- name: Upload camera script
+  copy:
+    src: camera.sh
+    dest: /home/pi/timelapse/camera.sh
+
+- name: Set executable camera script
+  file:
+    path: /home/pi/timelapse/camera.sh
+    state: file
+    mode: 0755
+
+- name: Add cron job
+  cron:
+    name: take snapshot
+    minute: "*/10"
+    job: "/home/pi/timelapse/camera.sh"
+
+- name: Disable camera led
+  become: yes
+  lineinfile:
+    path: /boot/config.txt
+    line: disable_camera_led=1
+    state: present

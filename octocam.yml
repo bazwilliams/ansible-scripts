@@ -1,0 +1,6 @@
+---
+- hosts: octocam
+  roles:
+    - update-packages-ubuntu
+    - timelapse
+    - awscli
