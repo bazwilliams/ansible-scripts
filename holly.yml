@@ -5,6 +5,7 @@
      - install-docker-suse
      - homeassistant-alexa-update
      - homeassistant-homeconnect-update
+     - homeassistant-securitasdirect-update
      - home-assistant
     #  - music
     #  - minimserver
