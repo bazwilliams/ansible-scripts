@@ -47,6 +47,12 @@
     src: custom_components/alexa_media
     dest: /opt/docker/data/home-assistant/config/custom_components
 
+- name: Upload Securitas Direct custom component
+  become: yes
+  copy:
+    src: custom_components/securitas_direct
+    dest: /opt/docker/data/home-assistant/config/custom_components
+
 - name: Tear down existing service
   docker_compose:
     project_name: home-assistant
