@@ -28,6 +28,13 @@ alexa:
 ring:
   username: YOUR_USERNAME
   password: YOUR_PASSWORD
+
+alarm:
+  code: HA_ALARM_CODE
+
+verisure:
+  username: ${username}
+  password: ${password}
 ```
 
 The following custom components for homeconnect exist in the home-assistant role's files folder. 
