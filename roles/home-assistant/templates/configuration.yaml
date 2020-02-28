@@ -153,3 +153,9 @@ homeconnect:
 ring:
   username: {{ ring.username }}
   password: {{ ring.password }}
+
+securitas_direct:
+  username: {{ verisure.username }}
+  password: {{ verisure.password }}
+  code: {{ alarm.code }}
+  country: GB
