@@ -89,8 +89,6 @@ binary_sensor:
       "0a140006f4dcf40a000060":
         name: Upstairs Hall Cupboard Door
         device_class: opening
-
-sensor:
   - platform: bayesian
     prior: 0.5
     probability_threshold: 0.9
@@ -128,6 +126,8 @@ sensor:
         platform: state
         prob_given_true: 0.9
         to_state: 'Starbug'
+
+sensor:
   - platform: rfxtrx
     automatic_add: true
     devices:
