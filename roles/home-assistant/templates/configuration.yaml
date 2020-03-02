@@ -32,6 +32,12 @@ homeassistant:
       icon: mdi-projector
     media_player.power_amplifier:
       icon: mdi-speaker
+    device_tracker.74_9e_af_4f_70_94:
+      friendly_name: Barry's iPhone
+    device_tracker.80_82_23_6a_ef_fc:
+      friendly_name: Louise's iPhone
+    alarm_control_panel.securitas_260178:
+      friendly_name: Alarm
 
 cloud:
   alexa:
@@ -41,11 +47,8 @@ cloud:
         - light.worktop_lights
         - light.dining_table
         - light.outside_light
-        - light.bathroom
         - light.bedroom
         - light.downstairs_hallway
-        - light.downstairs_toilet
-        - light.ensuite
         - light.guest_room
         - light.ethans_room
         - light.living_room
@@ -159,3 +162,10 @@ securitas_direct:
   password: {{ verisure.password }}
   code: {{ alarm.code }}
   country: GB
+
+opnsense:
+  url: {{ opnsense.url }}
+  api_secret: {{ opnsense.api_secret }}
+  api_key: {{ opnsense.api_key }}
+  tracker_interfaces:
+    - LAN

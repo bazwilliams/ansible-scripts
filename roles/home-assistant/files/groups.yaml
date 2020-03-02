@@ -23,7 +23,8 @@ garden:
     - sensor.front_garden_motion_light_level
     - sensor.front_garden_motion_temperature
     - light.outside_light
-    - binary_sensor.ring_front_door_motion
+    - binary_sensor.front_door_motion
+    - sensor.front_door_last_motion
     - camera.front_door
 bathroom:
   name: Bathroom

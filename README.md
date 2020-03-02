@@ -35,6 +35,13 @@ alarm:
 verisure:
   username: ${username}
   password: ${password}
+
+opnsense:
+  url: ${opnsense.url}
+  api_secret: ${opnsense.api_secret}
+  api_key: ${opnsense.api_key}
+  tracker_interfaces:
+    - LAN
 ```
 
 The following custom components for homeconnect exist in the home-assistant role's files folder. 
