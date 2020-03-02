@@ -91,6 +91,43 @@ binary_sensor:
         device_class: opening
 
 sensor:
+  - platform: bayesian
+    prior: 0.5
+    probability_threshold: 0.9
+    name: Presence
+    observations:
+      - entity_id: alarm_control_panel.securitas_260178
+        platform: state
+        prob_given_true: 1
+        to_state: 'on'
+      - entity_id: binary_sensor.kitchen_motion_motion
+        platform: state
+        prob_given_true: 0.5
+        to_state: 'on'
+      - entity_id: device_tracker.74_9e_af_4f_70_94
+        platform: state
+        prob_given_true: 0.9
+        to_state: 'home'
+      - entity_id: device_tracker.80_82_23_6a_ef_fc
+        platform: state
+        prob_given_true: 0.9
+        to_state: 'home'
+      - entity_id: device_tracker.barrys_iphone
+        platform: state
+        prob_given_true: 0.95
+        to_state: 'home'
+      - entity_id: device_tracker.holly
+        platform: state
+        prob_given_true: 0.95
+        to_state: 'home'
+      - entity_id: sensor.barrys_iphone_ssid
+        platform: state
+        prob_given_true: 0.9
+        to_state: 'Starbug'
+      - entity_id: sensor.holly_ssid
+        platform: state
+        prob_given_true: 0.9
+        to_state: 'Starbug'
   - platform: rfxtrx
     automatic_add: true
     devices:
