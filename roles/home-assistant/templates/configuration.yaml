@@ -92,7 +92,8 @@ binary_sensor:
   - platform: bayesian
     prior: 0.5
     probability_threshold: 0.9
-    name: Presence
+    name: Possibly Present
+    device_class: presence
     observations:
       - entity_id: alarm_control_panel.securitas_260178
         platform: state
