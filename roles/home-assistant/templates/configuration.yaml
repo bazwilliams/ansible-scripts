@@ -111,10 +111,10 @@ binary_sensor:
         platform: state
         prob_given_true: 0
         to_state: 'armed_away'
-      - entity_id: binary_sensor.kitchen_motion_motion
-        platform: template
+      - platform: template
         value_template: >
-          {% raw %}{{is_state('binary_sensor.kitchen_motion_motion','on') and ((as_timestamp(now()) - as_timestamp(states.binary_sensor.kitchen_motion_motion.last_changed)) < 1800)}}{% endraw %}
+          {% raw %} {{((as_timestamp(now()) - as_timestamp(states.binary_sensor.kitchen_motion_motion.last_changed)) < 1800)}} {% endraw %}
+
         prob_given_true: 1
         prob_given_false: 0.5
       - entity_id: device_tracker.74_9e_af_4f_70_94
@@ -126,15 +126,13 @@ binary_sensor:
         prob_given_true: 0.95
         to_state: 'home'
       - entity_id: device_tracker.barrys_iphone
-        platform: template
-        value_template: >
-          {% raw %}{{is_state('device_tracker.barrys_iphone','home') and ((as_timestamp(now()) - as_timestamp(states.device_tracker.barrys_iphone.last_changed)) < 1800)}}{% endraw %}
+        platform: state
+        to_state: 'home'
         prob_given_true: 0.9
         prob_given_false: 0.5
       - entity_id: device_tracker.holly
-        platform: template
-        value_template: >
-          {% raw %}{{is_state('device_tracker.holly','home') and ((as_timestamp(now()) - as_timestamp(states.device_tracker.holly.last_changed)) < 1800)}}{% endraw %}
+        platform: state
+        to_state: 'home'
         prob_given_true: 0.9
         prob_given_false: 0.5
       - entity_id: sensor.barrys_iphone_ssid
