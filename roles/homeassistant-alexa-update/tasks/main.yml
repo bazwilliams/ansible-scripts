@@ -19,6 +19,7 @@
     dest: ./roles/home-assistant/files/custom_components
 
 - name: Cleanup
+  delegate_to: 127.0.0.1
   file:
     path: "{{ tempdir.path }}"
     state: absent
