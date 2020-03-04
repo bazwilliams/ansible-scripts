@@ -120,10 +120,12 @@ binary_sensor:
       - entity_id: device_tracker.74_9e_af_4f_70_94
         platform: state
         prob_given_true: 0.95
+        prob_given_false: 0.4
         to_state: 'home'
       - entity_id: device_tracker.80_82_23_6a_ef_fc
         platform: state
         prob_given_true: 0.95
+        prob_given_false: 0.4
         to_state: 'home'
       - entity_id: device_tracker.barrys_iphone
         platform: state
@@ -135,14 +137,6 @@ binary_sensor:
         to_state: 'home'
         prob_given_true: 0.9
         prob_given_false: 0.5
-      - entity_id: sensor.barrys_iphone_ssid
-        platform: state
-        prob_given_true: 0.95
-        to_state: 'Starbug'
-      - entity_id: sensor.holly_ssid
-        platform: state
-        prob_given_true: 0.95
-        to_state: 'Starbug'
 
 sensor:
   - platform: rfxtrx
