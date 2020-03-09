@@ -2,7 +2,7 @@
   initial_state: true
   trigger:
     platform: numeric_state
-    entity_id: sensor.front_garden_motion_light_level
+    entity_id: sensor.outside_light_level
     below: 200
   condition:
     condition: time
@@ -30,7 +30,7 @@
   initial_state: true
   trigger:
     platform: numeric_state
-    entity_id: sensor.front_garden_motion_light_level
+    entity_id: sensor.outside_light_level
     above: 200
     below: 800
   condition:
@@ -59,7 +59,7 @@
   initial_state: true
   trigger:
     platform: numeric_state
-    entity_id: sensor.front_garden_motion_light_level
+    entity_id: sensor.outside_light_level
     above: 800
     below: 3000
   condition:
@@ -90,7 +90,7 @@
   initial_state: true
   trigger:
     platform: numeric_state
-    entity_id: sensor.front_garden_motion_light_level
+    entity_id: sensor.outside_light_level
     above: 3000
   action:
     - service: hue.hue_activate_scene
@@ -116,7 +116,7 @@
     at: "06:00:00"
   condition:
     - condition: numeric_state
-      entity_id: sensor.front_garden_motion_light_level
+      entity_id: sensor.outside_light_level
       below: 200
   action:
     - service: hue.hue_activate_scene
@@ -234,7 +234,7 @@
     to: "on"
   condition:
     - condition: numeric_state
-      entity_id: sensor.front_garden_motion_light_level
+      entity_id: sensor.outside_light_level
       below: 50
     - condition: state
       entity_id: input_boolean.front_garden_scene_saved
@@ -256,7 +256,7 @@
   initial_state: true
   condition:
     - condition: numeric_state
-      entity_id: sensor.front_garden_motion_light_level
+      entity_id: sensor.outside_light_level
       below: 50
   trigger:
     platform: state
