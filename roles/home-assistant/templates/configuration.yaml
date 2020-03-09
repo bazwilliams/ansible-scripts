@@ -216,3 +216,4 @@ opnsense:
   api_key: {{ opnsense.api_key }}
   tracker_interfaces:
     - LAN
+  verify_ssl: true
