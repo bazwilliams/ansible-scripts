@@ -6,6 +6,7 @@
      - homeassistant-alexa-update
      - homeassistant-homeconnect-update
      - homeassistant-securitasdirect-update
+     - homeassistant-skyq-update
      - home-assistant
     #  - music
     #  - minimserver
