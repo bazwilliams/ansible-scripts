@@ -16,8 +16,8 @@ kitchen:
     - sensor.dishwasher_remaining_program_time
     - switch.dishwasher
     - timer.kitchen_light
-garden:
-  name: Garden
+front_garden:
+  name: Front Garden
   entities:
     - binary_sensor.front_garden_motion_motion
     - sensor.front_garden_motion_light_level
@@ -26,6 +26,13 @@ garden:
     - binary_sensor.front_door_motion
     - sensor.front_door_last_motion
     - camera.front_door
+terrace:
+  name: Terrace
+  entities:
+    - sensor.terrace_light_level
+    - sensor.terrace_temperature
+    - binary_sensor.terrace_motion
+    - light.terrace
 bathroom:
   name: Bathroom
   entities:

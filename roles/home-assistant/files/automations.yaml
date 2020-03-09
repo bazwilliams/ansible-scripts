@@ -11,7 +11,7 @@
   action:
     - service: hue.hue_activate_scene
       data:
-        group_name: Garden
+        group_name: Front Garden
         scene_name: Dimmed
     - service: hue.hue_activate_scene
       data:
@@ -53,7 +53,7 @@
     - service: light.turn_off
       data:
         entity_id:
-          - group.garden
+          - group.front_garden
 
 - alias: Bright Outside
   initial_state: true
@@ -78,7 +78,7 @@
     - service: light.turn_off
       data:
         entity_id:
-          - group.garden
+          - group.front_garden
           - group.living_room
           - group.ethans_room
           - group.marcuss_room
@@ -101,7 +101,7 @@
       data:
         entity_id:
           - group.downstairs_hallway
-          - group.garden
+          - group.front_garden
           - group.living_room
           - group.ethans_room
           - group.marcuss_room
@@ -226,7 +226,7 @@
         entity_id:
           - light.worktop_lights
 
-- alias: Brighten the Garden
+- alias: Brighten the Front Garden
   initial_state: true
   trigger:
     platform: state
@@ -237,22 +237,22 @@
       entity_id: sensor.front_garden_motion_light_level
       below: 50
     - condition: state
-      entity_id: input_boolean.garden_scene_saved # prevents overwriting the before scene with the bright scene on motion repeat
+      entity_id: input_boolean.front_garden_scene_saved
       state: "off"
   action:
     - service: scene.create
       data:
-        scene_id: garden_before
+        scene_id: front_garden_before
         snapshot_entities:
-          - light.garden
+          - light.front_garden
     - service: hue.hue_activate_scene
       data:
-        group_name: Garden
+        group_name: Front Garden
         scene_name: Bright
-    - service: input_boolean.turn_on # to prevent overwriting the before scene with the bright scene on motion repeat
-      entity_id: input_boolean.garden_scene_saved
+    - service: input_boolean.turn_on
+      entity_id: input_boolean.front_garden_scene_saved
 
-- alias: Restore garden lights
+- alias: Restore Front Garden Lights
   initial_state: true
   condition:
     - condition: numeric_state
@@ -267,9 +267,9 @@
   action:
     - service: scene.turn_on
       data:
-        entity_id: scene.garden_before
-    - service: input_boolean.turn_off # allow saving of the before scene again.
-      entity_id: input_boolean.garden_scene_saved
+        entity_id: scene.front_garden_before
+    - service: input_boolean.turn_off
+      entity_id: input_boolean.front_garden_scene_saved
 
 - alias: Turn Power Amp On
   initial_state: true

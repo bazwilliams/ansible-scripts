@@ -161,14 +161,26 @@ sensor:
         data_type:
           - Humidity
           - Temperature
+  - platform: min_max
+    name: Outside Light Level
+    entity_ids:
+    - sensor.front_garden_motion_light_level
+    - sensor.terrace_light_level
+    type: min
+  - platform: min_max
+    name: Outside Temperature
+    entity_ids:
+    - sensor.front_garden_motion_temperature
+    - sensor.terrace_temperature
+    type: min
 
 weather:
   - platform: darksky
     api_key: {{ darksky.api_key }}
 
 input_boolean:
-  garden_scene_saved:
-    name: Garden Scene Saved
+  front_garden_scene_saved:
+    name: Front Garden Scene Saved
     initial: off
 
 timer:
