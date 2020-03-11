@@ -94,7 +94,7 @@ binary_sensor:
         device_class: opening
   - platform: bayesian
     prior: 0.5
-    probability_threshold: 0.8
+    probability_threshold: 0.75
     name: Possibly Present
     device_class: presence
     observations:
@@ -119,12 +119,12 @@ binary_sensor:
       - entity_id: device_tracker.74_9e_af_4f_70_94
         platform: state
         prob_given_true: 0.95
-        prob_given_false: 0.4
+        prob_given_false: 0.5
         to_state: 'home'
       - entity_id: device_tracker.80_82_23_6a_ef_fc
         platform: state
         prob_given_true: 0.95
-        prob_given_false: 0.4
+        prob_given_false: 0.5
         to_state: 'home'
       - entity_id: device_tracker.barrys_iphone
         platform: state
