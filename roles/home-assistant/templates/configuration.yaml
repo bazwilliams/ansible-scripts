@@ -129,12 +129,12 @@ binary_sensor:
       - entity_id: device_tracker.barrys_iphone
         platform: state
         to_state: 'home'
-        prob_given_true: 0.9
+        prob_given_true: 0.6
         prob_given_false: 0.5
       - entity_id: device_tracker.holly
         platform: state
         to_state: 'home'
-        prob_given_true: 0.9
+        prob_given_true: 0.6
         prob_given_false: 0.5
 
 sensor:
@@ -173,6 +173,47 @@ sensor:
     - sensor.front_garden_motion_temperature
     - sensor.terrace_temperature
     type: min
+  - platform: time_date
+    display_options:
+      - 'time'
+  - platform: template
+    sensors:
+      house_mode:
+        entity_id:
+        - sensor.outside_light_level
+        - sensor.time
+        friendly_name: 'House Mode'
+        value_template: >-
+{% raw %}
+          {% if now().hour | int >= 22 %}
+          {% set time_slot = "early_night" %}
+          {% elif now().hour | int >= 21 %}
+          {% set time_slot = "late_evening" %}
+          {% elif now().hour | int >= 19 %}
+          {% set time_slot = "evening" %}
+          {% elif now().hour | int >= 8 %}
+          {% set time_slot = "daytime" %}
+          {% elif now().hour | int >= 6 %}
+          {% set time_slot = "morning" %}
+          {% elif now().hour | int >= 0 %}
+          {% set time_slot = "night" %}
+          {% endif %}
+          {% if states("sensor.outside_light_level") | float < 200 %}
+          {% set light_slot = "dark" %}
+          {% elif states("sensor.outside_light_level") | float  < 800 %}
+          {% set light_slot = "dim" %}
+          {% elif states("sensor.outside_light_level") | float  < 3000 %}
+          {% set light_slot = "bright" %}
+          {% else %}
+          {% set light_slot = "very_bright" %}
+          {% endif %}
+          {% if is_state("binary_sensor.possibly_present", "on") %}
+          {% set presence = "home" %}
+          {% else %}
+          {% set presence = "away" %}
+          {% endif %}
+          {{ time_slot }}_{{ light_slot }}_{{ presence }}
+{% endraw %}
 
 weather:
   - platform: darksky
