@@ -212,7 +212,7 @@ sensor:
           {% else %}
           {% set presence = "away" %}
           {% endif %}
-          {{ time_slot }}_{{ light_slot }}_{{ presence }}
+          {{ time_slot }}_{{ light_slot }}_home
 {% endraw %}
 
 weather:
