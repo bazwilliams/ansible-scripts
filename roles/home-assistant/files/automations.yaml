@@ -503,6 +503,432 @@
         group_name: Upstairs Hallway
         scene_name: Night
 
+- alias: morning_dark_away
+  initial_state: true
+  trigger:
+    platform: state
+    entity_id: sensor.house_mode
+    to: morning_dark_away
+  action:
+    - service: hue.hue_activate_scene
+      data:
+        group_name: Front Garden
+        scene_name: Dimmed
+    - service: hue.hue_activate_scene
+      data:
+        group_name: Downstairs Hallway
+        scene_name: Morning Variation
+    - service: hue.hue_activate_scene
+      data:
+        group_name: "Living room"
+        scene_name: Morning
+    - service: light.turn_off
+      data:
+        entity_id:
+          - group.upstairs_hallway
+- alias: morning_dim_away
+  initial_state: true
+  trigger:
+    platform: state
+    entity_id: sensor.house_mode
+    to: morning_dim_away
+  action:
+    - service: light.turn_off
+      data:
+        entity_id:
+          - group.front_garden
+          - group.upstairs_hallway
+    - service: hue.hue_activate_scene
+      data:
+        group_name: Downstairs Hallway
+        scene_name: Morning Variation
+    - service: hue.hue_activate_scene
+      data:
+        group_name: "Living room"
+        scene_name: Morning
+- alias: morning_bright_away
+  initial_state: true
+  trigger:
+    platform: state
+    entity_id: sensor.house_mode
+    to: morning_bright_away
+  action:
+    - service: light.turn_off
+      data:
+        entity_id:
+          - group.front_garden
+          - group.upstairs_hallway
+          - group.downstairs_hallway
+          - group.living_room
+- alias: morning_very_bright_away
+  initial_state: true
+  trigger:
+    platform: state
+    entity_id: sensor.house_mode
+    to: morning_very_bright_away
+  action:
+    - service: light.turn_off
+      data:
+        entity_id:
+          - group.front_garden
+          - group.upstairs_hallway
+          - group.downstairs_hallway
+          - group.living_room
+- alias: daytime_dark_away
+  initial_state: true
+  trigger:
+    platform: state
+    entity_id: sensor.house_mode
+    to: daytime_dark_away
+  action:
+    - service: hue.hue_activate_scene
+      data:
+        group_name: Front Garden
+        scene_name: Dimmed
+    - service: hue.hue_activate_scene
+      data:
+        group_name: Downstairs Hallway
+        scene_name: Colourful Evening
+    - service: light.turn_off
+      data:
+        entity_id:
+          - group.upstairs_hallway
+    - service: hue.hue_activate_scene
+      data:
+        group_name: "Living room"
+        scene_name: "Living Room Evening"
+- alias: daytime_dim_away
+  initial_state: true
+  trigger:
+    platform: state
+    entity_id: sensor.house_mode
+    to: daytime_dim_away
+  action:
+    - service: light.turn_off
+      data:
+        entity_id:
+          - group.front_garden
+          - group.upstairs_hallway
+    - service: hue.hue_activate_scene
+      data:
+        group_name: Downstairs Hallway
+        scene_name: Daytime Presence
+    - service: hue.hue_activate_scene
+      data:
+        group_name: "Living room"
+        scene_name: "Dull Outside"
+- alias: daytime_bright_away
+  initial_state: true
+  trigger:
+    platform: state
+    entity_id: sensor.house_mode
+    to: daytime_bright_away
+  action:
+    - service: light.turn_off
+      data:
+        entity_id:
+          - group.front_garden
+          - group.living_room
+          - group.upstairs_hallway
+    - service: hue.hue_activate_scene
+      data:
+        group_name: Downstairs Hallway
+        scene_name: Daytime Presence
+- alias: daytime_very_bright_away
+  initial_state: true
+  trigger:
+    platform: state
+    entity_id: sensor.house_mode
+    to: daytime_very_bright_away
+  action:
+    - service: light.turn_off
+      data:
+        entity_id:
+          - group.front_garden
+          - group.living_room
+          - group.downstairs_hallway
+          - group.upstairs_hallway
+- alias: evening_dark_away
+  initial_state: true
+  trigger:
+    platform: state
+    entity_id: sensor.house_mode
+    to: evening_dark_away
+  action:
+    - service: hue.hue_activate_scene
+      data:
+        group_name: Front Garden
+        scene_name: Dimmed
+    - service: hue.hue_activate_scene
+      data:
+        group_name: Downstairs Hallway
+        scene_name: Colourful Evening
+    - service: light.turn_off
+      data:
+        entity_id:
+          - group.upstairs_hallway
+    - service: hue.hue_activate_scene
+      data:
+        group_name: "Living room"
+        scene_name: "Living Room Evening"
+- alias: evening_dim_away
+  initial_state: true
+  trigger:
+    platform: state
+    entity_id: sensor.house_mode
+    to: evening_dim_away
+  action:
+    - service: light.turn_off
+      data:
+        entity_id:
+          - group.front_garden
+          - group.upstairs_hallway
+    - service: hue.hue_activate_scene
+      data:
+        group_name: Downstairs Hallway
+        scene_name: Daytime Presence
+    - service: hue.hue_activate_scene
+      data:
+        group_name: "Living room"
+        scene_name: "Dull Outside"
+- alias: evening_bright_away
+  initial_state: true
+  trigger:
+    platform: state
+    entity_id: sensor.house_mode
+    to: evening_bright_away
+  action:
+    - service: light.turn_off
+      data:
+        entity_id:
+          - group.front_garden
+          - group.living_room
+          - group.upstairs_hallway
+    - service: hue.hue_activate_scene
+      data:
+        group_name: Upstairs Hallway
+        scene_name: Daytime Presence
+- alias: evening_very_bright_away
+  initial_state: true
+  trigger:
+    platform: state
+    entity_id: sensor.house_mode
+    to: evening_very_bright_away
+  action:
+    - service: light.turn_off
+      data:
+        entity_id:
+          - group.front_garden
+          - group.living_room
+          - group.downstairs_hallway
+          - group.upstairs_hallway
+- alias: late_evening_dark_away
+  initial_state: true
+  trigger:
+    platform: state
+    entity_id: sensor.house_mode
+    to: late_evening_dark_away
+  action:
+    - service: hue.hue_activate_scene
+      data:
+        group_name: Front Garden
+        scene_name: Dimmed
+    - service: hue.hue_activate_scene
+      data:
+        group_name: Downstairs Hallway
+        scene_name: Colourful Evening
+    - service: light.turn_off
+      data:
+        entity_id:
+          - group.upstairs_hallway
+    - service: hue.hue_activate_scene
+      data:
+        group_name: "Living room"
+        scene_name: "Living Room Evening"
+- alias: late_evening_dim_away
+  initial_state: true
+  trigger:
+    platform: state
+    entity_id: sensor.house_mode
+    to: late_evening_dim_away
+  action:
+    - service: light.turn_off
+      data:
+        entity_id:
+          - group.front_garden
+          - group.upstairs_hallway
+    - service: hue.hue_activate_scene
+      data:
+        group_name: Downstairs Hallway
+        scene_name: Daytime Presence
+    - service: hue.hue_activate_scene
+      data:
+        group_name: "Living room"
+        scene_name: "Dull Outside"
+- alias: late_evening_bright_away
+  initial_state: true
+  trigger:
+    platform: state
+    entity_id: sensor.house_mode
+    to: late_evening_bright_away
+  action:
+    - service: light.turn_off
+      data:
+        entity_id:
+          - group.front_garden
+          - group.living_room
+          - group.upstairs_hallway
+    - service: hue.hue_activate_scene
+      data:
+        group_name: Downstairs Hallway
+        scene_name: Daytime Presence
+- alias: late_evening_very_bright_away
+  initial_state: true
+  trigger:
+    platform: state
+    entity_id: sensor.house_mode
+    to: late_evening_very_bright_away
+  action:
+    - service: light.turn_off
+      data:
+        entity_id:
+          - group.front_garden
+          - group.living_room
+          - group.downstairs_hallway
+          - group.upstairs_hallway
+- alias: early_night_dark_away
+  initial_state: true
+  trigger:
+    platform: state
+    entity_id: sensor.house_mode
+    to: early_night_dark_away
+  action:
+    - service: hue.hue_activate_scene
+      data:
+        group_name: Front Garden
+        scene_name: Dimmed
+    - service: hue.hue_activate_scene
+      data:
+        group_name: Downstairs Hallway
+        scene_name: Late Night
+    - service: light.turn_off
+      data:
+        entity_id:
+          - group.upstairs_hallway
+    - service: hue.hue_activate_scene
+      data:
+        group_name: "Living room"
+        scene_name: "Living Room Evening"
+- alias: early_night_dim_away
+  initial_state: true
+  trigger:
+    platform: state
+    entity_id: sensor.house_mode
+    to: early_night_dim_away
+  action:
+    - service: light.turn_off
+      data:
+        entity_id:
+          - group.front_garden
+          - group.upstairs_hallway
+    - service: hue.hue_activate_scene
+      data:
+        group_name: Downstairs Hallway
+        scene_name: Late Night
+    - service: hue.hue_activate_scene
+      data:
+        group_name: "Living room"
+        scene_name: "Dull Outside"
+- alias: early_night_bright_away
+  initial_state: true
+  trigger:
+    platform: state
+    entity_id: sensor.house_mode
+    to: early_night_bright_away
+  action:
+    - service: light.turn_off
+      data:
+        entity_id:
+          - group.front_garden
+          - group.living_room
+          - group.upstairs_hallway
+    - service: hue.hue_activate_scene
+      data:
+        group_name: Downstairs Hallway
+        scene_name: Late Night
+- alias: early_night_very_bright_away
+  initial_state: true
+  trigger:
+    platform: state
+    entity_id: sensor.house_mode
+    to: early_night_very_bright_away
+  action:
+    - service: light.turn_off
+      data:
+        entity_id:
+          - group.front_garden
+          - group.living_room
+          - group.downstairs_hallway
+          - group.upstairs_hallway
+- alias: night_dark_away
+  initial_state: true
+  trigger:
+    platform: state
+    entity_id: sensor.house_mode
+    to: night_dark_away
+  action:
+    - service: hue.hue_activate_scene
+      data:
+        group_name: Front Garden
+        scene_name: Dimmed
+    - service: light.turn_off
+      data:
+        entity_id:
+          - group.living_room
+          - group.upstairs_hallway
+          - group.downstairs_hallway
+- alias: night_dim_away
+  initial_state: true
+  trigger:
+    platform: state
+    entity_id: sensor.house_mode
+    to: night_dim_away
+  action:
+    - service: light.turn_off
+      data:
+        entity_id:
+          - group.front_garden
+          - group.living_room
+          - group.upstairs_hallway
+          - group.downstairs_hallway
+- alias: night_bright_away
+  initial_state: true
+  trigger:
+    platform: state
+    entity_id: sensor.house_mode
+    to: night_bright_away
+  action:
+    - service: light.turn_off
+      data:
+        entity_id:
+          - group.front_garden
+          - group.living_room
+          - group.upstairs_hallway
+          - group.downstairs_hallway
+- alias: night_very_bright_away
+  initial_state: true
+  trigger:
+    platform: state
+    entity_id: sensor.house_mode
+    to: night_very_bright_away
+  action:
+    - service: light.turn_off
+      data:
+        entity_id:
+          - group.front_garden
+          - group.living_room
+          - group.upstairs_hallway
+          - group.downstairs_hallway
 
 - alias: Turn lights off in rooms not covered by house modes
   initial_state: true

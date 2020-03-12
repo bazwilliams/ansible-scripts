@@ -94,7 +94,7 @@ binary_sensor:
         device_class: opening
   - platform: bayesian
     prior: 0.5
-    probability_threshold: 0.75
+    probability_threshold: 0.7
     name: Possibly Present
     device_class: presence
     observations:
@@ -182,6 +182,7 @@ sensor:
         entity_id:
         - sensor.outside_light_level
         - sensor.time
+        - binary_sensor.possibly_present
         friendly_name: 'House Mode'
         value_template: >-
 {% raw %}
@@ -212,7 +213,7 @@ sensor:
           {% else %}
           {% set presence = "away" %}
           {% endif %}
-          {{ time_slot }}_{{ light_slot }}_home
+          {{ time_slot }}_{{ light_slot }}_{{ presence }}
 {% endraw %}
 
 weather:
