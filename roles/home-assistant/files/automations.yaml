@@ -55,17 +55,14 @@
       data:
         entity_id:
           - group.front_garden
+          - group.living_room
     - service: hue.hue_activate_scene
       data:
         group_name: Downstairs Hallway
-        scene_name: Morning Variation
+        scene_name: Daytime Presence
     - service: hue.hue_activate_scene
       data:
         group_name: Upstairs Hallway
-        scene_name: Morning
-    - service: hue.hue_activate_scene
-      data:
-        group_name: "Living room"
         scene_name: Morning
 - alias: morning_very_bright_home
   initial_state: true
@@ -78,17 +75,11 @@
       data:
         entity_id:
           - group.front_garden
-    - service: hue.hue_activate_scene
-      data:
-        group_name: Downstairs Hallway
-        scene_name: Morning Variation
+          - group.downstairs_hallway
+          - group.living_room
     - service: hue.hue_activate_scene
       data:
         group_name: Upstairs Hallway
-        scene_name: Morning
-    - service: hue.hue_activate_scene
-      data:
-        group_name: "Living room"
         scene_name: Morning
 - alias: daytime_dark_home
   initial_state: true
@@ -517,7 +508,7 @@
     - service: hue.hue_activate_scene
       data:
         group_name: Downstairs Hallway
-        scene_name: Morning Variation
+        scene_name: Morning Variation Away
     - service: hue.hue_activate_scene
       data:
         group_name: "Living room"
@@ -541,7 +532,7 @@
     - service: hue.hue_activate_scene
       data:
         group_name: Downstairs Hallway
-        scene_name: Morning Variation
+        scene_name: Morning Variation Away
     - service: hue.hue_activate_scene
       data:
         group_name: "Living room"
@@ -588,7 +579,7 @@
     - service: hue.hue_activate_scene
       data:
         group_name: Downstairs Hallway
-        scene_name: Colourful Evening
+        scene_name: Colourful Evening Away
     - service: light.turn_off
       data:
         entity_id:
@@ -662,7 +653,7 @@
     - service: hue.hue_activate_scene
       data:
         group_name: Downstairs Hallway
-        scene_name: Colourful Evening
+        scene_name: Colourful Evening Away
     - service: light.turn_off
       data:
         entity_id:
@@ -736,7 +727,7 @@
     - service: hue.hue_activate_scene
       data:
         group_name: Downstairs Hallway
-        scene_name: Colourful Evening
+        scene_name: Colourful Evening Away
     - service: light.turn_off
       data:
         entity_id:
@@ -807,14 +798,11 @@
       data:
         group_name: Front Garden
         scene_name: Dimmed
-    - service: hue.hue_activate_scene
-      data:
-        group_name: Downstairs Hallway
-        scene_name: Late Night
     - service: light.turn_off
       data:
         entity_id:
           - group.upstairs_hallway
+          - group.downstairs_hallway
     - service: hue.hue_activate_scene
       data:
         group_name: "Living room"
@@ -831,10 +819,7 @@
         entity_id:
           - group.front_garden
           - group.upstairs_hallway
-    - service: hue.hue_activate_scene
-      data:
-        group_name: Downstairs Hallway
-        scene_name: Late Night
+          - group.downstairs_hallway
     - service: hue.hue_activate_scene
       data:
         group_name: "Living room"
@@ -852,10 +837,7 @@
           - group.front_garden
           - group.living_room
           - group.upstairs_hallway
-    - service: hue.hue_activate_scene
-      data:
-        group_name: Downstairs Hallway
-        scene_name: Late Night
+          - group.downstairs_hallway
 - alias: early_night_very_bright_away
   initial_state: true
   trigger:
