@@ -11,6 +11,10 @@
         scene_name: Dimmed
     - service: hue.hue_activate_scene
       data:
+        group_name: Terrace
+        scene_name: Dimmed
+    - service: hue.hue_activate_scene
+      data:
         group_name: Downstairs Hallway
         scene_name: Morning Variation
     - service: hue.hue_activate_scene
@@ -32,6 +36,7 @@
       data:
         entity_id:
           - group.front_garden
+          - group.terrace
     - service: hue.hue_activate_scene
       data:
         group_name: Downstairs Hallway
@@ -56,6 +61,7 @@
         entity_id:
           - group.front_garden
           - group.living_room
+          - group.terrace
     - service: hue.hue_activate_scene
       data:
         group_name: Downstairs Hallway
@@ -77,6 +83,7 @@
           - group.front_garden
           - group.downstairs_hallway
           - group.living_room
+          - group.terrace
     - service: hue.hue_activate_scene
       data:
         group_name: Upstairs Hallway
@@ -91,6 +98,10 @@
     - service: hue.hue_activate_scene
       data:
         group_name: Front Garden
+        scene_name: Dimmed
+    - service: hue.hue_activate_scene
+      data:
+        group_name: Terrace
         scene_name: Dimmed
     - service: hue.hue_activate_scene
       data:
@@ -115,6 +126,7 @@
       data:
         entity_id:
           - group.front_garden
+          - group.terrace
     - service: hue.hue_activate_scene
       data:
         group_name: Downstairs Hallway
@@ -138,6 +150,7 @@
       data:
         entity_id:
           - group.front_garden
+          - group.terrace
           - group.living_room
     - service: hue.hue_activate_scene
       data:
@@ -158,6 +171,7 @@
       data:
         entity_id:
           - group.front_garden
+          - group.terrace
           - group.living_room
           - group.downstairs_hallway
     - service: hue.hue_activate_scene
@@ -174,6 +188,10 @@
     - service: hue.hue_activate_scene
       data:
         group_name: Front Garden
+        scene_name: Dimmed
+    - service: hue.hue_activate_scene
+      data:
+        group_name: Terrace
         scene_name: Dimmed
     - service: hue.hue_activate_scene
       data:
@@ -198,6 +216,7 @@
       data:
         entity_id:
           - group.front_garden
+          - group.terrace
     - service: hue.hue_activate_scene
       data:
         group_name: Downstairs Hallway
@@ -221,6 +240,7 @@
       data:
         entity_id:
           - group.front_garden
+          - group.terrace
           - group.living_room
     - service: hue.hue_activate_scene
       data:
@@ -241,6 +261,7 @@
       data:
         entity_id:
           - group.front_garden
+          - group.terrace
           - group.living_room
           - group.downstairs_hallway
     - service: hue.hue_activate_scene
@@ -257,6 +278,10 @@
     - service: hue.hue_activate_scene
       data:
         group_name: Front Garden
+        scene_name: Dimmed
+    - service: hue.hue_activate_scene
+      data:
+        group_name: Terrace
         scene_name: Dimmed
     - service: hue.hue_activate_scene
       data:
@@ -281,6 +306,7 @@
       data:
         entity_id:
           - group.front_garden
+          - group.terrace
     - service: hue.hue_activate_scene
       data:
         group_name: Downstairs Hallway
@@ -304,6 +330,7 @@
       data:
         entity_id:
           - group.front_garden
+          - group.terrace
           - group.living_room
     - service: hue.hue_activate_scene
       data:
@@ -324,6 +351,7 @@
       data:
         entity_id:
           - group.front_garden
+          - group.terrace
           - group.living_room
           - group.downstairs_hallway
     - service: hue.hue_activate_scene
@@ -340,6 +368,10 @@
     - service: hue.hue_activate_scene
       data:
         group_name: Front Garden
+        scene_name: Dimmed
+    - service: hue.hue_activate_scene
+      data:
+        group_name: Terrace
         scene_name: Dimmed
     - service: hue.hue_activate_scene
       data:
@@ -364,6 +396,7 @@
       data:
         entity_id:
           - group.front_garden
+          - group.terrace
     - service: hue.hue_activate_scene
       data:
         group_name: Downstairs Hallway
@@ -387,6 +420,7 @@
       data:
         entity_id:
           - group.front_garden
+          - group.terrace
           - group.living_room
     - service: hue.hue_activate_scene
       data:
@@ -407,6 +441,7 @@
       data:
         entity_id:
           - group.front_garden
+          - group.terrace
           - group.living_room
           - group.downstairs_hallway
     - service: hue.hue_activate_scene
@@ -433,6 +468,7 @@
         entity_id:
           - group.living_room
           - group.front_garden
+          - group.terrace
 - alias: night_dim_home
   initial_state: true
   trigger:
@@ -444,6 +480,7 @@
       data:
         entity_id:
           - group.front_garden
+          - group.terrace
           - group.living_room
     - service: hue.hue_activate_scene
       data:
@@ -464,6 +501,7 @@
       data:
         entity_id:
           - group.front_garden
+          - group.terrace
           - group.living_room
     - service: hue.hue_activate_scene
       data:
@@ -484,6 +522,7 @@
       data:
         entity_id:
           - group.front_garden
+          - group.terrace
           - group.living_room
           - group.downstairs_hallway
     - service: hue.hue_activate_scene
@@ -501,6 +540,10 @@
     - service: hue.hue_activate_scene
       data:
         group_name: Front Garden
+        scene_name: Dimmed
+    - service: hue.hue_activate_scene
+      data:
+        group_name: Terrace
         scene_name: Dimmed
     - service: hue.hue_activate_scene
       data:
@@ -525,6 +568,7 @@
       data:
         entity_id:
           - group.front_garden
+          - group.terrace
           - group.upstairs_hallway
     - service: hue.hue_activate_scene
       data:
@@ -545,6 +589,7 @@
       data:
         entity_id:
           - group.front_garden
+          - group.terrace
           - group.upstairs_hallway
           - group.downstairs_hallway
           - group.living_room
@@ -559,6 +604,7 @@
       data:
         entity_id:
           - group.front_garden
+          - group.terrace
           - group.upstairs_hallway
           - group.downstairs_hallway
           - group.living_room
@@ -572,6 +618,10 @@
     - service: hue.hue_activate_scene
       data:
         group_name: Front Garden
+        scene_name: Dimmed
+    - service: hue.hue_activate_scene
+      data:
+        group_name: Terrace
         scene_name: Dimmed
     - service: hue.hue_activate_scene
       data:
@@ -596,6 +646,7 @@
       data:
         entity_id:
           - group.front_garden
+          - group.terrace
           - group.upstairs_hallway
     - service: hue.hue_activate_scene
       data:
@@ -616,6 +667,7 @@
       data:
         entity_id:
           - group.front_garden
+          - group.terrace
           - group.living_room
           - group.upstairs_hallway
     - service: hue.hue_activate_scene
@@ -633,6 +685,7 @@
       data:
         entity_id:
           - group.front_garden
+          - group.terrace
           - group.living_room
           - group.downstairs_hallway
           - group.upstairs_hallway
@@ -646,6 +699,10 @@
     - service: hue.hue_activate_scene
       data:
         group_name: Front Garden
+        scene_name: Dimmed
+    - service: hue.hue_activate_scene
+      data:
+        group_name: Terrace
         scene_name: Dimmed
     - service: hue.hue_activate_scene
       data:
@@ -670,6 +727,7 @@
       data:
         entity_id:
           - group.front_garden
+          - group.terrace
           - group.upstairs_hallway
     - service: hue.hue_activate_scene
       data:
@@ -690,6 +748,7 @@
       data:
         entity_id:
           - group.front_garden
+          - group.terrace
           - group.living_room
           - group.upstairs_hallway
     - service: hue.hue_activate_scene
@@ -707,6 +766,7 @@
       data:
         entity_id:
           - group.front_garden
+          - group.terrace
           - group.living_room
           - group.downstairs_hallway
           - group.upstairs_hallway
@@ -720,6 +780,10 @@
     - service: hue.hue_activate_scene
       data:
         group_name: Front Garden
+        scene_name: Dimmed
+    - service: hue.hue_activate_scene
+      data:
+        group_name: Terrace
         scene_name: Dimmed
     - service: hue.hue_activate_scene
       data:
@@ -744,6 +808,7 @@
       data:
         entity_id:
           - group.front_garden
+          - group.terrace
           - group.upstairs_hallway
     - service: hue.hue_activate_scene
       data:
@@ -764,6 +829,7 @@
       data:
         entity_id:
           - group.front_garden
+          - group.terrace
           - group.living_room
           - group.upstairs_hallway
     - service: hue.hue_activate_scene
@@ -781,6 +847,7 @@
       data:
         entity_id:
           - group.front_garden
+          - group.terrace
           - group.living_room
           - group.downstairs_hallway
           - group.upstairs_hallway
@@ -794,6 +861,10 @@
     - service: hue.hue_activate_scene
       data:
         group_name: Front Garden
+        scene_name: Dimmed
+    - service: hue.hue_activate_scene
+      data:
+        group_name: Terrace
         scene_name: Dimmed
     - service: light.turn_off
       data:
@@ -815,6 +886,7 @@
       data:
         entity_id:
           - group.front_garden
+          - group.terrace
           - group.upstairs_hallway
           - group.downstairs_hallway
     - service: hue.hue_activate_scene
@@ -832,6 +904,7 @@
       data:
         entity_id:
           - group.front_garden
+          - group.terrace
           - group.living_room
           - group.upstairs_hallway
           - group.downstairs_hallway
@@ -846,6 +919,7 @@
       data:
         entity_id:
           - group.front_garden
+          - group.terrace
           - group.living_room
           - group.downstairs_hallway
           - group.upstairs_hallway
@@ -863,6 +937,7 @@
           - group.upstairs_hallway
           - group.downstairs_hallway
           - group.front_garden
+          - group.terrace
 - alias: night_dim_away
   initial_state: true
   trigger:
@@ -874,6 +949,7 @@
       data:
         entity_id:
           - group.front_garden
+          - group.terrace
           - group.living_room
           - group.upstairs_hallway
           - group.downstairs_hallway
@@ -888,6 +964,7 @@
       data:
         entity_id:
           - group.front_garden
+          - group.terrace
           - group.living_room
           - group.upstairs_hallway
           - group.downstairs_hallway
@@ -902,6 +979,7 @@
       data:
         entity_id:
           - group.front_garden
+          - group.terrace
           - group.living_room
           - group.upstairs_hallway
           - group.downstairs_hallway
