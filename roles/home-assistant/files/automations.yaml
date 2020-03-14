@@ -422,10 +422,6 @@
   action:
     - service: hue.hue_activate_scene
       data:
-        group_name: Front Garden
-        scene_name: Dimmed
-    - service: hue.hue_activate_scene
-      data:
         group_name: Downstairs Hallway
         scene_name: Night
     - service: hue.hue_activate_scene
@@ -436,6 +432,7 @@
       data:
         entity_id:
           - group.living_room
+          - group.front_garden
 - alias: night_dim_home
   initial_state: true
   trigger:
@@ -859,16 +856,13 @@
     entity_id: sensor.house_mode
     to: night_dark_away
   action:
-    - service: hue.hue_activate_scene
-      data:
-        group_name: Front Garden
-        scene_name: Dimmed
     - service: light.turn_off
       data:
         entity_id:
           - group.living_room
           - group.upstairs_hallway
           - group.downstairs_hallway
+          - group.front_garden
 - alias: night_dim_away
   initial_state: true
   trigger:
