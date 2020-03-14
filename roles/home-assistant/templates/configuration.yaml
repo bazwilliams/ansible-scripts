@@ -225,10 +225,6 @@ input_boolean:
     name: Front Garden Scene Saved
     initial: off
 
-timer:
-  kitchen_light:
-    duration: "00:10:00"
-
 notify:
   - platform: alexa_media
     name: alexa_media

@@ -950,26 +950,13 @@
           - media_player.ethan_s_room
           - media_player.marcus_room
 
-- alias: Start Kitchen Light Timer
+- alias: Kitchen Worktop Lights On
   initial_state: true
   trigger:
     - platform: state
       entity_id: binary_sensor.kitchen_motion_motion
       from: "off"
       to: "on"
-  action:
-    - service: timer.cancel
-      entity_id: timer.kitchen_light
-    - service: timer.start
-      entity_id: timer.kitchen_light
-
-- alias: Kitchen Worktop Lights On
-  initial_state: true
-  trigger:
-    - platform: event
-      event_type: timer.started
-      event_data:
-        entity_id: timer.kitchen_light
   action:
     - service: light.turn_on
       data:
@@ -979,10 +966,11 @@
 - alias: Kitchen Worktop Lights Off
   initial_state: true
   trigger:
-    - platform: event
-      event_type: timer.finished
-      event_data:
-        entity_id: timer.kitchen_light
+    platform: state
+    entity_id: binary_sensor.kitchen_motion_motion
+    to: "off"
+    for:
+      minutes: 5
   action:
     - service: light.turn_off
       data:
