@@ -8,11 +8,11 @@
     - service: hue.hue_activate_scene
       data:
         group_name: Front Garden
-        scene_name: Dimmed
+        scene_name: St patrick dimmed
     - service: hue.hue_activate_scene
       data:
         group_name: Terrace
-        scene_name: Dimmed
+        scene_name: St patrick dimmed
     - service: hue.hue_activate_scene
       data:
         group_name: Downstairs Hallway
@@ -98,11 +98,11 @@
     - service: hue.hue_activate_scene
       data:
         group_name: Front Garden
-        scene_name: Dimmed
+        scene_name: St patrick dimmed
     - service: hue.hue_activate_scene
       data:
         group_name: Terrace
-        scene_name: Dimmed
+        scene_name: St patrick dimmed
     - service: hue.hue_activate_scene
       data:
         group_name: Downstairs Hallway
@@ -188,11 +188,11 @@
     - service: hue.hue_activate_scene
       data:
         group_name: Front Garden
-        scene_name: Dimmed
+        scene_name: St patrick dimmed
     - service: hue.hue_activate_scene
       data:
         group_name: Terrace
-        scene_name: Dimmed
+        scene_name: St patrick dimmed
     - service: hue.hue_activate_scene
       data:
         group_name: Downstairs Hallway
@@ -278,11 +278,11 @@
     - service: hue.hue_activate_scene
       data:
         group_name: Front Garden
-        scene_name: Dimmed
+        scene_name: St patrick dimmed
     - service: hue.hue_activate_scene
       data:
         group_name: Terrace
-        scene_name: Dimmed
+        scene_name: St patrick dimmed
     - service: hue.hue_activate_scene
       data:
         group_name: Downstairs Hallway
@@ -368,11 +368,11 @@
     - service: hue.hue_activate_scene
       data:
         group_name: Front Garden
-        scene_name: Dimmed
+        scene_name: St patrick dimmed
     - service: hue.hue_activate_scene
       data:
         group_name: Terrace
-        scene_name: Dimmed
+        scene_name: St patrick dimmed
     - service: hue.hue_activate_scene
       data:
         group_name: Downstairs Hallway
@@ -540,11 +540,11 @@
     - service: hue.hue_activate_scene
       data:
         group_name: Front Garden
-        scene_name: Dimmed
+        scene_name: St patrick dimmed
     - service: hue.hue_activate_scene
       data:
         group_name: Terrace
-        scene_name: Dimmed
+        scene_name: St patrick dimmed
     - service: hue.hue_activate_scene
       data:
         group_name: Downstairs Hallway
@@ -618,11 +618,11 @@
     - service: hue.hue_activate_scene
       data:
         group_name: Front Garden
-        scene_name: Dimmed
+        scene_name: St patrick dimmed
     - service: hue.hue_activate_scene
       data:
         group_name: Terrace
-        scene_name: Dimmed
+        scene_name: St patrick dimmed
     - service: hue.hue_activate_scene
       data:
         group_name: Downstairs Hallway
@@ -699,11 +699,11 @@
     - service: hue.hue_activate_scene
       data:
         group_name: Front Garden
-        scene_name: Dimmed
+        scene_name: St patrick dimmed
     - service: hue.hue_activate_scene
       data:
         group_name: Terrace
-        scene_name: Dimmed
+        scene_name: St patrick dimmed
     - service: hue.hue_activate_scene
       data:
         group_name: Downstairs Hallway
@@ -780,11 +780,11 @@
     - service: hue.hue_activate_scene
       data:
         group_name: Front Garden
-        scene_name: Dimmed
+        scene_name: St patrick dimmed
     - service: hue.hue_activate_scene
       data:
         group_name: Terrace
-        scene_name: Dimmed
+        scene_name: St patrick dimmed
     - service: hue.hue_activate_scene
       data:
         group_name: Downstairs Hallway
@@ -861,11 +861,11 @@
     - service: hue.hue_activate_scene
       data:
         group_name: Front Garden
-        scene_name: Dimmed
+        scene_name: St patrick dimmed
     - service: hue.hue_activate_scene
       data:
         group_name: Terrace
-        scene_name: Dimmed
+        scene_name: St patrick dimmed
     - service: light.turn_off
       data:
         entity_id:
