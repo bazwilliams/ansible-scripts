@@ -224,6 +224,9 @@ input_boolean:
   front_garden_scene_saved:
     name: Front Garden Scene Saved
     initial: off
+  terrace_scene_saved:
+    name: Terrace Scene Saved
+    initial: off
 
 notify:
   - platform: alexa_media

@@ -1049,6 +1049,51 @@
         entity_id:
           - light.worktop_lights
 
+- alias: Brighten the Terrace
+  initial_state: true
+  trigger:
+    platform: state
+    entity_id: binary_sensor.terrace_motion
+    to: "on"
+  condition:
+    - condition: numeric_state
+      entity_id: sensor.outside_light_level
+      below: 50
+    - condition: state
+      entity_id: input_boolean.terrace_scene_saved
+      state: "off"
+  action:
+    - service: scene.create
+      data:
+        scene_id: terrace_before
+        snapshot_entities:
+          - group.terrace
+    - service: hue.hue_activate_scene
+      data:
+        group_name: Terrace
+        scene_name: Bright
+    - service: input_boolean.turn_on
+      entity_id: input_boolean.terrace_scene_saved
+
+- alias: Restore Terrace Lights
+  initial_state: true
+  condition:
+    - condition: numeric_state
+      entity_id: sensor.outside_light_level
+      below: 50
+  trigger:
+    platform: state
+    entity_id: binary_sensor.terrace_motion
+    to: "off"
+    for:
+      minutes: 5
+  action:
+    - service: scene.turn_on
+      data:
+        entity_id: scene.terrace_before
+    - service: input_boolean.turn_off
+      entity_id: input_boolean.terrace_scene_saved
+
 - alias: Brighten the Front Garden
   initial_state: true
   trigger:
