@@ -73,7 +73,6 @@ media_player:
     name: SkyQ Snug
     host: 192.168.1.59
 
-
 rfxtrx:
   device: /dev/rfxtrx
 
@@ -231,6 +230,32 @@ input_boolean:
   terrace_scene_saved:
     name: Terrace Scene Saved
     initial: off
+
+input_select:
+  terrace_dimmed_scene:
+    name: Terrace Dimmed Scene Name
+    options:
+      - "dimmed"
+      - "St patrick dimmed"
+    icon: mdi:target
+  terrace_bright_scene:
+    name: Terrace Bright Scene Name
+    options:
+      - "Bright"
+      - "Bright White"
+      - "St patrick bright"
+    icon: mdi:target
+  front_garden_dimmed_scene:
+    name: Front Garden Dimmed Scene Name
+    options:
+      - "dimmed"
+      - "St patrick dimmed"
+    icon: mdi:target
+  front_garden_bright_scene:
+    name: Front Garden Bright Scene Name
+    options:
+      - "Bright"
+    icon: mdi:target
 
 notify:
   - platform: alexa_media

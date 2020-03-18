@@ -6,13 +6,13 @@
     to: morning_dark_home
   action:
     - service: hue.hue_activate_scene
-      data:
+      data_template:
         group_name: Front Garden
-        scene_name: St patrick dimmed
+        scene_name: "{{ states('input_select.front_garden_dimmed_scene') }}"
     - service: hue.hue_activate_scene
-      data:
+      data_template:
         group_name: Terrace
-        scene_name: St patrick dimmed
+        scene_name: "{{ states('input_select.terrace_dimmed_scene') }}"
     - service: hue.hue_activate_scene
       data:
         group_name: Downstairs Hallway
@@ -96,13 +96,13 @@
     to: daytime_dark_home
   action:
     - service: hue.hue_activate_scene
-      data:
+      data_template:
         group_name: Front Garden
-        scene_name: St patrick dimmed
+        scene_name: "{{ states('input_select.front_garden_dimmed_scene') }}"
     - service: hue.hue_activate_scene
-      data:
+      data_template:
         group_name: Terrace
-        scene_name: St patrick dimmed
+        scene_name: "{{ states('input_select.terrace_dimmed_scene') }}"
     - service: hue.hue_activate_scene
       data:
         group_name: Downstairs Hallway
@@ -186,13 +186,13 @@
     to: evening_dark_home
   action:
     - service: hue.hue_activate_scene
-      data:
+      data_template:
         group_name: Front Garden
-        scene_name: St patrick dimmed
+        scene_name: "{{ states('input_select.front_garden_dimmed_scene') }}"
     - service: hue.hue_activate_scene
-      data:
+      data_template:
         group_name: Terrace
-        scene_name: St patrick dimmed
+        scene_name: "{{ states('input_select.terrace_dimmed_scene') }}"
     - service: hue.hue_activate_scene
       data:
         group_name: Downstairs Hallway
@@ -276,13 +276,13 @@
     to: late_evening_dark_home
   action:
     - service: hue.hue_activate_scene
-      data:
+      data_template:
         group_name: Front Garden
-        scene_name: St patrick dimmed
+        scene_name: "{{ states('input_select.front_garden_dimmed_scene') }}"
     - service: hue.hue_activate_scene
-      data:
+      data_template:
         group_name: Terrace
-        scene_name: St patrick dimmed
+        scene_name: "{{ states('input_select.terrace_dimmed_scene') }}"
     - service: hue.hue_activate_scene
       data:
         group_name: Downstairs Hallway
@@ -366,13 +366,13 @@
     to: early_night_dark_home
   action:
     - service: hue.hue_activate_scene
-      data:
+      data_template:
         group_name: Front Garden
-        scene_name: St patrick dimmed
+        scene_name: "{{ states('input_select.front_garden_dimmed_scene') }}"
     - service: hue.hue_activate_scene
-      data:
+      data_template:
         group_name: Terrace
-        scene_name: St patrick dimmed
+        scene_name: "{{ states('input_select.terrace_dimmed_scene') }}"
     - service: hue.hue_activate_scene
       data:
         group_name: Downstairs Hallway
@@ -538,13 +538,13 @@
     to: morning_dark_away
   action:
     - service: hue.hue_activate_scene
-      data:
+      data_template:
         group_name: Front Garden
-        scene_name: St patrick dimmed
+        scene_name: "{{ states('input_select.front_garden_dimmed_scene') }}"
     - service: hue.hue_activate_scene
-      data:
+      data_template:
         group_name: Terrace
-        scene_name: St patrick dimmed
+        scene_name: "{{ states('input_select.terrace_dimmed_scene') }}"
     - service: hue.hue_activate_scene
       data:
         group_name: Downstairs Hallway
@@ -616,13 +616,13 @@
     to: daytime_dark_away
   action:
     - service: hue.hue_activate_scene
-      data:
+      data_template:
         group_name: Front Garden
-        scene_name: St patrick dimmed
+        scene_name: "{{ states('input_select.front_garden_dimmed_scene') }}"
     - service: hue.hue_activate_scene
-      data:
+      data_template:
         group_name: Terrace
-        scene_name: St patrick dimmed
+        scene_name: "{{ states('input_select.terrace_dimmed_scene') }}"
     - service: hue.hue_activate_scene
       data:
         group_name: Downstairs Hallway
@@ -697,13 +697,13 @@
     to: evening_dark_away
   action:
     - service: hue.hue_activate_scene
-      data:
+      data_template:
         group_name: Front Garden
-        scene_name: St patrick dimmed
+        scene_name: "{{ states('input_select.front_garden_dimmed_scene') }}"
     - service: hue.hue_activate_scene
-      data:
+      data_template:
         group_name: Terrace
-        scene_name: St patrick dimmed
+        scene_name: "{{ states('input_select.terrace_dimmed_scene') }}"
     - service: hue.hue_activate_scene
       data:
         group_name: Downstairs Hallway
@@ -778,13 +778,13 @@
     to: late_evening_dark_away
   action:
     - service: hue.hue_activate_scene
-      data:
+      data_template:
         group_name: Front Garden
-        scene_name: St patrick dimmed
+        scene_name: "{{ states('input_select.front_garden_dimmed_scene') }}"
     - service: hue.hue_activate_scene
-      data:
+      data_template:
         group_name: Terrace
-        scene_name: St patrick dimmed
+        scene_name: "{{ states('input_select.terrace_dimmed_scene') }}"
     - service: hue.hue_activate_scene
       data:
         group_name: Downstairs Hallway
@@ -859,13 +859,13 @@
     to: early_night_dark_away
   action:
     - service: hue.hue_activate_scene
-      data:
+      data_template:
         group_name: Front Garden
-        scene_name: St patrick dimmed
+        scene_name: "{{ states('input_select.front_garden_dimmed_scene') }}"
     - service: hue.hue_activate_scene
-      data:
+      data_template:
         group_name: Terrace
-        scene_name: St patrick dimmed
+        scene_name: "{{ states('input_select.terrace_dimmed_scene') }}"
     - service: light.turn_off
       data:
         entity_id:
@@ -1069,9 +1069,9 @@
         snapshot_entities:
           - group.terrace
     - service: hue.hue_activate_scene
-      data:
+      data_template:
         group_name: Terrace
-        scene_name: Bright
+        scene_name: "{{ states('input_select.terrace_bright_scene') }}"
     - service: input_boolean.turn_on
       entity_id: input_boolean.terrace_scene_saved
 
@@ -1114,9 +1114,9 @@
         snapshot_entities:
           - light.front_garden
     - service: hue.hue_activate_scene
-      data:
+      data_template:
         group_name: Front Garden
-        scene_name: Bright
+        scene_name: "{{ states('input_select.front_garden_bright_scene') }}"
     - service: input_boolean.turn_on
       entity_id: input_boolean.front_garden_scene_saved
 
