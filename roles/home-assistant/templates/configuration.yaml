@@ -176,6 +176,22 @@ sensor:
     - sensor.front_garden_motion_temperature
     - sensor.terrace_temperature
     type: min
+  - platform: min_max
+    name: Bedroom Temperatures
+    entity_ids:
+    - sensor.guest_room_temperature
+    - sensor.ethan_s_room_temperature
+    - sensor.marcus_room_temperature
+    - sensor.bedroom_temperature
+    type: mean
+  - platform: min_max
+    name: Bedroom Humidities
+    entity_ids:
+    - sensor.guest_room_humidity
+    - sensor.ethan_s_room_humidity
+    - sensor.marcus_room_humidity
+    - sensor.bedroom_humidity
+    type: max
   - platform: time_date
     display_options:
       - 'time'

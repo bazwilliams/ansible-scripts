@@ -40,7 +40,7 @@ bedroom:
   name: Bedroom
   entities:
     - sensor.bedroom_humidity
-    - sensor.bedroom_temperature 
+    - sensor.bedroom_temperature
     - light.bedroom_big_light
     - light.bedside_lamp
 downstairs_hallway:
