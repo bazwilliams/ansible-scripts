@@ -1022,8 +1022,30 @@
           - media_player.ethan_s_room
           - media_player.marcus_room
 
-- alias: Kitchen Worktop Lights On
+- alias: Kitchen Lights On At Night
   initial_state: true
+  condition:
+    - condition: numeric_state
+      entity_id: sensor.kitchen_light_level
+      below: 5
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.kitchen_occupancy
+      from: "off"
+      to: "on"
+  action:
+    - service: hue.hue_activate_scene
+      data_template:
+        group_name: Kitchen
+        scene_name: Night
+
+- alias: Kitchen Lights On
+  initial_state: true
+  condition:
+    - condition: numeric_state
+      entity_id: sensor.kitchen_light_level
+      below: 40
+      above: 5
   trigger:
     - platform: state
       entity_id: binary_sensor.kitchen_occupancy
@@ -1034,8 +1056,12 @@
       data:
         entity_id:
           - light.worktop_lights
+    - service: hue.hue_activate_scene
+      data_template:
+        group_name: Kitchen
+        scene_name: Morning
 
-- alias: Kitchen Worktop Lights Off
+- alias: Kitchen Lights Off
   initial_state: true
   trigger:
     platform: state
@@ -1047,7 +1073,7 @@
     - service: light.turn_off
       data:
         entity_id:
-          - light.worktop_lights
+          - group.kitchen
 
 - alias: Brighten the Terrace
   initial_state: true
