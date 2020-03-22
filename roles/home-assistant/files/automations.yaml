@@ -1026,7 +1026,7 @@
   initial_state: true
   trigger:
     - platform: state
-      entity_id: binary_sensor.kitchen_motion_motion
+      entity_id: binary_sensor.kitchen_occupancy
       from: "off"
       to: "on"
   action:
@@ -1039,7 +1039,7 @@
   initial_state: true
   trigger:
     platform: state
-    entity_id: binary_sensor.kitchen_motion_motion
+    entity_id: binary_sensor.kitchen_occupancy
     to: "off"
     for:
       minutes: 5

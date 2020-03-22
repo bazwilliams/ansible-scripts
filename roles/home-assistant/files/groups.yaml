@@ -1,9 +1,9 @@
 kitchen:
   name: Kitchen
   entities:
-    - binary_sensor.kitchen_motion_motion
-    - sensor.kitchen_motion_light_level
-    - sensor.kitchen_motion_temperature
+    - binary_sensor.kitchen_occupancy
+    - sensor.kitchen_light_level
+    - sensor.kitchen_temperature
     - light.worktop_lights
     - light.kitchen_main
     - light.kitchen_under_cupboards

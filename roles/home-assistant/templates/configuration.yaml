@@ -76,6 +76,11 @@ media_player:
 rfxtrx:
   device: /dev/rfxtrx
 
+zha:
+  usb_path: /dev/conbee2
+  database_path: /config/zigbee.db
+  radio_type: deconz
+
 light:
   platform: rfxtrx
   devices:
@@ -115,7 +120,7 @@ binary_sensor:
         to_state: 'armed_away'
       - platform: template
         value_template: >
-          {% raw %} {{((as_timestamp(now()) - as_timestamp(states.binary_sensor.kitchen_motion_motion.last_changed)) < 1800)}} {% endraw %}
+          {% raw %} {{((as_timestamp(now()) - as_timestamp(states.binary_sensor.kitchen_occupancy.last_changed)) < 1800)}} {% endraw %}
 
         prob_given_true: 1
         prob_given_false: 0.5

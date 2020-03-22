@@ -140,6 +140,7 @@
                 restart: unless-stopped
                 devices:
                 - "/dev/ttyUSB0:/dev/rfxtrx"
+                - "/dev/ttyACM0:/dev/conbee2"
 
 - name: Cleanup
   file:
