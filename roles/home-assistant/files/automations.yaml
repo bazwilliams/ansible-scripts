@@ -1025,6 +1025,9 @@
 - alias: Kitchen Lights On At Night
   initial_state: true
   condition:
+    - condition: time
+      after: "21:00:00"
+      before: "06:00:00"
     - condition: numeric_state
       entity_id: sensor.kitchen_light_level
       below: 5
@@ -1300,12 +1303,12 @@
         entity_id:
           - group.snug
 
-- alias: Guest Room Dim Lights On
+- alias: Guest Room Scene Mode 1
   initial_state: true
   condition:
     - condition: state
-      entity_id: light.silver_lamp
-      state: "off"
+      entity_id: input_text.guest_room_mode
+      state: scene_off
   trigger:
     platform: event
     event_type: zha_event
@@ -1320,13 +1323,17 @@
       data:
         group_name: Guest Room
         scene_name: Dim lamp
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.guest_room_mode
+        value: scene_1
 
-- alias: Guest Room Lights All Light On
+- alias: Guest Room Scene Mode 2
   initial_state: true
   condition:
     - condition: state
-      entity_id: light.silver_lamp
-      state: "on"
+      entity_id: input_text.guest_room_mode
+      state: "scene_1"
   trigger:
     platform: event
     event_type: zha_event
@@ -1341,6 +1348,35 @@
       data:
         group_name: Guest Room
         scene_name: Mid bright
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.guest_room_mode
+        value: scene_2
+
+- alias: Guest Room Scene Mode 3
+  initial_state: true
+  condition:
+    - condition: state
+      entity_id: input_text.guest_room_mode
+      state: "scene_2"
+  trigger:
+    platform: event
+    event_type: zha_event
+    event_data:
+      device_ieee: 00:17:88:01:10:49:e1:d2
+      unique_id: 00:17:88:01:10:49:e1:d2:1:0x0006
+      endpoint_id: 1
+      cluster_id: 6
+      command: "on"
+  action:
+    - service: hue.hue_activate_scene
+      data:
+        group_name: Guest Room
+        scene_name: Energize
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.guest_room_mode
+        value: scene_3
 
 - alias: Guest Room Lights Off
   initial_state: true
@@ -1358,3 +1394,7 @@
       data:
         entity_id:
           - group.guest_room
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.guest_room_mode
+        value: scene_off

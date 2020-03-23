@@ -252,6 +252,11 @@ input_boolean:
     name: Terrace Scene Saved
     initial: off
 
+input_text:
+  guest_room_mode:
+    name: Guest Room Scene Mode
+    initial: scene_off
+
 input_select:
   terrace_dimmed_scene:
     name: Terrace Dimmed Scene Name
