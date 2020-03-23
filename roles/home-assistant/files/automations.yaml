@@ -1299,3 +1299,62 @@
       data:
         entity_id:
           - group.snug
+
+- alias: Guest Room Dim Lights On
+  initial_state: true
+  condition:
+    - condition: state
+      entity_id: light.silver_lamp
+      state: "off"
+  trigger:
+    platform: event
+    event_type: zha_event
+    event_data:
+      device_ieee: 00:17:88:01:10:49:e1:d2
+      unique_id: 00:17:88:01:10:49:e1:d2:1:0x0006
+      endpoint_id: 1
+      cluster_id: 6
+      command: "on"
+  action:
+    - service: hue.hue_activate_scene
+      data:
+        group_name: Guest Room
+        scene_name: Dim lamp
+
+- alias: Guest Room Lights All Light On
+  initial_state: true
+  condition:
+    - condition: state
+      entity_id: light.silver_lamp
+      state: "on"
+  trigger:
+    platform: event
+    event_type: zha_event
+    event_data:
+      device_ieee: 00:17:88:01:10:49:e1:d2
+      unique_id: 00:17:88:01:10:49:e1:d2:1:0x0006
+      endpoint_id: 1
+      cluster_id: 6
+      command: "on"
+  action:
+    - service: hue.hue_activate_scene
+      data:
+        group_name: Guest Room
+        scene_name: Mid bright
+
+- alias: Guest Room Lights Off
+  initial_state: true
+  trigger:
+    platform: event
+    event_type: zha_event
+    event_data:
+      device_ieee: 00:17:88:01:10:49:e1:d2
+      unique_id: 00:17:88:01:10:49:e1:d2:1:0x0006
+      endpoint_id: 1
+      cluster_id: 6
+      command: off_with_effect
+  action:
+    - service: light.turn_off
+      data:
+        entity_id:
+          - group.guest_room
