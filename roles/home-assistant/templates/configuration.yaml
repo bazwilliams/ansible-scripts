@@ -172,14 +172,14 @@ sensor:
   - platform: min_max
     name: Outside Light Level
     entity_ids:
-    - sensor.front_garden_motion_light_level
-    - sensor.terrace_light_level
+    - sensor.front_garden_light_level
+    - sensor.back_garden_light_level
     type: min
   - platform: min_max
     name: Outside Temperature
     entity_ids:
-    - sensor.front_garden_motion_temperature
-    - sensor.terrace_temperature
+    - sensor.front_garden_temperature
+    - sensor.back_garden_temperature
     type: min
   - platform: min_max
     name: Bedroom Temperatures

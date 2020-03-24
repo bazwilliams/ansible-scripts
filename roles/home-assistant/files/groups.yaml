@@ -18,9 +18,9 @@ kitchen:
 front_garden:
   name: Front Garden
   entities:
-    - binary_sensor.front_garden_motion_motion
-    - sensor.front_garden_motion_light_level
-    - sensor.front_garden_motion_temperature
+    - binary_sensor.front_garden_occupancy
+    - sensor.front_garden_light_level
+    - sensor.front_garden_temperature
     - light.outside_light
     - binary_sensor.front_door_motion
     - sensor.front_door_last_motion
@@ -28,9 +28,9 @@ front_garden:
 terrace:
   name: Terrace
   entities:
-    - sensor.terrace_light_level
-    - sensor.terrace_temperature
-    - binary_sensor.terrace_motion
+    - sensor.back_garden_light_level
+    - sensor.back_garden_temperature
+    - binary_sensor.back_garden_occupancy
     - light.terrace
 bathroom:
   name: Bathroom

@@ -1082,7 +1082,7 @@
   initial_state: true
   trigger:
     platform: state
-    entity_id: binary_sensor.terrace_motion
+    entity_id: binary_sensor.back_garden_occupancy
     to: "on"
   condition:
     - condition: numeric_state
@@ -1112,7 +1112,7 @@
       below: 50
   trigger:
     platform: state
-    entity_id: binary_sensor.terrace_motion
+    entity_id: binary_sensor.back_garden_occupancy
     to: "off"
     for:
       minutes: 5
@@ -1127,7 +1127,7 @@
   initial_state: true
   trigger:
     platform: state
-    entity_id: binary_sensor.front_garden_motion_motion
+    entity_id: binary_sensor.front_garden_occupancy
     to: "on"
   condition:
     - condition: numeric_state
@@ -1157,7 +1157,7 @@
       below: 50
   trigger:
     platform: state
-    entity_id: binary_sensor.front_garden_motion_motion
+    entity_id: binary_sensor.front_garden_occupancy
     to: "off"
     for:
       minutes: 2
