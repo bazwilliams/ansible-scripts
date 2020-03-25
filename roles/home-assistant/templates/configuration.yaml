@@ -251,11 +251,20 @@ input_boolean:
   terrace_scene_saved:
     name: Terrace Scene Saved
     initial: off
+  kitchen_worktop_lights:
+    name: Kitchen Motion Worktop Lights State
+    initial: on
 
 input_text:
   guest_room_mode:
     name: Guest Room Scene Mode
     initial: scene_off
+  kitchen_scene:
+    name: Kitchen Motion Scene
+    initial: Morning
+  kitchen_worktop_scene
+    name: Kitchen Worktop scene
+    initial: worktop_lights_on
 
 input_select:
   terrace_dimmed_scene:

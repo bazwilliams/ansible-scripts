@@ -1,0 +1,8 @@
+  - name: Worktop Lights On
+    icon: "mdi:lightbulb"
+    entities:
+      light.worktop_lights: on
+  - name: Worktop Lights Off
+    icon: "mdi:lightbulb-off"
+    entities:
+      light.worktop_lights: off
