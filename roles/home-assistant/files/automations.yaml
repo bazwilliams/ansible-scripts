@@ -382,7 +382,7 @@
     - service: hue.hue_activate_scene
       data:
         group_name: Downstairs Hallway
-        scene_name: Colourful Evening
+        scene_name: Late Evening
     - service: hue.hue_activate_scene
       data:
         group_name: Upstairs Hallway
@@ -398,7 +398,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_worktop_scene
-        value: worktop_lights_on
+        value: worktop_lights_off
 - alias: late_evening_dim_home
   initial_state: true
   trigger:
@@ -430,7 +430,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_worktop_scene
-        value: worktop_lights_on
+        value: worktop_lights_off
 - alias: late_evening_bright_home
   initial_state: true
   trigger:
@@ -459,7 +459,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_worktop_scene
-        value: worktop_lights_on
+        value: worktop_lights_off
 - alias: late_evening_very_bright_home
   initial_state: true
   trigger:
@@ -485,7 +485,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_worktop_scene
-        value: worktop_lights_on
+        value: worktop_lights_off
 - alias: early_night_dark_home
   initial_state: true
   trigger:
@@ -504,7 +504,7 @@
     - service: hue.hue_activate_scene
       data:
         group_name: Downstairs Hallway
-        scene_name: Late Night
+        scene_name: Early Night
     - service: hue.hue_activate_scene
       data:
         group_name: Upstairs Hallway
@@ -536,7 +536,7 @@
     - service: hue.hue_activate_scene
       data:
         group_name: Downstairs Hallway
-        scene_name: Late Night
+        scene_name: Early Night
     - service: hue.hue_activate_scene
       data:
         group_name: Upstairs Hallway
@@ -569,7 +569,7 @@
     - service: hue.hue_activate_scene
       data:
         group_name: Downstairs Hallway
-        scene_name: Late Night
+        scene_name: Early Night
     - service: hue.hue_activate_scene
       data:
         group_name: Upstairs Hallway
@@ -1076,7 +1076,7 @@
     - service: hue.hue_activate_scene
       data:
         group_name: Downstairs Hallway
-        scene_name: Colourful Evening Away
+        scene_name: Late Evening Away
     - service: light.turn_off
       data:
         entity_id:
@@ -1092,7 +1092,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_worktop_scene
-        value: worktop_lights_on
+        value: worktop_lights_off
 - alias: late_evening_dim_away
   initial_state: true
   trigger:
@@ -1121,7 +1121,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_worktop_scene
-        value: worktop_lights_on
+        value: worktop_lights_off
 - alias: late_evening_bright_away
   initial_state: true
   trigger:
@@ -1147,7 +1147,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_worktop_scene
-        value: worktop_lights_on
+        value: worktop_lights_off
 - alias: late_evening_very_bright_away
   initial_state: true
   trigger:
@@ -1170,7 +1170,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_worktop_scene
-        value: worktop_lights_on
+        value: worktop_lights_off
 - alias: early_night_dark_away
   initial_state: true
   trigger:
@@ -1418,9 +1418,9 @@
       from: "off"
       to: "on"
   action:
-    - service: scene.apply
+    - service: scene.turn_on
       data_template:
-        entity_id: "{{ states('input_text.kitchen_worktop_scene') }}"
+        entity_id: "scene.{{ states('input_text.kitchen_worktop_scene') }}"
     - service: hue.hue_activate_scene
       data_template:
         group_name: Kitchen
@@ -1479,7 +1479,7 @@
     for:
       minutes: 5
   action:
-    - service: scene.apply
+    - service: scene.turn_on
       data:
         entity_id: scene.terrace_before
     - service: input_boolean.turn_off
@@ -1524,7 +1524,7 @@
     for:
       minutes: 2
   action:
-    - service: scene.apply
+    - service: scene.turn_on
       data:
         entity_id: scene.front_garden_before
     - service: input_boolean.turn_off
@@ -1627,7 +1627,7 @@
       entity_id: binary_sensor.upstairs_hall_cupboard_door
       to: "off"
   action:
-    - service: scene.apply
+    - service: scene.turn_on
       data:
         entity_id: scene.upstairs_spot_2_before
 

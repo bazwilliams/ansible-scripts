@@ -262,7 +262,7 @@ input_text:
   kitchen_scene:
     name: Kitchen Motion Scene
     initial: Morning
-  kitchen_worktop_scene
+  kitchen_worktop_scene:
     name: Kitchen Worktop scene
     initial: worktop_lights_on
 
