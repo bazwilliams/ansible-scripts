@@ -752,11 +752,11 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
-        value: Morning
+        value: Away
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_worktop_scene
-        value: worktop_lights_on
+        value: worktop_lights_off
 - alias: morning_dim_away
   initial_state: true
   trigger:
@@ -781,11 +781,11 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
-        value: Morning
+        value: Away
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_worktop_scene
-        value: worktop_lights_on
+        value: worktop_lights_off
 - alias: morning_bright_away
   initial_state: true
   trigger:
@@ -804,11 +804,11 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
-        value: Morning
+        value: Away
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_worktop_scene
-        value: worktop_lights_on
+        value: worktop_lights_off
 - alias: morning_very_bright_away
   initial_state: true
   trigger:
@@ -827,11 +827,11 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
-        value: Morning
+        value: Away
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_worktop_scene
-        value: worktop_lights_on
+        value: worktop_lights_off
 - alias: daytime_dark_away
   initial_state: true
   trigger:
@@ -862,11 +862,11 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
-        value: Daytime
+        value: Away
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_worktop_scene
-        value: worktop_lights_on
+        value: worktop_lights_off
 - alias: daytime_dim_away
   initial_state: true
   trigger:
@@ -891,11 +891,11 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
-        value: Daytime
+        value: Away
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_worktop_scene
-        value: worktop_lights_on
+        value: worktop_lights_off
 - alias: daytime_bright_away
   initial_state: true
   trigger:
@@ -917,11 +917,11 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
-        value: Daytime
+        value: Away
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_worktop_scene
-        value: worktop_lights_on
+        value: worktop_lights_off
 - alias: daytime_very_bright_away
   initial_state: true
   trigger:
@@ -940,11 +940,11 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
-        value: Daytime
+        value: Away
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_worktop_scene
-        value: worktop_lights_on
+        value: worktop_lights_off
 - alias: evening_dark_away
   initial_state: true
   trigger:
@@ -975,11 +975,11 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
-        value: Evening
+        value: Away
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_worktop_scene
-        value: worktop_lights_on
+        value: worktop_lights_off
 - alias: evening_dim_away
   initial_state: true
   trigger:
@@ -1004,11 +1004,11 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
-        value: Evening
+        value: Away
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_worktop_scene
-        value: worktop_lights_on
+        value: worktop_lights_off
 - alias: evening_bright_away
   initial_state: true
   trigger:
@@ -1030,11 +1030,11 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
-        value: Evening
+        value: Away
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_worktop_scene
-        value: worktop_lights_on
+        value: worktop_lights_off
 - alias: evening_very_bright_away
   initial_state: true
   trigger:
@@ -1053,11 +1053,11 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
-        value: Evening
+        value: Away
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_worktop_scene
-        value: worktop_lights_on
+        value: worktop_lights_off
 - alias: late_evening_dark_away
   initial_state: true
   trigger:
@@ -1088,7 +1088,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
-        value: Late Evening
+        value: Away
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_worktop_scene
@@ -1117,7 +1117,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
-        value: Late Evening
+        value: Away
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_worktop_scene
@@ -1143,7 +1143,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
-        value: Late Evening
+        value: Away
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_worktop_scene
@@ -1166,7 +1166,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
-        value: Late Evening
+        value: Away
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_worktop_scene
@@ -1198,11 +1198,11 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
-        value: Early Night
+        value: Away
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_worktop_scene
-        value: worktop_lights_on
+        value: worktop_lights_off
 - alias: early_night_dim_away
   initial_state: true
   trigger:
@@ -1224,11 +1224,11 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
-        value: Early Night
+        value: Away
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_worktop_scene
-        value: worktop_lights_on
+        value: worktop_lights_off
 - alias: early_night_bright_away
   initial_state: true
   trigger:
@@ -1247,11 +1247,11 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
-        value: Early Night
+        value: Away
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_worktop_scene
-        value: worktop_lights_on
+        value: worktop_lights_off
 - alias: early_night_very_bright_away
   initial_state: true
   trigger:
@@ -1270,11 +1270,11 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
-        value: Early Night
+        value: Away
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_worktop_scene
-        value: worktop_lights_on
+        value: worktop_lights_off
 - alias: night_dark_away
   initial_state: true
   trigger:
@@ -1293,7 +1293,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
-        value: Night
+        value: Away
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_worktop_scene
@@ -1316,7 +1316,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
-        value: Night
+        value: Away
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_worktop_scene
@@ -1339,7 +1339,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
-        value: Night
+        value: Away
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_worktop_scene
@@ -1362,7 +1362,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
-        value: Night
+        value: Away
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_worktop_scene
