@@ -398,7 +398,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_worktop_scene
-        value: worktop_lights_off
+        value: worktop_lights_on
 - alias: late_evening_dim_home
   initial_state: true
   trigger:
@@ -430,7 +430,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_worktop_scene
-        value: worktop_lights_off
+        value: worktop_lights_on
 - alias: late_evening_bright_home
   initial_state: true
   trigger:
@@ -459,7 +459,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_worktop_scene
-        value: worktop_lights_off
+        value: worktop_lights_on
 - alias: late_evening_very_bright_home
   initial_state: true
   trigger:
@@ -485,7 +485,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_worktop_scene
-        value: worktop_lights_off
+        value: worktop_lights_on
 - alias: early_night_dark_home
   initial_state: true
   trigger:
@@ -520,7 +520,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_worktop_scene
-        value: worktop_lights_on
+        value: worktop_lights_off
 - alias: early_night_dim_home
   initial_state: true
   trigger:
@@ -552,7 +552,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_worktop_scene
-        value: worktop_lights_on
+        value: worktop_lights_off
 - alias: early_night_bright_home
   initial_state: true
   trigger:
@@ -581,7 +581,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_worktop_scene
-        value: worktop_lights_on
+        value: worktop_lights_off
 - alias: early_night_very_bright_home
   initial_state: true
   trigger:
@@ -607,7 +607,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_worktop_scene
-        value: worktop_lights_on
+        value: worktop_lights_off
 - alias: night_dark_home
   initial_state: true
   trigger:
@@ -636,7 +636,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_worktop_scene
-        value: worktop_lights_on
+        value: worktop_lights_off
 - alias: night_dim_home
   initial_state: true
   trigger:
@@ -665,7 +665,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_worktop_scene
-        value: worktop_lights_on
+        value: worktop_lights_off
 - alias: night_bright_home
   initial_state: true
   trigger:
@@ -694,7 +694,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_worktop_scene
-        value: worktop_lights_on
+        value: worktop_lights_off
 - alias: night_very_bright_home
   initial_state: true
   trigger:
@@ -720,7 +720,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_worktop_scene
-        value: worktop_lights_on
+        value: worktop_lights_off
 
 - alias: morning_dark_away
   initial_state: true
