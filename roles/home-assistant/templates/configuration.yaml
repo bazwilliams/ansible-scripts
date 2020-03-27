@@ -261,6 +261,9 @@ input_boolean:
     initial: on
 
 input_text:
+  bedroom_mode:
+    name: Bedroom Scene Mode
+    initial: scene_off
   guest_room_mode:
     name: Guest Room Scene Mode
     initial: scene_off

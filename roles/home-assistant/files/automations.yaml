@@ -1408,7 +1408,7 @@
     before: "21:00:00"
     after: "08:00:00"
   action:
-    - service: light.turn_off
+    - service: homeassistant.turn_off
       data:
         entity_id:
           - group.ethans_room
@@ -1788,3 +1788,100 @@
       data:
         entity_id: input_text.guest_room_mode
         value: scene_off
+
+- alias: Bedroom Scene Mode 1
+  initial_state: true
+  condition:
+    - condition: state
+      entity_id: input_text.bedroom_mode
+      state: "scene_off"
+  trigger:
+    platform: event
+    event_type: zha_event
+    event_data:
+      device_ieee: 00:17:88:01:08:07:fc:d2
+      unique_id: 00:17:88:01:08:07:fc:d2:1:0x0006
+      endpoint_id: 1
+      cluster_id: 6
+      command: "on"
+  action:
+    - service: hue.hue_activate_scene
+      data:
+        group_name: Bedroom
+        scene_name: Scene 1
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.bedroom_mode
+        value: scene_1
+
+- alias: Bedroom Scene Mode 2
+  initial_state: true
+  condition:
+    - condition: state
+      entity_id: input_text.bedroom_mode
+      state: "scene_1"
+  trigger:
+    platform: event
+    event_type: zha_event
+    event_data:
+      device_ieee: 00:17:88:01:08:07:fc:d2
+      unique_id: 00:17:88:01:08:07:fc:d2:1:0x0006
+      endpoint_id: 1
+      cluster_id: 6
+      command: "on"
+  action:
+    - service: hue.hue_activate_scene
+      data:
+        group_name: Bedroom
+        scene_name: Scene 2
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.bedroom_mode
+        value: scene_2
+
+- alias: Bedroom Scene Mode 3
+  initial_state: true
+  condition:
+    - condition: state
+      entity_id: input_text.bedroom_mode
+      state: "scene_2"
+  trigger:
+    platform: event
+    event_type: zha_event
+    event_data:
+      device_ieee: 00:17:88:01:08:07:fc:d2
+      unique_id: 00:17:88:01:08:07:fc:d2:1:0x0006
+      endpoint_id: 1
+      cluster_id: 6
+      command: "on"
+  action:
+    - service: hue.hue_activate_scene
+      data:
+        group_name: Bedroom
+        scene_name: Scene 3
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.bedroom_mode
+        value: scene_3
+
+- alias: Bedroom Lights Off
+  initial_state: true
+  trigger:
+    platform: event
+    event_type: zha_event
+    event_data:
+      device_ieee: 00:17:88:01:08:07:fc:d2
+      unique_id: 00:17:88:01:08:07:fc:d2:1:0x0006
+      endpoint_id: 1
+      cluster_id: 6
+      command: off_with_effect
+  action:
+    - service: light.turn_off
+      data:
+        entity_id:
+          - group.bedroom
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.bedroom_mode
+        value: scene_off
+
