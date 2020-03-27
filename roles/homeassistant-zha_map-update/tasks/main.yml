@@ -1,0 +1,52 @@
+---
+- name: Create Temporary zha_map directory
+  delegate_to: 127.0.0.1
+  tempfile:
+    state: directory
+    suffix: zha_map
+  register: tempdir1
+
+- name: Pull zha_map Custom Component
+  delegate_to: 127.0.0.1
+  git:
+    repo: 'https://github.com/zha-ng/zha-map'
+    dest: "{{ tempdir1.path }}"
+
+- name: Copy latest custom component to home-assistant role
+  delegate_to: 127.0.0.1
+  copy:
+    src: "{{ tempdir1.path }}/custom_components/zha_map"
+    dest: ./roles/home-assistant/files/custom_components
+
+- name: Create Temporary zha-network-visualization-card directory
+  delegate_to: 127.0.0.1
+  tempfile:
+    state: directory
+    suffix: zha-network-visualization-card
+  register: tempdir2
+
+- name: Pull zha network visualisation card
+  delegate_to: 127.0.0.1
+  git:
+    repo: 'https://github.com/dmulcahey/zha-network-visualization-card'
+    dest: "{{ tempdir2.path }}"
+
+- name: Copy latest custom component to home-assistant role
+  delegate_to: 127.0.0.1
+  copy:
+    src: "{{ tempdir2.path }}/zha-network-visualization-card.js"
+    dest: ./roles/home-assistant/files/www
+
+- name: Cleanup
+  delegate_to: 127.0.0.1
+  file:
+    path: "{{ tempdir1.path }}"
+    state: absent
+  when: tempdir1.path is defined
+
+- name: Cleanup
+  delegate_to: 127.0.0.1
+  file:
+    path: "{{ tempdir2.path }}"
+    state: absent
+  when: tempdir2.path is defined

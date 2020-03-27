@@ -56,29 +56,17 @@
     src: scenes.yaml
     dest: /opt/docker/data/home-assistant/config/scenes.yaml
 
-- name: Upload HomeConnect custom component
+- name: Upload custom components
   become: yes
   copy:
-    src: custom_components/homeconnect
+    src: custom_components/
     dest: /opt/docker/data/home-assistant/config/custom_components
 
-- name: Upload Alexa Media custom component
+- name: Upload custom lovelace assets
   become: yes
   copy:
-    src: custom_components/alexa_media
-    dest: /opt/docker/data/home-assistant/config/custom_components
-
-- name: Upload Securitas Direct custom component
-  become: yes
-  copy:
-    src: custom_components/securitas_direct
-    dest: /opt/docker/data/home-assistant/config/custom_components
-
-- name: Upload SkyQ custom component
-  become: yes
-  copy:
-    src: custom_components/skyq
-    dest: /opt/docker/data/home-assistant/config/custom_components
+    src: www/
+    dest: /opt/docker/data/home-assistant/config/www
 
 - name: Tear down existing service
   docker_compose:

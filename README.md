@@ -1,7 +1,9 @@
 # OpenSUSE Server
 
+## Home Assistant 
+
 ```sh
-ansible-playbook -i inventory/hosts.ini holly.yml -K --user $USER
+ansible-playbook -i inventory/hosts.ini holly-homeassistant.yml -K --user $USER
 ```
 
 Setup `group_vars/holly.yaml` with the following configuration
@@ -50,11 +52,24 @@ These are copied from
 * https://github.com/DavidMStraub/homeassistant-homeconnect 
 * https://github.com/custom-components/alexa_media_player
 * https://github.com/segalion/securitasdirect
+* https://github.com/4n0nD3v3l0p3r/Home_Assistant_SkyQ_MediaPlayer
+* https://github.com/zha-ng/zha-map
+
+Custom lovelace card downloaded from
+* https://github.com/dmulcahey/zha-network-visualization-card
 
 Should the upstream repos be updated, the local copies can be updated by running:
 
 ```sh
 ansible-playbook update-homeassistant-custom-components.yaml
+```
+
+## Minimserver
+
+New music should be added to the files in `roles/music/files`
+
+```sh
+ansible-playbook -i inventory/hosts.ini holly-minim.yml -K --user $USER
 ```
 
 # Lightsail

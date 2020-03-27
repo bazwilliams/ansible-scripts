@@ -86,6 +86,8 @@ zha:
   database_path: /config/zigbee.db
   radio_type: deconz
 
+zha_map:
+
 light:
   platform: rfxtrx
   devices:

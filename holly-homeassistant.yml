@@ -7,7 +7,5 @@
      - homeassistant-homeconnect-update
      - homeassistant-securitasdirect-update
      - homeassistant-skyq-update
+     - homeassistant-zha_map-update
      - home-assistant
-    #  - music
-    #  - minimserver
-    #  - plex

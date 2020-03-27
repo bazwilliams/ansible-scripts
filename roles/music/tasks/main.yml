@@ -13,7 +13,7 @@
 #     src: /data/music/
 #     dest: roles/music/files/
 
-# - name: Upload music
-#   synchronize:
-#     src: music/
-#     dest: /data/music/
+- name: Upload music
+  synchronize:
+    src: .
+    dest: /data/music/
