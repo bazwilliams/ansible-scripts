@@ -29,15 +29,18 @@ homeassistant:
   customize:
     media_player.epson_projector:
       friendly_name: Projector
-      icon: mdi-projector
+      icon: mdi:projector
     media_player.power_amplifier:
-      icon: mdi-speaker
+      icon: mdi:speaker
     device_tracker.74_9e_af_4f_70_94:
       friendly_name: Barry's iPhone
     device_tracker.80_82_23_6a_ef_fc:
       friendly_name: Louise's iPhone
     alarm_control_panel.securitas_260178:
       friendly_name: Alarm
+    switch.living_room_main:
+      friendly_name: Big Light
+      icon: mdi:ceiling-light
 
 cloud:
   alexa:
@@ -46,7 +49,7 @@ cloud:
         - light.kitchen
         - light.worktop_lights
         - light.dining_table
-        - light.outside_light
+        - light.terrace
         - light.bedroom
         - light.downstairs_hallway
         - light.guest_room
@@ -57,6 +60,8 @@ cloud:
         - light.snug
         - light.upstairs_hallway
         - media_player.epson_projector
+        - switch.living_room_main
+        - light.lava_lamp
 
 discovery:
 
@@ -173,13 +178,13 @@ sensor:
     name: Outside Light Level
     entity_ids:
     - sensor.front_garden_light_level
-    # - sensor.back_garden_light_level
+    - sensor.back_garden_light_level
     type: min
   - platform: min_max
     name: Outside Temperature
     entity_ids:
     - sensor.front_garden_temperature
-    # - sensor.back_garden_temperature
+    - sensor.back_garden_temperature
     type: min
   - platform: min_max
     name: Bedroom Temperatures

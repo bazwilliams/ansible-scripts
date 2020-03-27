@@ -76,6 +76,7 @@
       data:
         entity_id:
           - group.front_garden
+          - switch.living_room_main
           - group.living_room
           - group.terrace
     - service: hue.hue_activate_scene
@@ -106,6 +107,7 @@
         entity_id:
           - group.front_garden
           - group.downstairs_hallway
+          - switch.living_room_main
           - group.living_room
           - group.terrace
     - service: hue.hue_activate_scene
@@ -199,6 +201,7 @@
         entity_id:
           - group.front_garden
           - group.terrace
+          - switch.living_room_main
           - group.living_room
     - service: hue.hue_activate_scene
       data:
@@ -228,6 +231,7 @@
         entity_id:
           - group.front_garden
           - group.terrace
+          - switch.living_room_main
           - group.living_room
           - group.downstairs_hallway
     - service: hue.hue_activate_scene
@@ -321,6 +325,7 @@
         entity_id:
           - group.front_garden
           - group.terrace
+          - switch.living_room_main
           - group.living_room
     - service: hue.hue_activate_scene
       data:
@@ -350,6 +355,7 @@
         entity_id:
           - group.front_garden
           - group.terrace
+          - switch.living_room_main
           - group.living_room
           - group.downstairs_hallway
     - service: hue.hue_activate_scene
@@ -443,6 +449,7 @@
         entity_id:
           - group.front_garden
           - group.terrace
+          - switch.living_room_main
           - group.living_room
     - service: hue.hue_activate_scene
       data:
@@ -472,6 +479,7 @@
         entity_id:
           - group.front_garden
           - group.terrace
+          - switch.living_room_main
           - group.living_room
           - group.downstairs_hallway
     - service: hue.hue_activate_scene
@@ -565,6 +573,7 @@
         entity_id:
           - group.front_garden
           - group.terrace
+          - switch.living_room_main
           - group.living_room
     - service: hue.hue_activate_scene
       data:
@@ -594,6 +603,7 @@
         entity_id:
           - group.front_garden
           - group.terrace
+          - switch.living_room_main
           - group.living_room
           - group.downstairs_hallway
     - service: hue.hue_activate_scene
@@ -626,6 +636,7 @@
     - service: light.turn_off
       data:
         entity_id:
+          - switch.living_room_main
           - group.living_room
           - group.front_garden
           - group.terrace
@@ -649,6 +660,7 @@
         entity_id:
           - group.front_garden
           - group.terrace
+          - switch.living_room_main
           - group.living_room
     - service: hue.hue_activate_scene
       data:
@@ -678,6 +690,7 @@
         entity_id:
           - group.front_garden
           - group.terrace
+          - switch.living_room_main
           - group.living_room
     - service: hue.hue_activate_scene
       data:
@@ -707,6 +720,7 @@
         entity_id:
           - group.front_garden
           - group.terrace
+          - switch.living_room_main
           - group.living_room
           - group.downstairs_hallway
     - service: hue.hue_activate_scene
@@ -800,6 +814,7 @@
           - group.terrace
           - group.upstairs_hallway
           - group.downstairs_hallway
+          - switch.living_room_main
           - group.living_room
     - service: input_text.set_value
       data:
@@ -823,6 +838,7 @@
           - group.terrace
           - group.upstairs_hallway
           - group.downstairs_hallway
+          - switch.living_room_main
           - group.living_room
     - service: input_text.set_value
       data:
@@ -908,6 +924,7 @@
         entity_id:
           - group.front_garden
           - group.terrace
+          - switch.living_room_main
           - group.living_room
           - group.upstairs_hallway
     - service: hue.hue_activate_scene
@@ -934,6 +951,7 @@
         entity_id:
           - group.front_garden
           - group.terrace
+          - switch.living_room_main
           - group.living_room
           - group.downstairs_hallway
           - group.upstairs_hallway
@@ -1021,6 +1039,7 @@
         entity_id:
           - group.front_garden
           - group.terrace
+          - switch.living_room_main
           - group.living_room
           - group.upstairs_hallway
     - service: hue.hue_activate_scene
@@ -1047,6 +1066,7 @@
         entity_id:
           - group.front_garden
           - group.terrace
+          - switch.living_room_main
           - group.living_room
           - group.downstairs_hallway
           - group.upstairs_hallway
@@ -1134,6 +1154,7 @@
         entity_id:
           - group.front_garden
           - group.terrace
+          - switch.living_room_main
           - group.living_room
           - group.upstairs_hallway
     - service: hue.hue_activate_scene
@@ -1160,6 +1181,7 @@
         entity_id:
           - group.front_garden
           - group.terrace
+          - switch.living_room_main
           - group.living_room
           - group.downstairs_hallway
           - group.upstairs_hallway
@@ -1241,6 +1263,7 @@
         entity_id:
           - group.front_garden
           - group.terrace
+          - switch.living_room_main
           - group.living_room
           - group.upstairs_hallway
           - group.downstairs_hallway
@@ -1264,6 +1287,7 @@
         entity_id:
           - group.front_garden
           - group.terrace
+          - switch.living_room_main
           - group.living_room
           - group.downstairs_hallway
           - group.upstairs_hallway
@@ -1285,6 +1309,7 @@
     - service: light.turn_off
       data:
         entity_id:
+          - switch.living_room_main
           - group.living_room
           - group.upstairs_hallway
           - group.downstairs_hallway
@@ -1310,6 +1335,7 @@
         entity_id:
           - group.front_garden
           - group.terrace
+          - switch.living_room_main
           - group.living_room
           - group.upstairs_hallway
           - group.downstairs_hallway
@@ -1333,6 +1359,7 @@
         entity_id:
           - group.front_garden
           - group.terrace
+          - switch.living_room_main
           - group.living_room
           - group.upstairs_hallway
           - group.downstairs_hallway
@@ -1356,6 +1383,7 @@
         entity_id:
           - group.front_garden
           - group.terrace
+          - switch.living_room_main
           - group.living_room
           - group.upstairs_hallway
           - group.downstairs_hallway
