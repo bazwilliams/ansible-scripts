@@ -1396,27 +1396,6 @@
         entity_id: input_text.kitchen_worktop_scene
         value: worktop_lights_off
 
-- alias: Turn lights off in rooms not covered by house modes
-  initial_state: true
-  trigger:
-    platform: numeric_state
-    entity_id: sensor.outside_light_level
-    above: 800
-    below: 3000
-  condition:
-    condition: time
-    before: "21:00:00"
-    after: "08:00:00"
-  action:
-    - service: homeassistant.turn_off
-      data:
-        entity_id:
-          - group.ethans_room
-          - group.marcuss_room
-          - group.bedroom
-          - group.guest_room
-          - group.snug
-
 - alias: Wakeup
   initial_state: true
   trigger:
