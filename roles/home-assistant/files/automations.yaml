@@ -1468,7 +1468,7 @@
         entity_id:
           - group.kitchen
 
-- alias: Brighten the Terrace
+- alias: Terrace Lights to Bright
   initial_state: true
   trigger:
     platform: state
@@ -1478,21 +1478,11 @@
     - condition: numeric_state
       entity_id: sensor.outside_light_level
       below: 50
-    - condition: state
-      entity_id: input_boolean.terrace_scene_saved
-      state: "off"
   action:
-    - service: scene.create
-      data:
-        scene_id: terrace_before
-        snapshot_entities:
-          - group.terrace
     - service: hue.hue_activate_scene
       data_template:
         group_name: Terrace
         scene_name: "{{ states('input_select.terrace_bright_scene') }}"
-    - service: input_boolean.turn_on
-      entity_id: input_boolean.terrace_scene_saved
 
 - alias: Restore Terrace Lights
   initial_state: true
@@ -1507,13 +1497,12 @@
     for:
       minutes: 5
   action:
-    - service: scene.turn_on
-      data:
-        entity_id: scene.terrace_before
-    - service: input_boolean.turn_off
-      entity_id: input_boolean.terrace_scene_saved
+    - service: hue.hue_activate_scene
+      data_template:
+        group_name: Terrace
+        scene_name: "{{ states('input_select.terrace_dimmed_scene') }}"
 
-- alias: Brighten the Front Garden
+- alias: Front Garden Lights to Bright
   initial_state: true
   trigger:
     platform: state
@@ -1523,23 +1512,13 @@
     - condition: numeric_state
       entity_id: sensor.outside_light_level
       below: 50
-    - condition: state
-      entity_id: input_boolean.front_garden_scene_saved
-      state: "off"
   action:
-    - service: scene.create
-      data:
-        scene_id: front_garden_before
-        snapshot_entities:
-          - light.front_garden
     - service: hue.hue_activate_scene
       data_template:
         group_name: Front Garden
         scene_name: "{{ states('input_select.front_garden_bright_scene') }}"
-    - service: input_boolean.turn_on
-      entity_id: input_boolean.front_garden_scene_saved
 
-- alias: Restore Front Garden Lights
+- alias: Front Garden Lights Dimmed
   initial_state: true
   condition:
     - condition: numeric_state
@@ -1552,11 +1531,10 @@
     for:
       minutes: 2
   action:
-    - service: scene.turn_on
-      data:
-        entity_id: scene.front_garden_before
-    - service: input_boolean.turn_off
-      entity_id: input_boolean.front_garden_scene_saved
+    - service: hue.hue_activate_scene
+      data_template:
+        group_name: Front Garden
+        scene_name: "{{ states('input_select.front_garden_dimmed_scene') }}"
 
 - alias: Turn Power Amp On
   initial_state: true

@@ -252,12 +252,6 @@ weather:
     api_key: {{ darksky.api_key }}
 
 input_boolean:
-  front_garden_scene_saved:
-    name: Front Garden Scene Saved
-    initial: off
-  terrace_scene_saved:
-    name: Terrace Scene Saved
-    initial: off
   kitchen_worktop_lights:
     name: Kitchen Motion Worktop Lights State
     initial: on
