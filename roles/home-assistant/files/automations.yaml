@@ -1674,9 +1674,14 @@
 - alias: Guest Room Scene Mode 1
   initial_state: true
   condition:
-    - condition: state
-      entity_id: input_text.guest_room_mode
-      state: scene_off
+    condition: or
+    conditions:
+      - condition: state
+        entity_id: input_text.guest_room_mode
+        state: scene_off
+      - condition: state
+        entity_id: input_text.guest_room_mode
+        state: scene_3
   trigger:
     platform: event
     event_type: zha_event
@@ -1770,9 +1775,14 @@
 - alias: Bedroom Scene Mode 1
   initial_state: true
   condition:
-    - condition: state
-      entity_id: input_text.bedroom_mode
-      state: "scene_off"
+    condition: or
+    conditions:
+      - condition: state
+        entity_id: input_text.bedroom_mode
+        state: scene_off
+      - condition: state
+        entity_id: input_text.bedroom_mode
+        state: scene_3
   trigger:
     platform: event
     event_type: zha_event
