@@ -1447,7 +1447,7 @@
         entity_id:
           - group.kitchen
 
-- alias: Terrace Lights to Bright
+- alias: Terrace Lights Bright
   initial_state: true
   trigger:
     platform: state
@@ -1463,7 +1463,7 @@
         group_name: Terrace
         scene_name: "{{ states('input_select.terrace_bright_scene') }}"
 
-- alias: Restore Terrace Lights
+- alias: Terrace Lights Dimmed
   initial_state: true
   condition:
     - condition: numeric_state
@@ -1481,7 +1481,7 @@
         group_name: Terrace
         scene_name: "{{ states('input_select.terrace_dimmed_scene') }}"
 
-- alias: Front Garden Lights to Bright
+- alias: Front Garden Lights Bright
   initial_state: true
   trigger:
     platform: state
