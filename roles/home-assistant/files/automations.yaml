@@ -1416,6 +1416,9 @@
 - alias: Kitchen Lights On
   initial_state: true
   condition:
+    - condition: state
+      entity_id: light.kitchen
+      state:  "off"
     - condition: numeric_state
       entity_id: sensor.kitchen_light_level
       below: 100
