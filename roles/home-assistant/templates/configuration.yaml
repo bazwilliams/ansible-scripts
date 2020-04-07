@@ -267,8 +267,11 @@ input_text:
     name: Kitchen Motion Scene
     initial: Morning
   kitchen_worktop_scene:
-    name: Kitchen Worktop scene
+    name: Kitchen Worktop Scene
     initial: worktop_lights_on
+  upstairs_hallway_scene:
+    name: Upstairs Hallway Scene
+    initial: Night
 
 input_select:
   terrace_dimmed_scene:
