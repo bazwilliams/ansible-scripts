@@ -1498,10 +1498,15 @@
     entity_id: binary_sensor.back_garden_occupancy
     to: "on"
   condition:
+    - condition:
+      entity_id: input_boolean.terrace_occupancy
+      state: "off"
     - condition: numeric_state
       entity_id: sensor.outside_light_level
       below: 50
   action:
+    - service: input_boolean.turn_on
+      entity_id: input_boolean.terrace_occupancy
     - service: hue.hue_activate_scene
       data_template:
         group_name: Terrace
@@ -1524,6 +1529,8 @@
       data_template:
         group_name: Terrace
         scene_name: "{{ states('input_select.terrace_dimmed_scene') }}"
+    - service: input_boolean.turn_off
+      entity_id: input_boolean.terrace_occupancy
 
 - alias: Front Garden Lights Bright
   initial_state: true
