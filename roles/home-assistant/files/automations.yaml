@@ -1454,12 +1454,20 @@
       state:  "off"
     - condition: numeric_state
       entity_id: sensor.upstairs_hallway_light_level
-      below: 50
+      below: 30
+    - condition: state
+      entity_id: binary_sensor.upstairs_hallway_motion
+      state: "on"
   trigger:
+    - platform: state
+      entity_id: sensor.house_mode
     - platform: state
       entity_id: binary_sensor.upstairs_hallway_motion
       from: "off"
       to: "on"
+    - platform: numeric_state
+      entity_id: sensor.upstairs_hallway_light_level
+      below: 30
   action:
     - service: hue.hue_activate_scene
       data_template:
@@ -1469,11 +1477,14 @@
 - alias: Upstairs Hallway Lights Off
   initial_state: true
   trigger:
-    platform: state
-    entity_id: binary_sensor.upstairs_hallway_motion
-    to: "off"
-    for:
-      minutes: 8
+    - platform: state
+      entity_id: binary_sensor.upstairs_hallway_motion
+      to: "off"
+      for:
+        minutes: 8
+    - platform: numeric_state
+      entity_id: sensor.upstairs_hallway_light_level
+      above: 30
   action:
     - service: light.turn_off
       data:
