@@ -1498,7 +1498,7 @@
     entity_id: binary_sensor.back_garden_occupancy
     to: "on"
   condition:
-    - condition:
+    - condition: state
       entity_id: input_boolean.terrace_occupancy
       state: "off"
     - condition: numeric_state
