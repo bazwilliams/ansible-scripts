@@ -1999,7 +1999,117 @@
       data:
         entity_id:
           - group.marcuss_room
+    - service: media_player.turn_off
+      data:
+        entity_id:
+          - group.marcuss_room
     - service: input_text.set_value
       data:
         entity_id: input_text.marcuss_room_mode
         value: scene_off
+
+- alias: Ethans Room Scene Mode 1
+  initial_state: true
+  condition:
+    condition: or
+    conditions:
+      - condition: state
+        entity_id: input_text.ethans_room_mode
+        state: scene_off
+      - condition: state
+        entity_id: input_text.ethans_room_mode
+        state: scene_3
+  trigger:
+    platform: event
+    event_type: zha_event
+    event_data:
+      device_ieee: 00:17:88:01:06:ea:ec:9c
+      unique_id: 00:17:88:01:06:ea:ec:9c:1:0x0006
+      endpoint_id: 1
+      cluster_id: 6
+      command: "on"
+  action:
+    - service: hue.hue_activate_scene
+      data:
+        group_name: "Ethan’s Room"
+        scene_name: Scene 1
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.ethans_room_mode
+        value: scene_1
+
+- alias: Ethans Room Scene Mode 2
+  initial_state: true
+  condition:
+    - condition: state
+      entity_id: input_text.ethans_room_mode
+      state: "scene_1"
+  trigger:
+    platform: event
+    event_type: zha_event
+    event_data:
+      device_ieee: 00:17:88:01:06:ea:ec:9c
+      unique_id: 00:17:88:01:06:ea:ec:9c:1:0x0006
+      endpoint_id: 1
+      cluster_id: 6
+      command: "on"
+  action:
+    - service: hue.hue_activate_scene
+      data:
+        group_name: "Ethan’s Room"
+        scene_name: Scene 2
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.ethans_room_mode
+        value: scene_2
+
+- alias: Ethans Room Scene Mode 3
+  initial_state: true
+  condition:
+    - condition: state
+      entity_id: input_text.ethans_room_mode
+      state: "scene_2"
+  trigger:
+    platform: event
+    event_type: zha_event
+    event_data:
+      device_ieee: 00:17:88:01:06:ea:ec:9c
+      unique_id: 00:17:88:01:06:ea:ec:9c:1:0x0006
+      endpoint_id: 1
+      cluster_id: 6
+      command: "on"
+  action:
+    - service: hue.hue_activate_scene
+      data:
+        group_name: "Ethan’s Room"
+        scene_name: Scene 3
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.ethans_room_mode
+        value: scene_3
+
+- alias: Ethans Room Lights Off
+  initial_state: true
+  trigger:
+    platform: event
+    event_type: zha_event
+    event_data:
+      device_ieee: 00:17:88:01:06:ea:ec:9c
+      unique_id: 00:17:88:01:06:ea:ec:9c:1:0x0006
+      endpoint_id: 1
+      cluster_id: 6
+      command: off_with_effect
+  action:
+    - service: light.turn_off
+      data:
+        entity_id:
+          - group.ethans_room
+    - service: media_player.turn_off
+      data:
+        entity_id:
+          - group.ethans_room
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.ethans_room_mode
+        value: scene_off
+
