@@ -1481,7 +1481,7 @@
       entity_id: binary_sensor.upstairs_hallway_motion
       to: "off"
       for:
-        minutes: 8
+        minutes: 2
     - platform: numeric_state
       entity_id: sensor.upstairs_hallway_light_level
       above: 30
@@ -1903,3 +1903,103 @@
         entity_id: input_text.bedroom_mode
         value: scene_off
 
+- alias: Marcus Room Scene Mode 1
+  initial_state: true
+  condition:
+    condition: or
+    conditions:
+      - condition: state
+        entity_id: input_text.marcuss_room_mode
+        state: scene_off
+      - condition: state
+        entity_id: input_text.marcuss_room_mode
+        state: scene_3
+  trigger:
+    platform: event
+    event_type: zha_event
+    event_data:
+      device_ieee: 00:17:88:01:08:0a:aa:90
+      unique_id: 00:17:88:01:08:0a:aa:90:1:0x0006
+      endpoint_id: 1
+      cluster_id: 6
+      command: "on"
+  action:
+    - service: hue.hue_activate_scene
+      data:
+        group_name: "Marcus’s Room"
+        scene_name: Scene 1
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.marcuss_room_mode
+        value: scene_1
+
+- alias: Marcus Room Scene Mode 2
+  initial_state: true
+  condition:
+    - condition: state
+      entity_id: input_text.marcuss_room_mode
+      state: "scene_1"
+  trigger:
+    platform: event
+    event_type: zha_event
+    event_data:
+      device_ieee: 00:17:88:01:08:0a:aa:90
+      unique_id: 00:17:88:01:08:0a:aa:90:1:0x0006
+      endpoint_id: 1
+      cluster_id: 6
+      command: "on"
+  action:
+    - service: hue.hue_activate_scene
+      data:
+        group_name: "Marcus’s Room"
+        scene_name: Scene 2
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.marcuss_room_mode
+        value: scene_2
+
+- alias: Marcus Room Scene Mode 3
+  initial_state: true
+  condition:
+    - condition: state
+      entity_id: input_text.marcuss_room_mode
+      state: "scene_2"
+  trigger:
+    platform: event
+    event_type: zha_event
+    event_data:
+      device_ieee: 00:17:88:01:08:0a:aa:90
+      unique_id: 00:17:88:01:08:0a:aa:90:1:0x0006
+      endpoint_id: 1
+      cluster_id: 6
+      command: "on"
+  action:
+    - service: hue.hue_activate_scene
+      data:
+        group_name: "Marcus’s Room"
+        scene_name: Scene 3
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.marcuss_room_mode
+        value: scene_3
+
+- alias: Marcus Room Lights Off
+  initial_state: true
+  trigger:
+    platform: event
+    event_type: zha_event
+    event_data:
+      device_ieee: 00:17:88:01:08:0a:aa:90
+      unique_id: 00:17:88:01:08:0a:aa:90:1:0x0006
+      endpoint_id: 1
+      cluster_id: 6
+      command: off_with_effect
+  action:
+    - service: light.turn_off
+      data:
+        entity_id:
+          - group.marcuss_room
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.marcuss_room_mode
+        value: scene_off

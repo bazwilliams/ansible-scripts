@@ -263,6 +263,9 @@ input_text:
   guest_room_mode:
     name: Guest Room Scene Mode
     initial: scene_off
+  marcuss_room_mode:
+    name: Guest Room Scene Mode
+    initial: scene_off
   kitchen_scene:
     name: Kitchen Motion Scene
     initial: Morning
