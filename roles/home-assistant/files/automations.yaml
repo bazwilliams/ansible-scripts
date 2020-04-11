@@ -1449,9 +1449,6 @@
 - alias: Upstairs Hallway Lights On
   initial_state: true
   condition:
-    - condition: state
-      entity_id: light.upstairs_hallway
-      state:  "off"
     - condition: numeric_state
       entity_id: sensor.upstairs_hallway_light_level
       below: 30
