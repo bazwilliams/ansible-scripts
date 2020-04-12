@@ -625,10 +625,6 @@
     entity_id: sensor.house_mode
     to: night_dark_home
   action:
-    - service: hue.hue_activate_scene
-      data:
-        group_name: Downstairs Hallway
-        scene_name: Night
     - service: input_text.set_value
       data:
         entity_id: input_text.upstairs_hallway_scene
@@ -640,6 +636,7 @@
           - group.living_room
           - group.front_garden
           - group.terrace
+          - group.downstairs_hallway
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
@@ -655,17 +652,14 @@
     entity_id: sensor.house_mode
     to: night_dim_home
   action:
-    - service: light.turn_off
+    - service: hturn_off
       data:
         entity_id:
           - group.front_garden
           - group.terrace
           - switch.living_room_main
           - group.living_room
-    - service: hue.hue_activate_scene
-      data:
-        group_name: Downstairs Hallway
-        scene_name: Night
+          - group.downstairs_hallway
     - service: input_text.set_value
       data:
         entity_id: input_text.upstairs_hallway_scene
@@ -692,10 +686,7 @@
           - group.terrace
           - switch.living_room_main
           - group.living_room
-    - service: hue.hue_activate_scene
-      data:
-        group_name: Downstairs Hallway
-        scene_name: Night
+          - group.downstairs_hallway
     - service: input_text.set_value
       data:
         entity_id: input_text.upstairs_hallway_scene

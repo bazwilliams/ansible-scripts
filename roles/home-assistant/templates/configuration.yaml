@@ -227,7 +227,7 @@ sensor:
           {% set time_slot = "daytime" %}
           {% elif now().hour | int >= 6 %}
           {% set time_slot = "morning" %}
-          {% elif now().hour | int >= 0 %}
+          {% elif now().hour | int >= 1 %}
           {% set time_slot = "night" %}
           {% endif %}
           {% if states("sensor.outside_light_level") | float < 200 %}
