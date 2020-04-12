@@ -1,8 +1,38 @@
-  - name: Worktop Lights On
-    icon: "mdi:lightbulb"
-    entities:
-      light.worktop_lights: on
-  - name: Worktop Lights Off
-    icon: "mdi:lightbulb-off"
-    entities:
-      light.worktop_lights: off
+- name: Kitchen Away
+  entities:
+    light.worktop_lights: off
+    light.dining_table: off
+- name: Kitchen Night
+  entities:
+    light.worktop_lights: off
+    light.dining_table: off
+- name: Kitchen Early Night
+  entities:
+    light.worktop_lights: off
+    light.dining_table:
+      state: on
+      brightness: 30
+- name: Kitchen Late Evening
+  entities:
+    light.worktop_lights: on
+    light.dining_table:
+      state: on
+      brightness: 70
+- name: Kitchen Evening
+  entities:
+    light.worktop_lights: on
+    light.dining_table:
+      state: on
+      brightness: 100
+- name: Kitchen Daytime
+  entities:
+    light.worktop_lights: on
+    light.dining_table:
+      state: on
+      brightness: 254
+- name: Kitchen Morning
+  entities:
+    light.worktop_lights: on
+    light.dining_table:
+      state: on
+      brightness: 254

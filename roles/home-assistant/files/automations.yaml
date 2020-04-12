@@ -27,12 +27,12 @@
         scene_name: Morning
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_scene
+        entity_id: input_text.kitchen_hue_scene
         value: Morning
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_worktop_scene
-        value: worktop_lights_on
+        entity_id: input_text.kitchen_scene
+        value: kitchen_morning
 - alias: morning_dim_home
   initial_state: true
   trigger:
@@ -59,12 +59,12 @@
         scene_name: Morning
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_scene
+        entity_id: input_text.kitchen_hue_scene
         value: Morning
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_worktop_scene
-        value: worktop_lights_on
+        entity_id: input_text.kitchen_scene
+        value: kitchen_morning
 - alias: morning_bright_home
   initial_state: true
   trigger:
@@ -89,12 +89,12 @@
         value: Morning
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_scene
+        entity_id: input_text.kitchen_hue_scene
         value: Morning
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_worktop_scene
-        value: worktop_lights_on
+        entity_id: input_text.kitchen_scene
+        value: kitchen_morning
 - alias: morning_very_bright_home
   initial_state: true
   trigger:
@@ -116,12 +116,12 @@
         value: Morning
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_scene
+        entity_id: input_text.kitchen_hue_scene
         value: Morning
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_worktop_scene
-        value: worktop_lights_on
+        entity_id: input_text.kitchen_scene
+        value: kitchen_morning
 - alias: daytime_dark_home
   initial_state: true
   trigger:
@@ -151,12 +151,12 @@
         scene_name: "Living Room Evening"
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_scene
+        entity_id: input_text.kitchen_hue_scene
         value: Daytime
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_worktop_scene
-        value: worktop_lights_on
+        entity_id: input_text.kitchen_scene
+        value: kitchen_daytime
 - alias: daytime_dim_home
   initial_state: true
   trigger:
@@ -183,12 +183,12 @@
         scene_name: "Dull Outside"
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_scene
+        entity_id: input_text.kitchen_hue_scene
         value: Daytime
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_worktop_scene
-        value: worktop_lights_on
+        entity_id: input_text.kitchen_scene
+        value: kitchen_daytime
 - alias: daytime_bright_home
   initial_state: true
   trigger:
@@ -213,12 +213,12 @@
         value: Daytime Presence
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_scene
+        entity_id: input_text.kitchen_hue_scene
         value: Daytime
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_worktop_scene
-        value: worktop_lights_on
+        entity_id: input_text.kitchen_scene
+        value: kitchen_daytime
 - alias: daytime_very_bright_home
   initial_state: true
   trigger:
@@ -240,12 +240,12 @@
         value: Daytime Presence
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_scene
+        entity_id: input_text.kitchen_hue_scene
         value: Daytime
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_worktop_scene
-        value: worktop_lights_on
+        entity_id: input_text.kitchen_scene
+        value: kitchen_daytime
 - alias: evening_dark_home
   initial_state: true
   trigger:
@@ -275,12 +275,12 @@
         scene_name: "Living Room Evening"
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_scene
+        entity_id: input_text.kitchen_hue_scene
         value: Evening
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_worktop_scene
-        value: worktop_lights_on
+        entity_id: input_text.kitchen_scene
+        value: kitchen_evening
 - alias: evening_dim_home
   initial_state: true
   trigger:
@@ -307,12 +307,12 @@
         scene_name: "Dull Outside"
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_scene
+        entity_id: input_text.kitchen_hue_scene
         value: Evening
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_worktop_scene
-        value: worktop_lights_on
+        entity_id: input_text.kitchen_scene
+        value: kitchen_evening
 - alias: evening_bright_home
   initial_state: true
   trigger:
@@ -337,12 +337,12 @@
         value: Daytime Presence
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_scene
+        entity_id: input_text.kitchen_hue_scene
         value: Evening
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_worktop_scene
-        value: worktop_lights_on
+        entity_id: input_text.kitchen_scene
+        value: kitchen_evening
 - alias: evening_very_bright_home
   initial_state: true
   trigger:
@@ -364,12 +364,12 @@
         value: Bright Outside
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_scene
+        entity_id: input_text.kitchen_hue_scene
         value: Evening
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_worktop_scene
-        value: worktop_lights_on
+        entity_id: input_text.kitchen_scene
+        value: kitchen_evening
 - alias: late_evening_dark_home
   initial_state: true
   trigger:
@@ -399,12 +399,12 @@
         scene_name: "Living Room Evening"
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_scene
+        entity_id: input_text.kitchen_hue_scene
         value: Late Evening
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_worktop_scene
-        value: worktop_lights_on
+        entity_id: input_text.kitchen_scene
+        value: kitchen_late_evening
 - alias: late_evening_dim_home
   initial_state: true
   trigger:
@@ -431,12 +431,12 @@
         scene_name: "Dull Outside"
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_scene
+        entity_id: input_text.kitchen_hue_scene
         value: Late Evening
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_worktop_scene
-        value: worktop_lights_on
+        entity_id: input_text.kitchen_scene
+        value: kitchen_late_evening
 - alias: late_evening_bright_home
   initial_state: true
   trigger:
@@ -461,12 +461,12 @@
         value: Night
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_scene
+        entity_id: input_text.kitchen_hue_scene
         value: Late Evening
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_worktop_scene
-        value: worktop_lights_on
+        entity_id: input_text.kitchen_scene
+        value: kitchen_late_evening
 - alias: late_evening_very_bright_home
   initial_state: true
   trigger:
@@ -488,12 +488,12 @@
         value: Night
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_scene
+        entity_id: input_text.kitchen_hue_scene
         value: Late Evening
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_worktop_scene
-        value: worktop_lights_on
+        entity_id: input_text.kitchen_scene
+        value: kitchen_late_evening
 - alias: early_night_dark_home
   initial_state: true
   trigger:
@@ -523,12 +523,12 @@
         scene_name: "Living Room Evening"
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_scene
+        entity_id: input_text.kitchen_hue_scene
         value: Early Night
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_worktop_scene
-        value: worktop_lights_off
+        entity_id: input_text.kitchen_scene
+        value: kitchen_early_night
 - alias: early_night_dim_home
   initial_state: true
   trigger:
@@ -555,12 +555,12 @@
         scene_name: "Dull Outside"
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_scene
+        entity_id: input_text.kitchen_hue_scene
         value: Early Night
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_worktop_scene
-        value: worktop_lights_off
+        entity_id: input_text.kitchen_scene
+        value: kitchen_early_night
 - alias: early_night_bright_home
   initial_state: true
   trigger:
@@ -585,12 +585,12 @@
         value: Night
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_scene
+        entity_id: input_text.kitchen_hue_scene
         value: Early Night
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_worktop_scene
-        value: worktop_lights_off
+        entity_id: input_text.kitchen_scene
+        value: kitchen_early_night
 - alias: early_night_very_bright_home
   initial_state: true
   trigger:
@@ -612,12 +612,12 @@
         value: Night
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_scene
+        entity_id: input_text.kitchen_hue_scene
         value: Early Night
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_worktop_scene
-        value: worktop_lights_off
+        entity_id: input_text.kitchen_scene
+        value: kitchen_early_night
 - alias: night_dark_home
   initial_state: true
   trigger:
@@ -639,12 +639,12 @@
           - group.downstairs_hallway
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_scene
+        entity_id: input_text.kitchen_hue_scene
         value: Night
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_worktop_scene
-        value: worktop_lights_off
+        entity_id: input_text.kitchen_scene
+        value: kitchen_night
 - alias: night_dim_home
   initial_state: true
   trigger:
@@ -652,7 +652,7 @@
     entity_id: sensor.house_mode
     to: night_dim_home
   action:
-    - service: hturn_off
+    - service: light.turn_off
       data:
         entity_id:
           - group.front_garden
@@ -666,12 +666,12 @@
         value: Night
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_scene
+        entity_id: input_text.kitchen_hue_scene
         value: Night
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_worktop_scene
-        value: worktop_lights_off
+        entity_id: input_text.kitchen_scene
+        value: kitchen_night
 - alias: night_bright_home
   initial_state: true
   trigger:
@@ -693,12 +693,12 @@
         value: Night
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_scene
+        entity_id: input_text.kitchen_hue_scene
         value: Night
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_worktop_scene
-        value: worktop_lights_off
+        entity_id: input_text.kitchen_scene
+        value: kitchen_night
 - alias: night_very_bright_home
   initial_state: true
   trigger:
@@ -720,12 +720,12 @@
         value: Night
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_scene
+        entity_id: input_text.kitchen_hue_scene
         value: Night
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_worktop_scene
-        value: worktop_lights_off
+        entity_id: input_text.kitchen_scene
+        value: kitchen_night
 
 - alias: morning_dark_away
   initial_state: true
@@ -756,12 +756,12 @@
           - group.upstairs_hallway
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_scene
+        entity_id: input_text.kitchen_hue_scene
         value: Away
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_worktop_scene
-        value: worktop_lights_off
+        entity_id: input_text.kitchen_scene
+        value: kitchen_away
 - alias: morning_dim_away
   initial_state: true
   trigger:
@@ -785,12 +785,12 @@
         scene_name: Morning
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_scene
+        entity_id: input_text.kitchen_hue_scene
         value: Away
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_worktop_scene
-        value: worktop_lights_off
+        entity_id: input_text.kitchen_scene
+        value: kitchen_away
 - alias: morning_bright_away
   initial_state: true
   trigger:
@@ -809,12 +809,12 @@
           - group.living_room
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_scene
+        entity_id: input_text.kitchen_hue_scene
         value: Away
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_worktop_scene
-        value: worktop_lights_off
+        entity_id: input_text.kitchen_scene
+        value: kitchen_away
 - alias: morning_very_bright_away
   initial_state: true
   trigger:
@@ -833,12 +833,12 @@
           - group.living_room
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_scene
+        entity_id: input_text.kitchen_hue_scene
         value: Away
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_worktop_scene
-        value: worktop_lights_off
+        entity_id: input_text.kitchen_scene
+        value: kitchen_away
 - alias: daytime_dark_away
   initial_state: true
   trigger:
@@ -868,12 +868,12 @@
         scene_name: "Living Room Evening"
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_scene
+        entity_id: input_text.kitchen_hue_scene
         value: Away
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_worktop_scene
-        value: worktop_lights_off
+        entity_id: input_text.kitchen_scene
+        value: kitchen_away
 - alias: daytime_dim_away
   initial_state: true
   trigger:
@@ -897,12 +897,12 @@
         scene_name: "Dull Outside"
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_scene
+        entity_id: input_text.kitchen_hue_scene
         value: Away
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_worktop_scene
-        value: worktop_lights_off
+        entity_id: input_text.kitchen_scene
+        value: kitchen_away
 - alias: daytime_bright_away
   initial_state: true
   trigger:
@@ -924,12 +924,12 @@
         scene_name: Daytime Presence
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_scene
+        entity_id: input_text.kitchen_hue_scene
         value: Away
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_worktop_scene
-        value: worktop_lights_off
+        entity_id: input_text.kitchen_scene
+        value: kitchen_away
 - alias: daytime_very_bright_away
   initial_state: true
   trigger:
@@ -948,12 +948,12 @@
           - group.upstairs_hallway
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_scene
+        entity_id: input_text.kitchen_hue_scene
         value: Away
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_worktop_scene
-        value: worktop_lights_off
+        entity_id: input_text.kitchen_scene
+        value: kitchen_away
 - alias: evening_dark_away
   initial_state: true
   trigger:
@@ -983,12 +983,12 @@
         scene_name: "Living Room Evening"
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_scene
+        entity_id: input_text.kitchen_hue_scene
         value: Away
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_worktop_scene
-        value: worktop_lights_off
+        entity_id: input_text.kitchen_scene
+        value: kitchen_away
 - alias: evening_dim_away
   initial_state: true
   trigger:
@@ -1012,12 +1012,12 @@
         scene_name: "Dull Outside"
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_scene
+        entity_id: input_text.kitchen_hue_scene
         value: Away
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_worktop_scene
-        value: worktop_lights_off
+        entity_id: input_text.kitchen_scene
+        value: kitchen_away
 - alias: evening_bright_away
   initial_state: true
   trigger:
@@ -1035,12 +1035,12 @@
           - group.upstairs_hallway
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_scene
+        entity_id: input_text.kitchen_hue_scene
         value: Away
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_worktop_scene
-        value: worktop_lights_off
+        entity_id: input_text.kitchen_scene
+        value: kitchen_away
 - alias: evening_very_bright_away
   initial_state: true
   trigger:
@@ -1059,12 +1059,12 @@
           - group.upstairs_hallway
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_scene
+        entity_id: input_text.kitchen_hue_scene
         value: Away
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_worktop_scene
-        value: worktop_lights_off
+        entity_id: input_text.kitchen_scene
+        value: kitchen_away
 - alias: late_evening_dark_away
   initial_state: true
   trigger:
@@ -1094,12 +1094,12 @@
         scene_name: "Living Room Evening"
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_scene
+        entity_id: input_text.kitchen_hue_scene
         value: Away
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_worktop_scene
-        value: worktop_lights_off
+        entity_id: input_text.kitchen_scene
+        value: kitchen_away
 - alias: late_evening_dim_away
   initial_state: true
   trigger:
@@ -1123,12 +1123,12 @@
         scene_name: "Dull Outside"
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_scene
+        entity_id: input_text.kitchen_hue_scene
         value: Away
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_worktop_scene
-        value: worktop_lights_off
+        entity_id: input_text.kitchen_scene
+        value: kitchen_away
 - alias: late_evening_bright_away
   initial_state: true
   trigger:
@@ -1150,12 +1150,12 @@
         scene_name: Daytime Presence
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_scene
+        entity_id: input_text.kitchen_hue_scene
         value: Away
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_worktop_scene
-        value: worktop_lights_off
+        entity_id: input_text.kitchen_scene
+        value: kitchen_away
 - alias: late_evening_very_bright_away
   initial_state: true
   trigger:
@@ -1174,12 +1174,12 @@
           - group.upstairs_hallway
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_scene
+        entity_id: input_text.kitchen_hue_scene
         value: Away
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_worktop_scene
-        value: worktop_lights_off
+        entity_id: input_text.kitchen_scene
+        value: kitchen_away
 - alias: early_night_dark_away
   initial_state: true
   trigger:
@@ -1206,12 +1206,12 @@
         scene_name: "Living Room Evening"
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_scene
+        entity_id: input_text.kitchen_hue_scene
         value: Away
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_worktop_scene
-        value: worktop_lights_off
+        entity_id: input_text.kitchen_scene
+        value: kitchen_away
 - alias: early_night_dim_away
   initial_state: true
   trigger:
@@ -1232,12 +1232,12 @@
         scene_name: "Dull Outside"
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_scene
+        entity_id: input_text.kitchen_hue_scene
         value: Away
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_worktop_scene
-        value: worktop_lights_off
+        entity_id: input_text.kitchen_scene
+        value: kitchen_away
 - alias: early_night_bright_away
   initial_state: true
   trigger:
@@ -1256,12 +1256,12 @@
           - group.downstairs_hallway
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_scene
+        entity_id: input_text.kitchen_hue_scene
         value: Away
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_worktop_scene
-        value: worktop_lights_off
+        entity_id: input_text.kitchen_scene
+        value: kitchen_away
 - alias: early_night_very_bright_away
   initial_state: true
   trigger:
@@ -1280,12 +1280,12 @@
           - group.upstairs_hallway
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_scene
+        entity_id: input_text.kitchen_hue_scene
         value: Away
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_worktop_scene
-        value: worktop_lights_off
+        entity_id: input_text.kitchen_scene
+        value: kitchen_away
 - alias: night_dark_away
   initial_state: true
   trigger:
@@ -1304,12 +1304,12 @@
           - group.terrace
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_scene
+        entity_id: input_text.kitchen_hue_scene
         value: Away
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_worktop_scene
-        value: worktop_lights_off
+        entity_id: input_text.kitchen_scene
+        value: kitchen_away
 - alias: night_dim_away
   initial_state: true
   trigger:
@@ -1328,12 +1328,12 @@
           - group.downstairs_hallway
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_scene
+        entity_id: input_text.kitchen_hue_scene
         value: Away
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_worktop_scene
-        value: worktop_lights_off
+        entity_id: input_text.kitchen_scene
+        value: kitchen_away
 - alias: night_bright_away
   initial_state: true
   trigger:
@@ -1352,12 +1352,12 @@
           - group.downstairs_hallway
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_scene
+        entity_id: input_text.kitchen_hue_scene
         value: Away
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_worktop_scene
-        value: worktop_lights_off
+        entity_id: input_text.kitchen_scene
+        value: kitchen_away
 - alias: night_very_bright_away
   initial_state: true
   trigger:
@@ -1376,12 +1376,12 @@
           - group.downstairs_hallway
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_scene
+        entity_id: input_text.kitchen_hue_scene
         value: Away
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_worktop_scene
-        value: worktop_lights_off
+        entity_id: input_text.kitchen_scene
+        value: kitchen_away
 
 - alias: Wakeup
   initial_state: true
@@ -1417,11 +1417,11 @@
   action:
     - service: scene.turn_on
       data_template:
-        entity_id: "scene.{{ states('input_text.kitchen_worktop_scene') }}"
+        entity_id: "scene.{{ states('input_text.kitchen_scene') }}"
     - service: hue.hue_activate_scene
       data_template:
         group_name: Kitchen
-        scene_name: "{{ states('input_text.kitchen_scene') }}"
+        scene_name: "{{ states('input_text.kitchen_hue_scene') }}"
 
 - alias: Kitchen Lights Off
   initial_state: true
