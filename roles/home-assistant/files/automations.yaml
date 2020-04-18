@@ -2101,3 +2101,36 @@
         entity_id: input_text.ethans_room_mode
         value: scene_off
 
+- alias: Living Room Big Light On
+  initial_state: true
+  trigger:
+    platform: event
+    event_type: zha_event
+    event_data:
+      device_ieee: 00:17:88:01:04:f3:de:ed
+      unique_id: 00:17:88:01:04:f3:de:ed:1:0x0006
+      endpoint_id: 1
+      cluster_id: 6
+      command: "on"
+  action:
+    - service: switch.turn_on
+      data:
+        entity_id:
+          - switch.living_room_main
+
+- alias: Living Room Big Light Off
+  initial_state: true
+  trigger:
+    platform: event
+    event_type: zha_event
+    event_data:
+      device_ieee: 00:17:88:01:04:f3:de:ed
+      unique_id: 00:17:88:01:04:f3:de:ed:1:0x0006
+      endpoint_id: 1
+      cluster_id: 6
+      command: off_with_effect
+  action:
+    - service: switch.turn_off
+      data:
+        entity_id:
+          - switch.living_room_main
