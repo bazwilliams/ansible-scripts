@@ -1,13 +1,44 @@
-# Configure a default setup of Home Assistant (frontend, api, etc)
-default_config:
+config:
+frontend:
+map:
+mobile_app:
+person:
+ssdp:
+sun:
+system_health:
+updater:
+zeroconf:
+zone:
 
-# logger:
-#   default: warning
-#   logs:
-#     homeassistant.components.switch.rfxtrx: debug
-#     homeassistant.components.binary_sensor.rfxtrx: debug
-#     homeassistant.components.sensor.rfxtrx: debug
-#     homeassistant.components.rfxtrx: debug
+logbook:
+  include:
+    domains:
+      - sensor
+      - switch
+      - media_player
+  exclude:
+    entities:
+      - sensor.last_boot
+      - sensor.time
+    domains:
+      - sun
+
+history:
+  exclude:
+    domains:
+      - automation
+      - updater
+    entities:
+      - sensor.last_boot
+      - sensor.time
+
+logger:
+  default: warning
+  # logs:
+    # homeassistant.components.switch.rfxtrx: debug
+    # homeassistant.components.binary_sensor.rfxtrx: debug
+    # homeassistant.components.sensor.rfxtrx: debug
+    # homeassistant.components.rfxtrx: debug
 
 http:
 
