@@ -1,9 +1,9 @@
 ---
-- name: Create config directory
-  become: yes
-  file:
-    path: /opt/docker/data/plex
-    state: directory
+# - name: Create config directory
+#   become: yes
+#   file:
+#     path: /opt/docker/data/plex
+#     state: directory
 
 # - name: Upload configuration
 #   become: yes
@@ -21,22 +21,22 @@
             plex:
                 image: ""
 
-- name: Start service
-  docker_compose:
-    project_name: plex
-    remove_orphans: yes
-    state: present
-    definition:
-      version: '3'
-      services:
-        plex:
-          container_name: plex
-          image: plexinc/pms-docker
-          restart: unless-stopped
-          environment:
-            TZ: Europe/London
-            PLEX_CLAIM: ___
-          network_mode: host
-          volumes:
-            - /opt/docker/data/plex:/config
-            - /data:/data
+# - name: Start service
+#   docker_compose:
+#     project_name: plex
+#     remove_orphans: yes
+#     state: present
+#     definition:
+#       version: '3'
+#       services:
+#         plex:
+#           container_name: plex
+#           image: plexinc/pms-docker
+#           restart: unless-stopped
+#           environment:
+#             TZ: Europe/London
+#             PLEX_CLAIM: ___
+#           network_mode: host
+#           volumes:
+#             - /opt/docker/data/plex:/config
+#             - /data:/data
