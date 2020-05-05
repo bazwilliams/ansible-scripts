@@ -3,9 +3,9 @@
   roles:
      - update-packages-suse
      - install-docker-suse
-     - homeassistant-alexa-update
-     - homeassistant-homeconnect-update
-     - homeassistant-securitasdirect-update
-     - homeassistant-skyq-update
-     - homeassistant-zha_map-update
+    #  - homeassistant-alexa-update
+    #  - homeassistant-homeconnect-update
+    #  - homeassistant-securitasdirect-update
+    #  - homeassistant-skyq-update
+    #  - homeassistant-zha_map-update
      - home-assistant

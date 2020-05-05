@@ -15,8 +15,8 @@
 - name: Copy latest custom component to home-assistant role
   delegate_to: 127.0.0.1
   copy:
-    src: "{{ tempdir.path }}/custom_components/homeconnect"
-    dest: ./roles/home-assistant/files/custom_components
+    src: "{{ tempdir.path }}/custom_components/home_connect_beta/"
+    dest: ./roles/home-assistant/files/custom_components/homeconnect
 
 - name: Cleanup
   delegate_to: 127.0.0.1
