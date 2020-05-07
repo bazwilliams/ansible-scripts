@@ -30,8 +30,10 @@ terrace:
   entities:
     - sensor.back_garden_light_level
     - sensor.back_garden_temperature
-    - binary_sensor.back_garden_occupancy
     - light.terrace
+driveway:
+    - camera.driveway
+    - binary_sensor.driveway_motion
 bathroom:
   name: Bathroom
   entities:
@@ -97,6 +99,7 @@ snug:
     - light.lava_lamp
     - light.snug_main
     - switch.power_amplifier
+    - switch.bookcase_light
 upstairs_hallway:
   name: Upstairs Hallway
   entities:

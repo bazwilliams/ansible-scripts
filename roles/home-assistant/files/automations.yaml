@@ -1600,6 +1600,10 @@
       data:
         group_name: Snug
         scene_name: Chill
+    - service: switch.turn_off
+      data:
+        entity_id:
+          - switch.bookcase_light
 
 - alias: Listening to Records
   initial_state: true
@@ -1613,6 +1617,10 @@
       data:
         group_name: Snug
         scene_name: LP12
+    - service: switch.turn_off
+      data:
+        entity_id:
+          - switch.bookcase_light
 
 - alias: Watching the Big Screen
   initial_state: true
@@ -1625,6 +1633,10 @@
       data:
         group_name: Snug
         scene_name: Movie
+    - service: switch.turn_off
+      data:
+        entity_id:
+          - switch.bookcase_light
 
 - alias: Upstairs Hall Cupboard Door Open
   initial_state: true
@@ -1671,6 +1683,10 @@
       data:
         group_name: Snug
         scene_name: Bright
+    - service: switch.turn_on
+      data:
+        entity_id:
+          - switch.bookcase_light
 
 - alias: Snug Off
   initial_state: true

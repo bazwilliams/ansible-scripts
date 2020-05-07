@@ -74,6 +74,9 @@ homeassistant:
     switch.living_room_main:
       friendly_name: Big Light
       icon: mdi:ceiling-light
+    switch.bookcase_light:
+      friendly_name: Reading Light
+      icon: mdi:book-open-variant
 
 cloud:
   alexa:
@@ -95,6 +98,7 @@ cloud:
         - media_player.epson_projector
         - switch.living_room_main
         - light.lava_lamp
+        - switch.bookcase_light
 
 discovery:
 
