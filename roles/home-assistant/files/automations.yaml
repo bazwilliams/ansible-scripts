@@ -1600,10 +1600,9 @@
       data:
         group_name: Snug
         scene_name: Chill
-    - service: switch.turn_off
+    - service: scene.turn_on
       data:
-        entity_id:
-          - switch.bookcase_light
+        entity_id: scene.snug_music
 
 - alias: Listening to Records
   initial_state: true
@@ -1617,10 +1616,9 @@
       data:
         group_name: Snug
         scene_name: LP12
-    - service: switch.turn_off
+    - service: scene.turn_on
       data:
-        entity_id:
-          - switch.bookcase_light
+        entity_id: scene.snug_lp12
 
 - alias: Watching the Big Screen
   initial_state: true
@@ -1633,11 +1631,9 @@
       data:
         entity_id:
           - group.snug
-    - service: switch.turn_off
+    - service: scene.turn_on
       data:
-        entity_id:
-          - switch.bookcase_light
-          - switch.lava_lamp
+        entity_id: scene.snug_movie
 
 - alias: Upstairs Hall Cupboard Door Open
   initial_state: true
@@ -1683,11 +1679,10 @@
     - service: hue.hue_activate_scene
       data:
         group_name: Snug
-        scene_name: Bright
-    - service: switch.turn_on
+        scene_name: Relax
+    - service: scene.turn_on
       data:
-        entity_id:
-          - switch.bookcase_light
+        entity_id: scene.snug_on
 
 - alias: Snug Off
   initial_state: true
@@ -2151,3 +2146,24 @@
       data:
         entity_id:
           - switch.living_room_main
+
+- alias: Living Room Off
+  initial_state: true
+  trigger:
+    platform: event
+    event_type: zha_event
+    event_data:
+      device_ieee: 00:17:88:01:04:f3:de:ed
+      unique_id: 00:17:88:01:04:f3:de:ed:1:0x0006
+      endpoint_id: 1
+      cluster_id: 6
+      command: off_with_effect
+  condition:
+    - condition: state
+      entity_id: switch.living_room_main
+      state: off
+  action:
+    - service: homeassistant.turn_off
+      data:
+        entity_id:
+          - group.living_room

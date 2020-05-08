@@ -36,3 +36,23 @@
     light.dining_table:
       state: on
       brightness: 254
+- name: Snug Movie
+  entities:
+    light.snug_main: off
+    switch.bookcase_light: off
+    switch.lava_lamp: off
+- name: Snug Music
+  entities:
+    light.snug_main: off
+    switch.bookcase_light: off
+    switch.lava_lamp: on
+- name: Snug LP12
+  entities:
+    light.snug_main: off
+    switch.bookcase_light: off
+    switch.lava_lamp: on
+- name: Snug On
+  entities:
+    light.snug_main: on
+    switch.bookcase_light: on
+    switch.lava_lamp: off
