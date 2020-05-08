@@ -1629,14 +1629,15 @@
       entity_id: media_player.epson_projector
       to: "on"
   action:
-    - service: hue.hue_activate_scene
+    - service: light.turn_off
       data:
-        group_name: Snug
-        scene_name: Movie
+        entity_id:
+          - group.snug
     - service: switch.turn_off
       data:
         entity_id:
           - switch.bookcase_light
+          - switch.lava_lamp
 
 - alias: Upstairs Hall Cupboard Door Open
   initial_state: true

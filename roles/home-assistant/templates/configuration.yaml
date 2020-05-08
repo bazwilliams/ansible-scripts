@@ -77,6 +77,9 @@ homeassistant:
     switch.bookcase_light:
       friendly_name: Reading Light
       icon: mdi:book-open-variant
+    switch.lava_lamp:
+      friendly_name: Lava Lamp
+      icon: mdi:lava-lamp
 
 cloud:
   alexa:
@@ -97,7 +100,7 @@ cloud:
         - light.upstairs_hallway
         - media_player.epson_projector
         - switch.living_room_main
-        - light.lava_lamp
+        - switch.lava_lamp
         - switch.bookcase_light
 
 discovery:

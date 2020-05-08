@@ -96,7 +96,7 @@ snug:
     - light.egg_lamp
     - light.steampunk_lamp
     - light.tripod_lamp
-    - light.lava_lamp
+    - switch.lava_lamp
     - light.snug_main
     - switch.power_amplifier
     - switch.bookcase_light
