@@ -2161,7 +2161,7 @@
   condition:
     - condition: state
       entity_id: switch.living_room_main
-      state: off
+      state: "off"
   action:
     - service: homeassistant.turn_off
       data:
