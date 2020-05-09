@@ -62,15 +62,19 @@ homeassistant:
       friendly_name: Projector
       icon: mdi:projector
     media_player.power_amplifier:
-      icon: mdi:speaker
+      icon: mdi:amplifier
     light.dining_table:
       friendly_name: Dining Table
+      icon: mdi:vanity-light
     device_tracker.74_9e_af_4f_70_94:
       friendly_name: Barry's iPhone
     device_tracker.80_82_23_6a_ef_fc:
       friendly_name: Louise's iPhone
     alarm_control_panel.securitas_260178:
       friendly_name: Alarm
+    light.snug_main:
+      friendly_name: Snug Main
+      icon: mdi:ceiling-light
     switch.living_room_main:
       friendly_name: Big Light
       icon: mdi:ceiling-light
