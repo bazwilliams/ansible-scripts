@@ -618,6 +618,130 @@
       data:
         entity_id: input_text.kitchen_scene
         value: kitchen_early_night
+- alias: late_night_dark_home
+  initial_state: true
+  trigger:
+    platform: state
+    entity_id: sensor.house_mode
+    to: late_night_dark_home
+  action:
+    - service: hue.hue_activate_scene
+      data_template:
+        group_name: Front Garden
+        scene_name: "{{ states('input_select.front_garden_dimmed_scene') }}"
+    - service: hue.hue_activate_scene
+      data_template:
+        group_name: Terrace
+        scene_name: "{{ states('input_select.terrace_dimmed_scene') }}"
+    - service: hue.hue_activate_scene
+      data:
+        group_name: Downstairs Hallway
+        scene_name: Early Night
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.upstairs_hallway_scene
+        value: Night
+    - service: hue.hue_activate_scene
+      data:
+        group_name: "Living room"
+        scene_name: "Living Room Evening"
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.kitchen_hue_scene
+        value: Early Night
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.kitchen_scene
+        value: kitchen_late_night
+- alias: late_night_dim_home
+  initial_state: true
+  trigger:
+    platform: state
+    entity_id: sensor.house_mode
+    to: late_night_dim_home
+  action:
+    - service: light.turn_off
+      data:
+        entity_id:
+          - group.front_garden
+          - group.terrace
+    - service: hue.hue_activate_scene
+      data:
+        group_name: Downstairs Hallway
+        scene_name: Early Night
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.upstairs_hallway_scene
+        value: Night
+    - service: hue.hue_activate_scene
+      data:
+        group_name: "Living room"
+        scene_name: "Dull Outside"
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.kitchen_hue_scene
+        value: Early Night
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.kitchen_scene
+        value: kitchen_late_night
+- alias: late_night_bright_home
+  initial_state: true
+  trigger:
+    platform: state
+    entity_id: sensor.house_mode
+    to: late_night_bright_home
+  action:
+    - service: light.turn_off
+      data:
+        entity_id:
+          - group.front_garden
+          - group.terrace
+          - switch.living_room_main
+          - group.living_room
+    - service: hue.hue_activate_scene
+      data:
+        group_name: Downstairs Hallway
+        scene_name: Early Night
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.upstairs_hallway_scene
+        value: Night
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.kitchen_hue_scene
+        value: Early Night
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.kitchen_scene
+        value: kitchen_late_night
+- alias: late_night_very_bright_home
+  initial_state: true
+  trigger:
+    platform: state
+    entity_id: sensor.house_mode
+    to: late_night_very_bright_home
+  action:
+    - service: light.turn_off
+      data:
+        entity_id:
+          - group.front_garden
+          - group.terrace
+          - switch.living_room_main
+          - group.living_room
+          - group.downstairs_hallway
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.upstairs_hallway_scene
+        value: Night
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.kitchen_hue_scene
+        value: Early Night
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.kitchen_scene
+        value: kitchen_late_night
 - alias: night_dark_home
   initial_state: true
   trigger:
@@ -1268,6 +1392,112 @@
     platform: state
     entity_id: sensor.house_mode
     to: early_night_very_bright_away
+  action:
+    - service: light.turn_off
+      data:
+        entity_id:
+          - group.front_garden
+          - group.terrace
+          - switch.living_room_main
+          - group.living_room
+          - group.downstairs_hallway
+          - group.upstairs_hallway
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.kitchen_hue_scene
+        value: Away
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.kitchen_scene
+        value: kitchen_away
+- alias: late_night_dark_away
+  initial_state: true
+  trigger:
+    platform: state
+    entity_id: sensor.house_mode
+    to: late_night_dark_away
+  action:
+    - service: hue.hue_activate_scene
+      data_template:
+        group_name: Front Garden
+        scene_name: "{{ states('input_select.front_garden_dimmed_scene') }}"
+    - service: hue.hue_activate_scene
+      data_template:
+        group_name: Terrace
+        scene_name: "{{ states('input_select.terrace_dimmed_scene') }}"
+    - service: light.turn_off
+      data:
+        entity_id:
+          - group.upstairs_hallway
+          - group.downstairs_hallway
+    - service: hue.hue_activate_scene
+      data:
+        group_name: "Living room"
+        scene_name: "Living Room Evening"
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.kitchen_hue_scene
+        value: Away
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.kitchen_scene
+        value: kitchen_away
+- alias: late_night_dim_away
+  initial_state: true
+  trigger:
+    platform: state
+    entity_id: sensor.house_mode
+    to: late_night_dim_away
+  action:
+    - service: light.turn_off
+      data:
+        entity_id:
+          - group.front_garden
+          - group.terrace
+          - group.upstairs_hallway
+          - group.downstairs_hallway
+    - service: hue.hue_activate_scene
+      data:
+        group_name: "Living room"
+        scene_name: "Dull Outside"
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.kitchen_hue_scene
+        value: Away
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.kitchen_scene
+        value: kitchen_away
+- alias: late_night_bright_away
+  initial_state: true
+  trigger:
+    platform: state
+    entity_id: sensor.house_mode
+    to: late_night_bright_away
+  action:
+    - service: light.turn_off
+      data:
+        entity_id:
+          - group.front_garden
+          - group.terrace
+          - switch.living_room_main
+          - group.living_room
+          - group.upstairs_hallway
+          - group.downstairs_hallway
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.kitchen_hue_scene
+        value: Away
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.kitchen_scene
+        value: kitchen_away
+- alias: late_night_very_bright_away
+  initial_state: true
+  trigger:
+    platform: state
+    entity_id: sensor.house_mode
+    to: late_night_very_bright_away
   action:
     - service: light.turn_off
       data:

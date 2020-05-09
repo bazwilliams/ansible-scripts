@@ -6,12 +6,16 @@
   entities:
     light.worktop_lights: off
     light.dining_table: off
+- name: Kitchen Late Night
+  entities:
+    light.worktop_lights: off
+    light.dining_table: off
 - name: Kitchen Early Night
   entities:
     light.worktop_lights: off
     light.dining_table:
       state: on
-      brightness: 30
+      brightness: 50
 - name: Kitchen Late Evening
   entities:
     light.worktop_lights: on
@@ -23,7 +27,7 @@
     light.worktop_lights: on
     light.dining_table:
       state: on
-      brightness: 100
+      brightness: 120
 - name: Kitchen Daytime
   entities:
     light.worktop_lights: on

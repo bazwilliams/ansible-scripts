@@ -269,6 +269,8 @@ sensor:
           {% set time_slot = "morning" %}
           {% elif now().hour | int >= 1 %}
           {% set time_slot = "night" %}
+          {% elif now().hour | int >= 0 %}
+          {% set time_slot = "late_night" %}
           {% endif %}
           {% if states("sensor.outside_light_level") | float < 200 %}
           {% set light_slot = "dark" %}
