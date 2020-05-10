@@ -1904,7 +1904,7 @@
     - service: input_boolean.turn_off
       entity_id: input_boolean.terrace_occupancy
 
-- alias: Front Garden Lights Bright
+- alias: Front Garden to Bright
   initial_state: true
   trigger:
     platform: state
@@ -1919,7 +1919,7 @@
       data:
         entity_id: scene.front_garden_bright
 
-- alias: Front Garden Lights Dimmed
+- alias: Front Garden To Default Scene
   initial_state: true
   condition:
     - condition: numeric_state
@@ -1931,6 +1931,16 @@
     to: "off"
     for:
       minutes: 2
+  action:
+    - service: scene.turn_on
+      data_template:
+        entity_id: "scene.{{ states('input_text.front_garden_scene') }}"
+
+- alias: Front Garden Default Scene Changed
+  initial_state: true
+  trigger:
+    platform: state
+    entity_id: input_text.front_garden_scene
   action:
     - service: scene.turn_on
       data_template:
