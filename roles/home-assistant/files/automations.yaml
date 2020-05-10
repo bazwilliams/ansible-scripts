@@ -1762,6 +1762,28 @@
           - media_player.ethan_s_room
           - media_player.marcus_room
 
+- alias: Frog Filter On
+  initial_state: true
+  trigger:
+    platform: time
+    at: "02:00:00"
+  action:
+    - service: switch.turn_on
+      data:
+        entity_id:
+          - switch.frog_filter
+
+- alias: Frog Filter Off
+  initial_state: true
+  trigger:
+    platform: time
+    at: "08:00:00"
+  action:
+    - service: switch.turn_off
+      data:
+        entity_id:
+          - switch.frog_filter
+
 - alias: Kitchen Lights On
   initial_state: true
   condition:
