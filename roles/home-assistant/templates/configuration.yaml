@@ -85,6 +85,9 @@ homeassistant:
     switch.lava_lamp:
       friendly_name: Lava Lamp
       icon: mdi:lava-lamp
+    switch.frog_filter:
+      friendly_name: Frog Filter
+      icon: mdi:air-filter
 
 cloud:
   alexa:
@@ -107,6 +110,7 @@ cloud:
         - switch.living_room_main
         - switch.lava_lamp
         - switch.bookcase_light
+        - switch.frog_filter
 
 discovery:
 
