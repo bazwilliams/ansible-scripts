@@ -5,10 +5,10 @@
     entity_id: sensor.house_mode
     to: morning_dark_home
   action:
-    - service: hue.hue_activate_scene
+    - service: input_text.set_value
       data_template:
-        group_name: Front Garden
-        scene_name: "{{ states('input_select.front_garden_dimmed_scene') }}"
+        entity_id: input_text.front_garden_scene
+        value: front_garden_dimmed
     - service: hue.hue_activate_scene
       data_template:
         group_name: Terrace
@@ -40,10 +40,13 @@
     entity_id: sensor.house_mode
     to: morning_dim_home
   action:
+    - service: input_text.set_value
+      data_template:
+        entity_id: input_text.front_garden_scene
+        value: front_garden_off
     - service: light.turn_off
       data:
         entity_id:
-          - group.front_garden
           - group.terrace
     - service: hue.hue_activate_scene
       data:
@@ -72,10 +75,13 @@
     entity_id: sensor.house_mode
     to: morning_bright_home
   action:
+    - service: input_text.set_value
+      data_template:
+        entity_id: input_text.front_garden_scene
+        value: front_garden_off
     - service: light.turn_off
       data:
         entity_id:
-          - group.front_garden
           - switch.living_room_main
           - group.living_room
           - group.terrace
@@ -102,10 +108,13 @@
     entity_id: sensor.house_mode
     to: morning_very_bright_home
   action:
+    - service: input_text.set_value
+      data_template:
+        entity_id: input_text.front_garden_scene
+        value: front_garden_off
     - service: light.turn_off
       data:
         entity_id:
-          - group.front_garden
           - group.downstairs_hallway
           - switch.living_room_main
           - group.living_room
@@ -129,10 +138,10 @@
     entity_id: sensor.house_mode
     to: daytime_dark_home
   action:
-    - service: hue.hue_activate_scene
+    - service: input_text.set_value
       data_template:
-        group_name: Front Garden
-        scene_name: "{{ states('input_select.front_garden_dimmed_scene') }}"
+        entity_id: input_text.front_garden_scene
+        value: front_garden_dimmed
     - service: hue.hue_activate_scene
       data_template:
         group_name: Terrace
@@ -164,10 +173,13 @@
     entity_id: sensor.house_mode
     to: daytime_dim_home
   action:
+    - service: input_text.set_value
+      data_template:
+        entity_id: input_text.front_garden_scene
+        value: front_garden_off
     - service: light.turn_off
       data:
         entity_id:
-          - group.front_garden
           - group.terrace
     - service: hue.hue_activate_scene
       data:
@@ -196,10 +208,13 @@
     entity_id: sensor.house_mode
     to: daytime_bright_home
   action:
+    - service: input_text.set_value
+      data_template:
+        entity_id: input_text.front_garden_scene
+        value: front_garden_off
     - service: light.turn_off
       data:
         entity_id:
-          - group.front_garden
           - group.terrace
           - switch.living_room_main
           - group.living_room
@@ -226,10 +241,13 @@
     entity_id: sensor.house_mode
     to: daytime_very_bright_home
   action:
+    - service: input_text.set_value
+      data_template:
+        entity_id: input_text.front_garden_scene
+        value: front_garden_off
     - service: light.turn_off
       data:
         entity_id:
-          - group.front_garden
           - group.terrace
           - switch.living_room_main
           - group.living_room
@@ -253,10 +271,10 @@
     entity_id: sensor.house_mode
     to: evening_dark_home
   action:
-    - service: hue.hue_activate_scene
+    - service: input_text.set_value
       data_template:
-        group_name: Front Garden
-        scene_name: "{{ states('input_select.front_garden_dimmed_scene') }}"
+        entity_id: input_text.front_garden_scene
+        value: front_garden_dimmed
     - service: hue.hue_activate_scene
       data_template:
         group_name: Terrace
@@ -288,10 +306,13 @@
     entity_id: sensor.house_mode
     to: evening_dim_home
   action:
+    - service: input_text.set_value
+      data_template:
+        entity_id: input_text.front_garden_scene
+        value: front_garden_off
     - service: light.turn_off
       data:
         entity_id:
-          - group.front_garden
           - group.terrace
     - service: hue.hue_activate_scene
       data:
@@ -320,10 +341,13 @@
     entity_id: sensor.house_mode
     to: evening_bright_home
   action:
+    - service: input_text.set_value
+      data_template:
+        entity_id: input_text.front_garden_scene
+        value: front_garden_off
     - service: light.turn_off
       data:
         entity_id:
-          - group.front_garden
           - group.terrace
           - switch.living_room_main
           - group.living_room
@@ -350,10 +374,13 @@
     entity_id: sensor.house_mode
     to: evening_very_bright_home
   action:
+    - service: input_text.set_value
+      data_template:
+        entity_id: input_text.front_garden_scene
+        value: front_garden_off
     - service: light.turn_off
       data:
         entity_id:
-          - group.front_garden
           - group.terrace
           - switch.living_room_main
           - group.living_room
@@ -377,10 +404,10 @@
     entity_id: sensor.house_mode
     to: late_evening_dark_home
   action:
-    - service: hue.hue_activate_scene
+    - service: input_text.set_value
       data_template:
-        group_name: Front Garden
-        scene_name: "{{ states('input_select.front_garden_dimmed_scene') }}"
+        entity_id: input_text.front_garden_scene
+        value: front_garden_dimmed
     - service: hue.hue_activate_scene
       data_template:
         group_name: Terrace
@@ -412,10 +439,13 @@
     entity_id: sensor.house_mode
     to: late_evening_dim_home
   action:
+    - service: input_text.set_value
+      data_template:
+        entity_id: input_text.front_garden_scene
+        value: front_garden_off
     - service: light.turn_off
       data:
         entity_id:
-          - group.front_garden
           - group.terrace
     - service: hue.hue_activate_scene
       data:
@@ -444,10 +474,13 @@
     entity_id: sensor.house_mode
     to: late_evening_bright_home
   action:
+    - service: input_text.set_value
+      data_template:
+        entity_id: input_text.front_garden_scene
+        value: front_garden_off
     - service: light.turn_off
       data:
         entity_id:
-          - group.front_garden
           - group.terrace
           - switch.living_room_main
           - group.living_room
@@ -474,10 +507,13 @@
     entity_id: sensor.house_mode
     to: late_evening_very_bright_home
   action:
+    - service: input_text.set_value
+      data_template:
+        entity_id: input_text.front_garden_scene
+        value: front_garden_off
     - service: light.turn_off
       data:
         entity_id:
-          - group.front_garden
           - group.terrace
           - switch.living_room_main
           - group.living_room
@@ -501,10 +537,10 @@
     entity_id: sensor.house_mode
     to: early_night_dark_home
   action:
-    - service: hue.hue_activate_scene
+    - service: input_text.set_value
       data_template:
-        group_name: Front Garden
-        scene_name: "{{ states('input_select.front_garden_dimmed_scene') }}"
+        entity_id: input_text.front_garden_scene
+        value: front_garden_dimmed
     - service: hue.hue_activate_scene
       data_template:
         group_name: Terrace
@@ -536,10 +572,13 @@
     entity_id: sensor.house_mode
     to: early_night_dim_home
   action:
+    - service: input_text.set_value
+      data_template:
+        entity_id: input_text.front_garden_scene
+        value: front_garden_off
     - service: light.turn_off
       data:
         entity_id:
-          - group.front_garden
           - group.terrace
     - service: hue.hue_activate_scene
       data:
@@ -568,10 +607,13 @@
     entity_id: sensor.house_mode
     to: early_night_bright_home
   action:
+    - service: input_text.set_value
+      data_template:
+        entity_id: input_text.front_garden_scene
+        value: front_garden_off
     - service: light.turn_off
       data:
         entity_id:
-          - group.front_garden
           - group.terrace
           - switch.living_room_main
           - group.living_room
@@ -598,10 +640,13 @@
     entity_id: sensor.house_mode
     to: early_night_very_bright_home
   action:
+    - service: input_text.set_value
+      data_template:
+        entity_id: input_text.front_garden_scene
+        value: front_garden_off
     - service: light.turn_off
       data:
         entity_id:
-          - group.front_garden
           - group.terrace
           - switch.living_room_main
           - group.living_room
@@ -625,10 +670,10 @@
     entity_id: sensor.house_mode
     to: late_night_dark_home
   action:
-    - service: hue.hue_activate_scene
+    - service: input_text.set_value
       data_template:
-        group_name: Front Garden
-        scene_name: "{{ states('input_select.front_garden_dimmed_scene') }}"
+        entity_id: input_text.front_garden_scene
+        value: front_garden_dimmed
     - service: hue.hue_activate_scene
       data_template:
         group_name: Terrace
@@ -660,10 +705,13 @@
     entity_id: sensor.house_mode
     to: late_night_dim_home
   action:
+    - service: input_text.set_value
+      data_template:
+        entity_id: input_text.front_garden_scene
+        value: front_garden_off
     - service: light.turn_off
       data:
         entity_id:
-          - group.front_garden
           - group.terrace
     - service: hue.hue_activate_scene
       data:
@@ -692,10 +740,13 @@
     entity_id: sensor.house_mode
     to: late_night_bright_home
   action:
+    - service: input_text.set_value
+      data_template:
+        entity_id: input_text.front_garden_scene
+        value: front_garden_off
     - service: light.turn_off
       data:
         entity_id:
-          - group.front_garden
           - group.terrace
           - switch.living_room_main
           - group.living_room
@@ -722,10 +773,13 @@
     entity_id: sensor.house_mode
     to: late_night_very_bright_home
   action:
+    - service: input_text.set_value
+      data_template:
+        entity_id: input_text.front_garden_scene
+        value: front_garden_off
     - service: light.turn_off
       data:
         entity_id:
-          - group.front_garden
           - group.terrace
           - switch.living_room_main
           - group.living_room
@@ -753,12 +807,15 @@
       data:
         entity_id: input_text.upstairs_hallway_scene
         value: Night
+    - service: input_text.set_value
+      data_template:
+        entity_id: input_text.front_garden_scene
+        value: front_garden_off
     - service: light.turn_off
       data:
         entity_id:
           - switch.living_room_main
           - group.living_room
-          - group.front_garden
           - group.terrace
           - group.downstairs_hallway
     - service: input_text.set_value
@@ -776,10 +833,13 @@
     entity_id: sensor.house_mode
     to: night_dim_home
   action:
+    - service: input_text.set_value
+      data_template:
+        entity_id: input_text.front_garden_scene
+        value: front_garden_off
     - service: light.turn_off
       data:
         entity_id:
-          - group.front_garden
           - group.terrace
           - switch.living_room_main
           - group.living_room
@@ -803,10 +863,13 @@
     entity_id: sensor.house_mode
     to: night_bright_home
   action:
+    - service: input_text.set_value
+      data_template:
+        entity_id: input_text.front_garden_scene
+        value: front_garden_off
     - service: light.turn_off
       data:
         entity_id:
-          - group.front_garden
           - group.terrace
           - switch.living_room_main
           - group.living_room
@@ -830,10 +893,13 @@
     entity_id: sensor.house_mode
     to: night_very_bright_home
   action:
+    - service: input_text.set_value
+      data_template:
+        entity_id: input_text.front_garden_scene
+        value: front_garden_off
     - service: light.turn_off
       data:
         entity_id:
-          - group.front_garden
           - group.terrace
           - switch.living_room_main
           - group.living_room
@@ -858,10 +924,10 @@
     entity_id: sensor.house_mode
     to: morning_dark_away
   action:
-    - service: hue.hue_activate_scene
+    - service: input_text.set_value
       data_template:
-        group_name: Front Garden
-        scene_name: "{{ states('input_select.front_garden_dimmed_scene') }}"
+        entity_id: input_text.front_garden_scene
+        value: front_garden_dimmed
     - service: hue.hue_activate_scene
       data_template:
         group_name: Terrace
@@ -893,10 +959,13 @@
     entity_id: sensor.house_mode
     to: morning_dim_away
   action:
+    - service: input_text.set_value
+      data_template:
+        entity_id: input_text.front_garden_scene
+        value: front_garden_off
     - service: light.turn_off
       data:
         entity_id:
-          - group.front_garden
           - group.terrace
           - group.upstairs_hallway
     - service: hue.hue_activate_scene
@@ -922,10 +991,13 @@
     entity_id: sensor.house_mode
     to: morning_bright_away
   action:
+    - service: input_text.set_value
+      data_template:
+        entity_id: input_text.front_garden_scene
+        value: front_garden_off
     - service: light.turn_off
       data:
         entity_id:
-          - group.front_garden
           - group.terrace
           - group.upstairs_hallway
           - group.downstairs_hallway
@@ -946,10 +1018,13 @@
     entity_id: sensor.house_mode
     to: morning_very_bright_away
   action:
+    - service: input_text.set_value
+      data_template:
+        entity_id: input_text.front_garden_scene
+        value: front_garden_off
     - service: light.turn_off
       data:
         entity_id:
-          - group.front_garden
           - group.terrace
           - group.upstairs_hallway
           - group.downstairs_hallway
@@ -970,10 +1045,10 @@
     entity_id: sensor.house_mode
     to: daytime_dark_away
   action:
-    - service: hue.hue_activate_scene
+    - service: input_text.set_value
       data_template:
-        group_name: Front Garden
-        scene_name: "{{ states('input_select.front_garden_dimmed_scene') }}"
+        entity_id: input_text.front_garden_scene
+        value: front_garden_dimmed
     - service: hue.hue_activate_scene
       data_template:
         group_name: Terrace
@@ -1005,10 +1080,13 @@
     entity_id: sensor.house_mode
     to: daytime_dim_away
   action:
+    - service: input_text.set_value
+      data_template:
+        entity_id: input_text.front_garden_scene
+        value: front_garden_off
     - service: light.turn_off
       data:
         entity_id:
-          - group.front_garden
           - group.terrace
           - group.upstairs_hallway
     - service: hue.hue_activate_scene
@@ -1034,10 +1112,13 @@
     entity_id: sensor.house_mode
     to: daytime_bright_away
   action:
+    - service: input_text.set_value
+      data_template:
+        entity_id: input_text.front_garden_scene
+        value: front_garden_off
     - service: light.turn_off
       data:
         entity_id:
-          - group.front_garden
           - group.terrace
           - switch.living_room_main
           - group.living_room
@@ -1061,10 +1142,13 @@
     entity_id: sensor.house_mode
     to: daytime_very_bright_away
   action:
+    - service: input_text.set_value
+      data_template:
+        entity_id: input_text.front_garden_scene
+        value: front_garden_off
     - service: light.turn_off
       data:
         entity_id:
-          - group.front_garden
           - group.terrace
           - switch.living_room_main
           - group.living_room
@@ -1085,10 +1169,10 @@
     entity_id: sensor.house_mode
     to: evening_dark_away
   action:
-    - service: hue.hue_activate_scene
+    - service: input_text.set_value
       data_template:
-        group_name: Front Garden
-        scene_name: "{{ states('input_select.front_garden_dimmed_scene') }}"
+        entity_id: input_text.front_garden_scene
+        value: front_garden_dimmed
     - service: hue.hue_activate_scene
       data_template:
         group_name: Terrace
@@ -1120,10 +1204,13 @@
     entity_id: sensor.house_mode
     to: evening_dim_away
   action:
+    - service: input_text.set_value
+      data_template:
+        entity_id: input_text.front_garden_scene
+        value: front_garden_off
     - service: light.turn_off
       data:
         entity_id:
-          - group.front_garden
           - group.terrace
           - group.upstairs_hallway
     - service: hue.hue_activate_scene
@@ -1149,10 +1236,13 @@
     entity_id: sensor.house_mode
     to: evening_bright_away
   action:
+    - service: input_text.set_value
+      data_template:
+        entity_id: input_text.front_garden_scene
+        value: front_garden_off
     - service: light.turn_off
       data:
         entity_id:
-          - group.front_garden
           - group.terrace
           - switch.living_room_main
           - group.living_room
@@ -1172,10 +1262,13 @@
     entity_id: sensor.house_mode
     to: evening_very_bright_away
   action:
+    - service: input_text.set_value
+      data_template:
+        entity_id: input_text.front_garden_scene
+        value: front_garden_off
     - service: light.turn_off
       data:
         entity_id:
-          - group.front_garden
           - group.terrace
           - switch.living_room_main
           - group.living_room
@@ -1196,10 +1289,10 @@
     entity_id: sensor.house_mode
     to: late_evening_dark_away
   action:
-    - service: hue.hue_activate_scene
+    - service: input_text.set_value
       data_template:
-        group_name: Front Garden
-        scene_name: "{{ states('input_select.front_garden_dimmed_scene') }}"
+        entity_id: input_text.front_garden_scene
+        value: front_garden_dimmed
     - service: hue.hue_activate_scene
       data_template:
         group_name: Terrace
@@ -1231,10 +1324,13 @@
     entity_id: sensor.house_mode
     to: late_evening_dim_away
   action:
+    - service: input_text.set_value
+      data_template:
+        entity_id: input_text.front_garden_scene
+        value: front_garden_off
     - service: light.turn_off
       data:
         entity_id:
-          - group.front_garden
           - group.terrace
           - group.upstairs_hallway
     - service: hue.hue_activate_scene
@@ -1260,10 +1356,13 @@
     entity_id: sensor.house_mode
     to: late_evening_bright_away
   action:
+    - service: input_text.set_value
+      data_template:
+        entity_id: input_text.front_garden_scene
+        value: front_garden_off
     - service: light.turn_off
       data:
         entity_id:
-          - group.front_garden
           - group.terrace
           - switch.living_room_main
           - group.living_room
@@ -1287,10 +1386,13 @@
     entity_id: sensor.house_mode
     to: late_evening_very_bright_away
   action:
+    - service: input_text.set_value
+      data_template:
+        entity_id: input_text.front_garden_scene
+        value: front_garden_off
     - service: light.turn_off
       data:
         entity_id:
-          - group.front_garden
           - group.terrace
           - switch.living_room_main
           - group.living_room
@@ -1311,10 +1413,10 @@
     entity_id: sensor.house_mode
     to: early_night_dark_away
   action:
-    - service: hue.hue_activate_scene
+    - service: input_text.set_value
       data_template:
-        group_name: Front Garden
-        scene_name: "{{ states('input_select.front_garden_dimmed_scene') }}"
+        entity_id: input_text.front_garden_scene
+        value: front_garden_dimmed
     - service: hue.hue_activate_scene
       data_template:
         group_name: Terrace
@@ -1343,10 +1445,13 @@
     entity_id: sensor.house_mode
     to: early_night_dim_away
   action:
+    - service: input_text.set_value
+      data_template:
+        entity_id: input_text.front_garden_scene
+        value: front_garden_off
     - service: light.turn_off
       data:
         entity_id:
-          - group.front_garden
           - group.terrace
           - group.upstairs_hallway
           - group.downstairs_hallway
@@ -1369,10 +1474,13 @@
     entity_id: sensor.house_mode
     to: early_night_bright_away
   action:
+    - service: input_text.set_value
+      data_template:
+        entity_id: input_text.front_garden_scene
+        value: front_garden_off
     - service: light.turn_off
       data:
         entity_id:
-          - group.front_garden
           - group.terrace
           - switch.living_room_main
           - group.living_room
@@ -1393,10 +1501,13 @@
     entity_id: sensor.house_mode
     to: early_night_very_bright_away
   action:
+    - service: input_text.set_value
+      data_template:
+        entity_id: input_text.front_garden_scene
+        value: front_garden_off
     - service: light.turn_off
       data:
         entity_id:
-          - group.front_garden
           - group.terrace
           - switch.living_room_main
           - group.living_room
@@ -1417,10 +1528,10 @@
     entity_id: sensor.house_mode
     to: late_night_dark_away
   action:
-    - service: hue.hue_activate_scene
+    - service: input_text.set_value
       data_template:
-        group_name: Front Garden
-        scene_name: "{{ states('input_select.front_garden_dimmed_scene') }}"
+        entity_id: input_text.front_garden_scene
+        value: front_garden_dimmed
     - service: hue.hue_activate_scene
       data_template:
         group_name: Terrace
@@ -1449,10 +1560,13 @@
     entity_id: sensor.house_mode
     to: late_night_dim_away
   action:
+    - service: input_text.set_value
+      data_template:
+        entity_id: input_text.front_garden_scene
+        value: front_garden_off
     - service: light.turn_off
       data:
         entity_id:
-          - group.front_garden
           - group.terrace
           - group.upstairs_hallway
           - group.downstairs_hallway
@@ -1475,10 +1589,13 @@
     entity_id: sensor.house_mode
     to: late_night_bright_away
   action:
+    - service: input_text.set_value
+      data_template:
+        entity_id: input_text.front_garden_scene
+        value: front_garden_off
     - service: light.turn_off
       data:
         entity_id:
-          - group.front_garden
           - group.terrace
           - switch.living_room_main
           - group.living_room
@@ -1499,10 +1616,13 @@
     entity_id: sensor.house_mode
     to: late_night_very_bright_away
   action:
+    - service: input_text.set_value
+      data_template:
+        entity_id: input_text.front_garden_scene
+        value: front_garden_off
     - service: light.turn_off
       data:
         entity_id:
-          - group.front_garden
           - group.terrace
           - switch.living_room_main
           - group.living_room
@@ -1523,6 +1643,10 @@
     entity_id: sensor.house_mode
     to: night_dark_away
   action:
+    - service: input_text.set_value
+      data_template:
+        entity_id: input_text.front_garden_scene
+        value: front_garden_off
     - service: light.turn_off
       data:
         entity_id:
@@ -1530,7 +1654,6 @@
           - group.living_room
           - group.upstairs_hallway
           - group.downstairs_hallway
-          - group.front_garden
           - group.terrace
     - service: input_text.set_value
       data:
@@ -1547,10 +1670,13 @@
     entity_id: sensor.house_mode
     to: night_dim_away
   action:
+    - service: input_text.set_value
+      data_template:
+        entity_id: input_text.front_garden_scene
+        value: front_garden_off
     - service: light.turn_off
       data:
         entity_id:
-          - group.front_garden
           - group.terrace
           - switch.living_room_main
           - group.living_room
@@ -1571,10 +1697,13 @@
     entity_id: sensor.house_mode
     to: night_bright_away
   action:
+    - service: input_text.set_value
+      data_template:
+        entity_id: input_text.front_garden_scene
+        value: front_garden_off
     - service: light.turn_off
       data:
         entity_id:
-          - group.front_garden
           - group.terrace
           - switch.living_room_main
           - group.living_room
@@ -1595,10 +1724,13 @@
     entity_id: sensor.house_mode
     to: night_very_bright_away
   action:
+    - service: input_text.set_value
+      data_template:
+        entity_id: input_text.front_garden_scene
+        value: front_garden_off
     - service: light.turn_off
       data:
         entity_id:
-          - group.front_garden
           - group.terrace
           - switch.living_room_main
           - group.living_room
@@ -1761,10 +1893,9 @@
       entity_id: sensor.outside_light_level
       below: 50
   action:
-    - service: hue.hue_activate_scene
-      data_template:
-        group_name: Front Garden
-        scene_name: "{{ states('input_select.front_garden_bright_scene') }}"
+    - service: scene.turn_on
+      data:
+        entity_id: scene.front_garden_bright
 
 - alias: Front Garden Lights Dimmed
   initial_state: true
@@ -1779,10 +1910,9 @@
     for:
       minutes: 2
   action:
-    - service: hue.hue_activate_scene
+    - service: scene.turn_on
       data_template:
-        group_name: Front Garden
-        scene_name: "{{ states('input_select.front_garden_dimmed_scene') }}"
+        entity_id: "scene.{{ states('input_text.front_garden_scene') }}"
 
 - alias: Turn Power Amp On
   initial_state: true

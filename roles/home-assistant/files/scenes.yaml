@@ -60,3 +60,18 @@
     light.snug_main: on
     switch.bookcase_light: on
     switch.lava_lamp: off
+- name: Front Garden Off
+  entities:
+    light.front_garden: off
+- name: Front Garden Dimmed
+  entities:
+    light.front_garden:
+      state: on
+      brightness: 24
+      xy_color: [0.254, 0.097]
+- name: Front Garden Bright
+  entities:
+    light.front_garden:
+      state: on
+      brightness: 255
+      color_temp: 153
