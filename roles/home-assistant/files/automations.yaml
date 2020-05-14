@@ -321,7 +321,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.upstairs_hallway_scene
-        value: Daytime Presence
+        value: Evening
     - service: hue.hue_activate_scene
       data:
         group_name: "Living room"
@@ -354,7 +354,7 @@
     - service: hue.hue_activate_scene
       data:
         group_name: Downstairs Hallway
-        scene_name: Daytime Presence
+        value: Evening
     - service: input_text.set_value
       data:
         entity_id: input_text.upstairs_hallway_scene
@@ -388,7 +388,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.upstairs_hallway_scene
-        value: Bright Outside
+        value: Evening
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_hue_scene
@@ -673,11 +673,11 @@
     - service: input_text.set_value
       data_template:
         entity_id: input_text.front_garden_scene
-        value: front_garden_dimmed
-    - service: hue.hue_activate_scene
-      data_template:
-        group_name: Terrace
-        scene_name: "{{ states('input_select.terrace_dimmed_scene') }}"
+        value: front_garden_off
+    - service: light.turn_off
+      data:
+        entity_id:
+          - group.terrace
     - service: hue.hue_activate_scene
       data:
         group_name: Downstairs Hallway
@@ -1531,14 +1531,11 @@
     - service: input_text.set_value
       data_template:
         entity_id: input_text.front_garden_scene
-        value: front_garden_dimmed
-    - service: hue.hue_activate_scene
-      data_template:
-        group_name: Terrace
-        scene_name: "{{ states('input_select.terrace_dimmed_scene') }}"
+        value: front_garden_off
     - service: light.turn_off
       data:
         entity_id:
+          - group.terrace
           - group.upstairs_hallway
           - group.downstairs_hallway
     - service: hue.hue_activate_scene

@@ -14,6 +14,7 @@ kitchen:
     - sensor.dishwasher_elapsed_program_time
     - sensor.dishwasher_program_progress
     - sensor.dishwasher_remaining_program_time
+    - switch.dishwasher_program_machinecare
     - switch.dishwasher
 front_garden:
   name: Front Garden
@@ -28,9 +29,22 @@ front_garden:
 terrace:
   name: Terrace
   entities:
+    - light.terrace
+back_garden:
+  name: Back Garden
+  entities:
     - sensor.back_garden_light_level
     - sensor.back_garden_temperature
-    - light.terrace
+    - light.hue_outdoor_wall_1
+    - light.hue_outdoor_spot_1
+    - light.hue_outdoor_spot_2
+    - light.hue_outdoor_spot_3
+    - light.hue_outdoor_spot_4
+    - light.hue_outdoor_spot_5
+    - light.hue_outdoor_pedestal_1
+    - light.hue_outdoor_pedestal_2
+    - light.hue_outdoor_pedestal_3
+    - light.hue_outdoor_pedestal_4
 driveway:
     - camera.driveway
     - binary_sensor.driveway_motion
