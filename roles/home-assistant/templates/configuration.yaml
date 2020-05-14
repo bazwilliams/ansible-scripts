@@ -332,21 +332,9 @@ input_text:
   front_garden_scene:
     name: Front Garden Scene
     initial: front_garden_off
-
-input_select:
-  terrace_dimmed_scene:
-    name: Terrace Dimmed Scene Name
-    options:
-      - "Dimmed"
-      - "St patrick dimmed"
-    icon: mdi:target
-  terrace_bright_scene:
-    name: Terrace Bright Scene Name
-    options:
-      - "Bright"
-      - "Bright White"
-      - "St patrick bright"
-    icon: mdi:target
+  back_garden_scene:
+    name: Back Garden Scene
+    initial: back_garden_off
 
 notify:
   - platform: alexa_media

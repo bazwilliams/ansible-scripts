@@ -9,10 +9,10 @@
       data_template:
         entity_id: input_text.front_garden_scene
         value: front_garden_dimmed
-    - service: hue.hue_activate_scene
+    - service: input_text.set_value
       data_template:
-        group_name: Terrace
-        scene_name: "{{ states('input_select.terrace_dimmed_scene') }}"
+        entity_id: input_text.back_garden_scene
+        value: back_garden_dimmed
     - service: hue.hue_activate_scene
       data:
         group_name: Downstairs Hallway
@@ -44,10 +44,10 @@
       data_template:
         entity_id: input_text.front_garden_scene
         value: front_garden_off
-    - service: light.turn_off
-      data:
-        entity_id:
-          - group.terrace
+    - service: input_text.set_value
+      data_template:
+        entity_id: input_text.back_garden_scene
+        value: back_garden_off
     - service: hue.hue_activate_scene
       data:
         group_name: Downstairs Hallway
@@ -79,12 +79,15 @@
       data_template:
         entity_id: input_text.front_garden_scene
         value: front_garden_off
+    - service: input_text.set_value
+      data_template:
+        entity_id: input_text.back_garden_scene
+        value: back_garden_off
     - service: light.turn_off
       data:
         entity_id:
           - switch.living_room_main
           - group.living_room
-          - group.terrace
     - service: hue.hue_activate_scene
       data:
         group_name: Downstairs Hallway
@@ -112,13 +115,16 @@
       data_template:
         entity_id: input_text.front_garden_scene
         value: front_garden_off
+    - service: input_text.set_value
+      data_template:
+        entity_id: input_text.back_garden_scene
+        value: back_garden_off
     - service: light.turn_off
       data:
         entity_id:
           - group.downstairs_hallway
           - switch.living_room_main
           - group.living_room
-          - group.terrace
     - service: input_text.set_value
       data:
         entity_id: input_text.upstairs_hallway_scene
@@ -142,10 +148,10 @@
       data_template:
         entity_id: input_text.front_garden_scene
         value: front_garden_dimmed
-    - service: hue.hue_activate_scene
+    - service: input_text.set_value
       data_template:
-        group_name: Terrace
-        scene_name: "{{ states('input_select.terrace_dimmed_scene') }}"
+        entity_id: input_text.back_garden_scene
+        value: back_garden_dimmed
     - service: hue.hue_activate_scene
       data:
         group_name: Downstairs Hallway
@@ -177,10 +183,10 @@
       data_template:
         entity_id: input_text.front_garden_scene
         value: front_garden_off
-    - service: light.turn_off
-      data:
-        entity_id:
-          - group.terrace
+    - service: input_text.set_value
+      data_template:
+        entity_id: input_text.back_garden_scene
+        value: back_garden_off
     - service: hue.hue_activate_scene
       data:
         group_name: Downstairs Hallway
@@ -212,10 +218,13 @@
       data_template:
         entity_id: input_text.front_garden_scene
         value: front_garden_off
+    - service: input_text.set_value
+      data_template:
+        entity_id: input_text.back_garden_scene
+        value: back_garden_off
     - service: light.turn_off
       data:
         entity_id:
-          - group.terrace
           - switch.living_room_main
           - group.living_room
     - service: hue.hue_activate_scene
@@ -245,10 +254,13 @@
       data_template:
         entity_id: input_text.front_garden_scene
         value: front_garden_off
+    - service: input_text.set_value
+      data_template:
+        entity_id: input_text.back_garden_scene
+        value: back_garden_off
     - service: light.turn_off
       data:
         entity_id:
-          - group.terrace
           - switch.living_room_main
           - group.living_room
           - group.downstairs_hallway
@@ -275,10 +287,10 @@
       data_template:
         entity_id: input_text.front_garden_scene
         value: front_garden_dimmed
-    - service: hue.hue_activate_scene
+    - service: input_text.set_value
       data_template:
-        group_name: Terrace
-        scene_name: "{{ states('input_select.terrace_dimmed_scene') }}"
+        entity_id: input_text.back_garden_scene
+        value: back_garden_dimmed
     - service: hue.hue_activate_scene
       data:
         group_name: Downstairs Hallway
@@ -310,10 +322,10 @@
       data_template:
         entity_id: input_text.front_garden_scene
         value: front_garden_off
-    - service: light.turn_off
-      data:
-        entity_id:
-          - group.terrace
+    - service: input_text.set_value
+      data_template:
+        entity_id: input_text.back_garden_scene
+        value: back_garden_off
     - service: hue.hue_activate_scene
       data:
         group_name: Downstairs Hallway
@@ -345,10 +357,13 @@
       data_template:
         entity_id: input_text.front_garden_scene
         value: front_garden_off
+    - service: input_text.set_value
+      data_template:
+        entity_id: input_text.back_garden_scene
+        value: back_garden_off
     - service: light.turn_off
       data:
         entity_id:
-          - group.terrace
           - switch.living_room_main
           - group.living_room
     - service: hue.hue_activate_scene
@@ -378,10 +393,13 @@
       data_template:
         entity_id: input_text.front_garden_scene
         value: front_garden_off
+    - service: input_text.set_value
+      data_template:
+        entity_id: input_text.back_garden_scene
+        value: back_garden_off
     - service: light.turn_off
       data:
         entity_id:
-          - group.terrace
           - switch.living_room_main
           - group.living_room
           - group.downstairs_hallway
@@ -408,10 +426,10 @@
       data_template:
         entity_id: input_text.front_garden_scene
         value: front_garden_dimmed
-    - service: hue.hue_activate_scene
+    - service: input_text.set_value
       data_template:
-        group_name: Terrace
-        scene_name: "{{ states('input_select.terrace_dimmed_scene') }}"
+        entity_id: input_text.back_garden_scene
+        value: back_garden_dimmed
     - service: hue.hue_activate_scene
       data:
         group_name: Downstairs Hallway
@@ -443,10 +461,10 @@
       data_template:
         entity_id: input_text.front_garden_scene
         value: front_garden_off
-    - service: light.turn_off
-      data:
-        entity_id:
-          - group.terrace
+    - service: input_text.set_value
+      data_template:
+        entity_id: input_text.back_garden_scene
+        value: back_garden_off
     - service: hue.hue_activate_scene
       data:
         group_name: Downstairs Hallway
@@ -478,10 +496,13 @@
       data_template:
         entity_id: input_text.front_garden_scene
         value: front_garden_off
+    - service: input_text.set_value
+      data_template:
+        entity_id: input_text.back_garden_scene
+        value: back_garden_off
     - service: light.turn_off
       data:
         entity_id:
-          - group.terrace
           - switch.living_room_main
           - group.living_room
     - service: hue.hue_activate_scene
@@ -511,10 +532,13 @@
       data_template:
         entity_id: input_text.front_garden_scene
         value: front_garden_off
+    - service: input_text.set_value
+      data_template:
+        entity_id: input_text.back_garden_scene
+        value: back_garden_off
     - service: light.turn_off
       data:
         entity_id:
-          - group.terrace
           - switch.living_room_main
           - group.living_room
           - group.downstairs_hallway
@@ -541,10 +565,10 @@
       data_template:
         entity_id: input_text.front_garden_scene
         value: front_garden_dimmed
-    - service: hue.hue_activate_scene
+    - service: input_text.set_value
       data_template:
-        group_name: Terrace
-        scene_name: "{{ states('input_select.terrace_dimmed_scene') }}"
+        entity_id: input_text.back_garden_scene
+        value: back_garden_dimmed
     - service: hue.hue_activate_scene
       data:
         group_name: Downstairs Hallway
@@ -576,10 +600,10 @@
       data_template:
         entity_id: input_text.front_garden_scene
         value: front_garden_off
-    - service: light.turn_off
-      data:
-        entity_id:
-          - group.terrace
+    - service: input_text.set_value
+      data_template:
+        entity_id: input_text.back_garden_scene
+        value: back_garden_off
     - service: hue.hue_activate_scene
       data:
         group_name: Downstairs Hallway
@@ -611,10 +635,13 @@
       data_template:
         entity_id: input_text.front_garden_scene
         value: front_garden_off
+    - service: input_text.set_value
+      data_template:
+        entity_id: input_text.back_garden_scene
+        value: back_garden_off
     - service: light.turn_off
       data:
         entity_id:
-          - group.terrace
           - switch.living_room_main
           - group.living_room
     - service: hue.hue_activate_scene
@@ -644,10 +671,13 @@
       data_template:
         entity_id: input_text.front_garden_scene
         value: front_garden_off
+    - service: input_text.set_value
+      data_template:
+        entity_id: input_text.back_garden_scene
+        value: back_garden_off
     - service: light.turn_off
       data:
         entity_id:
-          - group.terrace
           - switch.living_room_main
           - group.living_room
           - group.downstairs_hallway
@@ -674,10 +704,10 @@
       data_template:
         entity_id: input_text.front_garden_scene
         value: front_garden_off
-    - service: light.turn_off
-      data:
-        entity_id:
-          - group.terrace
+    - service: input_text.set_value
+      data_template:
+        entity_id: input_text.back_garden_scene
+        value: back_garden_off
     - service: hue.hue_activate_scene
       data:
         group_name: Downstairs Hallway
@@ -709,10 +739,10 @@
       data_template:
         entity_id: input_text.front_garden_scene
         value: front_garden_off
-    - service: light.turn_off
-      data:
-        entity_id:
-          - group.terrace
+    - service: input_text.set_value
+      data_template:
+        entity_id: input_text.back_garden_scene
+        value: back_garden_off
     - service: hue.hue_activate_scene
       data:
         group_name: Downstairs Hallway
@@ -744,10 +774,13 @@
       data_template:
         entity_id: input_text.front_garden_scene
         value: front_garden_off
+    - service: input_text.set_value
+      data_template:
+        entity_id: input_text.back_garden_scene
+        value: back_garden_off
     - service: light.turn_off
       data:
         entity_id:
-          - group.terrace
           - switch.living_room_main
           - group.living_room
     - service: hue.hue_activate_scene
@@ -777,10 +810,13 @@
       data_template:
         entity_id: input_text.front_garden_scene
         value: front_garden_off
+    - service: input_text.set_value
+      data_template:
+        entity_id: input_text.back_garden_scene
+        value: back_garden_off
     - service: light.turn_off
       data:
         entity_id:
-          - group.terrace
           - switch.living_room_main
           - group.living_room
           - group.downstairs_hallway
@@ -811,12 +847,15 @@
       data_template:
         entity_id: input_text.front_garden_scene
         value: front_garden_off
+    - service: input_text.set_value
+      data_template:
+        entity_id: input_text.back_garden_scene
+        value: back_garden_off
     - service: light.turn_off
       data:
         entity_id:
           - switch.living_room_main
           - group.living_room
-          - group.terrace
           - group.downstairs_hallway
     - service: input_text.set_value
       data:
@@ -837,10 +876,13 @@
       data_template:
         entity_id: input_text.front_garden_scene
         value: front_garden_off
+    - service: input_text.set_value
+      data_template:
+        entity_id: input_text.back_garden_scene
+        value: back_garden_off
     - service: light.turn_off
       data:
         entity_id:
-          - group.terrace
           - switch.living_room_main
           - group.living_room
           - group.downstairs_hallway
@@ -867,10 +909,13 @@
       data_template:
         entity_id: input_text.front_garden_scene
         value: front_garden_off
+    - service: input_text.set_value
+      data_template:
+        entity_id: input_text.back_garden_scene
+        value: back_garden_off
     - service: light.turn_off
       data:
         entity_id:
-          - group.terrace
           - switch.living_room_main
           - group.living_room
           - group.downstairs_hallway
@@ -897,10 +942,13 @@
       data_template:
         entity_id: input_text.front_garden_scene
         value: front_garden_off
+    - service: input_text.set_value
+      data_template:
+        entity_id: input_text.back_garden_scene
+        value: back_garden_off
     - service: light.turn_off
       data:
         entity_id:
-          - group.terrace
           - switch.living_room_main
           - group.living_room
           - group.downstairs_hallway
@@ -928,10 +976,10 @@
       data_template:
         entity_id: input_text.front_garden_scene
         value: front_garden_dimmed
-    - service: hue.hue_activate_scene
+    - service: input_text.set_value
       data_template:
-        group_name: Terrace
-        scene_name: "{{ states('input_select.terrace_dimmed_scene') }}"
+        entity_id: input_text.back_garden_scene
+        value: back_garden_dimmed
     - service: hue.hue_activate_scene
       data:
         group_name: Downstairs Hallway
@@ -963,10 +1011,13 @@
       data_template:
         entity_id: input_text.front_garden_scene
         value: front_garden_off
+    - service: input_text.set_value
+      data_template:
+        entity_id: input_text.back_garden_scene
+        value: back_garden_off
     - service: light.turn_off
       data:
         entity_id:
-          - group.terrace
           - group.upstairs_hallway
     - service: hue.hue_activate_scene
       data:
@@ -995,10 +1046,13 @@
       data_template:
         entity_id: input_text.front_garden_scene
         value: front_garden_off
+    - service: input_text.set_value
+      data_template:
+        entity_id: input_text.back_garden_scene
+        value: back_garden_off
     - service: light.turn_off
       data:
         entity_id:
-          - group.terrace
           - group.upstairs_hallway
           - group.downstairs_hallway
           - switch.living_room_main
@@ -1022,10 +1076,13 @@
       data_template:
         entity_id: input_text.front_garden_scene
         value: front_garden_off
+    - service: input_text.set_value
+      data_template:
+        entity_id: input_text.back_garden_scene
+        value: back_garden_off
     - service: light.turn_off
       data:
         entity_id:
-          - group.terrace
           - group.upstairs_hallway
           - group.downstairs_hallway
           - switch.living_room_main
@@ -1049,10 +1106,10 @@
       data_template:
         entity_id: input_text.front_garden_scene
         value: front_garden_dimmed
-    - service: hue.hue_activate_scene
+    - service: input_text.set_value
       data_template:
-        group_name: Terrace
-        scene_name: "{{ states('input_select.terrace_dimmed_scene') }}"
+        entity_id: input_text.back_garden_scene
+        value: back_garden_dimmed
     - service: hue.hue_activate_scene
       data:
         group_name: Downstairs Hallway
@@ -1084,10 +1141,13 @@
       data_template:
         entity_id: input_text.front_garden_scene
         value: front_garden_off
+    - service: input_text.set_value
+      data_template:
+        entity_id: input_text.back_garden_scene
+        value: back_garden_off
     - service: light.turn_off
       data:
         entity_id:
-          - group.terrace
           - group.upstairs_hallway
     - service: hue.hue_activate_scene
       data:
@@ -1116,10 +1176,13 @@
       data_template:
         entity_id: input_text.front_garden_scene
         value: front_garden_off
+    - service: input_text.set_value
+      data_template:
+        entity_id: input_text.back_garden_scene
+        value: back_garden_off
     - service: light.turn_off
       data:
         entity_id:
-          - group.terrace
           - switch.living_room_main
           - group.living_room
           - group.upstairs_hallway
@@ -1146,10 +1209,13 @@
       data_template:
         entity_id: input_text.front_garden_scene
         value: front_garden_off
+    - service: input_text.set_value
+      data_template:
+        entity_id: input_text.back_garden_scene
+        value: back_garden_off
     - service: light.turn_off
       data:
         entity_id:
-          - group.terrace
           - switch.living_room_main
           - group.living_room
           - group.downstairs_hallway
@@ -1173,10 +1239,10 @@
       data_template:
         entity_id: input_text.front_garden_scene
         value: front_garden_dimmed
-    - service: hue.hue_activate_scene
+    - service: input_text.set_value
       data_template:
-        group_name: Terrace
-        scene_name: "{{ states('input_select.terrace_dimmed_scene') }}"
+        entity_id: input_text.back_garden_scene
+        value: back_garden_dimmed
     - service: hue.hue_activate_scene
       data:
         group_name: Downstairs Hallway
@@ -1208,10 +1274,13 @@
       data_template:
         entity_id: input_text.front_garden_scene
         value: front_garden_off
+    - service: input_text.set_value
+      data_template:
+        entity_id: input_text.back_garden_scene
+        value: back_garden_off
     - service: light.turn_off
       data:
         entity_id:
-          - group.terrace
           - group.upstairs_hallway
     - service: hue.hue_activate_scene
       data:
@@ -1240,10 +1309,13 @@
       data_template:
         entity_id: input_text.front_garden_scene
         value: front_garden_off
+    - service: input_text.set_value
+      data_template:
+        entity_id: input_text.back_garden_scene
+        value: back_garden_off
     - service: light.turn_off
       data:
         entity_id:
-          - group.terrace
           - switch.living_room_main
           - group.living_room
           - group.upstairs_hallway
@@ -1266,10 +1338,13 @@
       data_template:
         entity_id: input_text.front_garden_scene
         value: front_garden_off
+    - service: input_text.set_value
+      data_template:
+        entity_id: input_text.back_garden_scene
+        value: back_garden_off
     - service: light.turn_off
       data:
         entity_id:
-          - group.terrace
           - switch.living_room_main
           - group.living_room
           - group.downstairs_hallway
@@ -1293,10 +1368,10 @@
       data_template:
         entity_id: input_text.front_garden_scene
         value: front_garden_dimmed
-    - service: hue.hue_activate_scene
+    - service: input_text.set_value
       data_template:
-        group_name: Terrace
-        scene_name: "{{ states('input_select.terrace_dimmed_scene') }}"
+        entity_id: input_text.back_garden_scene
+        value: back_garden_dimmed
     - service: hue.hue_activate_scene
       data:
         group_name: Downstairs Hallway
@@ -1328,10 +1403,13 @@
       data_template:
         entity_id: input_text.front_garden_scene
         value: front_garden_off
+    - service: input_text.set_value
+      data_template:
+        entity_id: input_text.back_garden_scene
+        value: back_garden_off
     - service: light.turn_off
       data:
         entity_id:
-          - group.terrace
           - group.upstairs_hallway
     - service: hue.hue_activate_scene
       data:
@@ -1360,10 +1438,13 @@
       data_template:
         entity_id: input_text.front_garden_scene
         value: front_garden_off
+    - service: input_text.set_value
+      data_template:
+        entity_id: input_text.back_garden_scene
+        value: back_garden_off
     - service: light.turn_off
       data:
         entity_id:
-          - group.terrace
           - switch.living_room_main
           - group.living_room
           - group.upstairs_hallway
@@ -1390,10 +1471,13 @@
       data_template:
         entity_id: input_text.front_garden_scene
         value: front_garden_off
+    - service: input_text.set_value
+      data_template:
+        entity_id: input_text.back_garden_scene
+        value: back_garden_off
     - service: light.turn_off
       data:
         entity_id:
-          - group.terrace
           - switch.living_room_main
           - group.living_room
           - group.downstairs_hallway
@@ -1417,10 +1501,10 @@
       data_template:
         entity_id: input_text.front_garden_scene
         value: front_garden_dimmed
-    - service: hue.hue_activate_scene
+    - service: input_text.set_value
       data_template:
-        group_name: Terrace
-        scene_name: "{{ states('input_select.terrace_dimmed_scene') }}"
+        entity_id: input_text.back_garden_scene
+        value: back_garden_dimmed
     - service: light.turn_off
       data:
         entity_id:
@@ -1449,10 +1533,13 @@
       data_template:
         entity_id: input_text.front_garden_scene
         value: front_garden_off
+    - service: input_text.set_value
+      data_template:
+        entity_id: input_text.back_garden_scene
+        value: back_garden_off
     - service: light.turn_off
       data:
         entity_id:
-          - group.terrace
           - group.upstairs_hallway
           - group.downstairs_hallway
     - service: hue.hue_activate_scene
@@ -1478,10 +1565,13 @@
       data_template:
         entity_id: input_text.front_garden_scene
         value: front_garden_off
+    - service: input_text.set_value
+      data_template:
+        entity_id: input_text.back_garden_scene
+        value: back_garden_off
     - service: light.turn_off
       data:
         entity_id:
-          - group.terrace
           - switch.living_room_main
           - group.living_room
           - group.upstairs_hallway
@@ -1505,10 +1595,13 @@
       data_template:
         entity_id: input_text.front_garden_scene
         value: front_garden_off
+    - service: input_text.set_value
+      data_template:
+        entity_id: input_text.back_garden_scene
+        value: back_garden_off
     - service: light.turn_off
       data:
         entity_id:
-          - group.terrace
           - switch.living_room_main
           - group.living_room
           - group.downstairs_hallway
@@ -1532,10 +1625,13 @@
       data_template:
         entity_id: input_text.front_garden_scene
         value: front_garden_off
+    - service: input_text.set_value
+      data_template:
+        entity_id: input_text.back_garden_scene
+        value: back_garden_off
     - service: light.turn_off
       data:
         entity_id:
-          - group.terrace
           - group.upstairs_hallway
           - group.downstairs_hallway
     - service: hue.hue_activate_scene
@@ -1561,10 +1657,13 @@
       data_template:
         entity_id: input_text.front_garden_scene
         value: front_garden_off
+    - service: input_text.set_value
+      data_template:
+        entity_id: input_text.back_garden_scene
+        value: back_garden_off
     - service: light.turn_off
       data:
         entity_id:
-          - group.terrace
           - group.upstairs_hallway
           - group.downstairs_hallway
     - service: hue.hue_activate_scene
@@ -1590,10 +1689,13 @@
       data_template:
         entity_id: input_text.front_garden_scene
         value: front_garden_off
+    - service: input_text.set_value
+      data_template:
+        entity_id: input_text.back_garden_scene
+        value: back_garden_off
     - service: light.turn_off
       data:
         entity_id:
-          - group.terrace
           - switch.living_room_main
           - group.living_room
           - group.upstairs_hallway
@@ -1617,10 +1719,13 @@
       data_template:
         entity_id: input_text.front_garden_scene
         value: front_garden_off
+    - service: input_text.set_value
+      data_template:
+        entity_id: input_text.back_garden_scene
+        value: back_garden_off
     - service: light.turn_off
       data:
         entity_id:
-          - group.terrace
           - switch.living_room_main
           - group.living_room
           - group.downstairs_hallway
@@ -1644,6 +1749,10 @@
       data_template:
         entity_id: input_text.front_garden_scene
         value: front_garden_off
+    - service: input_text.set_value
+      data_template:
+        entity_id: input_text.back_garden_scene
+        value: back_garden_off
     - service: light.turn_off
       data:
         entity_id:
@@ -1651,7 +1760,6 @@
           - group.living_room
           - group.upstairs_hallway
           - group.downstairs_hallway
-          - group.terrace
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_hue_scene
@@ -1671,10 +1779,13 @@
       data_template:
         entity_id: input_text.front_garden_scene
         value: front_garden_off
+    - service: input_text.set_value
+      data_template:
+        entity_id: input_text.back_garden_scene
+        value: back_garden_off
     - service: light.turn_off
       data:
         entity_id:
-          - group.terrace
           - switch.living_room_main
           - group.living_room
           - group.upstairs_hallway
@@ -1698,10 +1809,13 @@
       data_template:
         entity_id: input_text.front_garden_scene
         value: front_garden_off
+    - service: input_text.set_value
+      data_template:
+        entity_id: input_text.back_garden_scene
+        value: back_garden_off
     - service: light.turn_off
       data:
         entity_id:
-          - group.terrace
           - switch.living_room_main
           - group.living_room
           - group.upstairs_hallway
@@ -1725,10 +1839,13 @@
       data_template:
         entity_id: input_text.front_garden_scene
         value: front_garden_off
+    - service: input_text.set_value
+      data_template:
+        entity_id: input_text.back_garden_scene
+        value: back_garden_off
     - service: light.turn_off
       data:
         entity_id:
-          - group.terrace
           - switch.living_room_main
           - group.living_room
           - group.upstairs_hallway
@@ -1860,7 +1977,7 @@
         entity_id:
           - group.upstairs_hallway
 
-- alias: Terrace Lights Bright
+- alias: Back Garden to Bright
   initial_state: true
   trigger:
     platform: state
@@ -1876,12 +1993,11 @@
   action:
     - service: input_boolean.turn_on
       entity_id: input_boolean.terrace_occupancy
-    - service: hue.hue_activate_scene
-      data_template:
-        group_name: Terrace
-        scene_name: "{{ states('input_select.terrace_bright_scene') }}"
+    - service: scene.turn_on
+      data:
+        entity_id: scene.front_garden_bright
 
-- alias: Terrace Lights Dimmed
+- alias: Back Garden to Default Scene
   initial_state: true
   condition:
     - condition: numeric_state
@@ -1894,12 +2010,21 @@
     for:
       minutes: 5
   action:
-    - service: hue.hue_activate_scene
+    - service: scene.turn_on
       data_template:
-        group_name: Terrace
-        scene_name: "{{ states('input_select.terrace_dimmed_scene') }}"
+        entity_id: "scene.{{ states('input_text.back_garden_scene') }}"
     - service: input_boolean.turn_off
       entity_id: input_boolean.terrace_occupancy
+
+- alias: Back Garden Default Scene Changed
+  initial_state: true
+  trigger:
+    platform: state
+    entity_id: input_text.back_garden_scene
+  action:
+    - service: scene.turn_on
+      data_template:
+        entity_id: "scene.{{ states('input_text.back_garden_scene') }}"
 
 - alias: Front Garden to Bright
   initial_state: true
@@ -1916,7 +2041,7 @@
       data:
         entity_id: scene.front_garden_bright
 
-- alias: Front Garden To Default Scene
+- alias: Front Garden to Default Scene
   initial_state: true
   condition:
     - condition: numeric_state
@@ -2073,7 +2198,7 @@
       data:
         entity_id: scene.snug_on
 
-- alias: Snug Off
+- alias: Snug Lights Off
   initial_state: true
   trigger:
     platform: event
@@ -2084,6 +2209,27 @@
       endpoint_id: 1
       cluster_id: 6
       command: off_with_effect
+  action:
+    - service: homeassistant.turn_off
+      data:
+        entity_id:
+          - group.snug
+
+- alias: Snug All Off
+  initial_state: true
+  trigger:
+    platform: event
+    event_type: zha_event
+    event_data:
+      device_ieee: 00:17:88:01:08:0d:00:be
+      unique_id: 00:17:88:01:08:0d:00:be:1:0x0006
+      endpoint_id: 1
+      cluster_id: 6
+      command: off_with_effect
+  condition:
+    - condition: state
+      entity_id: light.snug
+      state: "off"
   action:
     - service: homeassistant.turn_off
       data:
