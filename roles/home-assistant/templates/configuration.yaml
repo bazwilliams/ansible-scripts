@@ -303,8 +303,8 @@ weather:
     api_key: {{ darksky.api_key }}
 
 input_boolean:
-  terrace_occupancy:
-    name: Motion detected on the terrace
+  back_garden_occupancy:
+    name: Motion detected in the garden
     initial: off
 
 input_text:

@@ -2014,7 +2014,7 @@
       data_template:
         entity_id: "scene.{{ states('input_text.back_garden_scene') }}"
     - service: input_boolean.turn_off
-      entity_id: input_boolean.terrace_occupancy
+      entity_id: input_boolean.back_garden_occupancy
 
 - alias: Back Garden Default Scene Changed
   initial_state: true
