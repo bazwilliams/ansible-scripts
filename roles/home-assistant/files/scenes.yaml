@@ -15,13 +15,13 @@
     light.worktop_lights: off
     light.dining_table:
       state: on
-      brightness: 50
+      brightness: 76
 - name: Kitchen Late Evening
   entities:
     light.worktop_lights: on
     light.dining_table:
       state: on
-      brightness: 70
+      brightness: 76
 - name: Kitchen Evening
   entities:
     light.worktop_lights: on
@@ -62,21 +62,22 @@
     switch.lava_lamp: off
 - name: Front Garden Off
   entities:
-    light.front_garden: off
+    light.outside_light: off
 - name: Front Garden Dimmed
   entities:
-    light.front_garden:
+    light.outside_light:
       state: on
       brightness: 24
       xy_color: [0.254, 0.097]
 - name: Front Garden Bright
   entities:
-    light.front_garden:
+    light.outside_light:
       state: on
       brightness: 255
       color_temp: 153
 - name: Back Garden Off
   entities:
+    light.terrace_light: off
     light.hue_outdoor_pedestal_1: off
     light.hue_outdoor_pedestal_2: off
     light.hue_outdoor_pedestal_3: off
@@ -88,6 +89,7 @@
     light.hue_outdoor_spot_5: off
 - name: Back Garden Dimmed
   entities:
+    light.terrace_light: off
     light.hue_outdoor_pedestal_1:
       state: on
       brightness: 20
@@ -114,6 +116,10 @@
       state: off
 - name: Back Garden Bright
   entities:
+    light.terrace_light:
+      state: on
+      brightness: 224
+      xy_color: [0.26, 0.1]
     light.hue_outdoor_pedestal_1:
       state: on
       brightness: 255
