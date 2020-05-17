@@ -1995,7 +1995,7 @@
       entity_id: input_boolean.terrace_occupancy
     - service: scene.turn_on
       data:
-        entity_id: scene.front_garden_bright
+        entity_id: scene.back_garden_bright
 
 - alias: Back Garden to Default Scene
   initial_state: true
@@ -2014,7 +2014,7 @@
       data_template:
         entity_id: "scene.{{ states('input_text.back_garden_scene') }}"
     - service: input_boolean.turn_off
-      entity_id: input_boolean.back_garden_occupancy
+      entity_id: input_boolean.terrace_occupancy
 
 - alias: Back Garden Default Scene Changed
   initial_state: true
@@ -2210,10 +2210,15 @@
       cluster_id: 6
       command: off_with_effect
   action:
-    - service: homeassistant.turn_off
+    - service: light.turn_off
       data:
         entity_id:
           - group.snug
+    - service: switch.turn_off
+      data:
+        entity_id:
+          - switch.bookcase_light
+          - switch.lava_lamp
 
 - alias: Snug All Off
   initial_state: true
