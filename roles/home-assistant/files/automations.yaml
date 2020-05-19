@@ -27,10 +27,6 @@
         scene_name: Morning
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_hue_scene
-        value: Morning
-    - service: input_text.set_value
-      data:
         entity_id: input_text.kitchen_scene
         value: kitchen_morning
 - alias: morning_dim_home
@@ -60,10 +56,6 @@
       data:
         group_name: "Living room"
         scene_name: Morning
-    - service: input_text.set_value
-      data:
-        entity_id: input_text.kitchen_hue_scene
-        value: Morning
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
@@ -98,10 +90,6 @@
         value: upstairs_hallway_morning
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_hue_scene
-        value: Morning
-    - service: input_text.set_value
-      data:
         entity_id: input_text.kitchen_scene
         value: kitchen_morning
 - alias: morning_very_bright_home
@@ -129,10 +117,6 @@
       data:
         entity_id: input_text.upstairs_hallway_scene
         value: upstairs_hallway_morning
-    - service: input_text.set_value
-      data:
-        entity_id: input_text.kitchen_hue_scene
-        value: Morning
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
@@ -166,10 +150,6 @@
         scene_name: "Living Room Evening"
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_hue_scene
-        value: Daytime
-    - service: input_text.set_value
-      data:
         entity_id: input_text.kitchen_scene
         value: kitchen_daytime
 - alias: daytime_dim_home
@@ -199,10 +179,6 @@
       data:
         group_name: "Living room"
         scene_name: "Dull Outside"
-    - service: input_text.set_value
-      data:
-        entity_id: input_text.kitchen_hue_scene
-        value: Daytime
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
@@ -237,10 +213,6 @@
         value: upstairs_hallway_daytime
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_hue_scene
-        value: Daytime
-    - service: input_text.set_value
-      data:
         entity_id: input_text.kitchen_scene
         value: kitchen_daytime
 - alias: daytime_very_bright_home
@@ -268,10 +240,6 @@
       data:
         entity_id: input_text.upstairs_hallway_scene
         value: upstairs_hallway_daytime
-    - service: input_text.set_value
-      data:
-        entity_id: input_text.kitchen_hue_scene
-        value: Daytime
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
@@ -305,10 +273,6 @@
         scene_name: "Living Room Evening"
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_hue_scene
-        value: Evening
-    - service: input_text.set_value
-      data:
         entity_id: input_text.kitchen_scene
         value: kitchen_evening
 - alias: evening_dim_home
@@ -338,10 +302,6 @@
       data:
         group_name: "Living room"
         scene_name: "Dull Outside"
-    - service: input_text.set_value
-      data:
-        entity_id: input_text.kitchen_hue_scene
-        value: Evening
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
@@ -376,10 +336,6 @@
         value: upstairs_hallway_daytime
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_hue_scene
-        value: Evening
-    - service: input_text.set_value
-      data:
         entity_id: input_text.kitchen_scene
         value: kitchen_evening
 - alias: evening_very_bright_home
@@ -407,10 +363,6 @@
       data:
         entity_id: input_text.upstairs_hallway_scene
         value: upstairs_hallway_evening
-    - service: input_text.set_value
-      data:
-        entity_id: input_text.kitchen_hue_scene
-        value: Evening
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
@@ -444,12 +396,8 @@
         scene_name: "Living Room Evening"
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_hue_scene
-        value: Late Evening
-    - service: input_text.set_value
-      data:
         entity_id: input_text.kitchen_scene
-        value: kitchen_late_evening
+        value: kitchen_evening
 - alias: late_evening_dim_home
   initial_state: true
   trigger:
@@ -479,12 +427,8 @@
         scene_name: "Dull Outside"
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_hue_scene
-        value: Late Evening
-    - service: input_text.set_value
-      data:
         entity_id: input_text.kitchen_scene
-        value: kitchen_late_evening
+        value: kitchen_evening
 - alias: late_evening_bright_home
   initial_state: true
   trigger:
@@ -515,12 +459,8 @@
         value: upstairs_hallway_night
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_hue_scene
-        value: Late Evening
-    - service: input_text.set_value
-      data:
         entity_id: input_text.kitchen_scene
-        value: kitchen_late_evening
+        value: kitchen_evening
 - alias: late_evening_very_bright_home
   initial_state: true
   trigger:
@@ -548,12 +488,8 @@
         value: upstairs_hallway_night
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_hue_scene
-        value: Late Evening
-    - service: input_text.set_value
-      data:
         entity_id: input_text.kitchen_scene
-        value: kitchen_late_evening
+        value: kitchen_evening
 - alias: early_night_dark_home
   initial_state: true
   trigger:
@@ -581,10 +517,6 @@
       data:
         group_name: "Living room"
         scene_name: "Living Room Evening"
-    - service: input_text.set_value
-      data:
-        entity_id: input_text.kitchen_hue_scene
-        value: Early Night
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
@@ -616,10 +548,6 @@
       data:
         group_name: "Living room"
         scene_name: "Dull Outside"
-    - service: input_text.set_value
-      data:
-        entity_id: input_text.kitchen_hue_scene
-        value: Early Night
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
@@ -654,10 +582,6 @@
         value: upstairs_hallway_night
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_hue_scene
-        value: Early Night
-    - service: input_text.set_value
-      data:
         entity_id: input_text.kitchen_scene
         value: kitchen_early_night
 - alias: early_night_very_bright_home
@@ -685,10 +609,6 @@
       data:
         entity_id: input_text.upstairs_hallway_scene
         value: upstairs_hallway_night
-    - service: input_text.set_value
-      data:
-        entity_id: input_text.kitchen_hue_scene
-        value: Early Night
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
@@ -722,10 +642,6 @@
         scene_name: "Living Room Evening"
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_hue_scene
-        value: Early Night
-    - service: input_text.set_value
-      data:
         entity_id: input_text.kitchen_scene
         value: kitchen_late_night
 - alias: late_night_dim_home
@@ -755,10 +671,6 @@
       data:
         group_name: "Living room"
         scene_name: "Dull Outside"
-    - service: input_text.set_value
-      data:
-        entity_id: input_text.kitchen_hue_scene
-        value: Early Night
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
@@ -793,10 +705,6 @@
         value: upstairs_hallway_night
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_hue_scene
-        value: Early Night
-    - service: input_text.set_value
-      data:
         entity_id: input_text.kitchen_scene
         value: kitchen_late_night
 - alias: late_night_very_bright_home
@@ -824,10 +732,6 @@
       data:
         entity_id: input_text.upstairs_hallway_scene
         value: upstairs_hallway_night
-    - service: input_text.set_value
-      data:
-        entity_id: input_text.kitchen_hue_scene
-        value: Early Night
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
@@ -859,10 +763,6 @@
           - group.downstairs_hallway
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_hue_scene
-        value: Night
-    - service: input_text.set_value
-      data:
         entity_id: input_text.kitchen_scene
         value: kitchen_night
 - alias: night_dim_home
@@ -890,10 +790,6 @@
       data:
         entity_id: input_text.upstairs_hallway_scene
         value: upstairs_hallway_night
-    - service: input_text.set_value
-      data:
-        entity_id: input_text.kitchen_hue_scene
-        value: Night
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
@@ -925,10 +821,6 @@
         value: upstairs_hallway_night
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_hue_scene
-        value: Night
-    - service: input_text.set_value
-      data:
         entity_id: input_text.kitchen_scene
         value: kitchen_night
 - alias: night_very_bright_home
@@ -956,10 +848,6 @@
       data:
         entity_id: input_text.upstairs_hallway_scene
         value: upstairs_hallway_night
-    - service: input_text.set_value
-      data:
-        entity_id: input_text.kitchen_hue_scene
-        value: Night
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
@@ -994,10 +882,6 @@
         value: upstairs_hallway_off
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_hue_scene
-        value: Away
-    - service: input_text.set_value
-      data:
         entity_id: input_text.kitchen_scene
         value: kitchen_away
 - alias: morning_dim_away
@@ -1029,10 +913,6 @@
         scene_name: Morning
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_hue_scene
-        value: Away
-    - service: input_text.set_value
-      data:
         entity_id: input_text.kitchen_scene
         value: kitchen_away
 - alias: morning_bright_away
@@ -1062,10 +942,6 @@
           - group.living_room
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_hue_scene
-        value: Away
-    - service: input_text.set_value
-      data:
         entity_id: input_text.kitchen_scene
         value: kitchen_away
 - alias: morning_very_bright_away
@@ -1093,10 +969,6 @@
           - group.downstairs_hallway
           - switch.living_room_main
           - group.living_room
-    - service: input_text.set_value
-      data:
-        entity_id: input_text.kitchen_hue_scene
-        value: Away
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
@@ -1133,10 +1005,6 @@
         scene_name: "Living Room Evening"
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_hue_scene
-        value: Away
-    - service: input_text.set_value
-      data:
         entity_id: input_text.kitchen_scene
         value: kitchen_away
 - alias: daytime_dim_away
@@ -1166,10 +1034,6 @@
       data:
         group_name: "Living room"
         scene_name: "Dull Outside"
-    - service: input_text.set_value
-      data:
-        entity_id: input_text.kitchen_hue_scene
-        value: Away
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
@@ -1204,10 +1068,6 @@
         scene_name: Daytime Presence
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_hue_scene
-        value: Away
-    - service: input_text.set_value
-      data:
         entity_id: input_text.kitchen_scene
         value: kitchen_away
 - alias: daytime_very_bright_away
@@ -1235,10 +1095,6 @@
           - switch.living_room_main
           - group.living_room
           - group.downstairs_hallway
-    - service: input_text.set_value
-      data:
-        entity_id: input_text.kitchen_hue_scene
-        value: Away
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
@@ -1272,10 +1128,6 @@
         scene_name: "Living Room Evening"
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_hue_scene
-        value: Away
-    - service: input_text.set_value
-      data:
         entity_id: input_text.kitchen_scene
         value: kitchen_away
 - alias: evening_dim_away
@@ -1307,10 +1159,6 @@
         scene_name: "Dull Outside"
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_hue_scene
-        value: Away
-    - service: input_text.set_value
-      data:
         entity_id: input_text.kitchen_scene
         value: kitchen_away
 - alias: evening_bright_away
@@ -1337,10 +1185,6 @@
         entity_id:
           - switch.living_room_main
           - group.living_room
-    - service: input_text.set_value
-      data:
-        entity_id: input_text.kitchen_hue_scene
-        value: Away
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
@@ -1370,10 +1214,6 @@
           - switch.living_room_main
           - group.living_room
           - group.downstairs_hallway
-    - service: input_text.set_value
-      data:
-        entity_id: input_text.kitchen_hue_scene
-        value: Away
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
@@ -1407,10 +1247,6 @@
         scene_name: "Living Room Evening"
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_hue_scene
-        value: Away
-    - service: input_text.set_value
-      data:
         entity_id: input_text.kitchen_scene
         value: kitchen_away
 - alias: late_evening_dim_away
@@ -1440,10 +1276,6 @@
       data:
         group_name: "Living room"
         scene_name: "Dull Outside"
-    - service: input_text.set_value
-      data:
-        entity_id: input_text.kitchen_hue_scene
-        value: Away
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
@@ -1478,10 +1310,6 @@
         scene_name: Daytime Presence
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_hue_scene
-        value: Away
-    - service: input_text.set_value
-      data:
         entity_id: input_text.kitchen_scene
         value: kitchen_away
 - alias: late_evening_very_bright_away
@@ -1509,10 +1337,6 @@
           - switch.living_room_main
           - group.living_room
           - group.downstairs_hallway
-    - service: input_text.set_value
-      data:
-        entity_id: input_text.kitchen_hue_scene
-        value: Away
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
@@ -1546,10 +1370,6 @@
         scene_name: "Living Room Evening"
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_hue_scene
-        value: Away
-    - service: input_text.set_value
-      data:
         entity_id: input_text.kitchen_scene
         value: kitchen_away
 - alias: early_night_dim_away
@@ -1581,10 +1401,6 @@
         scene_name: "Dull Outside"
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_hue_scene
-        value: Away
-    - service: input_text.set_value
-      data:
         entity_id: input_text.kitchen_scene
         value: kitchen_away
 - alias: early_night_bright_away
@@ -1614,10 +1430,6 @@
           - group.downstairs_hallway
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_hue_scene
-        value: Away
-    - service: input_text.set_value
-      data:
         entity_id: input_text.kitchen_scene
         value: kitchen_away
 - alias: early_night_very_bright_away
@@ -1645,10 +1457,6 @@
           - switch.living_room_main
           - group.living_room
           - group.downstairs_hallway
-    - service: input_text.set_value
-      data:
-        entity_id: input_text.kitchen_hue_scene
-        value: Away
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
@@ -1682,10 +1490,6 @@
         scene_name: "Living Room Evening"
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_hue_scene
-        value: Away
-    - service: input_text.set_value
-      data:
         entity_id: input_text.kitchen_scene
         value: kitchen_away
 - alias: late_night_dim_away
@@ -1717,10 +1521,6 @@
         scene_name: "Dull Outside"
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_hue_scene
-        value: Away
-    - service: input_text.set_value
-      data:
         entity_id: input_text.kitchen_scene
         value: kitchen_away
 - alias: late_night_bright_away
@@ -1748,10 +1548,6 @@
           - switch.living_room_main
           - group.living_room
           - group.downstairs_hallway
-    - service: input_text.set_value
-      data:
-        entity_id: input_text.kitchen_hue_scene
-        value: Away
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
@@ -1783,10 +1579,6 @@
           - group.downstairs_hallway
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_hue_scene
-        value: Away
-    - service: input_text.set_value
-      data:
         entity_id: input_text.kitchen_scene
         value: kitchen_away
 - alias: night_dark_away
@@ -1814,10 +1606,6 @@
           - switch.living_room_main
           - group.living_room
           - group.downstairs_hallway
-    - service: input_text.set_value
-      data:
-        entity_id: input_text.kitchen_hue_scene
-        value: Away
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
@@ -1849,10 +1637,6 @@
           - group.downstairs_hallway
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_hue_scene
-        value: Away
-    - service: input_text.set_value
-      data:
         entity_id: input_text.kitchen_scene
         value: kitchen_away
 - alias: night_bright_away
@@ -1882,10 +1666,6 @@
           - group.downstairs_hallway
     - service: input_text.set_value
       data:
-        entity_id: input_text.kitchen_hue_scene
-        value: Away
-    - service: input_text.set_value
-      data:
         entity_id: input_text.kitchen_scene
         value: kitchen_away
 - alias: night_very_bright_away
@@ -1913,10 +1693,6 @@
           - switch.living_room_main
           - group.living_room
           - group.downstairs_hallway
-    - service: input_text.set_value
-      data:
-        entity_id: input_text.kitchen_hue_scene
-        value: Away
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene

@@ -2,44 +2,119 @@
   entities:
     light.worktop_lights: off
     light.dining_table: off
+    light.kitchen_main:
+      state: on
+      xy_color: [ 0.447, 0.408 ]
+      brightness: 63
+    light.kitchen_under_cupboards:
+      state: on
+      xy_color: [ 0.447, 0.408 ]
+      brightness: 63
+    light.kitchen_under_tall_cupboards:
+      state: on
+      xy_color: [ 0.447, 0.408 ]
+      brightness: 63
 - name: Kitchen Night
   entities:
     light.worktop_lights: off
     light.dining_table: off
+    light.kitchen_main: off
+    light.kitchen_under_cupboards:
+      state: on
+      xy_color: [ 0.547, 0.353 ]
+      brightness: 44
+    light.kitchen_under_tall_cupboards:
+      state: on
+      xy_color: [ 0.547, 0.353 ]
+      brightness: 44
 - name: Kitchen Late Night
   entities:
     light.worktop_lights: off
     light.dining_table: off
-- name: Kitchen Early Night
-  entities:
-    light.worktop_lights: off
-    light.dining_table:
+    light.kitchen_main:
       state: on
-      brightness: 76
-- name: Kitchen Late Evening
+      xy_color: [ 0.653, 0.306 ]
+      brightness: 37
+    light.kitchen_under_cupboards:
+      state: on
+      xy_color: [ 0.523, 0.411 ]
+      brightness: 37
+    light.kitchen_under_tall_cupboards:
+      state: on
+      xy_color: [ 0.523, 0.411 ]
+      brightness: 37
+- name: Kitchen Early Night
   entities:
     light.worktop_lights: on
     light.dining_table:
       state: on
       brightness: 76
+    light.kitchen_main:
+      state: on
+      xy_color: [ 0.653, 0.306 ]
+      brightness: 37
+    light.kitchen_under_cupboards:
+      state: on
+      xy_color: [ 0.523, 0.411 ]
+      brightness: 37
+    light.kitchen_under_tall_cupboards:
+      state: on
+      xy_color: [ 0.523, 0.411 ]
+      brightness: 37
 - name: Kitchen Evening
   entities:
     light.worktop_lights: on
     light.dining_table:
       state: on
       brightness: 120
+    light.kitchen_main:
+      state: on
+      xy_color: [ 0.301, 0.145 ]
+      brightness: 25
+    light.kitchen_under_cupboards:
+      state: on
+      xy_color: [ 0.299, 0.144 ]
+      brightness: 71
+    light.kitchen_under_tall_cupboards:
+      state: on
+      xy_color: [ 0.299, 0.144 ]
+      brightness: 71
 - name: Kitchen Daytime
   entities:
     light.worktop_lights: on
     light.dining_table:
       state: on
       brightness: 254
+    light.kitchen_main:
+      state: on
+      xy_color: [ 0.158, 0.094 ]
+      brightness: 119
+    light.kitchen_under_cupboards:
+      state: on
+      xy_color: [ 0.314, 0.331 ]
+      brightness: 60
+    light.kitchen_under_tall_cupboards:
+      state: on
+      xy_color: [ 0.314, 0.331 ]
+      brightness: 60
 - name: Kitchen Morning
   entities:
     light.worktop_lights: on
     light.dining_table:
       state: on
       brightness: 254
+    light.kitchen_main:
+      state: on
+      xy_color: [ 0.526, 0.411 ]
+      brightness: 114
+    light.kitchen_under_cupboards:
+      state: on
+      xy_color: [ 0.526, 0.411 ]
+      brightness: 114
+    light.kitchen_under_tall_cupboards:
+      state: on
+      xy_color: [ 0.526, 0.411 ]
+      brightness: 114
 - name: Snug Movie
   entities:
     light.snug_main: off
