@@ -299,3 +299,52 @@
       state: on
       color_temp: 153
       brightness: 254
+- name: Living Room Off
+  entities:
+    light.mushroom_lamp: off
+    light.copper_lamp: off
+    switch.living_room_main: off
+- name: Living Room Bright
+  entities:
+    light.mushroom_lamp:
+      state: on
+      brightness: 255
+      color_temp: 156
+    light.copper_lamp:
+      state: on
+      brightness: 255
+      color_temp: 156
+    switch.living_room_main: on
+- name: Living Room Morning
+  entities:
+    light.mushroom_lamp:
+      state: on
+      brightness: 255
+      color_temp: 497
+    light.copper_lamp:
+      state: on
+      brightness: 255
+      color_temp: 497
+    switch.living_room_main: off
+- name: Living Room Dull Outside
+  entities:
+    light.mushroom_lamp:
+      state: on
+      brightness: 104
+      xy_color: [ 0.257, 0.218 ]
+    light.copper_lamp:
+      state: on
+      brightness: 62
+      xy_color: [ 0.491, 0.415 ]
+    switch.living_room_main: off
+- name: Living Room Evening
+  entities:
+    light.mushroom_lamp:
+      state: on
+      brightness: 141
+      xy_color: [ 0.264, 0.119 ]
+    light.copper_lamp:
+      state: on
+      brightness: 141
+      xy_color: [ 0.159, 0.241 ]
+    switch.living_room_main: off
