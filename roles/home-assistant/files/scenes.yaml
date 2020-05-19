@@ -159,44 +159,56 @@
 - name: Upstairs Hallway Morning
   entities:
     light.upstairs_spot_1:
+      state: on
       brightness: 29
       color_temp: 379
     light.upstairs_spot_2:
+      state: on
       brightness: 29
       color_temp: 379
     light.upstairs_spot_3:
+      state: on
       brightness: 29
+      color_temp: 379
 - name: Upstairs Hallway Daytime
   entities:
     light.upstairs_spot_1:
+      state: on
       brightness: 63
       color_temp: 309
     light.upstairs_spot_2:
+      state: on
       brightness: 76
       color_temp: 239
     light.upstairs_spot_3:
+      state: on
       brightness: 109
       color_temp: 156
 - name: Upstairs Hallway Evening
   entities:
     light.upstairs_spot_1:
+      state: on
       brightness: 55
       color_temp: 454
     light.upstairs_spot_2:
+      state: on
       brightness: 55
       color_temp: 393
     light.upstairs_spot_3:
+      state: on
       brightness: 55
       color_temp: 294
 - name: Upstairs Hallway Night
   entities:
     light.upstairs_spot_1:
-      brightness: 0
+      state: on
+      brightness: 21
       color_temp: 454
     light.upstairs_spot_2:
       state: off
     light.upstairs_spot_3:
-      brightness: 0
+      state: on
+      brightness: 17
       color_temp: 454
 - name: Upstairs Hallway Off
   entities:
@@ -208,10 +220,7 @@
       state: off
 - name: Upstairs Cupboard Open
   entities:
-    light.upstairs_spot_1:
-      state: off
     light.upstairs_spot_2:
+      state: on
       color_temp: 153
       brightness: 254
-    light.upstairs_spot_3:
-      state: off

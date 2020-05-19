@@ -20,7 +20,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.upstairs_hallway_scene
-        value: Morning
+        value: upstairs_hallway_morning
     - service: hue.hue_activate_scene
       data:
         group_name: "Living room"
@@ -55,7 +55,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.upstairs_hallway_scene
-        value: Morning
+        value: upstairs_hallway_morning
     - service: hue.hue_activate_scene
       data:
         group_name: "Living room"
@@ -95,7 +95,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.upstairs_hallway_scene
-        value: Morning
+        value: upstairs_hallway_morning
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_hue_scene
@@ -128,7 +128,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.upstairs_hallway_scene
-        value: Morning
+        value: upstairs_hallway_morning
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_hue_scene
@@ -159,7 +159,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.upstairs_hallway_scene
-        value: Evening
+        value: upstairs_hallway_evening
     - service: hue.hue_activate_scene
       data:
         group_name: "Living room"
@@ -194,7 +194,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.upstairs_hallway_scene
-        value: Daytime Presence
+        value: upstairs_hallway_daytime
     - service: hue.hue_activate_scene
       data:
         group_name: "Living room"
@@ -234,7 +234,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.upstairs_hallway_scene
-        value: Daytime Presence
+        value: upstairs_hallway_daytime
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_hue_scene
@@ -267,7 +267,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.upstairs_hallway_scene
-        value: Daytime Presence
+        value: upstairs_hallway_daytime
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_hue_scene
@@ -298,7 +298,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.upstairs_hallway_scene
-        value: Evening
+        value: upstairs_hallway_evening
     - service: hue.hue_activate_scene
       data:
         group_name: "Living room"
@@ -333,7 +333,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.upstairs_hallway_scene
-        value: Evening
+        value: upstairs_hallway_evening
     - service: hue.hue_activate_scene
       data:
         group_name: "Living room"
@@ -373,7 +373,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.upstairs_hallway_scene
-        value: Daytime Presence
+        value: upstairs_hallway_daytime
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_hue_scene
@@ -406,7 +406,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.upstairs_hallway_scene
-        value: Evening
+        value: upstairs_hallway_evening
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_hue_scene
@@ -437,7 +437,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.upstairs_hallway_scene
-        value: Night
+        value: upstairs_hallway_night
     - service: hue.hue_activate_scene
       data:
         group_name: "Living room"
@@ -472,7 +472,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.upstairs_hallway_scene
-        value: Night
+        value: upstairs_hallway_night
     - service: hue.hue_activate_scene
       data:
         group_name: "Living room"
@@ -512,7 +512,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.upstairs_hallway_scene
-        value: Night
+        value: upstairs_hallway_night
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_hue_scene
@@ -545,7 +545,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.upstairs_hallway_scene
-        value: Night
+        value: upstairs_hallway_night
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_hue_scene
@@ -576,7 +576,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.upstairs_hallway_scene
-        value: Night
+        value: upstairs_hallway_night
     - service: hue.hue_activate_scene
       data:
         group_name: "Living room"
@@ -611,7 +611,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.upstairs_hallway_scene
-        value: Night
+        value: upstairs_hallway_night
     - service: hue.hue_activate_scene
       data:
         group_name: "Living room"
@@ -651,7 +651,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.upstairs_hallway_scene
-        value: Night
+        value: upstairs_hallway_night
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_hue_scene
@@ -684,7 +684,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.upstairs_hallway_scene
-        value: Night
+        value: upstairs_hallway_night
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_hue_scene
@@ -715,7 +715,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.upstairs_hallway_scene
-        value: Night
+        value: upstairs_hallway_night
     - service: hue.hue_activate_scene
       data:
         group_name: "Living room"
@@ -750,7 +750,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.upstairs_hallway_scene
-        value: Night
+        value: upstairs_hallway_night
     - service: hue.hue_activate_scene
       data:
         group_name: "Living room"
@@ -790,7 +790,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.upstairs_hallway_scene
-        value: Night
+        value: upstairs_hallway_night
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_hue_scene
@@ -823,7 +823,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.upstairs_hallway_scene
-        value: Night
+        value: upstairs_hallway_night
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_hue_scene
@@ -842,7 +842,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.upstairs_hallway_scene
-        value: Night
+        value: upstairs_hallway_night
     - service: input_text.set_value
       data_template:
         entity_id: input_text.front_garden_scene
@@ -889,7 +889,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.upstairs_hallway_scene
-        value: Night
+        value: upstairs_hallway_night
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_hue_scene
@@ -922,7 +922,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.upstairs_hallway_scene
-        value: Night
+        value: upstairs_hallway_night
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_hue_scene
@@ -955,7 +955,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.upstairs_hallway_scene
-        value: Night
+        value: upstairs_hallway_night
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_hue_scene
@@ -988,10 +988,10 @@
       data:
         group_name: "Living room"
         scene_name: Morning
-    - service: light.turn_off
+    - service: input_text.set_value
       data:
-        entity_id:
-          - group.upstairs_hallway
+        entity_id: input_text.upstairs_hallway_scene
+        value: upstairs_hallway_off
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_hue_scene
@@ -1015,10 +1015,10 @@
       data_template:
         entity_id: input_text.back_garden_scene
         value: back_garden_off
-    - service: light.turn_off
+    - service: input_text.set_value
       data:
-        entity_id:
-          - group.upstairs_hallway
+        entity_id: input_text.upstairs_hallway_scene
+        value: upstairs_hallway_off
     - service: hue.hue_activate_scene
       data:
         group_name: Downstairs Hallway
@@ -1050,10 +1050,13 @@
       data_template:
         entity_id: input_text.back_garden_scene
         value: back_garden_off
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.upstairs_hallway_scene
+        value: upstairs_hallway_off
     - service: light.turn_off
       data:
         entity_id:
-          - group.upstairs_hallway
           - group.downstairs_hallway
           - switch.living_room_main
           - group.living_room
@@ -1080,10 +1083,13 @@
       data_template:
         entity_id: input_text.back_garden_scene
         value: back_garden_off
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.upstairs_hallway_scene
+        value: upstairs_hallway_off
     - service: light.turn_off
       data:
         entity_id:
-          - group.upstairs_hallway
           - group.downstairs_hallway
           - switch.living_room_main
           - group.living_room
@@ -1114,10 +1120,13 @@
       data:
         group_name: Downstairs Hallway
         scene_name: Colourful Evening Away
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.upstairs_hallway_scene
+        value: upstairs_hallway_off
     - service: light.turn_off
       data:
         entity_id:
-          - group.upstairs_hallway
     - service: hue.hue_activate_scene
       data:
         group_name: "Living room"
@@ -1145,10 +1154,10 @@
       data_template:
         entity_id: input_text.back_garden_scene
         value: back_garden_off
-    - service: light.turn_off
+    - service: input_text.set_value
       data:
-        entity_id:
-          - group.upstairs_hallway
+        entity_id: input_text.upstairs_hallway_scene
+        value: upstairs_hallway_off
     - service: hue.hue_activate_scene
       data:
         group_name: Downstairs Hallway
@@ -1180,12 +1189,15 @@
       data_template:
         entity_id: input_text.back_garden_scene
         value: back_garden_off
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.upstairs_hallway_scene
+        value: upstairs_hallway_off
     - service: light.turn_off
       data:
         entity_id:
           - switch.living_room_main
           - group.living_room
-          - group.upstairs_hallway
     - service: hue.hue_activate_scene
       data:
         group_name: Downstairs Hallway
@@ -1213,13 +1225,16 @@
       data_template:
         entity_id: input_text.back_garden_scene
         value: back_garden_off
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.upstairs_hallway_scene
+        value: upstairs_hallway_off
     - service: light.turn_off
       data:
         entity_id:
           - switch.living_room_main
           - group.living_room
           - group.downstairs_hallway
-          - group.upstairs_hallway
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_hue_scene
@@ -1247,10 +1262,10 @@
       data:
         group_name: Downstairs Hallway
         scene_name: Colourful Evening Away
-    - service: light.turn_off
+    - service: input_text.set_value
       data:
-        entity_id:
-          - group.upstairs_hallway
+        entity_id: input_text.upstairs_hallway_scene
+        value: upstairs_hallway_off
     - service: hue.hue_activate_scene
       data:
         group_name: "Living room"
@@ -1278,10 +1293,10 @@
       data_template:
         entity_id: input_text.back_garden_scene
         value: back_garden_off
-    - service: light.turn_off
+    - service: input_text.set_value
       data:
-        entity_id:
-          - group.upstairs_hallway
+        entity_id: input_text.upstairs_hallway_scene
+        value: upstairs_hallway_off
     - service: hue.hue_activate_scene
       data:
         group_name: Downstairs Hallway
@@ -1313,12 +1328,15 @@
       data_template:
         entity_id: input_text.back_garden_scene
         value: back_garden_off
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.upstairs_hallway_scene
+        value: upstairs_hallway_off
     - service: light.turn_off
       data:
         entity_id:
           - switch.living_room_main
           - group.living_room
-          - group.upstairs_hallway
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_hue_scene
@@ -1342,13 +1360,16 @@
       data_template:
         entity_id: input_text.back_garden_scene
         value: back_garden_off
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.upstairs_hallway_scene
+        value: upstairs_hallway_off
     - service: light.turn_off
       data:
         entity_id:
           - switch.living_room_main
           - group.living_room
           - group.downstairs_hallway
-          - group.upstairs_hallway
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_hue_scene
@@ -1376,10 +1397,10 @@
       data:
         group_name: Downstairs Hallway
         scene_name: Late Evening Away
-    - service: light.turn_off
+    - service: input_text.set_value
       data:
-        entity_id:
-          - group.upstairs_hallway
+        entity_id: input_text.upstairs_hallway_scene
+        value: upstairs_hallway_off
     - service: hue.hue_activate_scene
       data:
         group_name: "Living room"
@@ -1407,10 +1428,10 @@
       data_template:
         entity_id: input_text.back_garden_scene
         value: back_garden_off
-    - service: light.turn_off
+    - service: input_text.set_value
       data:
-        entity_id:
-          - group.upstairs_hallway
+        entity_id: input_text.upstairs_hallway_scene
+        value: upstairs_hallway_off
     - service: hue.hue_activate_scene
       data:
         group_name: Downstairs Hallway
@@ -1442,12 +1463,15 @@
       data_template:
         entity_id: input_text.back_garden_scene
         value: back_garden_off
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.upstairs_hallway_scene
+        value: upstairs_hallway_off
     - service: light.turn_off
       data:
         entity_id:
           - switch.living_room_main
           - group.living_room
-          - group.upstairs_hallway
     - service: hue.hue_activate_scene
       data:
         group_name: Downstairs Hallway
@@ -1475,13 +1499,16 @@
       data_template:
         entity_id: input_text.back_garden_scene
         value: back_garden_off
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.upstairs_hallway_scene
+        value: upstairs_hallway_off
     - service: light.turn_off
       data:
         entity_id:
           - switch.living_room_main
           - group.living_room
           - group.downstairs_hallway
-          - group.upstairs_hallway
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_hue_scene
@@ -1505,10 +1532,13 @@
       data_template:
         entity_id: input_text.back_garden_scene
         value: back_garden_dimmed
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.upstairs_hallway_scene
+        value: upstairs_hallway_off
     - service: light.turn_off
       data:
         entity_id:
-          - group.upstairs_hallway
           - group.downstairs_hallway
     - service: hue.hue_activate_scene
       data:
@@ -1537,10 +1567,13 @@
       data_template:
         entity_id: input_text.back_garden_scene
         value: back_garden_off
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.upstairs_hallway_scene
+        value: upstairs_hallway_off
     - service: light.turn_off
       data:
         entity_id:
-          - group.upstairs_hallway
           - group.downstairs_hallway
     - service: hue.hue_activate_scene
       data:
@@ -1569,12 +1602,15 @@
       data_template:
         entity_id: input_text.back_garden_scene
         value: back_garden_off
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.upstairs_hallway_scene
+        value: upstairs_hallway_off
     - service: light.turn_off
       data:
         entity_id:
           - switch.living_room_main
           - group.living_room
-          - group.upstairs_hallway
           - group.downstairs_hallway
     - service: input_text.set_value
       data:
@@ -1599,13 +1635,16 @@
       data_template:
         entity_id: input_text.back_garden_scene
         value: back_garden_off
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.upstairs_hallway_scene
+        value: upstairs_hallway_off
     - service: light.turn_off
       data:
         entity_id:
           - switch.living_room_main
           - group.living_room
           - group.downstairs_hallway
-          - group.upstairs_hallway
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_hue_scene
@@ -1629,10 +1668,13 @@
       data_template:
         entity_id: input_text.back_garden_scene
         value: back_garden_off
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.upstairs_hallway_scene
+        value: upstairs_hallway_off
     - service: light.turn_off
       data:
         entity_id:
-          - group.upstairs_hallway
           - group.downstairs_hallway
     - service: hue.hue_activate_scene
       data:
@@ -1661,10 +1703,13 @@
       data_template:
         entity_id: input_text.back_garden_scene
         value: back_garden_off
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.upstairs_hallway_scene
+        value: upstairs_hallway_off
     - service: light.turn_off
       data:
         entity_id:
-          - group.upstairs_hallway
           - group.downstairs_hallway
     - service: hue.hue_activate_scene
       data:
@@ -1693,12 +1738,15 @@
       data_template:
         entity_id: input_text.back_garden_scene
         value: back_garden_off
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.upstairs_hallway_scene
+        value: upstairs_hallway_off
     - service: light.turn_off
       data:
         entity_id:
           - switch.living_room_main
           - group.living_room
-          - group.upstairs_hallway
           - group.downstairs_hallway
     - service: input_text.set_value
       data:
@@ -1723,13 +1771,16 @@
       data_template:
         entity_id: input_text.back_garden_scene
         value: back_garden_off
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.upstairs_hallway_scene
+        value: upstairs_hallway_off
     - service: light.turn_off
       data:
         entity_id:
           - switch.living_room_main
           - group.living_room
           - group.downstairs_hallway
-          - group.upstairs_hallway
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_hue_scene
@@ -1753,12 +1804,15 @@
       data_template:
         entity_id: input_text.back_garden_scene
         value: back_garden_off
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.upstairs_hallway_scene
+        value: upstairs_hallway_off
     - service: light.turn_off
       data:
         entity_id:
           - switch.living_room_main
           - group.living_room
-          - group.upstairs_hallway
           - group.downstairs_hallway
     - service: input_text.set_value
       data:
@@ -1783,12 +1837,15 @@
       data_template:
         entity_id: input_text.back_garden_scene
         value: back_garden_off
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.upstairs_hallway_scene
+        value: upstairs_hallway_off
     - service: light.turn_off
       data:
         entity_id:
           - switch.living_room_main
           - group.living_room
-          - group.upstairs_hallway
           - group.downstairs_hallway
     - service: input_text.set_value
       data:
@@ -1813,12 +1870,15 @@
       data_template:
         entity_id: input_text.back_garden_scene
         value: back_garden_off
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.upstairs_hallway_scene
+        value: upstairs_hallway_off
     - service: light.turn_off
       data:
         entity_id:
           - switch.living_room_main
           - group.living_room
-          - group.upstairs_hallway
           - group.downstairs_hallway
     - service: input_text.set_value
       data:
@@ -1843,12 +1903,15 @@
       data_template:
         entity_id: input_text.back_garden_scene
         value: back_garden_off
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.upstairs_hallway_scene
+        value: upstairs_hallway_off
     - service: light.turn_off
       data:
         entity_id:
           - switch.living_room_main
           - group.living_room
-          - group.upstairs_hallway
           - group.downstairs_hallway
     - service: input_text.set_value
       data:
@@ -1935,7 +1998,7 @@
         entity_id:
           - group.kitchen
 
-- alias: Upstairs Hallway Lights On
+- alias: Upstairs Hallway Motion
   initial_state: true
   condition:
     - condition: numeric_state
@@ -1955,12 +2018,11 @@
       entity_id: sensor.upstairs_hallway_light_level
       below: 30
   action:
-    - service: hue.hue_activate_scene
+    - service: scene.turn_on
       data_template:
-        group_name: Upstairs Hallway
-        scene_name: "{{ states('input_text.upstairs_hallway_scene') }}"
+        entity_id: "scene.{{ states('input_text.upstairs_hallway_scene') }}"
 
-- alias: Upstairs Hallway Lights Off
+- alias: Upstairs Hallway No Motion
   initial_state: true
   trigger:
     - platform: state
@@ -1972,10 +2034,20 @@
       entity_id: sensor.upstairs_hallway_light_level
       above: 30
   action:
-    - service: light.turn_off
+    - service: scene.turn_on
       data:
-        entity_id:
-          - group.upstairs_hallway
+        entity_id: scene.upstairs_hallway_off
+
+- alias: Upstairs Hallway Default Scene Changed to Off
+  initial_state: true
+  trigger:
+    platform: state
+    entity_id: input_text.upstairs_hallway_scene
+    to: "upstairs_hallway_off"
+  action:
+    - service: scene.turn_on
+      data:
+        entity_id: scene.upstairs_hallway_off
 
 - alias: Back Garden to Bright
   initial_state: true
@@ -2161,11 +2233,9 @@
         scene_id: upstairs_spot_2_before
         snapshot_entities:
           - light.upstairs_spot_2
-    - service: light.turn_on
+    - service: scene.turn_on
       data:
-        entity_id: light.upstairs_spot_2
-        color_temp: 153
-        brightness: 254
+        entity_id: scene.upstairs_cupboard_open
 
 - alias: Upstairs Hall Cupboard Door Closed
   initial_state: true

@@ -328,7 +328,7 @@ input_text:
     initial: worktop_lights_on
   upstairs_hallway_scene:
     name: Upstairs Hallway Scene
-    initial: Night
+    initial: upstairs_hallway_night
   front_garden_scene:
     name: Front Garden Scene
     initial: front_garden_off
