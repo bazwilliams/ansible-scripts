@@ -6,13 +6,6 @@
     path: /data/music/
     state: directory
 
-# - name: Download music
-#   synchronize:
-#     mode: pull
-#     delete: yes
-#     src: /data/music/
-#     dest: roles/music/files/
-
 - name: Upload music
   synchronize:
     src: .
