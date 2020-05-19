@@ -268,7 +268,7 @@ sensor:
 {% raw %}
           {% if now().hour | int >= 22 %}
           {% set time_slot = "early_night" %}
-          {% elif now().hour | int >= 21 %}
+          {% elif now().hour | int >= 20 %}
           {% set time_slot = "late_evening" %}
           {% elif now().hour | int >= 19 %}
           {% set time_slot = "evening" %}
