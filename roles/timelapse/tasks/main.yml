@@ -18,7 +18,7 @@
 - name: Add cron job
   cron:
     name: take snapshot
-    minute: "*/10"
+    minute: "*/5"
     job: "/home/pi/timelapse/camera.sh"
 
 - name: Disable camera led
