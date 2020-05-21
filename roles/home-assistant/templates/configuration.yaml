@@ -332,6 +332,9 @@ input_text:
   back_garden_scene:
     name: Back Garden Scene
     initial: back_garden_off
+  living_room_scene:
+    name: Living Room Scene
+    initial: living_room_off
 
 notify:
   - platform: alexa_media
