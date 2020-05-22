@@ -64,7 +64,12 @@ downstairs_hallway:
   entities:
     - light.play_left
     - light.play_right
-    - light.downstairs_hallway_ceiling
+    - light.downstairs_hallway_1
+    - light.downstairs_hallway_2
+    - light.downstairs_hallway_3
+    - light.downstairs_hallway_4
+    - light.downstairs_hallway_5
+    - light.downstairs_hallway_6
 downstairs_toilet:
   name: Downstairs Toilet
   entities:

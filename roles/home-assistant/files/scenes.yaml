@@ -348,3 +348,13 @@
       brightness: 141
       xy_color: [ 0.159, 0.241 ]
     switch.living_room_main: off
+- name: Downstairs Hallway Off
+  entities:
+    light.play_left: off
+    light.play_right: off
+    light.downstairs_hallway_1: off
+    light.downstairs_hallway_2: off
+    light.downstairs_hallway_3: off
+    light.downstairs_hallway_4: off
+    light.downstairs_hallway_5: off
+    light.downstairs_hallway_6: off
