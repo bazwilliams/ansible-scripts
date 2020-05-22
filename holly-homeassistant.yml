@@ -1,8 +1,8 @@
 ---
 - hosts: holly
   roles:
-     - update-packages-suse
-     - install-docker-suse
+    #  - update-packages-suse
+    #  - install-docker-suse
     #  - homeassistant-alexa-update
     #  - homeassistant-homeconnect-update
     #  - homeassistant-securitasdirect-update
