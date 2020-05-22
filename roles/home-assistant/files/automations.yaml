@@ -330,7 +330,7 @@
     - service: hue.hue_activate_scene
       data:
         group_name: Downstairs Hallway
-        value: Evening
+        scene_name: Daytime Presence
     - service: input_text.set_value
       data:
         entity_id: input_text.upstairs_hallway_scene
@@ -388,7 +388,7 @@
     - service: hue.hue_activate_scene
       data:
         group_name: Downstairs Hallway
-        scene_name: Late Evening
+        scene_name: Colourful Evening
     - service: input_text.set_value
       data:
         entity_id: input_text.upstairs_hallway_scene
@@ -512,7 +512,7 @@
     - service: hue.hue_activate_scene
       data:
         group_name: Downstairs Hallway
-        scene_name: Early Night
+        scene_name: Colourful Evening
     - service: input_text.set_value
       data:
         entity_id: input_text.upstairs_hallway_scene
@@ -543,7 +543,7 @@
     - service: hue.hue_activate_scene
       data:
         group_name: Downstairs Hallway
-        scene_name: Early Night
+        scene_name: Colourful Evening
     - service: input_text.set_value
       data:
         entity_id: input_text.upstairs_hallway_scene
@@ -1256,7 +1256,7 @@
     - service: hue.hue_activate_scene
       data:
         group_name: Downstairs Hallway
-        scene_name: Late Evening Away
+        scene_name: Colourful Evening Away
     - service: input_text.set_value
       data:
         entity_id: input_text.upstairs_hallway_scene
@@ -1792,10 +1792,6 @@
     - service: scene.turn_on
       data_template:
         entity_id: "scene.{{ states('input_text.kitchen_scene') }}"
-    - service: hue.hue_activate_scene
-      data_template:
-        group_name: Kitchen
-        scene_name: "{{ states('input_text.kitchen_hue_scene') }}"
 
 - alias: Kitchen Lights Off
   initial_state: true
