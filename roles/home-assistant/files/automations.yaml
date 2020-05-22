@@ -2552,7 +2552,7 @@
       data_template:
         entity_id: scene.living_room_bright
 
-- alias: Living Room to Default Scene
+- alias: Living Room to Default Scene from Bright
   initial_state: true
   trigger:
     platform: event
@@ -2563,6 +2563,10 @@
       endpoint_id: 1
       cluster_id: 6
       command: off_with_effect
+  condition:
+    - condition: state
+      entity_id: switch.living_room_main
+      state: "on"
   action:
     - service: scene.turn_on
       data_template:
