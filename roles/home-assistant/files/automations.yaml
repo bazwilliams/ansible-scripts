@@ -137,10 +137,10 @@
       data_template:
         entity_id: input_text.back_garden_scene
         value: back_garden_dimmed
-    - service: hue.hue_activate_scene
+    - service: input_text.set_value
       data:
-        group_name: Downstairs Hallway
-        scene_name: Colourful Evening
+        entity_id: input_text.downstairs_hallway_scene
+        value: downstairs_hallway_colourful_evening
     - service: input_text.set_value
       data:
         entity_id: input_text.upstairs_hallway_scene
@@ -261,10 +261,10 @@
       data_template:
         entity_id: input_text.back_garden_scene
         value: back_garden_dimmed
-    - service: hue.hue_activate_scene
+    - service: input_text.set_value
       data:
-        group_name: Downstairs Hallway
-        scene_name: Colourful Evening
+        entity_id: input_text.downstairs_hallway_scene
+        value: downstairs_hallway_colourful_evening
     - service: input_text.set_value
       data:
         entity_id: input_text.upstairs_hallway_scene
@@ -385,10 +385,10 @@
       data_template:
         entity_id: input_text.back_garden_scene
         value: back_garden_dimmed
-    - service: hue.hue_activate_scene
+    - service: input_text.set_value
       data:
-        group_name: Downstairs Hallway
-        scene_name: Colourful Evening
+        entity_id: input_text.downstairs_hallway_scene
+        value: downstairs_hallway_colourful_evening
     - service: input_text.set_value
       data:
         entity_id: input_text.upstairs_hallway_scene
