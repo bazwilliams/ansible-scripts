@@ -79,10 +79,10 @@
       data:
         entity_id: input_text.living_room_scene
         value: living_room_off
-    - service: hue.hue_activate_scene
+    - service: input_text.set_value
       data:
-        group_name: Downstairs Hallway
-        scene_name: Daytime Presence
+        entity_id: input_text.downstairs_hallway_scene
+        value: downstairs_hallway_daytime_presence
     - service: input_text.set_value
       data:
         entity_id: input_text.upstairs_hallway_scene
@@ -168,10 +168,10 @@
       data_template:
         entity_id: input_text.back_garden_scene
         value: back_garden_off
-    - service: hue.hue_activate_scene
+    - service: input_text.set_value
       data:
-        group_name: Downstairs Hallway
-        scene_name: Daytime Presence
+        entity_id: input_text.downstairs_hallway_scene
+        value: downstairs_hallway_daytime_presence
     - service: input_text.set_value
       data:
         entity_id: input_text.upstairs_hallway_scene
@@ -203,10 +203,10 @@
       data:
         entity_id: input_text.living_room_scene
         value: living_room_off
-    - service: hue.hue_activate_scene
+    - service: input_text.set_value
       data:
-        group_name: Downstairs Hallway
-        scene_name: Daytime Presence
+        entity_id: input_text.downstairs_hallway_scene
+        value: downstairs_hallway_daytime_presence
     - service: input_text.set_value
       data:
         entity_id: input_text.upstairs_hallway_scene
@@ -292,10 +292,10 @@
       data_template:
         entity_id: input_text.back_garden_scene
         value: back_garden_off
-    - service: hue.hue_activate_scene
+    - service: input_text.set_value
       data:
-        group_name: Downstairs Hallway
-        scene_name: Daytime Presence
+        entity_id: input_text.downstairs_hallway_scene
+        value: downstairs_hallway_daytime_presence
     - service: input_text.set_value
       data:
         entity_id: input_text.upstairs_hallway_scene
@@ -327,10 +327,10 @@
       data:
         entity_id: input_text.living_room_scene
         value: living_room_off
-    - service: hue.hue_activate_scene
+    - service: input_text.set_value
       data:
-        group_name: Downstairs Hallway
-        scene_name: Daytime Presence
+        entity_id: input_text.downstairs_hallway_scene
+        value: downstairs_hallway_daytime_presence
     - service: input_text.set_value
       data:
         entity_id: input_text.upstairs_hallway_scene
@@ -416,10 +416,10 @@
       data_template:
         entity_id: input_text.back_garden_scene
         value: back_garden_off
-    - service: hue.hue_activate_scene
+    - service: input_text.set_value
       data:
-        group_name: Downstairs Hallway
-        scene_name: Daytime Presence
+        entity_id: input_text.downstairs_hallway_scene
+        value: downstairs_hallway_daytime_presence
     - service: input_text.set_value
       data:
         entity_id: input_text.upstairs_hallway_scene
@@ -451,10 +451,10 @@
       data:
         entity_id: input_text.living_room_scene
         value: living_room_off
-    - service: hue.hue_activate_scene
+    - service: input_text.set_value
       data:
-        group_name: Downstairs Hallway
-        scene_name: Daytime Presence
+        entity_id: input_text.downstairs_hallway_scene
+        value: downstairs_hallway_daytime_presence
     - service: input_text.set_value
       data:
         entity_id: input_text.upstairs_hallway_scene
@@ -509,10 +509,10 @@
       data_template:
         entity_id: input_text.back_garden_scene
         value: back_garden_dimmed
-    - service: hue.hue_activate_scene
+    - service: input_text.set_value
       data:
-        group_name: Downstairs Hallway
-        scene_name: Late Evening
+        entity_id: input_text.downstairs_hallway_scene
+        value: downstairs_hallway_late_evening
     - service: input_text.set_value
       data:
         entity_id: input_text.upstairs_hallway_scene
@@ -540,10 +540,10 @@
       data_template:
         entity_id: input_text.back_garden_scene
         value: back_garden_off
-    - service: hue.hue_activate_scene
+    - service: input_text.set_value
       data:
-        group_name: Downstairs Hallway
-        scene_name: Late Evening
+        entity_id: input_text.downstairs_hallway_scene
+        value: downstairs_hallway_late_evening
     - service: input_text.set_value
       data:
         entity_id: input_text.upstairs_hallway_scene
@@ -575,10 +575,10 @@
       data:
         entity_id: input_text.living_room_scene
         value: living_room_off
-    - service: hue.hue_activate_scene
+    - service: input_text.set_value
       data:
-        group_name: Downstairs Hallway
-        scene_name: Late Evening
+        entity_id: input_text.downstairs_hallway_scene
+        value: downstairs_hallway_late_evening
     - service: input_text.set_value
       data:
         entity_id: input_text.upstairs_hallway_scene
@@ -633,10 +633,10 @@
       data_template:
         entity_id: input_text.back_garden_scene
         value: back_garden_off
-    - service: hue.hue_activate_scene
+    - service: input_text.set_value
       data:
-        group_name: Downstairs Hallway
-        scene_name: Early Night
+        entity_id: input_text.downstairs_hallway_scene
+        value: downstairs_hallway_early_night
     - service: input_text.set_value
       data:
         entity_id: input_text.upstairs_hallway_scene
@@ -664,10 +664,10 @@
       data_template:
         entity_id: input_text.back_garden_scene
         value: back_garden_off
-    - service: hue.hue_activate_scene
+    - service: input_text.set_value
       data:
-        group_name: Downstairs Hallway
-        scene_name: Early Night
+        entity_id: input_text.downstairs_hallway_scene
+        value: downstairs_hallway_early_night
     - service: input_text.set_value
       data:
         entity_id: input_text.upstairs_hallway_scene
@@ -699,10 +699,10 @@
       data:
         entity_id: input_text.living_room_scene
         value: living_room_off
-    - service: hue.hue_activate_scene
+    - service: input_text.set_value
       data:
-        group_name: Downstairs Hallway
-        scene_name: Early Night
+        entity_id: input_text.downstairs_hallway_scene
+        value: downstairs_hallway_early_night
     - service: input_text.set_value
       data:
         entity_id: input_text.upstairs_hallway_scene
@@ -1044,10 +1044,10 @@
       data:
         entity_id: input_text.upstairs_hallway_scene
         value: upstairs_hallway_off
-    - service: hue.hue_activate_scene
+    - service: input_text.set_value
       data:
-        group_name: Downstairs Hallway
-        scene_name: Daytime Presence
+        entity_id: input_text.downstairs_hallway_scene
+        value: downstairs_hallway_off
     - service: input_text.set_value
       data:
         entity_id: input_text.living_room_scene
@@ -1079,10 +1079,10 @@
       data:
         entity_id: input_text.living_room_scene
         value: living_room_off
-    - service: hue.hue_activate_scene
+    - service: input_text.set_value
       data:
-        group_name: Downstairs Hallway
-        scene_name: Daytime Presence
+        entity_id: input_text.downstairs_hallway_scene
+        value: downstairs_hallway_off
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
@@ -1168,10 +1168,10 @@
       data:
         entity_id: input_text.upstairs_hallway_scene
         value: upstairs_hallway_off
-    - service: hue.hue_activate_scene
+    - service: input_text.set_value
       data:
-        group_name: Downstairs Hallway
-        scene_name: Daytime Presence
+        entity_id: input_text.downstairs_hallway_scene
+        value: downstairs_hallway_off
     - service: input_text.set_value
       data:
         entity_id: input_text.living_room_scene
@@ -1199,6 +1199,10 @@
       data:
         entity_id: input_text.upstairs_hallway_scene
         value: upstairs_hallway_off
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.downstairs_hallway_scene
+        value: downstairs_hallway_off
     - service: input_text.set_value
       data:
         entity_id: input_text.living_room_scene
@@ -1288,10 +1292,10 @@
       data:
         entity_id: input_text.upstairs_hallway_scene
         value: upstairs_hallway_off
-    - service: hue.hue_activate_scene
+    - service: input_text.set_value
       data:
-        group_name: Downstairs Hallway
-        scene_name: Daytime Presence
+        entity_id: input_text.downstairs_hallway_scene
+        value: downstairs_hallway_off
     - service: input_text.set_value
       data:
         entity_id: input_text.living_room_scene
@@ -1323,10 +1327,10 @@
       data:
         entity_id: input_text.living_room_scene
         value: living_room_off
-    - service: hue.hue_activate_scene
+    - service: input_text.set_value
       data:
-        group_name: Downstairs Hallway
-        scene_name: Daytime Presence
+        entity_id: input_text.downstairs_hallway_scene
+        value: downstairs_hallway_off
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
@@ -1381,10 +1385,10 @@
       data:
         entity_id: input_text.upstairs_hallway_scene
         value: upstairs_hallway_off
-    - service: hue.hue_activate_scene
+    - service: input_text.set_value
       data:
-        group_name: Downstairs Hallway
-        scene_name: Late Evening Away
+        entity_id: input_text.downstairs_hallway_scene
+        value: downstairs_hallway_late_evening_away
     - service: input_text.set_value
       data:
         entity_id: input_text.living_room_scene
@@ -1412,10 +1416,10 @@
       data:
         entity_id: input_text.upstairs_hallway_scene
         value: upstairs_hallway_off
-    - service: hue.hue_activate_scene
+    - service: input_text.set_value
       data:
-        group_name: Downstairs Hallway
-        scene_name: Late Evening Away
+        entity_id: input_text.downstairs_hallway_scene
+        value: downstairs_hallway_late_evening_away
     - service: input_text.set_value
       data:
         entity_id: input_text.living_room_scene
