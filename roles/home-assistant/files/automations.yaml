@@ -1995,10 +1995,6 @@
       for:
         seconds: 2
   action:
-    - service: hue.hue_activate_scene
-      data:
-        group_name: Snug
-        scene_name: Chill
     - service: scene.turn_on
       data:
         entity_id: scene.snug_music
@@ -2011,10 +2007,6 @@
       for:
         seconds: 2
   action:
-    - service: hue.hue_activate_scene
-      data:
-        group_name: Snug
-        scene_name: LP12
     - service: scene.turn_on
       data:
         entity_id: scene.snug_lp12
@@ -2026,10 +2018,6 @@
       entity_id: media_player.epson_projector
       to: "on"
   action:
-    - service: light.turn_off
-      data:
-        entity_id:
-          - group.snug
     - service: scene.turn_on
       data:
         entity_id: scene.snug_movie
@@ -2073,10 +2061,6 @@
       cluster_id: 6
       command: "on"
   action:
-    - service: hue.hue_activate_scene
-      data:
-        group_name: Snug
-        scene_name: Relax
     - service: scene.turn_on
       data:
         entity_id: scene.snug_on
@@ -2092,16 +2076,14 @@
       endpoint_id: 1
       cluster_id: 6
       command: off_with_effect
+  condition:
+    - condition: state
+      entity_id: light.snug
+      state: "on"
   action:
-    - service: light.turn_off
+    - service: scene.turn_on
       data:
-        entity_id:
-          - group.snug
-    - service: switch.turn_off
-      data:
-        entity_id:
-          - switch.bookcase_light
-          - switch.lava_lamp
+        entity_id: scene.snug_off
 
 - alias: Snug All Off
   initial_state: true
