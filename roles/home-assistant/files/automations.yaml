@@ -13,10 +13,10 @@
       data_template:
         entity_id: input_text.back_garden_scene
         value: back_garden_dimmed
-    - service: hue.hue_activate_scene
+    - service: input_text.set_value
       data:
-        group_name: Downstairs Hallway
-        scene_name: Morning Variation
+        entity_id: input_text.downstairs_hallway_scene
+        value: downstairs_hallway_morning
     - service: input_text.set_value
       data:
         entity_id: input_text.upstairs_hallway_scene
@@ -44,10 +44,10 @@
       data_template:
         entity_id: input_text.back_garden_scene
         value: back_garden_off
-    - service: hue.hue_activate_scene
+    - service: input_text.set_value
       data:
-        group_name: Downstairs Hallway
-        scene_name: Morning Variation
+        entity_id: input_text.downstairs_hallway_scene
+        value: downstairs_hallway_morning
     - service: input_text.set_value
       data:
         entity_id: input_text.upstairs_hallway_scene
@@ -882,10 +882,10 @@
       data_template:
         entity_id: input_text.back_garden_scene
         value: back_garden_dimmed
-    - service: hue.hue_activate_scene
+    - service: input_text.set_value
       data:
-        group_name: Downstairs Hallway
-        scene_name: Morning Variation Away
+        entity_id: input_text.downstairs_hallway_scene
+        value: downstairs_hallway_morning_away
     - service: input_text.set_value
       data:
         entity_id: input_text.living_room_scene
@@ -917,10 +917,10 @@
       data:
         entity_id: input_text.upstairs_hallway_scene
         value: upstairs_hallway_off
-    - service: hue.hue_activate_scene
+    - service: input_text.set_value
       data:
-        group_name: Downstairs Hallway
-        scene_name: Morning Variation Away
+        entity_id: input_text.downstairs_hallway_scene
+        value: downstairs_hallway_morning_away
     - service: input_text.set_value
       data:
         entity_id: input_text.living_room_scene
@@ -2612,7 +2612,3 @@
     - service: scene.turn_on
       data_template:
         entity_id: "scene.{{ states('input_text.downstairs_hallway_scene') }}"
-    - service: input_text.set_value
-      data:
-        entity_id: input_text.downstairs_hallway_scene
-        value: using_hue_scene

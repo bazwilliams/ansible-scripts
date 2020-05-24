@@ -337,7 +337,7 @@ input_text:
     initial: living_room_off
   downstairs_hallway_scene:
     name: Downstairs Hallway Scene
-    initial: using_hue_scene
+    initial: downstairs_hallway_off
 
 notify:
   - platform: alexa_media

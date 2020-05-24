@@ -573,3 +573,78 @@
     light.downstairs_hallway_4: off
     light.downstairs_hallway_5: off
     light.downstairs_hallway_6: off
+- name: Downstairs Hallway Morning
+  entities:
+    light.play_left:
+      state: on
+      brightness: 113
+      xy_color:
+        - 0.171
+        - 0.059
+    light.play_right:
+      state: on
+      brightness: 117
+      xy_color:
+        - 0.159
+        - 0.235
+    light.downstairs_hallway_1:
+      state: on
+      brightness: 247
+      xy_color:
+        - 0.173
+        - 0.175
+    light.downstairs_hallway_2:
+      state: on
+      brightness: 148
+      xy_color:
+        - 0.314
+        - 0.331
+    light.downstairs_hallway_3:
+      state: on
+      brightness: 173
+      xy_color:
+        - 0.526
+        - 0.411
+    light.downstairs_hallway_4:
+      state: on
+      brightness: 255
+      xy_color:
+        - 0.583
+        - 0.389
+    light.downstairs_hallway_5:
+      state: on
+      brightness: 69
+      xy_color:
+        - 0.464
+        - 0.411
+    light.downstairs_hallway_6:
+      state: on
+      brightness: 183
+      xy_color:
+        - 0.526
+        - 0.411
+- name: Downstairs Hallway Morning Away
+  entities:
+    light.play_left: off
+    light.play_right: off
+    light.downstairs_hallway_1:
+      state: on
+      brightness: 247
+      xy_color:
+        - 0.173
+        - 0.175
+    light.downstairs_hallway_2:
+      state: on
+      brightness: 148
+      xy_color:
+        - 0.314
+        - 0.331
+    light.downstairs_hallway_3:
+      state: on
+      brightness: 173
+      xy_color:
+        - 0.526
+        - 0.411
+    light.downstairs_hallway_4: off
+    light.downstairs_hallway_5: off
+    light.downstairs_hallway_6: off
