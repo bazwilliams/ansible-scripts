@@ -1778,7 +1778,7 @@
         entity_id:
           - switch.frog_filter
 
-- alias: Kitchen Lights On
+- alias: Kitchen Lights On Due to Motion
   initial_state: true
   condition:
     - condition: state
@@ -1797,14 +1797,35 @@
       data_template:
         entity_id: "scene.{{ states('input_text.kitchen_scene') }}"
 
+- alias: Kitchen Lights On Due to Brightness with Motion
+  initial_state: true
+  condition:
+    - condition: state
+      entity_id: light.kitchen
+      state:  "off"
+    - condition: state
+      entity_id: binary_sensor.kitchen_occupancy
+      state: "on"
+  trigger:
+    - platform: numeric_state
+      entity_id: sensor.kitchen_light_level
+      below: 100
+  action:
+    - service: scene.turn_on
+      data_template:
+        entity_id: "scene.{{ states('input_text.kitchen_scene') }}"
+
 - alias: Kitchen Lights Off
   initial_state: true
   trigger:
-    platform: state
-    entity_id: binary_sensor.kitchen_occupancy
-    to: "off"
-    for:
-      minutes: 10
+    - platform: numeric_state
+      entity_id: sensor.kitchen_light_level
+      above: 100
+    - platform: state
+      entity_id: binary_sensor.kitchen_occupancy
+      to: "off"
+      for:
+        minutes: 10
   action:
     - service: light.turn_off
       data:
