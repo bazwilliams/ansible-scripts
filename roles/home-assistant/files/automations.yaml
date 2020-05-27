@@ -1883,6 +1883,33 @@
       data:
         entity_id: scene.upstairs_hallway_off
 
+- alias: Upstairs Hallway Cupboard Door Open
+  initial_state: true
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.upstairs_hall_cupboard_door
+      to: "on"
+  action:
+    - service: scene.create
+      data:
+        scene_id: upstairs_spot_2_before
+        snapshot_entities:
+          - light.upstairs_spot_2
+    - service: scene.turn_on
+      data:
+        entity_id: scene.upstairs_cupboard_open
+
+- alias: Upstairs Hallway Cupboard Door Closed
+  initial_state: true
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.upstairs_hall_cupboard_door
+      to: "off"
+  action:
+    - service: scene.turn_on
+      data:
+        entity_id: scene.upstairs_spot_2_before
+
 - alias: Back Garden to Bright
   initial_state: true
   trigger:
@@ -2016,9 +2043,10 @@
       for:
         seconds: 2
   action:
-    - service: scene.turn_on
+    - service: input_text.set_value
       data:
-        entity_id: scene.snug_music
+        entity_id: input_text.snug_scene
+        value: snug_music
 
 - alias: Listening to Records
   initial_state: true
@@ -2028,9 +2056,10 @@
       for:
         seconds: 2
   action:
-    - service: scene.turn_on
+    - service: input_text.set_value
       data:
-        entity_id: scene.snug_lp12
+        entity_id: input_text.snug_scene
+        value: snug_lp12
 
 - alias: Watching the Big Screen
   initial_state: true
@@ -2039,36 +2068,10 @@
       entity_id: media_player.epson_projector
       to: "on"
   action:
-    - service: scene.turn_on
+    - service: input_text.set_value
       data:
-        entity_id: scene.snug_movie
-
-- alias: Upstairs Hall Cupboard Door Open
-  initial_state: true
-  trigger:
-    - platform: state
-      entity_id: binary_sensor.upstairs_hall_cupboard_door
-      to: "on"
-  action:
-    - service: scene.create
-      data:
-        scene_id: upstairs_spot_2_before
-        snapshot_entities:
-          - light.upstairs_spot_2
-    - service: scene.turn_on
-      data:
-        entity_id: scene.upstairs_cupboard_open
-
-- alias: Upstairs Hall Cupboard Door Closed
-  initial_state: true
-  trigger:
-    - platform: state
-      entity_id: binary_sensor.upstairs_hall_cupboard_door
-      to: "off"
-  action:
-    - service: scene.turn_on
-      data:
-        entity_id: scene.upstairs_spot_2_before
+        entity_id: input_text.snug_scene
+        value: snug_movie
 
 - alias: Snug Lights On
   initial_state: true
@@ -2082,9 +2085,10 @@
       cluster_id: 6
       command: "on"
   action:
-    - service: scene.turn_on
+    - service: input_text.set_value
       data:
-        entity_id: scene.snug_on
+        entity_id: input_text.snug_scene
+        value: snug_on
 
 - alias: Snug Lights Off
   initial_state: true
@@ -2102,9 +2106,10 @@
       entity_id: light.snug
       state: "on"
   action:
-    - service: scene.turn_on
+    - service: input_text.set_value
       data:
-        entity_id: scene.snug_off
+        entity_id: input_text.snug_scene
+        value: snug_off
 
 - alias: Snug All Off
   initial_state: true
@@ -2119,13 +2124,23 @@
       command: off_with_effect
   condition:
     - condition: state
-      entity_id: light.snug
-      state: "off"
+      entity_id: input_text.snug_scene
+      state: "snug_off"
   action:
     - service: homeassistant.turn_off
       data:
         entity_id:
           - group.snug
+
+- alias: Snug Scene Changed
+  initial_state: true
+  trigger:
+    platform: state
+    entity_id: input_text.snug_scene
+  action:
+    - service: scene.turn_on
+      data_template:
+        entity_id: "scene.{{ states('input_text.snug_scene') }}"
 
 - alias: Guest Room Scene Mode 1
   initial_state: true

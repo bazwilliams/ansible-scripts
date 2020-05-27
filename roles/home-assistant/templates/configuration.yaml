@@ -338,6 +338,9 @@ input_text:
   downstairs_hallway_scene:
     name: Downstairs Hallway Scene
     initial: downstairs_hallway_off
+  snug_scene:
+    name: Snug Scene
+    initial: snug_off
 
 notify:
   - platform: alexa_media
