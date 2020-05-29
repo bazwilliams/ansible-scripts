@@ -1,0 +1,37 @@
+---
+- name: Create data directory
+  become: yes
+  file:
+    path: /opt/docker/data/grafana
+    state: directory
+    owner: "104"
+
+- name: Tear down existing service
+  docker_compose:
+    project_name: grafana
+    state: absent
+    definition:
+        version: "3"
+        services:
+            grafana:
+                image: ""
+
+- name: Start service
+  docker_compose:
+    project_name: grafana
+    remove_orphans: yes
+    state: present
+    definition:
+      version: '3'
+      services:
+        grafana:
+          container_name: grafana
+          image: grafana/grafana
+          restart: unless-stopped
+          environment:
+            TZ: Europe/London
+          ports:
+              - 3000:3000
+          volumes:
+            - /opt/docker/data/grafana:/var/lib/grafana
+          user: "104"
