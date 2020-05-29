@@ -41,6 +41,14 @@ logger:
     # homeassistant.components.sensor.rfxtrx: debug
     # homeassistant.components.rfxtrx: debug
 
+influxdb:
+  exclude:
+    domains:
+      - updater
+    entities:
+      - sensor.last_boot
+      - sensor.time
+
 http:
 
 tts:

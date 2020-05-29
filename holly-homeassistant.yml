@@ -3,6 +3,7 @@
   roles:
     #  - update-packages-suse
     #  - install-docker-suse
+    #  - influxdb
     #  - homeassistant-alexa-update
     #  - homeassistant-homeconnect-update
     #  - homeassistant-securitasdirect-update

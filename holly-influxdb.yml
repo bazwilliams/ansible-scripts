@@ -1,0 +1,6 @@
+---
+- hosts: holly
+  roles:
+    #  - update-packages-suse
+    #  - install-docker-suse
+     - influxdb
