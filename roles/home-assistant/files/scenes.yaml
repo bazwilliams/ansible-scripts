@@ -286,6 +286,48 @@
       state: on
       brightness: 224
       xy_color: [0.479, 0.328]
+- name: Back Garden Colour Loop
+  entities:
+    light.terrace_light:
+      state: on
+      brightness: 224
+      effect: colorloop
+    light.hue_outdoor_pedestal_1:
+      state: on
+      brightness: 255
+      effect: colorloop
+    light.hue_outdoor_pedestal_2:
+      state: on
+      brightness: 255
+      effect: colorloop
+    light.hue_outdoor_pedestal_3:
+      state: on
+      brightness: 255
+      effect: colorloop
+    light.hue_outdoor_pedestal_4:
+      state: on
+      brightness: 255
+      effect: colorloop
+    light.hue_outdoor_spot_1:
+      state: on
+      brightness: 224
+      effect: colorloop
+    light.hue_outdoor_spot_2:
+      state: on
+      brightness: 255
+      effect: colorloop
+    light.hue_outdoor_spot_3:
+      state: on
+      brightness: 224
+      effect: colorloop
+    light.hue_outdoor_spot_4:
+      state: on
+      brightness: 224
+      effect: colorloop
+    light.hue_outdoor_spot_5:
+      state: on
+      brightness: 224
+      effect: colorloop
 - name: Upstairs Hallway Morning
   entities:
     light.upstairs_spot_1:

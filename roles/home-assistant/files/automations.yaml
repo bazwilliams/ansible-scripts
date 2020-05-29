@@ -1809,7 +1809,7 @@
   trigger:
     - platform: numeric_state
       entity_id: sensor.kitchen_light_level
-      below: 100
+      below: 80
   action:
     - service: scene.turn_on
       data_template:
@@ -1929,6 +1929,19 @@
     - service: scene.turn_on
       data:
         entity_id: scene.back_garden_bright
+
+- alias: Back Garden to Colour Loop
+  initial_state: true
+  trigger:
+    platform: state
+    entity_id: input_boolean.terrace_occupancy
+    to: "on"
+    for:
+      minutes: 6
+  action:
+    - service: scene.turn_on
+      data:
+        entity_id: scene.back_garden_colour_loop
 
 - alias: Back Garden to Default Scene
   initial_state: true
@@ -2101,10 +2114,6 @@
       endpoint_id: 1
       cluster_id: 6
       command: off_with_effect
-  condition:
-    - condition: state
-      entity_id: light.snug
-      state: "on"
   action:
     - service: input_text.set_value
       data:
