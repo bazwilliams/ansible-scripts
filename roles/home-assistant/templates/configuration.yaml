@@ -218,7 +218,7 @@ sensor:
         data_type:
           - Humidity
           - Temperature
-      0a520a01880200b4340179:
+      0a520a17240200ef2d0179:
         name: "Ethan's Room"
         data_type:
           - Humidity
