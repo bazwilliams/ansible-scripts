@@ -224,16 +224,19 @@
       state: on
       brightness: 20
       xy_color: [0.526, 0.411]
+      effect: none
     light.hue_outdoor_pedestal_2:
       state: off
     light.hue_outdoor_pedestal_3:
       state: on
       brightness: 20
       xy_color: [0.526, 0.411]
+      effect: none
     light.hue_outdoor_pedestal_4:
       state: on
       brightness: 20
       xy_color: [0.526, 0.411]
+      effect: none
     light.hue_outdoor_spot_1:
       state: off
     light.hue_outdoor_spot_2:
@@ -250,42 +253,52 @@
       state: on
       brightness: 224
       xy_color: [0.26, 0.1]
+      effect: none
     light.hue_outdoor_pedestal_1:
       state: on
       brightness: 255
       xy_color: [0.435, 0.201]
+      effect: none
     light.hue_outdoor_pedestal_2:
       state: on
       brightness: 255
       xy_color: [0.499, 0.415]
+      effect: none
     light.hue_outdoor_pedestal_3:
       state: on
       brightness: 255
       xy_color: [0.435, 0.201]
+      effect: none
     light.hue_outdoor_pedestal_4:
       state: on
       brightness: 255
       xy_color: [0.435, 0.201]
+      effect: none
     light.hue_outdoor_spot_1:
       state: on
       brightness: 224
       xy_color: [0.179, 0.413]
+      effect: none
     light.hue_outdoor_spot_2:
       state: on
       brightness: 255
       xy_color: [0.157, 0.099]
+      effect: none
     light.hue_outdoor_spot_3:
       state: on
       brightness: 224
       xy_color: [0.158, 0.19]
+      effect: none
     light.hue_outdoor_spot_4:
       state: on
       brightness: 224
       xy_color: [0.521, 0.436]
+      effect: none
     light.hue_outdoor_spot_5:
       state: on
       brightness: 224
       xy_color: [0.479, 0.328]
+      effect: none
 - name: Back Garden Colour Loop
   entities:
     light.terrace_light:
