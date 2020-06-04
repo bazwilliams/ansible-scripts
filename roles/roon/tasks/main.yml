@@ -1,0 +1,44 @@
+---
+- name: Create roon data directory
+  become: yes
+  file:
+    path: /opt/docker/data/roon
+    state: directory
+
+- name: Create roon temporary build directory
+  tempfile:
+    state: directory
+    suffix: .roon
+  register: buildcontext
+
+- name: Upload Dockerfile
+  copy:
+    src: Dockerfile
+    dest: "{{ buildcontext.path }}"
+
+- name: Start roon
+  docker_compose:
+    project_name: roon
+    remove_orphans: yes
+    state: present
+    definition:
+      version: "3.7"
+
+      services:
+        roon:
+          restart: unless-stopped
+          build: "{{ buildcontext.path }}"
+          container_name: roon
+          volumes:
+            - type: bind
+              source: /opt/docker/data/roon
+              target: /var/roon/RoonServer
+            - /data/music:/data/music:ro
+            - /etc/localtime:/etc/localtime:ro
+          network_mode: host
+
+- name: Cleanup
+  file:
+    path: "{{ buildcontext.path }}"
+    state: absent
+  when: buildcontext.path is defined
