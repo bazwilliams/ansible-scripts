@@ -46,10 +46,9 @@ opnsense:
     - LAN
 ```
 
-The following custom components for homeconnect exist in the home-assistant role's files folder. 
+The following custom components exist in the home-assistant role's files folder. 
 
 These are copied from
-* https://github.com/DavidMStraub/homeassistant-homeconnect 
 * https://github.com/custom-components/alexa_media_player
 * https://github.com/segalion/securitasdirect
 * https://github.com/4n0nD3v3l0p3r/Home_Assistant_SkyQ_MediaPlayer
