@@ -1742,8 +1742,11 @@
 - alias: Wakeup
   initial_state: true
   trigger:
-    platform: time
-    at: "06:00:00"
+    - platform: time
+      at: "06:00:00"
+    - platform: numeric_state
+      entity_id: sensor.outside_light_level
+      above: 60
   action:
     - service: light.turn_off
       data:
@@ -1809,7 +1812,7 @@
   trigger:
     - platform: numeric_state
       entity_id: sensor.kitchen_light_level
-      below: 80
+      below: 40
   action:
     - service: scene.turn_on
       data_template:
@@ -2048,11 +2051,37 @@
     - service: switch.turn_off
       entity_id: switch.power_amplifier
 
-- alias: Listening to Music
+- alias: Listening to Music (Playlist)
   initial_state: true
   trigger:
     - platform: template
       value_template: "{{ is_state_attr('media_player.hifi', 'source', 'Playlist') }}"
+      for:
+        seconds: 2
+  action:
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.snug_scene
+        value: snug_music
+
+- alias: Listening to Music (Roon)
+  initial_state: true
+  trigger:
+    - platform: template
+      value_template: "{{ is_state_attr('media_player.hifi', 'source', 'Roon') }}"
+      for:
+        seconds: 2
+  action:
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.snug_scene
+        value: snug_music
+
+- alias: Listening to Music (Radio)
+  initial_state: true
+  trigger:
+    - platform: template
+      value_template: "{{ is_state_attr('media_player.hifi', 'source', 'Radio') }}"
       for:
         seconds: 2
   action:
