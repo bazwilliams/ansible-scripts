@@ -1,0 +1,16 @@
+- homebrew:
+    name: ansible
+    state: latest
+    update_homebrew: yes
+- homebrew_cask:
+    name: visual-studio-code
+    state: latest
+    update_homebrew: yes
+- homebrew:
+    name: git
+    state: latest
+    update_homebrew: yes
+- homebrew_cask:
+    name: firefox
+    state: latest
+    update_homebrew: yes
