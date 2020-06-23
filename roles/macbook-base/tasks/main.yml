@@ -1,16 +1,40 @@
-- homebrew:
+- name: Install Ansible
+  homebrew:
     name: ansible
     state: latest
     update_homebrew: yes
-- homebrew_cask:
+- name: Install Visual Studio Code
+  homebrew_cask:
     name: visual-studio-code
     state: latest
     update_homebrew: yes
-- homebrew:
+- name: Install Git
+  homebrew:
     name: git
     state: latest
     update_homebrew: yes
-- homebrew_cask:
+- name: Install Firefox
+  homebrew_cask:
     name: firefox
+    state: latest
+    update_homebrew: yes
+- name: Install Slack
+  homebrew_cask:
+    name: slack
+    state: latest
+    update_homebrew: yes
+- name: Install Roon
+  homebrew_cask:
+    name: roon
+    state: latest
+    update_homebrew: yes
+- name: Install WhatsApp
+  homebrew_cask:
+    name: whatsapp
+    state: latest
+    update_homebrew: yes
+- name: Install Mp3tag
+  homebrew_cask:
+    name: mp3tag
     state: latest
     update_homebrew: yes
