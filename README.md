@@ -71,6 +71,10 @@ New music should be added to the files in `roles/music/files`
 ansible-playbook -i inventory/hosts.ini holly-minim.yml -K --user $USER
 ```
 
+## Samba
+
+This is mostly copied from https://github.com/pwntr/samba-alpine-docker
+
 # Lightsail
 
 Setup `group_vars/lightsail.yaml` with the following configuration
