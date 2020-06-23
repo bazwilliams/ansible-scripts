@@ -10,28 +10,28 @@ updater:
 zeroconf:
 zone:
 
-logbook:
-  include:
-    domains:
-      - sensor
-      - switch
-      - media_player
-  exclude:
-    entities:
-      - sensor.last_boot
-      - sensor.time
-      - sensor.dishwasher_remaining_program_time
-    domains:
-      - sun
+# logbook:
+#   include:
+#     domains:
+#       - sensor
+#       - switch
+#       - media_player
+#   exclude:
+#     entities:
+#       - sensor.last_boot
+#       - sensor.time
+#       - sensor.dishwasher_remaining_program_time
+#     domains:
+#       - sun
 
-history:
-  exclude:
-    domains:
-      - automation
-      - updater
-    entities:
-      - sensor.last_boot
-      - sensor.time
+# history:
+#   exclude:
+#     domains:
+#       - automation
+#       - updater
+#     entities:
+#       - sensor.last_boot
+#       - sensor.time
 
 logger:
   default: warning
