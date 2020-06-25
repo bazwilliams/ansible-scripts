@@ -28,6 +28,27 @@
     immediate: yes
     state: enabled
 
+- name: Create music directory
+  become: yes
+  file:
+    owner: barry
+    path: /data/music/
+    state: directory
+
+- name: Create videos directory
+  become: yes
+  file:
+    owner: barry
+    path: /data/videos/
+    state: directory
+
+- name: Create archives directory
+  become: yes
+  file:
+    owner: barry
+    path: /data/archives/
+    state: directory
+
 - name: Start samba
   docker_compose:
     project_name: samba
@@ -43,8 +64,8 @@
           container_name: samba
           volumes:
             - type: bind
-              source: /data/music/
-              target: /shared
+              source: /data/
+              target: /shared/
           network_mode: host
 
 - name: Cleanup
