@@ -57,6 +57,7 @@
         version: "3"
         services:
           minimserver:
+            container_name: minimserver
             restart: unless-stopped
             build: "{{ buildcontext.path }}"
             ports:

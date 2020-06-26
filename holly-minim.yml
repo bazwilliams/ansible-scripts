@@ -3,6 +3,6 @@
   roles:
     #  - update-packages-suse
     #  - install-docker-suse
-     - music
+    # - music
      - minimserver
     #  - plex

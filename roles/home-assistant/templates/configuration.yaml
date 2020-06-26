@@ -128,12 +128,6 @@ media_player:
   - platform: openhome
   - platform: epson
     host: 192.168.1.50
-  - platform: skyq
-    name: SkyQ Living Room
-    host: 192.168.1.58
-  - platform: skyq
-    name: SkyQ Snug
-    host: 192.168.1.59
 
 rfxtrx:
   device: /dev/rfxtrx
@@ -371,7 +365,7 @@ alexa_media:
         - Downstairs
         - Kids Rooms
 
-homeconnect:
+home_connect:
   client_id: {{ homeconnect.client_id }}
   client_secret: {{ homeconnect.client_secret }}
 
