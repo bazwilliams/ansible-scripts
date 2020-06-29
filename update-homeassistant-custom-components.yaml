@@ -3,5 +3,5 @@
   roles:
     - homeassistant-alexa-update
     - homeassistant-securitasdirect-update
-    - homeassistant-skyq-update
+    - homeassistant-roon-update
     - homeassistant-zha_map-update

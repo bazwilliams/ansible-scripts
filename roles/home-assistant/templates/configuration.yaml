@@ -365,6 +365,8 @@ alexa_media:
         - Downstairs
         - Kids Rooms
 
+roon:
+
 home_connect:
   client_id: {{ homeconnect.client_id }}
   client_secret: {{ homeconnect.client_secret }}
