@@ -12,16 +12,13 @@ Setup `group_vars/holly.yaml` by downloading
 aws s3 cp s3://home-configuration-configurationbucket-13wmfldf19xzw/holly.yaml group_vars/holly.yaml
 ```
 
-
-
-
 The following custom components exist in the home-assistant role's files folder. 
 
 These are copied from
 * https://github.com/custom-components/alexa_media_player
 * https://github.com/segalion/securitasdirect
-* https://github.com/4n0nD3v3l0p3r/Home_Assistant_SkyQ_MediaPlayer
 * https://github.com/zha-ng/zha-map
+* https://github.com/Nimmsis/roon-hass
 
 Custom lovelace card downloaded from
 * https://github.com/dmulcahey/zha-network-visualization-card
