@@ -121,75 +121,105 @@
     light.tripod_lamp: off
     light.egg_lamp: off
     light.snug_main: off
-    switch.bookcase_light: off
+    light.snug_bookcase: off
     switch.lava_lamp: off
+    switch.turntable: off
 - name: Snug Movie
   entities:
-    light.steampunk_lamp: off
-    light.tripod_lamp: off
-    light.egg_lamp: off
+    light.steampunk_lamp:
+      state: off
+      transition: 10
+    light.tripod_lamp:
+      state: off
+      transition: 10
+    light.egg_lamp:
+      state: off
+      transition: 10
     light.snug_main: off
-    switch.bookcase_light: off
+    light.snug_bookcase:
+      state: off
+      transition: 10
     switch.lava_lamp: off
+    switch.turntable: off
 - name: Snug Music
   entities:
-    light.steampunk_lamp: off
+    light.steampunk_lamp: 
+      state: off
+      transition: 2
     light.tripod_lamp:
       state: on
+      transition: 2
       brightness: 69
       xy_color:
         - 0.586
         - 0.357
     light.egg_lamp:
       state: on
+      transition: 2
       brightness: 186
       xy_color:
         - 0.634
         - 0.283
     light.snug_main: off
-    switch.bookcase_light: off
+    light.snug_bookcase:
+      state: on
+      transition: 2
+      brightness: 1
     switch.lava_lamp: on
+    switch.turntable: off
 - name: Snug LP12
   entities:
     light.steampunk_lamp:
       state: on
+      transition: 2
       brightness: 1
       xy_color:
         - 0.526
         - 0.411
     light.tripod_lamp:
       state: on
+      transition: 2
       brightness: 25
       xy_color:
         - 0.558
         - 0.313
     light.egg_lamp:
       state: on
+      transition: 2
       brightness: 210
       xy_color:
         - 0.195
         - 0.68
     light.snug_main: off
-    switch.bookcase_light: off
+    light.snug_bookcase:
+      state: off
+      transition: 2
     switch.lava_lamp: on
+    switch.turntable: on
 - name: Snug On
   entities:
     light.steampunk_lamp:
       state: on
+      transition: 1
       brightness: 19
       xy_color:
         - 0.608
         - 0.369
     light.tripod_lamp:
       state: on
-      brightness: 1
+      transition: 1
+      brightness: 20
       xy_color:
         - 0.581
         - 0.389
     light.egg_lamp: off
     light.snug_main: on
-    switch.bookcase_light: on
+    light.snug_bookcase:
+      state: on
+      transition: 1
+      brightness: 255
     switch.lava_lamp: off
+    switch.turntable: off
 - name: Front Garden Off
   entities:
     light.outside_light: off

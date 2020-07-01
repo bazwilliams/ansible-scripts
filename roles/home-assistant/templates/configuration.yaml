@@ -87,15 +87,24 @@ homeassistant:
     switch.living_room_main:
       friendly_name: Big Light
       icon: mdi:ceiling-light
-    switch.bookcase_light:
+    light.snug_bookcase:
       friendly_name: Reading Light
       icon: mdi:book-open-variant
+    switch.turntable:
+      friendly_name: Turntable Light
+      icon: mdi:record-player
     switch.lava_lamp:
       friendly_name: Lava Lamp
       icon: mdi:lava-lamp
     switch.frog_filter:
       friendly_name: Frog Filter
       icon: mdi:air-filter
+    light.tripod_lamp:
+      icon: mdi:floor-lamp-variant
+    light.steampunk_lamp:
+      icon: mdi:desk-lamp
+    light.egg_lamp:
+      icon: mdi:egg
 
 cloud:
   alexa:
@@ -117,7 +126,7 @@ cloud:
         - media_player.epson_projector
         - switch.living_room_main
         - switch.lava_lamp
-        - switch.bookcase_light
+        - light.snug_bookcase
         - switch.frog_filter
 
 discovery:
