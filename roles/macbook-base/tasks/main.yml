@@ -37,3 +37,11 @@
   homebrew:
     name: awscli
     state: latest
+- name: Install Evernote
+  homebrew_cask:
+    name: evernote
+    state: latest
+- name: Install Homebank
+  homebrew:
+    name: Homebank
+    state: latest
