@@ -72,6 +72,10 @@ homeassistant:
       icon: mdi:projector
     media_player.power_amplifier:
       icon: mdi:amplifier
+    media_player.hifi_roon:
+      friendly_name: HiFi
+    media_player.living_room_roon:
+      friendly_name: Living Room Music
     light.dining_table:
       friendly_name: Dining Table
       icon: mdi:vanity-light
@@ -105,6 +109,10 @@ homeassistant:
       icon: mdi:desk-lamp
     light.egg_lamp:
       icon: mdi:egg
+    climate.bedroom_heating:
+      friendly_name: Upstairs Heating
+    climate.living_room_heating:
+      friendly_name: Heating
 
 cloud:
   alexa:
@@ -120,7 +128,8 @@ cloud:
         - light.ethans_room
         - light.living_room
         - light.marcuss_room
-        - media_player.hifi
+        - media_player.hifi_roon
+        - media_player.living_room_roon
         - light.snug
         - light.upstairs_hallway
         - media_player.epson_projector
@@ -128,6 +137,8 @@ cloud:
         - switch.lava_lamp
         - light.snug_bookcase
         - switch.frog_filter
+        - climate.bedroom_heating
+        - climate.living_room_heating
 
 discovery:
 
@@ -376,6 +387,10 @@ alexa_media:
 
 roon:
 
+hive:
+  username: {{ hive.username }}
+  password: {{ hive.password }}
+  
 home_connect:
   client_id: {{ homeconnect.client_id }}
   client_secret: {{ homeconnect.client_secret }}

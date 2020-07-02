@@ -11,11 +11,9 @@ kitchen:
     - light.dining_table
     - binary_sensor.dishwasher_door
     - sensor.dishwasher_duration
-    - sensor.dishwasher_elapsed_program_time
     - sensor.dishwasher_program_progress
     - sensor.dishwasher_remaining_program_time
-    - switch.dishwasher_program_machinecare
-    - switch.dishwasher
+    - switch.dishwasher_power
 front_garden:
   name: Front Garden
   entities:
@@ -35,7 +33,7 @@ back_garden:
   entities:
     - sensor.back_garden_light_level
     - sensor.back_garden_temperature
-    - light.hue_outdoor_wall_1
+    - light.terrace_light
     - light.hue_outdoor_spot_1
     - light.hue_outdoor_spot_2
     - light.hue_outdoor_spot_3
@@ -59,6 +57,7 @@ bedroom:
     - sensor.bedroom_temperature
     - light.bedroom_big_light
     - light.bedside_lamp
+    - climate.bedroom_heating
 downstairs_hallway:
   name: Downstairs Hallway
   entities:
@@ -97,9 +96,12 @@ living_room:
   name: Living Room
   entities:
     - media_player.living_room_roku
+    - media_player.living_room_hifi
+    - media_player.living_room_roon
     - light.mushroom_lamp
     - light.copper_lamp
     - switch.living_room_main
+    - climate.living_room_heating
 marcuss_room:
   name: Marcus' Room
   entities:
@@ -112,6 +114,7 @@ snug:
   entities:
     - media_player.epson_projector
     - media_player.hifi
+    - media_player.hifi_roon
     - light.egg_lamp
     - light.steampunk_lamp
     - light.tripod_lamp
