@@ -10,7 +10,6 @@ kitchen:
     - light.kitchen_under_tall_cupboards
     - light.dining_table
     - binary_sensor.dishwasher_door
-    - sensor.dishwasher_duration
     - sensor.dishwasher_program_progress
     - sensor.dishwasher_remaining_program_time
     - switch.dishwasher_power
@@ -31,6 +30,7 @@ terrace:
 back_garden:
   name: Back Garden
   entities:
+    - binary_sensor.back_garden_occupancy
     - sensor.back_garden_light_level
     - sensor.back_garden_temperature
     - light.terrace_light
@@ -69,6 +69,7 @@ downstairs_hallway:
     - light.downstairs_hallway_4
     - light.downstairs_hallway_5
     - light.downstairs_hallway_6
+    - switch.partylite_diffuser
 downstairs_toilet:
   name: Downstairs Toilet
   entities:
@@ -128,3 +129,4 @@ upstairs_hallway:
   entities:
     - light.upstairs_hallway
     - binary_sensor.upstairs_hall_cupboard_door
+    - binary_sensor.upstairs_hallway_motion

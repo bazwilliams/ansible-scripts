@@ -768,7 +768,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.downstairs_hallway_scene
-        value: downstairs_hallway_off
+        value: downstairs_hallway_night
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
@@ -795,7 +795,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.downstairs_hallway_scene
-        value: downstairs_hallway_off
+        value: downstairs_hallway_night
     - service: input_text.set_value
       data:
         entity_id: input_text.upstairs_hallway_scene
@@ -826,7 +826,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.downstairs_hallway_scene
-        value: downstairs_hallway_off
+        value: downstairs_hallway_night
     - service: input_text.set_value
       data:
         entity_id: input_text.upstairs_hallway_scene
@@ -857,7 +857,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.downstairs_hallway_scene
-        value: downstairs_hallway_off
+        value: downstairs_hallway_night
     - service: input_text.set_value
       data:
         entity_id: input_text.upstairs_hallway_scene
@@ -955,7 +955,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.downstairs_hallway_scene
-        value: downstairs_hallway_off
+        value: downstairs_hallway_off_away
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
@@ -986,7 +986,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.downstairs_hallway_scene
-        value: downstairs_hallway_off
+        value: downstairs_hallway_off_away
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
@@ -1047,7 +1047,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.downstairs_hallway_scene
-        value: downstairs_hallway_off
+        value: downstairs_hallway_off_away
     - service: input_text.set_value
       data:
         entity_id: input_text.living_room_scene
@@ -1082,7 +1082,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.downstairs_hallway_scene
-        value: downstairs_hallway_off
+        value: downstairs_hallway_off_away
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
@@ -1113,7 +1113,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.downstairs_hallway_scene
-        value: downstairs_hallway_off
+        value: downstairs_hallway_off_away
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
@@ -1171,7 +1171,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.downstairs_hallway_scene
-        value: downstairs_hallway_off
+        value: downstairs_hallway_off_away
     - service: input_text.set_value
       data:
         entity_id: input_text.living_room_scene
@@ -1202,7 +1202,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.downstairs_hallway_scene
-        value: downstairs_hallway_off
+        value: downstairs_hallway_off_away
     - service: input_text.set_value
       data:
         entity_id: input_text.living_room_scene
@@ -1237,7 +1237,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.downstairs_hallway_scene
-        value: downstairs_hallway_off
+        value: downstairs_hallway_off_away
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
@@ -1295,7 +1295,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.downstairs_hallway_scene
-        value: downstairs_hallway_off
+        value: downstairs_hallway_off_away
     - service: input_text.set_value
       data:
         entity_id: input_text.living_room_scene
@@ -1330,7 +1330,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.downstairs_hallway_scene
-        value: downstairs_hallway_off
+        value: downstairs_hallway_off_away
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
@@ -1361,7 +1361,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.downstairs_hallway_scene
-        value: downstairs_hallway_off
+        value: downstairs_hallway_off_away
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
@@ -1454,7 +1454,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.downstairs_hallway_scene
-        value: downstairs_hallway_off
+        value: downstairs_hallway_off_away
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
@@ -1485,7 +1485,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.downstairs_hallway_scene
-        value: downstairs_hallway_off
+        value: downstairs_hallway_off_away
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
@@ -1512,7 +1512,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.downstairs_hallway_scene
-        value: downstairs_hallway_off
+        value: downstairs_hallway_off_away
     - service: input_text.set_value
       data:
         entity_id: input_text.living_room_scene
@@ -1543,7 +1543,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.downstairs_hallway_scene
-        value: downstairs_hallway_off
+        value: downstairs_hallway_off_away
     - service: input_text.set_value
       data:
         entity_id: input_text.living_room_scene
@@ -1578,7 +1578,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.downstairs_hallway_scene
-        value: downstairs_hallway_off
+        value: downstairs_hallway_off_away
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
@@ -1609,7 +1609,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.downstairs_hallway_scene
-        value: downstairs_hallway_off
+        value: downstairs_hallway_off_away
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
@@ -1640,7 +1640,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.downstairs_hallway_scene
-        value: downstairs_hallway_off
+        value: downstairs_hallway_off_away
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
@@ -1671,7 +1671,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.downstairs_hallway_scene
-        value: downstairs_hallway_off
+        value: downstairs_hallway_off_away
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
@@ -1702,7 +1702,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.downstairs_hallway_scene
-        value: downstairs_hallway_off
+        value: downstairs_hallway_off_away
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
@@ -1733,7 +1733,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.downstairs_hallway_scene
-        value: downstairs_hallway_off
+        value: downstairs_hallway_off_away
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
@@ -2644,7 +2644,15 @@
       entity_id: switch.living_room_main
       state: "off"
   action:
-    - service: homeassistant.turn_off
+    - service: light.turn_off
+      data:
+        entity_id:
+          - group.living_room
+    - service: switch.turn_off
+      data:
+        entity_id:
+          - group.living_room
+    - service: media_player.turn_off
       data:
         entity_id:
           - group.living_room

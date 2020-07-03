@@ -9,29 +9,27 @@ system_health:
 updater:
 zeroconf:
 zone:
+history:
+logbook:
 
-# logbook:
-#   include:
-#     domains:
-#       - sensor
-#       - switch
-#       - media_player
-#   exclude:
-#     entities:
-#       - sensor.last_boot
-#       - sensor.time
-#       - sensor.dishwasher_remaining_program_time
-#     domains:
-#       - sun
-
-# history:
-#   exclude:
-#     domains:
-#       - automation
-#       - updater
-#     entities:
-#       - sensor.last_boot
-#       - sensor.time
+recorder:
+  auto_purge: true
+  purge_keep_days: 3
+  include:
+    domains:
+      - sensor
+      - switch
+      - media_player
+  exclude:
+    domains:
+      - automation
+      - updater
+    entities:
+      - sensor.last_boot
+      - sensor.time
+      - sensor.dishwasher_duration
+      - sensor.dishwasher_program_progress
+      - sensor.dishwasher_remaining_program_time
 
 logger:
   default: warning
@@ -112,7 +110,30 @@ homeassistant:
     climate.bedroom_heating:
       friendly_name: Upstairs Heating
     climate.living_room_heating:
-      friendly_name: Heating
+      friendly_name: Downstairs Heating
+    switch.partylite_diffuser:
+      friendly_name: Diffuser
+      icon: mdi:air-purifier
+    sensor.upstairs_hallway_light_level:
+      friendly_name: Upstairs Hallway Light Level
+    sensor.kitchen_temperature:
+      friendly_name: Kitchen Temperature
+    sensor.kitchen_light_level:
+      friendly_name: Kitchen Light Level
+    binary_sensor.kitchen_occupancy:
+      friendly_name: Kitchen Motion
+    binary_sensor.front_garden_occupancy:
+      friendly_name: Front Garden Motion
+    sensor.front_garden_light_level:
+      friendly_name: Front Garden Light Level
+    sensor.front_garden_temperature:
+      friendly_name: Front Garden Temperature
+    sensor.back_garden_light_level:
+      friendly_name: Back Garden Light Level
+    binary_sensor.back_garden_occupancy:
+      friendly_name: Back Garden Motion
+    sensor.back_garden_temperature:
+      friendly_name: Back Garden Temperature
 
 cloud:
   alexa:
@@ -280,6 +301,22 @@ sensor:
       - 'time'
   - platform: template
     sensors:
+      living_room_temperature_hive:
+        entity_id:
+        - climate.living_room_heating
+        friendly_name: 'Living Room Temperature'
+        unit_of_measurement: °C
+        value_template:  >
+          {% raw %}{{ state_attr('climate.living_room_heating', 'current_temperature') }} {% endraw %}
+
+      bedroom_temperature_hive:
+        entity_id:
+        - climate.bedroom_heating
+        friendly_name: 'Bedroom Temperature'
+        unit_of_measurement: °C
+        value_template: >
+          {% raw %} {{ state_attr('climate.bedroom_heating', 'current_temperature') }} {% endraw %}
+
       house_mode:
         entity_id:
         - sensor.outside_light_level

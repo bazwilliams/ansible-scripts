@@ -488,6 +488,17 @@
       brightness: 141
       xy_color: [ 0.159, 0.241 ]
     switch.living_room_main: off
+- name: Downstairs Hallway Night
+  entities:
+    light.play_left: off
+    light.play_right: off
+    light.downstairs_hallway_1: off
+    light.downstairs_hallway_2: off
+    light.downstairs_hallway_3: off
+    light.downstairs_hallway_4: off
+    light.downstairs_hallway_5: off
+    light.downstairs_hallway_6: off
+    switch.partylite_diffuser: off
 - name: Downstairs Hallway Off
   entities:
     light.play_left: off
@@ -498,6 +509,18 @@
     light.downstairs_hallway_4: off
     light.downstairs_hallway_5: off
     light.downstairs_hallway_6: off
+    switch.partylite_diffuser: on
+- name: Downstairs Hallway Off Away
+  entities:
+    light.play_left: off
+    light.play_right: off
+    light.downstairs_hallway_1: off
+    light.downstairs_hallway_2: off
+    light.downstairs_hallway_3: off
+    light.downstairs_hallway_4: off
+    light.downstairs_hallway_5: off
+    light.downstairs_hallway_6: off
+    switch.partylite_diffuser: off
 - name: Downstairs Hallway Colourful Evening
   entities:
     light.play_left:
@@ -548,6 +571,7 @@
       xy_color:
         - 0.579
         - 0.256
+    switch.partylite_diffuser: on
 - name: Downstairs Hallway Colourful Evening Away
   entities:
     light.play_left:
@@ -578,6 +602,7 @@
     light.downstairs_hallway_4: off
     light.downstairs_hallway_5: off
     light.downstairs_hallway_6: off
+    switch.partylite_diffuser: off
 - name: Downstairs Hallway Daytime Presence
   entities:
     light.play_left:
@@ -608,6 +633,7 @@
       xy_color:
         - 0.314
         - 0.331
+    switch.partylite_diffuser: on
 - name: Downstairs Hallway Early Night
   entities:
     light.play_left: off
@@ -633,6 +659,7 @@
       xy_color:
         - 0.464
         - 0.277
+    switch.partylite_diffuser: on
 - name: Downstairs Hallway Late Evening
   entities:
     light.play_left:
@@ -683,6 +710,7 @@
       xy_color:
         - 0.579
         - 0.256
+    switch.partylite_diffuser: on
 - name: Downstairs Hallway Late Evening Away
   entities:
     light.play_left:
@@ -713,6 +741,7 @@
     light.downstairs_hallway_4: off
     light.downstairs_hallway_5: off
     light.downstairs_hallway_6: off
+    switch.partylite_diffuser: off
 - name: Downstairs Hallway Morning
   entities:
     light.play_left:
@@ -763,6 +792,7 @@
       xy_color:
         - 0.526
         - 0.411
+    switch.partylite_diffuser: on
 - name: Downstairs Hallway Morning Away
   entities:
     light.play_left: off
@@ -788,3 +818,4 @@
     light.downstairs_hallway_4: off
     light.downstairs_hallway_5: off
     light.downstairs_hallway_6: off
+    switch.partylite_diffuser: off
