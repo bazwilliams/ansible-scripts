@@ -1,35 +1,36 @@
 ---
-- name: Create config directory
+- name: Create data directory
   become: yes
   file:
-    path: /opt/docker/data/influxdb
+    path: /opt/docker/data/chronograf
     state: directory
+    owner: "104"
 
 - name: Tear down existing service
   docker_compose:
-    project_name: influxdb
+    project_name: chronograf
     state: absent
     definition:
         version: "3"
         services:
-            influxdb:
+            chronograf:
                 image: ""
 
 - name: Start service
   docker_compose:
-    project_name: influxdb
+    project_name: chronograf
     remove_orphans: yes
     state: present
     definition:
       version: '3'
       services:
-        influxdb:
-          container_name: influxdb
-          image: influxdb:1.8-alpine
+        chronograf:
+          container_name: chronograf
+          image: chronograf:1.8-alpine
           restart: unless-stopped
           environment:
             TZ: Europe/London
           ports:
-              - 8086:8086
+              - 8888:8888
           volumes:
-            - /opt/docker/data/influxdb:/var/lib/influxdb
+            - /opt/docker/data/chronograf:/var/lib/chronograf

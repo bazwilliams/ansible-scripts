@@ -245,6 +245,96 @@ binary_sensor:
         prob_given_false: 0.5
 
 sensor:
+  - platform: influxdb
+    api_version: 1
+    queries:
+      - name: Upstairs Heating Target -1d
+        field: temperature
+        measurement: '"autogen"."climate.bedroom_heating"'
+        where: 'time > (now() -  24h) AND time < (now() - 23h) FILL(previous)'
+        group_function: mode
+        unit_of_measurement: °C
+      - name: Upstairs Heating Target -2d
+        field: temperature
+        measurement: '"autogen"."climate.bedroom_heating"'
+        where: 'time > (now() -  48h) AND time < (now() - 47h) FILL(previous)'
+        group_function: mode
+        unit_of_measurement: °C
+      - name: Upstairs Heating Target -3d
+        field: temperature
+        measurement: '"autogen"."climate.bedroom_heating"'
+        where: 'time > (now() -  72h) AND time < (now() - 71h) FILL(previous)'
+        group_function: mode
+        unit_of_measurement: °C
+      - name: Upstairs Heating Target -4d
+        field: temperature
+        measurement: '"autogen"."climate.bedroom_heating"'
+        where: 'time > (now() -  96h) AND time < (now() - 95h) FILL(previous)'
+        group_function: mode
+        unit_of_measurement: °C
+      - name: Upstairs Heating Target -5d
+        field: temperature
+        measurement: '"autogen"."climate.bedroom_heating"'
+        where: 'time > (now() -  120h) AND time < (now() - 119h) FILL(previous)'
+        group_function: mode
+        unit_of_measurement: °C
+      - name: Upstairs Heating Target -6d
+        field: temperature
+        measurement: '"autogen"."climate.bedroom_heating"'
+        where: 'time > (now() -  144h) AND time < (now() - 143h) FILL(previous)'
+        group_function: mode
+        unit_of_measurement: °C
+      - name: Upstairs Heating Target -7d
+        field: temperature
+        measurement: '"autogen"."climate.bedroom_heating"'
+        where: 'time > (now() -  168h) AND time < (now() - 167h) FILL(previous)'
+        group_function: mode
+        unit_of_measurement: °C
+  - platform: influxdb
+    api_version: 1
+    queries:
+      - name: Downstairs Heating Target -1d
+        field: temperature
+        measurement: '"autogen"."climate.living_room_heating"'
+        where: 'time > (now() -  24h) AND time < (now() - 23h) FILL(previous)'
+        group_function: mode
+        unit_of_measurement: °C
+      - name: Downstairs Heating Target -2d
+        field: temperature
+        measurement: '"autogen"."climate.living_room_heating"'
+        where: 'time > (now() -  48h) AND time < (now() - 47h) FILL(previous)'
+        group_function: mode
+        unit_of_measurement: °C
+      - name: Downstairs Heating Target -3d
+        field: temperature
+        measurement: '"autogen"."climate.living_room_heating"'
+        where: 'time > (now() -  72h) AND time < (now() - 71h) FILL(previous)'
+        group_function: mode
+        unit_of_measurement: °C
+      - name: Downstairs Heating Target -4d
+        field: temperature
+        measurement: '"autogen"."climate.living_room_heating"'
+        where: 'time > (now() -  96h) AND time < (now() - 95h) FILL(previous)'
+        group_function: mode
+        unit_of_measurement: °C
+      - name: Downstairs Heating Target -5d
+        field: temperature
+        measurement: '"autogen"."climate.living_room_heating"'
+        where: 'time > (now() -  120h) AND time < (now() - 119h) FILL(previous)'
+        group_function: mode
+        unit_of_measurement: °C
+      - name: Downstairs Heating Target -6d
+        field: temperature
+        measurement: '"autogen"."climate.living_room_heating"'
+        where: 'time > (now() -  144h) AND time < (now() - 143h) FILL(previous)'
+        group_function: mode
+        unit_of_measurement: °C
+      - name: Downstairs Heating Target -7d
+        field: temperature
+        measurement: '"autogen"."climate.living_room_heating"'
+        where: 'time > (now() -  168h) AND time < (now() - 167h) FILL(previous)'
+        group_function: mode
+        unit_of_measurement: °C
   - platform: rfxtrx
     automatic_add: true
     devices:
