@@ -45,3 +45,11 @@
   homebrew:
     name: Homebank
     state: latest
+- name: Install python3
+  homebrew:
+    name: python
+    state: latest
+- name: Install zoom
+  homebrew_cask:
+    name: zoom
+    state: latest
