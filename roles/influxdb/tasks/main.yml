@@ -1,9 +1,21 @@
 ---
-- name: Create config directory
+- name: Create data directory
   become: yes
   file:
     path: /opt/docker/data/influxdb
     state: directory
+
+- name: Create configuration directory
+  become: yes
+  file:
+    path: /opt/docker/data/influxdb-etc
+    state: directory
+
+- name: Upload influxdb.conf
+  become: yes
+  copy:
+    src: influxdb.conf
+    dest: /opt/docker/data/influxdb-etc/influxdb.conf
 
 - name: Tear down existing service
   docker_compose:
@@ -33,3 +45,4 @@
               - 8086:8086
           volumes:
             - /opt/docker/data/influxdb:/var/lib/influxdb
+            - /opt/docker/data/influxdb-etc:/etc/influxdb
