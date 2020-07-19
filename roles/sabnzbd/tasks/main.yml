@@ -1,0 +1,46 @@
+---
+    - name: Create config directory
+      become: yes
+      file:
+        path: /opt/docker/data/sabnzbd
+        state: directory
+    
+    # - name: Upload configuration
+    #   become: yes
+    #   copy:
+    #     src: ???
+    #     dest: /opt/docker/data/sabnzbd
+    
+    - name: Tear down existing service
+      docker_compose:
+        project_name: sabnzbd
+        state: absent
+        definition:
+            version: "3"
+            services:
+                sabnzbd:
+                    image: ""
+    
+    - name: Start service
+      docker_compose:
+        project_name: sabnzbd
+        remove_orphans: yes
+        state: present
+        definition:
+            version: "2.1"
+            services:
+              sabnzbd:
+                image: linuxserver/sabnzbd
+                container_name: sabnzbd
+                environment:
+                  - PUID=1000
+                  - PGID=100
+                  - TZ=Europe/London
+                volumes:
+                  - /opt/docker/data/sabnzbd:/config
+                  - /data/videos/sabnzbd/downloads:/downloads
+                ports:
+                  - 8080:8080
+                  - 9090:9090
+                restart: unless-stopped
+    
