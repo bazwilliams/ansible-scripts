@@ -4,7 +4,9 @@ kitchen:
     - binary_sensor.kitchen_occupancy
     - sensor.kitchen_light_level
     - sensor.kitchen_temperature
-    - light.worktop_lights
+    - light.kitchen_worktop_cooker_left
+    - light.kitchen_worktop_cooker_right
+    - light.kitchen_worktop_tumble_dryer
     - light.kitchen_main
     - light.kitchen_under_cupboards
     - light.kitchen_under_tall_cupboards
@@ -49,7 +51,7 @@ driveway:
 bathroom:
   name: Bathroom
   entities:
-    - light.bathroom_2
+    - light.bathroom
 bedroom:
   name: Bedroom
   entities:
@@ -73,7 +75,7 @@ downstairs_hallway:
 downstairs_toilet:
   name: Downstairs Toilet
   entities:
-    - light.downstairs_toilet_2
+    - light.downstairs_toilet
 ensuite:
   name: Ensuite
   entities:

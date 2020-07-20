@@ -1,6 +1,8 @@
 - name: Kitchen Away
   entities:
-    light.worktop_lights: off
+    light.kitchen_worktop_cooker_left: off
+    light.kitchen_worktop_cooker_right: off
+    light.kitchen_worktop_tumble_dryer: off
     light.dining_table: off
     light.kitchen_main:
       state: on
@@ -16,7 +18,9 @@
       brightness: 63
 - name: Kitchen Night
   entities:
-    light.worktop_lights: off
+    light.kitchen_worktop_cooker_left: off
+    light.kitchen_worktop_cooker_right: off
+    light.kitchen_worktop_tumble_dryer: off
     light.dining_table: off
     light.kitchen_main: off
     light.kitchen_under_cupboards:
@@ -29,7 +33,9 @@
       brightness: 44
 - name: Kitchen Late Night
   entities:
-    light.worktop_lights: off
+    light.kitchen_worktop_cooker_left: off
+    light.kitchen_worktop_cooker_right: off
+    light.kitchen_worktop_tumble_dryer: off
     light.dining_table: off
     light.kitchen_main:
       state: on
@@ -45,7 +51,18 @@
       brightness: 37
 - name: Kitchen Early Night
   entities:
-    light.worktop_lights: on
+    light.kitchen_worktop_cooker_left: 
+      state: on
+      brightness: 100
+      transition: 2
+    light.kitchen_worktop_cooker_right: 
+      state: on
+      brightness: 100
+      transition: 2
+    light.kitchen_worktop_tumble_dryer: 
+      state: on
+      brightness: 100
+      transition: 2
     light.dining_table:
       state: on
       brightness: 76
@@ -63,7 +80,18 @@
       brightness: 37
 - name: Kitchen Evening
   entities:
-    light.worktop_lights: on
+    light.kitchen_worktop_cooker_left: 
+      state: on
+      brightness: 150
+      transition: 2
+    light.kitchen_worktop_cooker_right: 
+      state: on
+      brightness: 150
+      transition: 2
+    light.kitchen_worktop_tumble_dryer: 
+      state: on
+      brightness: 150
+      transition: 2
     light.dining_table:
       state: on
       brightness: 120
@@ -81,7 +109,18 @@
       brightness: 71
 - name: Kitchen Daytime
   entities:
-    light.worktop_lights: on
+    light.kitchen_worktop_cooker_left: 
+      state: on
+      brightness: 255
+      transition: 2
+    light.kitchen_worktop_cooker_right: 
+      state: on
+      brightness: 255
+      transition: 2
+    light.kitchen_worktop_tumble_dryer: 
+      state: on
+      brightness: 255
+      transition: 2
     light.dining_table:
       state: on
       brightness: 254
@@ -99,7 +138,18 @@
       brightness: 60
 - name: Kitchen Morning
   entities:
-    light.worktop_lights: on
+    light.kitchen_worktop_cooker_left: 
+      state: on
+      brightness: 255
+      transition: 2
+    light.kitchen_worktop_cooker_right: 
+      state: on
+      brightness: 255
+      transition: 2
+    light.kitchen_worktop_tumble_dryer: 
+      state: on
+      brightness: 255
+      transition: 2
     light.dining_table:
       state: on
       brightness: 254

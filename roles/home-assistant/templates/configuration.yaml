@@ -134,6 +134,10 @@ homeassistant:
       friendly_name: Back Garden Motion
     sensor.back_garden_temperature:
       friendly_name: Back Garden Temperature
+    light.downstairs_toilet:
+      friendly_name: Downstairs Toilet
+    light.bathroom:
+      friendly_name: Bathroom
 
 cloud:
   alexa:
