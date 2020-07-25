@@ -18,9 +18,18 @@
       brightness: 63
 - name: Kitchen Night
   entities:
-    light.kitchen_worktop_cooker_left: off
-    light.kitchen_worktop_cooker_right: off
-    light.kitchen_worktop_tumble_dryer: off
+    light.kitchen_worktop_cooker_left: 
+      state: on
+      brightness: 20
+      transition: 2
+    light.kitchen_worktop_cooker_right: 
+      state: on
+      brightness: 20
+      transition: 2
+    light.kitchen_worktop_tumble_dryer: 
+      state: on
+      brightness: 20
+      transition: 2
     light.dining_table: off
     light.kitchen_main: off
     light.kitchen_under_cupboards:
@@ -33,9 +42,18 @@
       brightness: 44
 - name: Kitchen Late Night
   entities:
-    light.kitchen_worktop_cooker_left: off
-    light.kitchen_worktop_cooker_right: off
-    light.kitchen_worktop_tumble_dryer: off
+    light.kitchen_worktop_cooker_left: 
+      state: on
+      brightness: 50
+      transition: 2
+    light.kitchen_worktop_cooker_right: 
+      state: on
+      brightness: 50
+      transition: 2
+    light.kitchen_worktop_tumble_dryer: 
+      state: on
+      brightness: 50
+      transition: 2
     light.dining_table: off
     light.kitchen_main:
       state: on
