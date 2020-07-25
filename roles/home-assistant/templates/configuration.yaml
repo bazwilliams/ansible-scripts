@@ -105,8 +105,6 @@ homeassistant:
       icon: mdi:floor-lamp-variant
     light.steampunk_lamp:
       icon: mdi:desk-lamp
-    light.egg_lamp:
-      icon: mdi:egg
     climate.bedroom_heating:
       friendly_name: Upstairs Heating
     climate.living_room_heating:
@@ -488,6 +486,9 @@ input_text:
   living_room_scene:
     name: Living Room Scene
     initial: living_room_off
+  staircase_scene:
+    name: Staircase Scene
+    initial: stairs_off
   downstairs_hallway_scene:
     name: Downstairs Hallway Scene
     initial: downstairs_hallway_off

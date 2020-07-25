@@ -60,6 +60,12 @@ bedroom:
     - light.bedroom_big_light
     - light.bedside_lamp
     - climate.bedroom_heating
+staircase:
+  name: staircase
+  entities:
+    - light.stairs_1
+    - light.stairs_2
+    - light.stairs_3
 downstairs_hallway:
   name: Downstairs Hallway
   entities:
@@ -118,7 +124,6 @@ snug:
     - media_player.epson_projector
     - media_player.hifi
     - media_player.hifi_roon
-    - light.egg_lamp
     - light.steampunk_lamp
     - light.tripod_lamp
     - switch.lava_lamp

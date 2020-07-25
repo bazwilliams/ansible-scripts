@@ -15,6 +15,10 @@
         value: back_garden_dimmed
     - service: input_text.set_value
       data:
+        entity_id: input_text.staircase_scene
+        value: stairs_morning
+    - service: input_text.set_value
+      data:
         entity_id: input_text.downstairs_hallway_scene
         value: downstairs_hallway_morning
     - service: input_text.set_value
@@ -44,6 +48,10 @@
       data_template:
         entity_id: input_text.back_garden_scene
         value: back_garden_off
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.staircase_scene
+        value: stairs_morning
     - service: input_text.set_value
       data:
         entity_id: input_text.downstairs_hallway_scene
@@ -81,6 +89,10 @@
         value: living_room_off
     - service: input_text.set_value
       data:
+        entity_id: input_text.staircase_scene
+        value: stairs_off
+    - service: input_text.set_value
+      data:
         entity_id: input_text.downstairs_hallway_scene
         value: downstairs_hallway_daytime_presence
     - service: input_text.set_value
@@ -112,6 +124,10 @@
         value: living_room_off
     - service: input_text.set_value
       data:
+        entity_id: input_text.staircase_scene
+        value: stairs_off
+    - service: input_text.set_value
+      data:
         entity_id: input_text.downstairs_hallway_scene
         value: downstairs_hallway_off
     - service: input_text.set_value
@@ -137,6 +153,10 @@
       data_template:
         entity_id: input_text.back_garden_scene
         value: back_garden_dimmed
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.staircase_scene
+        value: stairs_colourful
     - service: input_text.set_value
       data:
         entity_id: input_text.downstairs_hallway_scene
@@ -168,6 +188,10 @@
       data_template:
         entity_id: input_text.back_garden_scene
         value: back_garden_off
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.staircase_scene
+        value: stairs_colourful
     - service: input_text.set_value
       data:
         entity_id: input_text.downstairs_hallway_scene
@@ -205,6 +229,10 @@
         value: living_room_off
     - service: input_text.set_value
       data:
+        entity_id: input_text.staircase_scene
+        value: stairs_off
+    - service: input_text.set_value
+      data:
         entity_id: input_text.downstairs_hallway_scene
         value: downstairs_hallway_daytime_presence
     - service: input_text.set_value
@@ -236,6 +264,10 @@
         value: living_room_off
     - service: input_text.set_value
       data:
+        entity_id: input_text.staircase_scene
+        value: stairs_off
+    - service: input_text.set_value
+      data:
         entity_id: input_text.downstairs_hallway_scene
         value: downstairs_hallway_off
     - service: input_text.set_value
@@ -261,6 +293,10 @@
       data_template:
         entity_id: input_text.back_garden_scene
         value: back_garden_dimmed
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.staircase_scene
+        value: stairs_colourful
     - service: input_text.set_value
       data:
         entity_id: input_text.downstairs_hallway_scene
@@ -292,6 +328,10 @@
       data_template:
         entity_id: input_text.back_garden_scene
         value: back_garden_off
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.staircase_scene
+        value: stairs_colourful
     - service: input_text.set_value
       data:
         entity_id: input_text.downstairs_hallway_scene
@@ -329,6 +369,10 @@
         value: living_room_off
     - service: input_text.set_value
       data:
+        entity_id: input_text.staircase_scene
+        value: stairs_off
+    - service: input_text.set_value
+      data:
         entity_id: input_text.downstairs_hallway_scene
         value: downstairs_hallway_daytime_presence
     - service: input_text.set_value
@@ -360,6 +404,10 @@
         value: living_room_off
     - service: input_text.set_value
       data:
+        entity_id: input_text.staircase_scene
+        value: stairs_off
+    - service: input_text.set_value
+      data:
         entity_id: input_text.downstairs_hallway_scene
         value: downstairs_hallway_off
     - service: input_text.set_value
@@ -385,6 +433,10 @@
       data_template:
         entity_id: input_text.back_garden_scene
         value: back_garden_dimmed
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.staircase_scene
+        value: stairs_colourful
     - service: input_text.set_value
       data:
         entity_id: input_text.downstairs_hallway_scene
@@ -416,6 +468,10 @@
       data_template:
         entity_id: input_text.back_garden_scene
         value: back_garden_off
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.staircase_scene
+        value: stairs_colourful
     - service: input_text.set_value
       data:
         entity_id: input_text.downstairs_hallway_scene
@@ -453,6 +509,10 @@
         value: living_room_off
     - service: input_text.set_value
       data:
+        entity_id: input_text.staircase_scene
+        value: stairs_off
+    - service: input_text.set_value
+      data:
         entity_id: input_text.downstairs_hallway_scene
         value: downstairs_hallway_daytime_presence
     - service: input_text.set_value
@@ -484,6 +544,10 @@
         value: living_room_off
     - service: input_text.set_value
       data:
+        entity_id: input_text.staircase_scene
+        value: stairs_off
+    - service: input_text.set_value
+      data:
         entity_id: input_text.downstairs_hallway_scene
         value: downstairs_hallway_off
     - service: input_text.set_value
@@ -509,6 +573,10 @@
       data_template:
         entity_id: input_text.back_garden_scene
         value: back_garden_dimmed
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.staircase_scene
+        value: stairs_colourful
     - service: input_text.set_value
       data:
         entity_id: input_text.downstairs_hallway_scene
@@ -540,6 +608,10 @@
       data_template:
         entity_id: input_text.back_garden_scene
         value: back_garden_off
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.staircase_scene
+        value: stairs_colourful
     - service: input_text.set_value
       data:
         entity_id: input_text.downstairs_hallway_scene
@@ -577,6 +649,10 @@
         value: living_room_off
     - service: input_text.set_value
       data:
+        entity_id: input_text.staircase_scene
+        value: stairs_off
+    - service: input_text.set_value
+      data:
         entity_id: input_text.downstairs_hallway_scene
         value: downstairs_hallway_late_evening
     - service: input_text.set_value
@@ -608,6 +684,10 @@
         value: living_room_off
     - service: input_text.set_value
       data:
+        entity_id: input_text.staircase_scene
+        value: stairs_off
+    - service: input_text.set_value
+      data:
         entity_id: input_text.downstairs_hallway_scene
         value: downstairs_hallway_off
     - service: input_text.set_value
@@ -633,6 +713,10 @@
       data_template:
         entity_id: input_text.back_garden_scene
         value: back_garden_off
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.staircase_scene
+        value: stairs_late_night
     - service: input_text.set_value
       data:
         entity_id: input_text.downstairs_hallway_scene
@@ -664,6 +748,10 @@
       data_template:
         entity_id: input_text.back_garden_scene
         value: back_garden_off
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.staircase_scene
+        value: stairs_late_night
     - service: input_text.set_value
       data:
         entity_id: input_text.downstairs_hallway_scene
@@ -701,6 +789,10 @@
         value: living_room_off
     - service: input_text.set_value
       data:
+        entity_id: input_text.staircase_scene
+        value: stairs_off
+    - service: input_text.set_value
+      data:
         entity_id: input_text.downstairs_hallway_scene
         value: downstairs_hallway_early_night
     - service: input_text.set_value
@@ -730,6 +822,10 @@
       data:
         entity_id: input_text.living_room_scene
         value: living_room_off
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.staircase_scene
+        value: stairs_off
     - service: input_text.set_value
       data:
         entity_id: input_text.downstairs_hallway_scene
@@ -767,6 +863,10 @@
         value: living_room_off
     - service: input_text.set_value
       data:
+        entity_id: input_text.staircase_scene
+        value: stairs_night
+    - service: input_text.set_value
+      data:
         entity_id: input_text.downstairs_hallway_scene
         value: downstairs_hallway_night
     - service: input_text.set_value
@@ -792,6 +892,10 @@
       data:
         entity_id: input_text.living_room_scene
         value: living_room_off
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.staircase_scene
+        value: stairs_night
     - service: input_text.set_value
       data:
         entity_id: input_text.downstairs_hallway_scene
@@ -825,6 +929,10 @@
         value: living_room_off
     - service: input_text.set_value
       data:
+        entity_id: input_text.staircase_scene
+        value: stairs_off
+    - service: input_text.set_value
+      data:
         entity_id: input_text.downstairs_hallway_scene
         value: downstairs_hallway_night
     - service: input_text.set_value
@@ -856,6 +964,10 @@
         value: living_room_off
     - service: input_text.set_value
       data:
+        entity_id: input_text.staircase_scene
+        value: stairs_off
+    - service: input_text.set_value
+      data:
         entity_id: input_text.downstairs_hallway_scene
         value: downstairs_hallway_night
     - service: input_text.set_value
@@ -882,6 +994,10 @@
       data_template:
         entity_id: input_text.back_garden_scene
         value: back_garden_dimmed
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.staircase_scene
+        value: stairs_off
     - service: input_text.set_value
       data:
         entity_id: input_text.downstairs_hallway_scene
@@ -919,6 +1035,10 @@
         value: upstairs_hallway_off
     - service: input_text.set_value
       data:
+        entity_id: input_text.staircase_scene
+        value: stairs_off
+    - service: input_text.set_value
+      data:
         entity_id: input_text.downstairs_hallway_scene
         value: downstairs_hallway_morning_away
     - service: input_text.set_value
@@ -954,6 +1074,10 @@
         value: living_room_off
     - service: input_text.set_value
       data:
+        entity_id: input_text.staircase_scene
+        value: stairs_off
+    - service: input_text.set_value
+      data:
         entity_id: input_text.downstairs_hallway_scene
         value: downstairs_hallway_off_away
     - service: input_text.set_value
@@ -985,6 +1109,10 @@
         value: living_room_off
     - service: input_text.set_value
       data:
+        entity_id: input_text.staircase_scene
+        value: stairs_off
+    - service: input_text.set_value
+      data:
         entity_id: input_text.downstairs_hallway_scene
         value: downstairs_hallway_off_away
     - service: input_text.set_value
@@ -1006,6 +1134,10 @@
       data_template:
         entity_id: input_text.back_garden_scene
         value: back_garden_dimmed
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.staircase_scene
+        value: stairs_off
     - service: input_text.set_value
       data:
         entity_id: input_text.downstairs_hallway_scene
@@ -1046,6 +1178,10 @@
         value: upstairs_hallway_off
     - service: input_text.set_value
       data:
+        entity_id: input_text.staircase_scene
+        value: stairs_off
+    - service: input_text.set_value
+      data:
         entity_id: input_text.downstairs_hallway_scene
         value: downstairs_hallway_off_away
     - service: input_text.set_value
@@ -1081,6 +1217,10 @@
         value: living_room_off
     - service: input_text.set_value
       data:
+        entity_id: input_text.staircase_scene
+        value: stairs_off
+    - service: input_text.set_value
+      data:
         entity_id: input_text.downstairs_hallway_scene
         value: downstairs_hallway_off_away
     - service: input_text.set_value
@@ -1112,6 +1252,10 @@
         value: living_room_off
     - service: input_text.set_value
       data:
+        entity_id: input_text.staircase_scene
+        value: stairs_off
+    - service: input_text.set_value
+      data:
         entity_id: input_text.downstairs_hallway_scene
         value: downstairs_hallway_off_away
     - service: input_text.set_value
@@ -1133,6 +1277,10 @@
       data_template:
         entity_id: input_text.back_garden_scene
         value: back_garden_dimmed
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.staircase_scene
+        value: stairs_off
     - service: input_text.set_value
       data:
         entity_id: input_text.downstairs_hallway_scene
@@ -1170,6 +1318,10 @@
         value: upstairs_hallway_off
     - service: input_text.set_value
       data:
+        entity_id: input_text.staircase_scene
+        value: stairs_off
+    - service: input_text.set_value
+      data:
         entity_id: input_text.downstairs_hallway_scene
         value: downstairs_hallway_off_away
     - service: input_text.set_value
@@ -1199,6 +1351,10 @@
       data:
         entity_id: input_text.upstairs_hallway_scene
         value: upstairs_hallway_off
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.staircase_scene
+        value: stairs_off
     - service: input_text.set_value
       data:
         entity_id: input_text.downstairs_hallway_scene
@@ -1236,6 +1392,10 @@
         value: living_room_off
     - service: input_text.set_value
       data:
+        entity_id: input_text.staircase_scene
+        value: stairs_off
+    - service: input_text.set_value
+      data:
         entity_id: input_text.downstairs_hallway_scene
         value: downstairs_hallway_off_away
     - service: input_text.set_value
@@ -1257,6 +1417,10 @@
       data_template:
         entity_id: input_text.back_garden_scene
         value: back_garden_dimmed
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.staircase_scene
+        value: stairs_off
     - service: input_text.set_value
       data:
         entity_id: input_text.downstairs_hallway_scene
@@ -1294,6 +1458,10 @@
         value: upstairs_hallway_off
     - service: input_text.set_value
       data:
+        entity_id: input_text.staircase_scene
+        value: stairs_off
+    - service: input_text.set_value
+      data:
         entity_id: input_text.downstairs_hallway_scene
         value: downstairs_hallway_off_away
     - service: input_text.set_value
@@ -1329,6 +1497,10 @@
         value: living_room_off
     - service: input_text.set_value
       data:
+        entity_id: input_text.staircase_scene
+        value: stairs_off
+    - service: input_text.set_value
+      data:
         entity_id: input_text.downstairs_hallway_scene
         value: downstairs_hallway_off_away
     - service: input_text.set_value
@@ -1360,6 +1532,10 @@
         value: living_room_off
     - service: input_text.set_value
       data:
+        entity_id: input_text.staircase_scene
+        value: stairs_off
+    - service: input_text.set_value
+      data:
         entity_id: input_text.downstairs_hallway_scene
         value: downstairs_hallway_off_away
     - service: input_text.set_value
@@ -1385,6 +1561,10 @@
       data:
         entity_id: input_text.upstairs_hallway_scene
         value: upstairs_hallway_off
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.staircase_scene
+        value: stairs_off
     - service: input_text.set_value
       data:
         entity_id: input_text.downstairs_hallway_scene
@@ -1416,6 +1596,10 @@
       data:
         entity_id: input_text.upstairs_hallway_scene
         value: upstairs_hallway_off
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.staircase_scene
+        value: stairs_off
     - service: input_text.set_value
       data:
         entity_id: input_text.downstairs_hallway_scene
@@ -1453,6 +1637,10 @@
         value: living_room_off
     - service: input_text.set_value
       data:
+        entity_id: input_text.staircase_scene
+        value: stairs_off
+    - service: input_text.set_value
+      data:
         entity_id: input_text.downstairs_hallway_scene
         value: downstairs_hallway_off_away
     - service: input_text.set_value
@@ -1484,6 +1672,10 @@
         value: living_room_off
     - service: input_text.set_value
       data:
+        entity_id: input_text.staircase_scene
+        value: stairs_off
+    - service: input_text.set_value
+      data:
         entity_id: input_text.downstairs_hallway_scene
         value: downstairs_hallway_off_away
     - service: input_text.set_value
@@ -1509,6 +1701,10 @@
       data:
         entity_id: input_text.upstairs_hallway_scene
         value: upstairs_hallway_off
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.staircase_scene
+        value: stairs_off
     - service: input_text.set_value
       data:
         entity_id: input_text.downstairs_hallway_scene
@@ -1540,6 +1736,10 @@
       data:
         entity_id: input_text.upstairs_hallway_scene
         value: upstairs_hallway_off
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.staircase_scene
+        value: stairs_off
     - service: input_text.set_value
       data:
         entity_id: input_text.downstairs_hallway_scene
@@ -1577,6 +1777,10 @@
         value: living_room_off
     - service: input_text.set_value
       data:
+        entity_id: input_text.staircase_scene
+        value: stairs_off
+    - service: input_text.set_value
+      data:
         entity_id: input_text.downstairs_hallway_scene
         value: downstairs_hallway_off_away
     - service: input_text.set_value
@@ -1606,6 +1810,10 @@
       data:
         entity_id: input_text.living_room_scene
         value: living_room_off
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.staircase_scene
+        value: stairs_off
     - service: input_text.set_value
       data:
         entity_id: input_text.downstairs_hallway_scene
@@ -1639,6 +1847,10 @@
         value: living_room_off
     - service: input_text.set_value
       data:
+        entity_id: input_text.staircase_scene
+        value: stairs_off
+    - service: input_text.set_value
+      data:
         entity_id: input_text.downstairs_hallway_scene
         value: downstairs_hallway_off_away
     - service: input_text.set_value
@@ -1668,6 +1880,10 @@
       data:
         entity_id: input_text.living_room_scene
         value: living_room_off
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.staircase_scene
+        value: stairs_off
     - service: input_text.set_value
       data:
         entity_id: input_text.downstairs_hallway_scene
@@ -1701,6 +1917,10 @@
         value: living_room_off
     - service: input_text.set_value
       data:
+        entity_id: input_text.staircase_scene
+        value: stairs_off
+    - service: input_text.set_value
+      data:
         entity_id: input_text.downstairs_hallway_scene
         value: downstairs_hallway_off_away
     - service: input_text.set_value
@@ -1730,6 +1950,10 @@
       data:
         entity_id: input_text.living_room_scene
         value: living_room_off
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.staircase_scene
+        value: stairs_off
     - service: input_text.set_value
       data:
         entity_id: input_text.downstairs_hallway_scene

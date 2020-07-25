@@ -187,7 +187,6 @@
   entities:
     light.steampunk_lamp: off
     light.tripod_lamp: off
-    light.egg_lamp: off
     light.snug_main: off
     light.snug_bookcase: off
     switch.lava_lamp: off
@@ -198,9 +197,6 @@
       state: off
       transition: 10
     light.tripod_lamp:
-      state: off
-      transition: 10
-    light.egg_lamp:
       state: off
       transition: 10
     light.snug_main: off
@@ -221,13 +217,6 @@
       xy_color:
         - 0.586
         - 0.357
-    light.egg_lamp:
-      state: on
-      transition: 2
-      brightness: 186
-      xy_color:
-        - 0.634
-        - 0.283
     light.snug_main: off
     light.snug_bookcase:
       state: on
@@ -251,13 +240,6 @@
       xy_color:
         - 0.558
         - 0.313
-    light.egg_lamp:
-      state: on
-      transition: 2
-      brightness: 210
-      xy_color:
-        - 0.195
-        - 0.68
     light.snug_main: off
     light.snug_bookcase:
       state: off
@@ -280,7 +262,6 @@
       xy_color:
         - 0.581
         - 0.389
-    light.egg_lamp: off
     light.snug_main: on
     light.snug_bookcase:
       state: on
@@ -887,3 +868,72 @@
     light.downstairs_hallway_5: off
     light.downstairs_hallway_6: off
     switch.partylite_diffuser: off
+- name: Stairs Off
+  entities:
+    light.stairs_1: off
+    light.stairs_2: off
+    light.stairs_3: off
+- name: Stairs Morning
+  entities:
+    light.stairs_1:
+      state: on
+      brightness: 17
+      color_temp: 158
+    light.stairs_2:
+      state: on
+      brightness: 17
+      color_temp: 367
+    light.stairs_3:
+      state: on
+      brightness: 17
+      color_temp: 244
+- name: Stairs Colourful
+  entities:
+    light.stairs_1:
+      state: on
+      brightness: 105
+      xy_color:
+        - 0.181
+        - 0.429
+    light.stairs_2:
+      state: on
+      brightness: 105
+      xy_color:
+        - 0.427
+        - 0.222
+    light.stairs_3:
+      state: on
+      brightness: 105
+      xy_color:
+        - 0.183
+        - 0.106
+- name: Stairs Late Night
+  entities:
+    light.stairs_1:
+      state: on
+      brightness: 47
+      xy_color:
+        - 0.216
+        - 0.113
+    light.stairs_2:
+      state: on
+      brightness: 47
+      xy_color:
+        - 0.162
+        - 0.271
+    light.stairs_3:
+      state: on
+      brightness: 47
+      xy_color:
+        - 0.158
+        - 0.087
+- name: Stairs Night
+  entities:
+    light.stairs_1: off
+    light.stairs_2:
+      state: on
+      brightness: 1
+      xy_color:
+        - 0.678
+        - 0.31
+    light.stairs_3: off
