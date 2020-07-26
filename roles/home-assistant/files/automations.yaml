@@ -168,7 +168,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.living_room_scene
-        value: living_room_evening
+        value: living_room_pink_blue
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
@@ -308,7 +308,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.living_room_scene
-        value: living_room_evening
+        value: living_room_pink_blue
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
@@ -448,7 +448,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.living_room_scene
-        value: living_room_evening
+        value: living_room_pink_blue
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
@@ -588,7 +588,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.living_room_scene
-        value: living_room_evening
+        value: living_room_pink_orange
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
@@ -728,7 +728,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.living_room_scene
-        value: living_room_evening
+        value: living_room_pink_orange
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
@@ -1152,7 +1152,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.living_room_scene
-        value: living_room_evening
+        value: living_room_pink_blue
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
@@ -1292,7 +1292,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.living_room_scene
-        value: living_room_evening
+        value: living_room_pink_orange
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
@@ -1432,7 +1432,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.living_room_scene
-        value: living_room_evening
+        value: living_room_pink_orange
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
@@ -1572,7 +1572,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.living_room_scene
-        value: living_room_evening
+        value: living_room_pink_orange
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
@@ -1712,7 +1712,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.living_room_scene
-        value: living_room_evening
+        value: living_room_pink_orange
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene

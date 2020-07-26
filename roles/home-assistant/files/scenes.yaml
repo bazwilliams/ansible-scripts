@@ -526,7 +526,7 @@
       brightness: 62
       xy_color: [ 0.491, 0.415 ]
     switch.living_room_main: off
-- name: Living Room Evening
+- name: Living Room Pink Blue
   entities:
     light.mushroom_lamp:
       state: on
@@ -536,6 +536,17 @@
       state: on
       brightness: 141
       xy_color: [ 0.159, 0.241 ]
+    switch.living_room_main: off
+- name: Living Room Pink Orange
+  entities:
+    light.mushroom_lamp:
+      state: on
+      brightness: 82
+      xy_color: [ 0.429, 0.188 ]
+    light.copper_lamp:
+      state: on
+      brightness: 25
+      xy_color: [ 0.571, 0.345 ]
     switch.living_room_main: off
 - name: Downstairs Hallway Night
   entities:
