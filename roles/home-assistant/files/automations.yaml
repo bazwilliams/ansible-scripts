@@ -436,7 +436,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.staircase_scene
-        value: stairs_colourful
+        value: stairs_colourful_dimmed
     - service: input_text.set_value
       data:
         entity_id: input_text.downstairs_hallway_scene
@@ -471,7 +471,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.staircase_scene
-        value: stairs_colourful
+        value: stairs_colourful_dimmed
     - service: input_text.set_value
       data:
         entity_id: input_text.downstairs_hallway_scene
@@ -576,7 +576,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.staircase_scene
-        value: stairs_colourful
+        value: stairs_colourful_dimmed
     - service: input_text.set_value
       data:
         entity_id: input_text.downstairs_hallway_scene
@@ -611,7 +611,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.staircase_scene
-        value: stairs_colourful
+        value: stairs_colourful_dimmed
     - service: input_text.set_value
       data:
         entity_id: input_text.downstairs_hallway_scene
@@ -2900,3 +2900,13 @@
     - service: scene.turn_on
       data_template:
         entity_id: "scene.{{ states('input_text.downstairs_hallway_scene') }}"
+
+- alias: Staircase Default Scene Changed
+  initial_state: true
+  trigger:
+    platform: state
+    entity_id: input_text.staircase_scene
+  action:
+    - service: scene.turn_on
+      data_template:
+        entity_id: "scene.{{ states('input_text.staircase_scene') }}"

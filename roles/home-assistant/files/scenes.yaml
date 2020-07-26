@@ -888,15 +888,15 @@
   entities:
     light.stairs_1:
       state: on
-      brightness: 17
+      brightness: 10
       color_temp: 158
     light.stairs_2:
       state: on
-      brightness: 17
+      brightness: 10
       color_temp: 367
     light.stairs_3:
       state: on
-      brightness: 17
+      brightness: 10
       color_temp: 244
 - name: Stairs Colourful
   entities:
@@ -918,23 +918,43 @@
       xy_color:
         - 0.183
         - 0.106
+- name: Stairs Colourful Dimmed
+  entities:
+    light.stairs_1:
+      state: on
+      brightness: 1
+      xy_color:
+        - 0.181
+        - 0.429
+    light.stairs_2:
+      state: on
+      brightness: 1
+      xy_color:
+        - 0.427
+        - 0.222
+    light.stairs_3:
+      state: on
+      brightness: 1
+      xy_color:
+        - 0.183
+        - 0.106
 - name: Stairs Late Night
   entities:
     light.stairs_1:
       state: on
-      brightness: 47
+      brightness: 1
       xy_color:
         - 0.216
         - 0.113
     light.stairs_2:
       state: on
-      brightness: 47
+      brightness: 1
       xy_color:
         - 0.162
         - 0.271
     light.stairs_3:
       state: on
-      brightness: 47
+      brightness: 1
       xy_color:
         - 0.158
         - 0.087
