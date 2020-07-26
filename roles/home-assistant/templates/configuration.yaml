@@ -182,12 +182,6 @@ zha:
 
 zha_map:
 
-light:
-  platform: rfxtrx
-  devices:
-    "0710080041030000":
-      name: Worktop Lights
-
 switch:
   platform: rfxtrx
   devices:
