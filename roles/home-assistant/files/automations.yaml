@@ -370,7 +370,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.staircase_scene
-        value: stairs_off
+        value: stairs_decorative_pastel
     - service: input_text.set_value
       data:
         entity_id: input_text.downstairs_hallway_scene
@@ -510,7 +510,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.staircase_scene
-        value: stairs_off
+        value: stairs_decorative_pastel
     - service: input_text.set_value
       data:
         entity_id: input_text.downstairs_hallway_scene
@@ -650,7 +650,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.staircase_scene
-        value: stairs_off
+        value: stairs_colourful_dimmed
     - service: input_text.set_value
       data:
         entity_id: input_text.downstairs_hallway_scene
@@ -790,7 +790,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.staircase_scene
-        value: stairs_off
+        value: stairs_decorative_pastel
     - service: input_text.set_value
       data:
         entity_id: input_text.downstairs_hallway_scene

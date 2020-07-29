@@ -968,3 +968,23 @@
         - 0.678
         - 0.31
     light.stairs_3: off
+- name: Stairs Decorative Pastel
+  entities:
+    light.stairs_1:
+      state: on
+      brightness: 30
+      xy_color:
+        - 0.31
+        - 0.29
+    light.stairs_2:
+      state: on
+      brightness: 30
+      xy_color:
+        - 0.22
+        - 0.274
+    light.stairs_3:
+      state: on
+      brightness: 30
+      xy_color:
+        - 0.259
+        - 0.177
