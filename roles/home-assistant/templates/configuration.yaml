@@ -15,11 +15,6 @@ logbook:
 recorder:
   auto_purge: true
   purge_keep_days: 3
-  include:
-    domains:
-      - sensor
-      - switch
-      - media_player
   exclude:
     domains:
       - automation
@@ -33,11 +28,6 @@ recorder:
 
 logger:
   default: warning
-  # logs:
-    # homeassistant.components.switch.rfxtrx: debug
-    # homeassistant.components.binary_sensor.rfxtrx: debug
-    # homeassistant.components.sensor.rfxtrx: debug
-    # homeassistant.components.rfxtrx: debug
 
 influxdb:
   exclude:
