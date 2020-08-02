@@ -20,13 +20,13 @@
     src: supervisord.conf
     dest: "{{ buildcontext.path }}"
 
-- name: Add firewall rule for NETBIOS
-  become: yes
-  firewalld:
-    port: 137-139/tcp
-    permanent: yes
-    immediate: yes
-    state: enabled
+# - name: Add firewall rule for NETBIOS
+#   become: yes
+#   firewalld:
+#     port: 137-139/tcp
+#     permanent: yes
+#     immediate: yes
+#     state: enabled
 
 - name: Create music directory
   become: yes

@@ -89,29 +89,29 @@
     name: home-assistant_home-assistant
     state: absent
 
-- name: Add firewall rule to open port
-  become: yes
-  firewalld:
-    port: 8123/tcp
-    permanent: yes
-    immediate: yes
-    state: enabled
+# - name: Add firewall rule to open port
+#   become: yes
+#   firewalld:
+#     port: 8123/tcp
+#     permanent: yes
+#     immediate: yes
+#     state: enabled
 
-- name: Add firewall rule to open ports above 1025 to permit TCP SSDP
-  become: yes
-  firewalld:
-    port: 1025-65535/tcp
-    permanent: yes
-    immediate: yes
-    state: enabled
+# - name: Add firewall rule to open ports above 1025 to permit TCP SSDP
+#   become: yes
+#   firewalld:
+#     port: 1025-65535/tcp
+#     permanent: yes
+#     immediate: yes
+#     state: enabled
 
-- name: Add firewall rule to open ports above 1025 to permit UDP SSDP
-  become: yes
-  firewalld:
-    port: 1025-65535/udp
-    permanent: yes
-    immediate: yes
-    state: enabled
+# - name: Add firewall rule to open ports above 1025 to permit UDP SSDP
+#   become: yes
+#   firewalld:
+#     port: 1025-65535/udp
+#     permanent: yes
+#     immediate: yes
+#     state: enabled
 
 - name: Start service
   docker_compose:

@@ -32,21 +32,21 @@
             minimserver:
                 image: ""
 
-- name: Add firewall rule to open port 9790
-  become: yes
-  firewalld:
-    port: 9790/tcp
-    permanent: yes
-    immediate: yes
-    state: enabled
+# - name: Add firewall rule to open port 9790
+#   become: yes
+#   firewalld:
+#     port: 9790/tcp
+#     permanent: yes
+#     immediate: yes
+#     state: enabled
 
-- name: Add firewall rule to open port 9791
-  become: yes
-  firewalld:
-    port: 9791/tcp
-    permanent: yes
-    immediate: yes
-    state: enabled
+# - name: Add firewall rule to open port 9791
+#   become: yes
+#   firewalld:
+#     port: 9791/tcp
+#     permanent: yes
+#     immediate: yes
+#     state: enabled
 
 - name: Start service
   docker_compose:
