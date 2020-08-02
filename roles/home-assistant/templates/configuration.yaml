@@ -472,7 +472,7 @@ input_text:
     initial: living_room_off
   staircase_scene:
     name: Staircase Scene
-    initial: stairs_off
+    initial: stairs_decorative_pastel
   downstairs_hallway_scene:
     name: Downstairs Hallway Scene
     initial: downstairs_hallway_off

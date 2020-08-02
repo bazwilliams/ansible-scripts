@@ -66,6 +66,7 @@ staircase:
     - light.stairs_1
     - light.stairs_2
     - light.stairs_3
+    - light.stairs_spot
 downstairs_hallway:
   name: Downstairs Hallway
   entities:
@@ -85,7 +86,6 @@ downstairs_toilet:
 ensuite:
   name: Ensuite
   entities:
-    - light.ensuite_shower
     - light.ensuite_2
 guest_room:
   name: Guest Room

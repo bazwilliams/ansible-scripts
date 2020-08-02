@@ -2901,12 +2901,44 @@
       data_template:
         entity_id: "scene.{{ states('input_text.downstairs_hallway_scene') }}"
 
-- alias: Staircase Default Scene Changed
+- alias: Staircase or Upstairs Hallway Motion
   initial_state: true
   trigger:
-    platform: state
-    entity_id: input_text.staircase_scene
+    - platform: state
+      entity_id: sensor.house_mode
+    - platform: state
+      entity_id: binary_sensor.staircase_motion
+      from: "off"
+      to: "on"
+    - platform: state
+      entity_id: binary_sensor.upstairs_hallway_motion
+      from: "off"
+      to: "on"
   action:
     - service: scene.turn_on
       data_template:
         entity_id: "scene.{{ states('input_text.staircase_scene') }}"
+
+- alias: Staircase No Motion
+  initial_state: true
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.staircase_motion
+      to: "off"
+      for:
+        minutes: 2
+  action:
+    - service: scene.turn_on
+      data:
+        entity_id: scene.stairs_off
+
+- alias: Staircase Default Scene Changed to Off
+  initial_state: true
+  trigger:
+    platform: state
+    entity_id: input_text.staircase_scene
+    to: "stairs_off"
+  action:
+    - service: scene.turn_on
+      data:
+        entity_id: scene.stairs_off
