@@ -971,10 +971,10 @@
       xy_color:
         - 0.158
         - 0.087
-  light.stairs_spot:
-    state: on
-    brightness: 1
-    color_temp: 156
+    light.stairs_spot:
+      state: on
+      brightness: 1
+      color_temp: 156
 - name: Stairs Night
   entities:
     light.stairs_1: off
