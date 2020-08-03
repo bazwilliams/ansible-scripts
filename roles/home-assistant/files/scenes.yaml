@@ -985,10 +985,7 @@
         - 0.678
         - 0.31
     light.stairs_3: off
-    light.stairs_spot:
-      state: on
-      brightness: 21
-      color_temp: 454
+    light.stairs_spot: off
 - name: Stairs Decorative Pastel
   entities:
     light.stairs_1:
