@@ -2241,39 +2241,39 @@
       data_template:
         entity_id: "scene.{{ states('input_text.front_garden_scene') }}"
 
-- alias: Turn Power Amp On
-  initial_state: true
-  trigger:
-    - platform: state
-      entity_id: media_player.hifi
-      to: "playing"
-      for:
-        seconds: 2
-    - platform: state
-      entity_id: media_player.hifi
-      to: "idle"
-      for:
-        seconds: 2
-    - platform: state
-      entity_id: media_player.hifi
-      to: "paused"
-      for:
-        seconds: 2
-  action:
-    - service: switch.turn_on
-      entity_id: switch.power_amplifier
+# - alias: Turn Power Amp On
+#   initial_state: true
+#   trigger:
+#     - platform: state
+#       entity_id: media_player.hifi
+#       to: "playing"
+#       for:
+#         seconds: 2
+#     - platform: state
+#       entity_id: media_player.hifi
+#       to: "idle"
+#       for:
+#         seconds: 2
+#     - platform: state
+#       entity_id: media_player.hifi
+#       to: "paused"
+#       for:
+#         seconds: 2
+#   action:
+#     - service: switch.turn_on
+#       entity_id: switch.power_amplifier
 
-- alias: Turn Power Amp Off
-  initial_state: true
-  trigger:
-    - platform: state
-      entity_id: media_player.hifi
-      to: "off"
-      for:
-        seconds: 5
-  action:
-    - service: switch.turn_off
-      entity_id: switch.power_amplifier
+# - alias: Turn Power Amp Off
+#   initial_state: true
+#   trigger:
+#     - platform: state
+#       entity_id: media_player.hifi
+#       to: "off"
+#       for:
+#         seconds: 5
+#   action:
+#     - service: switch.turn_off
+#       entity_id: switch.power_amplifier
 
 - alias: Listening to Music (Playlist)
   initial_state: true
