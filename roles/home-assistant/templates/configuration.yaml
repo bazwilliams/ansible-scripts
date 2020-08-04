@@ -126,6 +126,10 @@ homeassistant:
       friendly_name: Downstairs Toilet
     light.bathroom:
       friendly_name: Bathroom
+    media_player.living_room_tv:
+      friendly_name: Television
+      icon: mdi:television
+        
 
 cloud:
   alexa:
@@ -152,6 +156,7 @@ cloud:
         - switch.frog_filter
         - climate.bedroom_heating
         - climate.living_room_heating
+        - media_player.living_room_tv
 
 discovery:
 
@@ -231,51 +236,15 @@ binary_sensor:
         prob_given_false: 0.5
 
 sensor:
-  - platform: influxdb
-    api_version: 1
-    queries:
-      - name: Upstairs Heating Target -1d
-        field: temperature
-        measurement: '"autogen"."climate.bedroom_heating"'
-        where: 'time > (now() -  24h) AND time < (now() - 23h) FILL(previous)'
-        group_function: mode
-        unit_of_measurement: °C
-      - name: Upstairs Heating Target -2d
-        field: temperature
-        measurement: '"autogen"."climate.bedroom_heating"'
-        where: 'time > (now() -  48h) AND time < (now() - 47h) FILL(previous)'
-        group_function: mode
-        unit_of_measurement: °C
-      - name: Upstairs Heating Target -3d
-        field: temperature
-        measurement: '"autogen"."climate.bedroom_heating"'
-        where: 'time > (now() -  72h) AND time < (now() - 71h) FILL(previous)'
-        group_function: mode
-        unit_of_measurement: °C
-      - name: Upstairs Heating Target -4d
-        field: temperature
-        measurement: '"autogen"."climate.bedroom_heating"'
-        where: 'time > (now() -  96h) AND time < (now() - 95h) FILL(previous)'
-        group_function: mode
-        unit_of_measurement: °C
-      - name: Upstairs Heating Target -5d
-        field: temperature
-        measurement: '"autogen"."climate.bedroom_heating"'
-        where: 'time > (now() -  120h) AND time < (now() - 119h) FILL(previous)'
-        group_function: mode
-        unit_of_measurement: °C
-      - name: Upstairs Heating Target -6d
-        field: temperature
-        measurement: '"autogen"."climate.bedroom_heating"'
-        where: 'time > (now() -  144h) AND time < (now() - 143h) FILL(previous)'
-        group_function: mode
-        unit_of_measurement: °C
-      - name: Upstairs Heating Target -7d
-        field: temperature
-        measurement: '"autogen"."climate.bedroom_heating"'
-        where: 'time > (now() -  168h) AND time < (now() - 167h) FILL(previous)'
-        group_function: mode
-        unit_of_measurement: °C
+  # - platform: influxdb
+  #   api_version: 1
+  #   queries:
+  #     - name: Upstairs Heating Target -1d
+  #       field: temperature
+  #       measurement: '"autogen"."climate.bedroom_heating"'
+  #       where: 'time > (now() -  24h) AND time < (now() - 23h) FILL(previous)'
+  #       group_function: mode
+  #       unit_of_measurement: °C
   - platform: rfxtrx
     automatic_add: true
     devices:
@@ -283,22 +252,22 @@ sensor:
         name: Guest Room
         data_type:
           - Humidity
-          - Temperature
+          # - Temperature
       0a520a17240200ef2d0179:
         name: "Ethan's Room"
         data_type:
           - Humidity
-          - Temperature
+          # - Temperature
       0a520a03810300b9310179:
         name: "Marcus' Room"
         data_type:
           - Humidity
-          - Temperature
+          # - Temperature
       0a520a04a80300b5320179:
         name: Bedroom
         data_type:
           - Humidity
-          - Temperature
+          # - Temperature
   - platform: min_max
     name: Outside Light Level
     entity_ids:
@@ -311,43 +280,60 @@ sensor:
     - sensor.front_garden_temperature
     - sensor.back_garden_temperature
     type: min
-  - platform: min_max
-    name: Bedroom Temperatures
-    entity_ids:
-    - sensor.guest_room_temperature
-    - sensor.ethan_s_room_temperature
-    - sensor.marcus_room_temperature
-    - sensor.bedroom_temperature
     type: mean
-  - platform: min_max
-    name: Bedroom Humidities
-    entity_ids:
-    - sensor.guest_room_humidity
-    - sensor.ethan_s_room_humidity
-    - sensor.marcus_room_humidity
-    - sensor.bedroom_humidity
-    type: max
   - platform: time_date
     display_options:
       - 'time'
   - platform: template
     sensors:
-      living_room_temperature_hive:
-        entity_id:
-        - climate.living_room_heating
-        friendly_name: 'Living Room Temperature'
-        unit_of_measurement: °C
-        value_template:  >
-          {% raw %}{{ state_attr('climate.living_room_heating', 'current_temperature') }} {% endraw %}
+      # living_room_temperature_hive:
+      #   entity_id:
+      #   - climate.living_room_heating
+      #   friendly_name: 'Living Room Temperature'
+      #   unit_of_measurement: °C
+      #   value_template:  >
+      #     {% raw %}{{ state_attr('climate.living_room_heating', 'current_temperature') }} {% endraw %}
 
-      bedroom_temperature_hive:
-        entity_id:
-        - climate.bedroom_heating
-        friendly_name: 'Bedroom Temperature'
-        unit_of_measurement: °C
-        value_template: >
-          {% raw %} {{ state_attr('climate.bedroom_heating', 'current_temperature') }} {% endraw %}
+      # bedroom_temperature_hive:
+      #   entity_id:
+      #   - climate.bedroom_heating
+      #   friendly_name: 'Bedroom Temperature'
+      #   unit_of_measurement: °C
+      #   value_template: >
+      #     {% raw %} {{ state_attr('climate.bedroom_heating', 'current_temperature') }} {% endraw %}
 
+      # ethans_room_temperature_hive:
+      #   entity_id:
+      #   - climate.ethans_room
+      #   friendly_name: 'Ethan's Room Temperature'
+      #   unit_of_measurement: °C
+      #   value_template: >
+      #     {% raw %} {{ state_attr('climate.ethans_room', 'current_temperature') }} {% endraw %}
+
+      # marcus_room_temperature_hive:
+      #   entity_id:
+      #   - climate.marcus_room
+      #   friendly_name: 'Marcus' Room Temperature'
+      #   unit_of_measurement: °C
+      #   value_template: >
+      #     {% raw %} {{ state_attr('climate.marcus_room', 'current_temperature') }} {% endraw %}
+
+      # hobby_room_temperature_hive:
+      #   entity_id:
+      #   - climate.hobby_room
+      #   friendly_name: 'Hobby Room Temperature'
+      #   unit_of_measurement: °C
+      #   value_template: >
+      #     {% raw %} {{ state_attr('climate.hobby_room', 'current_temperature') }} {% endraw %}
+
+      # kitchen_temperature_hive:
+      #   entity_id:
+      #   - climate.kitchen
+      #   friendly_name: 'Kitchen Temperature'
+      #   unit_of_measurement: °C
+      #   value_template: >
+      #     {% raw %} {{ state_attr('climate.hobby_room', 'current_temperature') }} {% endraw %}
+    
       house_mode:
         entity_id:
         - sensor.outside_light_level
@@ -457,6 +443,16 @@ alexa_media:
         - Kids Rooms
 
 roon:
+
+wake_on_lan:
+
+webostv:
+  host: 192.168.1.53
+  name: Living Room TV
+  turn_on_action:
+    service: wake_on_lan.send_magic_packet
+    data:
+      mac: "44:cb:8b:f8:a7:f2"
 
 hive:
   username: {{ hive.username }}

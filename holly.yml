@@ -1,7 +1,7 @@
 ---
 - hosts: holly
   roles:
-    #  - update-packages-suse
+    # - update-packages-suse
     # - install-docker-suse
     # - music-smb
     # - influxdb
@@ -9,4 +9,6 @@
     # - grafana
     # - minimserver
     # - plex
-    - home-assistant
+    # - roon
+     - home-assistant
+    # - sabnzbd
