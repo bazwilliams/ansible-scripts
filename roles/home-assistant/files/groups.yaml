@@ -135,5 +135,5 @@ upstairs_hallway:
   name: Upstairs Hallway
   entities:
     - light.upstairs_hallway
-    - binary_sensor.upstairs_hall_cupboard_door
+    - binary_sensor.upstairs_cupboard_door
     - binary_sensor.upstairs_hallway_motion

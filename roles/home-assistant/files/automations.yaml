@@ -2114,7 +2114,7 @@
   initial_state: true
   trigger:
     - platform: state
-      entity_id: binary_sensor.upstairs_hall_cupboard_door
+      entity_id: binary_sensor.upstairs_cupboard_door
       to: "on"
   action:
     - service: scene.create
@@ -2130,7 +2130,7 @@
   initial_state: true
   trigger:
     - platform: state
-      entity_id: binary_sensor.upstairs_hall_cupboard_door
+      entity_id: binary_sensor.upstairs_cupboard_door
       to: "off"
   action:
     - service: scene.turn_on

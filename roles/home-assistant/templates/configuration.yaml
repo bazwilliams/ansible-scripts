@@ -184,12 +184,6 @@ switch:
       name: Partylite Diffuser
 
 binary_sensor:
-  - platform: rfxtrx
-    automatic_add: true
-    devices:
-      "0a140006f4dcf40a000060":
-        name: Upstairs Hall Cupboard Door
-        device_class: opening
   - platform: bayesian
     prior: 0.5
     probability_threshold: 0.7
