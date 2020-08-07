@@ -274,7 +274,6 @@ sensor:
     - sensor.front_garden_temperature
     - sensor.back_garden_temperature
     type: min
-    type: mean
   - platform: time_date
     display_options:
       - 'time'
