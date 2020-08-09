@@ -1010,3 +1010,15 @@
       state: on
       brightness: 1
       color_temp: 156
+- name: Downstairs Toilet Bright
+  entities:
+    light.downstairs_toilet:
+      state: on
+      transition: 1
+      brightness: 254
+      color_temp: 250
+- name: Downstairs Toilet Off
+  entities:
+    light.downstairs_toilet:
+      transition: 1
+      state: off

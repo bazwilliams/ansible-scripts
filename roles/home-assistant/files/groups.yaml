@@ -1,6 +1,7 @@
 kitchen:
   name: Kitchen
   entities:
+    - climate.kitchen
     - binary_sensor.kitchen_occupancy
     - sensor.kitchen_light_level
     - sensor.kitchen_temperature
@@ -55,8 +56,6 @@ bathroom:
 bedroom:
   name: Bedroom
   entities:
-    - sensor.bedroom_humidity
-    - sensor.bedroom_temperature
     - light.bedroom_big_light
     - light.bedside_lamp
     - climate.bedroom_heating
@@ -90,15 +89,13 @@ ensuite:
 guest_room:
   name: Guest Room
   entities:
-    - sensor.guest_room_temperature
-    - sensor.guest_room_humidity
+    - climate.hobby_room
     - light.silver_lamp
     - light.guest_big_light
 ethans_room:
   name: Ethan's Room
   entities:
-    - sensor.ethan_s_room_temperature
-    - sensor.ethan_s_room_humidity
+    - climate.ethans_room
     - light.ethans_big_light
     - light.ethans_globe
 living_room:
@@ -106,7 +103,7 @@ living_room:
   entities:
     - media_player.living_room_roku
     - media_player.living_room_hifi
-    - media_player.living_room_roon
+    - media_player.living_room_tv
     - light.mushroom_lamp
     - light.copper_lamp
     - switch.living_room_main
@@ -114,13 +111,13 @@ living_room:
 marcuss_room:
   name: Marcus' Room
   entities:
-    - sensor.marcus_room_humidity
-    - sensor.marcus_room_temperature
+    - climate.marcus_room
     - light.marcuss_big_light
     - light.marcuss_globe
 snug:
   name: Snug
   entities:
+    - climate.snug
     - media_player.epson_projector
     - media_player.hifi
     - media_player.hifi_roon
@@ -128,7 +125,6 @@ snug:
     - light.tripod_lamp
     - switch.lava_lamp
     - light.snug_main
-    # - switch.power_amplifier
     - light.snug_bookcase
     - switch.turntable
 upstairs_hallway:

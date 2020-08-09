@@ -2241,40 +2241,6 @@
       data_template:
         entity_id: "scene.{{ states('input_text.front_garden_scene') }}"
 
-# - alias: Turn Power Amp On
-#   initial_state: true
-#   trigger:
-#     - platform: state
-#       entity_id: media_player.hifi
-#       to: "playing"
-#       for:
-#         seconds: 2
-#     - platform: state
-#       entity_id: media_player.hifi
-#       to: "idle"
-#       for:
-#         seconds: 2
-#     - platform: state
-#       entity_id: media_player.hifi
-#       to: "paused"
-#       for:
-#         seconds: 2
-#   action:
-#     - service: switch.turn_on
-#       entity_id: switch.power_amplifier
-
-# - alias: Turn Power Amp Off
-#   initial_state: true
-#   trigger:
-#     - platform: state
-#       entity_id: media_player.hifi
-#       to: "off"
-#       for:
-#         seconds: 5
-#   action:
-#     - service: switch.turn_off
-#       entity_id: switch.power_amplifier
-
 - alias: Listening to Music (Playlist)
   initial_state: true
   trigger:
@@ -2815,6 +2781,38 @@
       data:
         entity_id: input_text.ethans_room_mode
         value: scene_off
+
+- alias: Downstairs Toilet to Bright
+  initial_state: true
+  trigger:
+    platform: event
+    event_type: zha_event
+    event_data:
+      device_ieee: 00:17:88:01:08:07:64:47
+      unique_id: 00:17:88:01:08:07:64:47:1:0x0006
+      endpoint_id: 1
+      cluster_id: 6
+      command: "on"
+  action:
+    - service: scene.turn_on
+      data_template:
+        entity_id: scene.downstairs_toilet_bright
+
+- alias: Downstairs Toilet Light Off
+  initial_state: true
+  trigger:
+    platform: event
+    event_type: zha_event
+    event_data:
+      device_ieee: 00:17:88:01:08:07:64:47
+      unique_id: 00:17:88:01:08:07:64:47:1:0x0006
+      endpoint_id: 1
+      cluster_id: 6
+      command: off_with_effect
+  action:
+    - service: scene.turn_on
+      data_template:
+        entity_id: scene.downstairs_toilet_off
 
 - alias: Living Room to Bright
   initial_state: true

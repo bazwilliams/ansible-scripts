@@ -58,8 +58,6 @@ homeassistant:
     media_player.epson_projector:
       friendly_name: Projector
       icon: mdi:projector
-    # switch.power_amplifier:
-    #   icon: mdi:amplifier
     media_player.hifi_roon:
       friendly_name: HiFi
     media_player.living_room_roon:
@@ -160,15 +158,10 @@ cloud:
 
 discovery:
 
-hue:
-
 media_player:
   - platform: openhome
   - platform: epson
     host: 192.168.1.50
-
-rfxtrx:
-  device: /dev/rfxtrx
 
 zha:
   usb_path: /dev/conbee2
@@ -176,12 +169,6 @@ zha:
   radio_type: deconz
 
 zha_map:
-
-switch:
-  platform: rfxtrx
-  devices:
-    "0710080041040000":
-      name: Partylite Diffuser
 
 binary_sensor:
   - platform: bayesian
@@ -230,38 +217,6 @@ binary_sensor:
         prob_given_false: 0.5
 
 sensor:
-  # - platform: influxdb
-  #   api_version: 1
-  #   queries:
-  #     - name: Upstairs Heating Target -1d
-  #       field: temperature
-  #       measurement: '"autogen"."climate.bedroom_heating"'
-  #       where: 'time > (now() -  24h) AND time < (now() - 23h) FILL(previous)'
-  #       group_function: mode
-  #       unit_of_measurement: °C
-  - platform: rfxtrx
-    automatic_add: true
-    devices:
-      0a520a02930200b8120279:
-        name: Guest Room
-        data_type:
-          - Humidity
-          # - Temperature
-      0a520a17240200ef2d0179:
-        name: "Ethan's Room"
-        data_type:
-          - Humidity
-          # - Temperature
-      0a520a03810300b9310179:
-        name: "Marcus' Room"
-        data_type:
-          - Humidity
-          # - Temperature
-      0a520a04a80300b5320179:
-        name: Bedroom
-        data_type:
-          - Humidity
-          # - Temperature
   - platform: min_max
     name: Outside Light Level
     entity_ids:
