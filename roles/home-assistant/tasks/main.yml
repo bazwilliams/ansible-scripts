@@ -133,7 +133,7 @@
                 network_mode: host
                 restart: unless-stopped
                 devices:
-                - "/dev/ttyACM0:/dev/conbee2"
+                - "/dev/serial/by-id/usb-dresden_elektronik_ingenieurtechnik_GmbH_ConBee_II_DE2153131-if00:/dev/conbee2"
 
 - name: Cleanup
   file:
