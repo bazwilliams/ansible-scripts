@@ -1082,7 +1082,7 @@
       state: on
       transition: 1
       brightness: 1
-      color_temp: 156
+      color_temp: 428
 - name: Stairs Late Night
   entities:
     light.stairs_1:
@@ -1110,7 +1110,7 @@
       state: on
       transition: 1
       brightness: 1
-      color_temp: 156
+      color_temp: 428
 - name: Stairs Night
   entities:
     light.stairs_1:
