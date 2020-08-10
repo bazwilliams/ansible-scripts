@@ -452,16 +452,16 @@
   entities:
     light.upstairs_spot_1:
       state: on
-      brightness: 55
-      color_temp: 454
+      brightness: 97
+      color_temp: 312
     light.upstairs_spot_2:
       state: on
-      brightness: 55
-      color_temp: 393
+      brightness: 73
+      color_temp: 398
     light.upstairs_spot_3:
       state: on
       brightness: 55
-      color_temp: 294
+      color_temp: 454
 - name: Upstairs Hallway Night
   entities:
     light.upstairs_spot_1:

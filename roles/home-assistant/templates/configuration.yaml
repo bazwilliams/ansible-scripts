@@ -22,9 +22,6 @@ recorder:
     entities:
       - sensor.last_boot
       - sensor.time
-      - sensor.dishwasher_duration
-      - sensor.dishwasher_program_progress
-      - sensor.dishwasher_remaining_program_time
 
 logger:
   default: warning
@@ -128,7 +125,6 @@ homeassistant:
       friendly_name: Television
       icon: mdi:television
         
-
 cloud:
   alexa:
     filter:
@@ -156,10 +152,10 @@ cloud:
         - climate.living_room_heating
         - media_player.living_room_tv
 
-discovery:
+# discovery:
 
 media_player:
-  - platform: openhome
+#   - platform: openhome
   - platform: epson
     host: 192.168.1.50
 
@@ -369,26 +365,26 @@ input_text:
     name: Snug Scene
     initial: snug_off
 
-notify:
-  - platform: alexa_media
-    name: alexa_media
+# notify:
+#   - platform: alexa_media
+#     name: alexa_media
 
-alexa_media:
-  accounts:
-    - email: {{ alexa.email }}
-      password: {{ alexa.password }}
-      url: {{ alexa.region }}
-      include_devices:
-        - 4k Fire TV
-        - Fire TV Stick
-        - Bedroom
-        - "Ethan's Room"
-        - "Marcus' Room"
-        - Snug Echo
-        - Kiko Echo
-        - Kitchen Show
-        - Downstairs
-        - Kids Rooms
+# alexa_media:
+#   accounts:
+#     - email: {{ alexa.email }}
+#       password: {{ alexa.password }}
+#       url: {{ alexa.region }}
+#       include_devices:
+#         - 4k Fire TV
+#         - Fire TV Stick
+#         - Bedroom
+#         - "Ethan's Room"
+#         - "Marcus' Room"
+#         - Snug Echo
+#         - Kiko Echo
+#         - Kitchen Show
+#         - Downstairs
+#         - Kids Rooms
 
 roon:
 
@@ -406,9 +402,9 @@ hive:
   username: {{ hive.username }}
   password: {{ hive.password }}
   
-home_connect:
-  client_id: {{ homeconnect.client_id }}
-  client_secret: {{ homeconnect.client_secret }}
+# home_connect:
+#   client_id: {{ homeconnect.client_id }}
+#   client_secret: {{ homeconnect.client_secret }}
 
 securitas_direct:
   username: {{ verisure.username }}

@@ -12,10 +12,6 @@ kitchen:
     - light.kitchen_under_cupboards
     - light.kitchen_under_tall_cupboards
     - light.dining_table
-    - binary_sensor.dishwasher_door
-    - sensor.dishwasher_program_progress
-    - sensor.dishwasher_remaining_program_time
-    - switch.dishwasher_power
 front_garden:
   name: Front Garden
   entities:
