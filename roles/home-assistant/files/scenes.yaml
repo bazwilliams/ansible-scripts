@@ -581,10 +581,10 @@
     switch.living_room_main: off
 - name: Downstairs Hallway Night
   entities:
-    light.play_left: off
+    light.play_left:
       state: off
       transition: 1
-    light.play_right: off
+    light.play_right:
       state: off
       transition: 1
     light.downstairs_hallway_1:
