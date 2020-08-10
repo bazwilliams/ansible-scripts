@@ -424,64 +424,79 @@
   entities:
     light.upstairs_spot_1:
       state: on
+      transition: 1
       brightness: 29
       color_temp: 379
     light.upstairs_spot_2:
       state: on
+      transition: 1
       brightness: 29
       color_temp: 379
     light.upstairs_spot_3:
       state: on
+      transition: 1
       brightness: 29
       color_temp: 379
 - name: Upstairs Hallway Daytime
   entities:
     light.upstairs_spot_1:
       state: on
+      transition: 1
       brightness: 63
       color_temp: 309
     light.upstairs_spot_2:
       state: on
+      transition: 1
       brightness: 76
       color_temp: 239
     light.upstairs_spot_3:
       state: on
+      transition: 1
       brightness: 109
       color_temp: 156
 - name: Upstairs Hallway Evening
   entities:
     light.upstairs_spot_1:
       state: on
+      transition: 1
       brightness: 97
       color_temp: 312
     light.upstairs_spot_2:
       state: on
+      transition: 1
       brightness: 73
       color_temp: 398
     light.upstairs_spot_3:
       state: on
+      transition: 1
       brightness: 55
       color_temp: 454
 - name: Upstairs Hallway Night
   entities:
     light.upstairs_spot_1:
       state: on
+      transition: 1
       brightness: 21
       color_temp: 454
     light.upstairs_spot_2:
       state: off
+      transition: 1
     light.upstairs_spot_3:
       state: on
+      transition: 1
       brightness: 17
       color_temp: 454
 - name: Upstairs Hallway Off
   entities:
     light.upstairs_spot_1:
       state: off
+      transition: 1
     light.upstairs_spot_2:
       state: off
+      transition: 1
     light.upstairs_spot_3:
       state: off
+      transition: 1
 - name: Upstairs Cupboard Open
   entities:
     light.upstairs_spot_2:
@@ -490,17 +505,25 @@
       brightness: 254
 - name: Living Room Off
   entities:
-    light.mushroom_lamp: off
-    light.copper_lamp: off
-    switch.living_room_main: off
+    light.mushroom_lamp:
+      state: off
+      transition: 2
+    light.copper_lamp:
+      state: off
+      transition: 2
+    switch.living_room_main:
+      state: off
+      transition: 2
 - name: Living Room Bright
   entities:
     light.mushroom_lamp:
       state: on
+      transition: 1
       brightness: 255
       color_temp: 156
     light.copper_lamp:
       state: on
+      transition: 1
       brightness: 255
       color_temp: 156
     switch.living_room_main: on
@@ -508,10 +531,12 @@
   entities:
     light.mushroom_lamp:
       state: on
+      transition: 5
       brightness: 255
       color_temp: 497
     light.copper_lamp:
       state: on
+      transition: 5
       brightness: 255
       color_temp: 497
     switch.living_room_main: off
@@ -519,10 +544,12 @@
   entities:
     light.mushroom_lamp:
       state: on
+      transition: 5
       brightness: 104
       xy_color: [ 0.257, 0.218 ]
     light.copper_lamp:
       state: on
+      transition: 5
       brightness: 62
       xy_color: [ 0.491, 0.415 ]
     switch.living_room_main: off
@@ -530,10 +557,12 @@
   entities:
     light.mushroom_lamp:
       state: on
+      transition: 5
       brightness: 141
       xy_color: [ 0.264, 0.119 ]
     light.copper_lamp:
       state: on
+      transition: 5
       brightness: 141
       xy_color: [ 0.159, 0.241 ]
     switch.living_room_main: off
@@ -541,34 +570,68 @@
   entities:
     light.mushroom_lamp:
       state: on
+      transition: 5
       brightness: 82
       xy_color: [ 0.429, 0.188 ]
     light.copper_lamp:
       state: on
+      transition: 5
       brightness: 25
       xy_color: [ 0.571, 0.345 ]
     switch.living_room_main: off
 - name: Downstairs Hallway Night
   entities:
     light.play_left: off
+      state: off
+      transition: 1
     light.play_right: off
-    light.downstairs_hallway_1: off
-    light.downstairs_hallway_2: off
-    light.downstairs_hallway_3: off
-    light.downstairs_hallway_4: off
-    light.downstairs_hallway_5: off
-    light.downstairs_hallway_6: off
+      state: off
+      transition: 1
+    light.downstairs_hallway_1:
+      state: off
+      transition: 1
+    light.downstairs_hallway_2:
+      state: off
+      transition: 1
+    light.downstairs_hallway_3:
+      state: off
+      transition: 1
+    light.downstairs_hallway_4:
+      state: off
+      transition: 1
+    light.downstairs_hallway_5:
+      state: off
+      transition: 1
+    light.downstairs_hallway_6:
+      state: off
+      transition: 1
     switch.partylite_diffuser: off
 - name: Downstairs Hallway Off
   entities:
-    light.play_left: off
-    light.play_right: off
-    light.downstairs_hallway_1: off
-    light.downstairs_hallway_2: off
-    light.downstairs_hallway_3: off
-    light.downstairs_hallway_4: off
-    light.downstairs_hallway_5: off
-    light.downstairs_hallway_6: off
+    light.play_left:
+      state: off
+      transition: 1
+    light.play_right:
+      state: off
+      transition: 1
+    light.downstairs_hallway_1:
+      state: off
+      transition: 1
+    light.downstairs_hallway_2:
+      state: off
+      transition: 1
+    light.downstairs_hallway_3:
+      state: off
+      transition: 1
+    light.downstairs_hallway_4:
+      state: off
+      transition: 1
+    light.downstairs_hallway_5:
+      state: off
+      transition: 1
+    light.downstairs_hallway_6:
+      state: off
+      transition: 1
     switch.partylite_diffuser: on
 - name: Downstairs Hallway Off Away
   entities:
@@ -585,48 +648,56 @@
   entities:
     light.play_left:
       state: on
+      transition: 10
       brightness: 90
       xy_color:
         - 0.473
         - 0.331
     light.play_right:
       state: on
+      transition: 10
       brightness: 87
       xy_color:
         - 0.473
         - 0.331
     light.downstairs_hallway_1:
       state: on
+      transition: 10
       brightness: 128
       xy_color:
         - 0.165
         - 0.479
     light.downstairs_hallway_2:
       state: on
+      transition: 10
       brightness: 111
       xy_color:
         - 0.434
         - 0.185
     light.downstairs_hallway_3:
       state: on
+      transition: 10
       brightness: 90
       xy_color:
         - 0.205
         - 0.074
     light.downstairs_hallway_4:
       state: on
+      transition: 10
       brightness: 90
       xy_color:
         - 0.158
         - 0.198
     light.downstairs_hallway_5:
       state: on
+      transition: 10
       brightness: 87
       xy_color:
         - 0.509
         - 0.36
     light.downstairs_hallway_6:
       state: on
+      transition: 10
       brightness: 109
       xy_color:
         - 0.579
@@ -667,28 +738,40 @@
   entities:
     light.play_left:
       state: on
+      transition: 10
       brightness: 45
       xy_color:
         - 0.173
         - 0.698
     light.play_right:
       state: on
+      transition: 10
       brightness: 59
       xy_color:
         - 0.192
         - 0.306
-    light.downstairs_hallway_1: off
-    light.downstairs_hallway_2: off
-    light.downstairs_hallway_3: off
-    light.downstairs_hallway_4: off
+    light.downstairs_hallway_1:
+      state: off
+      transition: 10
+    light.downstairs_hallway_2:
+      state: off
+      transition: 10
+    light.downstairs_hallway_3:
+      state: off
+      transition: 10
+    light.downstairs_hallway_4:
+      state: off
+      transition: 10
     light.downstairs_hallway_5:
       state: on
+      transition: 10
       brightness: 28
       xy_color:
         - 0.314
         - 0.331
     light.downstairs_hallway_6:
       state: on
+      transition: 10
       brightness: 54
       xy_color:
         - 0.314
@@ -696,25 +779,38 @@
     switch.partylite_diffuser: on
 - name: Downstairs Hallway Early Night
   entities:
-    light.play_left: off
-    light.play_right: off
-    light.downstairs_hallway_1: off
-    light.downstairs_hallway_2: off
+    light.play_left:
+      state: off
+      transition: 10
+    light.play_right:
+      state: off
+      transition: 10
+    light.downstairs_hallway_1:
+      state: off
+      transition: 10
+    light.downstairs_hallway_2:
+      state: off
+      transition: 10
     light.downstairs_hallway_3:
       state: on
+      transition: 10
       brightness: 29
       xy_color:
         - 0.169
         - 0.371
     light.downstairs_hallway_4:
       state: on
+      transition: 10
       brightness: 29
       xy_color:
         - 0.3
         - 0.12
-    light.downstairs_hallway_5: off
+    light.downstairs_hallway_5:
+      state: off
+      transition: 10
     light.downstairs_hallway_6:
       state: on
+      transition: 10
       brightness: 29
       xy_color:
         - 0.464
@@ -724,48 +820,56 @@
   entities:
     light.play_left:
       state: on
+      transition: 10
       brightness: 31
       xy_color:
         - 0.473
         - 0.331
     light.play_right:
       state: on
+      transition: 10
       brightness: 30
       xy_color:
         - 0.473
         - 0.331
     light.downstairs_hallway_1:
       state: on
+      transition: 10
       brightness: 44
       xy_color:
         - 0.165
         - 0.479
     light.downstairs_hallway_2:
       state: on
+      transition: 10
       brightness: 39
       xy_color:
         - 0.434
         - 0.185
     light.downstairs_hallway_3:
       state: on
+      transition: 10
       brightness: 32
       xy_color:
         - 0.205
         - 0.074
     light.downstairs_hallway_4:
       state: on
+      transition: 10
       brightness: 32
       xy_color:
         - 0.158
         - 0.198
     light.downstairs_hallway_5:
       state: on
+      transition: 10
       brightness: 31
       xy_color:
         - 0.509
         - 0.36
     light.downstairs_hallway_6:
       state: on
+      transition: 10
       brightness: 38
       xy_color:
         - 0.579
@@ -806,48 +910,56 @@
   entities:
     light.play_left:
       state: on
+      transition: 10
       brightness: 113
       xy_color:
         - 0.171
         - 0.059
     light.play_right:
       state: on
+      transition: 10
       brightness: 117
       xy_color:
         - 0.159
         - 0.235
     light.downstairs_hallway_1:
       state: on
+      transition: 10
       brightness: 247
       xy_color:
         - 0.173
         - 0.175
     light.downstairs_hallway_2:
       state: on
+      transition: 10
       brightness: 148
       xy_color:
         - 0.314
         - 0.331
     light.downstairs_hallway_3:
       state: on
+      transition: 10
       brightness: 173
       xy_color:
         - 0.526
         - 0.411
     light.downstairs_hallway_4:
       state: on
+      transition: 10
       brightness: 255
       xy_color:
         - 0.583
         - 0.389
     light.downstairs_hallway_5:
       state: on
+      transition: 10
       brightness: 69
       xy_color:
         - 0.464
         - 0.411
     light.downstairs_hallway_6:
       state: on
+      transition: 10
       brightness: 183
       xy_color:
         - 0.526
@@ -881,105 +993,132 @@
     switch.partylite_diffuser: off
 - name: Stairs Off
   entities:
-    light.stairs_1: off
-    light.stairs_2: off
-    light.stairs_3: off
-    light.stairs_spot: off
+    light.stairs_1:
+      state: off
+      transition: 5
+    light.stairs_2:
+      state: off
+      transition: 5
+    light.stairs_3:
+      state: off
+      transition: 5
+    light.stairs_spot:
+      state: off
+      transition: 5
 - name: Stairs Morning
   entities:
     light.stairs_1:
       state: on
+      transition: 1
       brightness: 10
       color_temp: 158
     light.stairs_2:
       state: on
+      transition: 1
       brightness: 10
       color_temp: 367
     light.stairs_3:
       state: on
+      transition: 1
       brightness: 10
       color_temp: 244
     light.stairs_spot:
       state: on
+      transition: 1
       brightness: 29
       color_temp: 379
 - name: Stairs Colourful
   entities:
     light.stairs_1:
       state: on
+      transition: 1
       brightness: 105
       xy_color:
         - 0.181
         - 0.429
     light.stairs_2:
       state: on
+      transition: 1
       brightness: 105
       xy_color:
         - 0.427
         - 0.222
     light.stairs_3:
       state: on
+      transition: 1
       brightness: 105
       xy_color:
         - 0.183
         - 0.106
     light.stairs_spot:
       state: on
+      transition: 1
       brightness: 116
       color_temp: 156
 - name: Stairs Colourful Dimmed
   entities:
     light.stairs_1:
       state: on
+      transition: 1
       brightness: 1
       xy_color:
         - 0.181
         - 0.429
     light.stairs_2:
       state: on
+      transition: 1
       brightness: 1
       xy_color:
         - 0.427
         - 0.222
     light.stairs_3:
       state: on
+      transition: 1
       brightness: 1
       xy_color:
         - 0.183
         - 0.106
     light.stairs_spot:
       state: on
+      transition: 1
       brightness: 1
       color_temp: 156
 - name: Stairs Late Night
   entities:
     light.stairs_1:
       state: on
+      transition: 1
       brightness: 1
       xy_color:
         - 0.216
         - 0.113
     light.stairs_2:
       state: on
+      transition: 1
       brightness: 1
       xy_color:
         - 0.162
         - 0.271
     light.stairs_3:
       state: on
+      transition: 1
       brightness: 1
       xy_color:
         - 0.158
         - 0.087
     light.stairs_spot:
       state: on
+      transition: 1
       brightness: 1
       color_temp: 156
 - name: Stairs Night
   entities:
-    light.stairs_1: off
+    light.stairs_1:
+      state: off
+      transition: 1
     light.stairs_2:
       state: on
+      transition: 1
       brightness: 1
       xy_color:
         - 0.678
@@ -990,18 +1129,21 @@
   entities:
     light.stairs_1:
       state: on
+      transition: 1
       brightness: 30
       xy_color:
         - 0.31
         - 0.29
     light.stairs_2:
       state: on
+      transition: 1
       brightness: 30
       xy_color:
         - 0.22
         - 0.274
     light.stairs_3:
       state: on
+      transition: 1
       brightness: 30
       xy_color:
         - 0.259
