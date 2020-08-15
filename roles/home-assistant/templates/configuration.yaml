@@ -111,11 +111,11 @@ homeassistant:
       friendly_name: Front Garden Light Level
     sensor.front_garden_temperature:
       friendly_name: Front Garden Temperature
-    sensor.back_garden_light_level:
+    sensor.philips_sml002_61de4606_illuminance:
       friendly_name: Back Garden Light Level
-    binary_sensor.back_garden_occupancy:
+    binary_sensor.philips_sml002_61de4606_occupancy:
       friendly_name: Back Garden Motion
-    sensor.back_garden_temperature:
+    sensor.philips_sml002_61de4606_temperature:
       friendly_name: Back Garden Temperature
     light.downstairs_toilet:
       friendly_name: Downstairs Toilet
@@ -217,13 +217,13 @@ sensor:
     name: Outside Light Level
     entity_ids:
     - sensor.front_garden_light_level
-    - sensor.back_garden_light_level
+    - sensor.philips_sml002_61de4606_illuminance
     type: min
   - platform: min_max
     name: Outside Temperature
     entity_ids:
     - sensor.front_garden_temperature
-    - sensor.back_garden_temperature
+    - sensor.philips_sml002_61de4606_temperature
     type: min
   - platform: time_date
     display_options:

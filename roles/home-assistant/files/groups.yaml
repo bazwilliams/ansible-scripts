@@ -29,9 +29,9 @@ terrace:
 back_garden:
   name: Back Garden
   entities:
-    - binary_sensor.back_garden_occupancy
-    - sensor.back_garden_light_level
-    - sensor.back_garden_temperature
+    - binary_sensor.philips_sml002_61de4606_occupancy
+    - sensor.philips_sml002_61de4606_illuminance
+    - sensor.philips_sml002_61de4606_temperature
     - light.terrace_light
     - light.hue_outdoor_spot_1
     - light.hue_outdoor_spot_2
@@ -81,7 +81,7 @@ downstairs_toilet:
 ensuite:
   name: Ensuite
   entities:
-    - light.ensuite_2
+    - light.ensuite
 guest_room:
   name: Guest Room
   entities:
@@ -97,8 +97,7 @@ ethans_room:
 living_room:
   name: Living Room
   entities:
-    - media_player.living_room_roku
-    - media_player.living_room_hifi
+    - media_player.living_room_roon
     - media_player.living_room_tv
     - light.mushroom_lamp
     - light.copper_lamp
@@ -115,7 +114,6 @@ snug:
   entities:
     - climate.snug
     - media_player.epson_projector
-    - media_player.hifi
     - media_player.hifi_roon
     - light.steampunk_lamp
     - light.tripod_lamp

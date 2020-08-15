@@ -2141,7 +2141,7 @@
   initial_state: true
   trigger:
     platform: state
-    entity_id: binary_sensor.back_garden_occupancy
+    entity_id: binary_sensor.philips_sml002_61de4606_occupancy
     to: "on"
   condition:
     - condition: state
@@ -2178,7 +2178,7 @@
       below: 50
   trigger:
     platform: state
-    entity_id: binary_sensor.back_garden_occupancy
+    entity_id: binary_sensor.philips_sml002_61de4606_occupancy
     to: "off"
     for:
       minutes: 5
@@ -2940,3 +2940,27 @@
     - service: scene.turn_on
       data:
         entity_id: scene.stairs_off
+
+- alias: Away Mode
+  initial_state: true
+  trigger:
+    platform: state
+    entity_id: binary_sensor.possibly_present
+    to: "off"
+  action:
+    - service: scene.turn_on
+      data:
+        entity_id:
+        - scene.snug_off
+        - scene.downstairs_toilet_off
+    - service: media_player.turn_off
+      data:
+        entity_id:
+        - media_player.hifi_roon
+        - media_player.living_room_roon
+        - media_player.living_room_tv
+    - service: media_player.media_pause
+      data:
+        entity_id:
+          - media_player.ethan_s_room
+          - media_player.marcus_room
