@@ -2059,83 +2059,83 @@
         entity_id:
           - group.kitchen
 
-- alias: Upstairs Hallway Motion
-  initial_state: true
-  condition:
-    - condition: numeric_state
-      entity_id: sensor.upstairs_hallway_light_level
-      below: 30
-    - condition: state
-      entity_id: binary_sensor.upstairs_hallway_motion
-      state: "on"
-  trigger:
-    - platform: state
-      entity_id: sensor.house_mode
-    - platform: state
-      entity_id: binary_sensor.upstairs_hallway_motion
-      from: "off"
-      to: "on"
-    - platform: numeric_state
-      entity_id: sensor.upstairs_hallway_light_level
-      below: 30
-  action:
-    - service: scene.turn_on
-      data_template:
-        entity_id: "scene.{{ states('input_text.upstairs_hallway_scene') }}"
+# - alias: Upstairs Hallway Motion
+#   initial_state: true
+#   condition:
+#     - condition: numeric_state
+#       entity_id: sensor.upstairs_hallway_light_level
+#       below: 30
+#     - condition: state
+#       entity_id: binary_sensor.upstairs_hallway_motion
+#       state: "on"
+#   trigger:
+#     - platform: state
+#       entity_id: sensor.house_mode
+#     - platform: state
+#       entity_id: binary_sensor.upstairs_hallway_motion
+#       from: "off"
+#       to: "on"
+#     - platform: numeric_state
+#       entity_id: sensor.upstairs_hallway_light_level
+#       below: 30
+#   action:
+#     - service: scene.turn_on
+#       data_template:
+#         entity_id: "scene.{{ states('input_text.upstairs_hallway_scene') }}"
 
-- alias: Upstairs Hallway No Motion
-  initial_state: true
-  trigger:
-    - platform: state
-      entity_id: binary_sensor.upstairs_hallway_motion
-      to: "off"
-      for:
-        minutes: 2
-    - platform: numeric_state
-      entity_id: sensor.upstairs_hallway_light_level
-      above: 30
-  action:
-    - service: scene.turn_on
-      data:
-        entity_id: scene.upstairs_hallway_off
+# - alias: Upstairs Hallway No Motion
+#   initial_state: true
+#   trigger:
+#     - platform: state
+#       entity_id: binary_sensor.upstairs_hallway_motion
+#       to: "off"
+#       for:
+#         minutes: 2
+#     - platform: numeric_state
+#       entity_id: sensor.upstairs_hallway_light_level
+#       above: 30
+#   action:
+#     - service: scene.turn_on
+#       data:
+#         entity_id: scene.upstairs_hallway_off
 
-- alias: Upstairs Hallway Default Scene Changed to Off
-  initial_state: true
-  trigger:
-    platform: state
-    entity_id: input_text.upstairs_hallway_scene
-    to: "upstairs_hallway_off"
-  action:
-    - service: scene.turn_on
-      data:
-        entity_id: scene.upstairs_hallway_off
+# - alias: Upstairs Hallway Default Scene Changed to Off
+#   initial_state: true
+#   trigger:
+#     platform: state
+#     entity_id: input_text.upstairs_hallway_scene
+#     to: "upstairs_hallway_off"
+#   action:
+#     - service: scene.turn_on
+#       data:
+#         entity_id: scene.upstairs_hallway_off
 
-- alias: Upstairs Hallway Cupboard Door Open
-  initial_state: true
-  trigger:
-    - platform: state
-      entity_id: binary_sensor.upstairs_cupboard_door
-      to: "on"
-  action:
-    - service: scene.create
-      data:
-        scene_id: upstairs_spot_2_before
-        snapshot_entities:
-          - light.upstairs_spot_2
-    - service: scene.turn_on
-      data:
-        entity_id: scene.upstairs_cupboard_open
+# - alias: Upstairs Hallway Cupboard Door Open
+#   initial_state: true
+#   trigger:
+#     - platform: state
+#       entity_id: binary_sensor.upstairs_cupboard_door
+#       to: "on"
+#   action:
+#     - service: scene.create
+#       data:
+#         scene_id: upstairs_spot_2_before
+#         snapshot_entities:
+#           - light.upstairs_spot_2
+#     - service: scene.turn_on
+#       data:
+#         entity_id: scene.upstairs_cupboard_open
 
-- alias: Upstairs Hallway Cupboard Door Closed
-  initial_state: true
-  trigger:
-    - platform: state
-      entity_id: binary_sensor.upstairs_cupboard_door
-      to: "off"
-  action:
-    - service: scene.turn_on
-      data:
-        entity_id: scene.upstairs_spot_2_before
+# - alias: Upstairs Hallway Cupboard Door Closed
+#   initial_state: true
+#   trigger:
+#     - platform: state
+#       entity_id: binary_sensor.upstairs_cupboard_door
+#       to: "off"
+#   action:
+#     - service: scene.turn_on
+#       data:
+#         entity_id: scene.upstairs_spot_2_before
 
 - alias: Back Garden to Bright
   initial_state: true
@@ -2889,57 +2889,57 @@
       data_template:
         entity_id: "scene.{{ states('input_text.living_room_scene') }}"
 
-- alias: Downstairs Hallway Default Scene Changed
-  initial_state: true
-  trigger:
-    platform: state
-    entity_id: input_text.downstairs_hallway_scene
-  action:
-    - service: scene.turn_on
-      data_template:
-        entity_id: "scene.{{ states('input_text.downstairs_hallway_scene') }}"
+# - alias: Downstairs Hallway Default Scene Changed
+#   initial_state: true
+#   trigger:
+#     platform: state
+#     entity_id: input_text.downstairs_hallway_scene
+#   action:
+#     - service: scene.turn_on
+#       data_template:
+#         entity_id: "scene.{{ states('input_text.downstairs_hallway_scene') }}"
 
-- alias: Staircase or Upstairs Hallway Motion
-  initial_state: true
-  trigger:
-    - platform: state
-      entity_id: sensor.house_mode
-    - platform: state
-      entity_id: binary_sensor.staircase_motion
-      from: "off"
-      to: "on"
-    - platform: state
-      entity_id: binary_sensor.upstairs_hallway_motion
-      from: "off"
-      to: "on"
-  action:
-    - service: scene.turn_on
-      data_template:
-        entity_id: "scene.{{ states('input_text.staircase_scene') }}"
+# - alias: Staircase or Upstairs Hallway Motion
+#   initial_state: true
+#   trigger:
+#     - platform: state
+#       entity_id: sensor.house_mode
+#     - platform: state
+#       entity_id: binary_sensor.staircase_motion
+#       from: "off"
+#       to: "on"
+#     - platform: state
+#       entity_id: binary_sensor.upstairs_hallway_motion
+#       from: "off"
+#       to: "on"
+#   action:
+#     - service: scene.turn_on
+#       data_template:
+#         entity_id: "scene.{{ states('input_text.staircase_scene') }}"
 
-- alias: Staircase No Motion
-  initial_state: true
-  trigger:
-    - platform: state
-      entity_id: binary_sensor.staircase_motion
-      to: "off"
-      for:
-        minutes: 2
-  action:
-    - service: scene.turn_on
-      data:
-        entity_id: scene.stairs_off
+# - alias: Staircase No Motion
+#   initial_state: true
+#   trigger:
+#     - platform: state
+#       entity_id: binary_sensor.staircase_motion
+#       to: "off"
+#       for:
+#         minutes: 2
+#   action:
+#     - service: scene.turn_on
+#       data:
+#         entity_id: scene.stairs_off
 
-- alias: Staircase Default Scene Changed to Off
-  initial_state: true
-  trigger:
-    platform: state
-    entity_id: input_text.staircase_scene
-    to: "stairs_off"
-  action:
-    - service: scene.turn_on
-      data:
-        entity_id: scene.stairs_off
+# - alias: Staircase Default Scene Changed to Off
+#   initial_state: true
+#   trigger:
+#     platform: state
+#     entity_id: input_text.staircase_scene
+#     to: "stairs_off"
+#   action:
+#     - service: scene.turn_on
+#       data:
+#         entity_id: scene.stairs_off
 
 - alias: Away Mode
   initial_state: true
