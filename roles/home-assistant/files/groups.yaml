@@ -73,7 +73,7 @@ downstairs_hallway:
     - light.downstairs_hallway_4
     - light.downstairs_hallway_5
     - light.downstairs_hallway_6
-    - switch.partylite_diffuser
+    - switch.innr_sp_222_dce84cfe_on_off
 downstairs_toilet:
   name: Downstairs Toilet
   entities:

@@ -94,7 +94,7 @@ homeassistant:
       friendly_name: Upstairs Heating
     climate.living_room_heating:
       friendly_name: Downstairs Heating
-    switch.partylite_diffuser:
+    switch.innr_sp_222_dce84cfe_on_off:
       friendly_name: Diffuser
       icon: mdi:air-purifier
     sensor.upstairs_hallway_light_level:
