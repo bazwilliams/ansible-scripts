@@ -425,17 +425,17 @@
     light.upstairs_spot_1:
       state: on
       transition: 1
-      brightness: 29
+      brightness: 50
       color_temp: 379
     light.upstairs_spot_2:
       state: on
       transition: 1
-      brightness: 29
+      brightness: 50
       color_temp: 379
     light.upstairs_spot_3:
       state: on
       transition: 1
-      brightness: 29
+      brightness: 50
       color_temp: 379
 - name: Upstairs Hallway Daytime
   entities:
