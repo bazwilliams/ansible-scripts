@@ -31,6 +31,10 @@
         value: living_room_morning
     - service: input_text.set_value
       data:
+        entity_id: input_text.downstairs_toilet_scene
+        value: downstairs_toilet_mood
+    - service: input_text.set_value
+      data:
         entity_id: input_text.kitchen_scene
         value: kitchen_morning
 - alias: morning_dim_home
@@ -64,6 +68,10 @@
       data:
         entity_id: input_text.living_room_scene
         value: living_room_morning
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.downstairs_toilet_scene
+        value: downstairs_toilet_bright
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
@@ -101,6 +109,10 @@
         value: upstairs_hallway_morning
     - service: input_text.set_value
       data:
+        entity_id: input_text.downstairs_toilet_scene
+        value: downstairs_toilet_bright
+    - service: input_text.set_value
+      data:
         entity_id: input_text.kitchen_scene
         value: kitchen_morning
 - alias: morning_very_bright_home
@@ -134,6 +146,10 @@
       data:
         entity_id: input_text.upstairs_hallway_scene
         value: upstairs_hallway_morning
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.downstairs_toilet_scene
+        value: downstairs_toilet_bright
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
@@ -171,6 +187,10 @@
         value: living_room_pink_blue
     - service: input_text.set_value
       data:
+        entity_id: input_text.downstairs_toilet_scene
+        value: downstairs_toilet_mood
+    - service: input_text.set_value
+      data:
         entity_id: input_text.kitchen_scene
         value: kitchen_daytime
 - alias: daytime_dim_home
@@ -204,6 +224,10 @@
       data:
         entity_id: input_text.living_room_scene
         value: living_room_dull_outside
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.downstairs_toilet_scene
+        value: downstairs_toilet_bright
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
@@ -241,6 +265,10 @@
         value: upstairs_hallway_daytime
     - service: input_text.set_value
       data:
+        entity_id: input_text.downstairs_toilet_scene
+        value: downstairs_toilet_bright
+    - service: input_text.set_value
+      data:
         entity_id: input_text.kitchen_scene
         value: kitchen_daytime
 - alias: daytime_very_bright_home
@@ -274,6 +302,10 @@
       data:
         entity_id: input_text.upstairs_hallway_scene
         value: upstairs_hallway_daytime
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.downstairs_toilet_scene
+        value: downstairs_toilet_bright
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
@@ -311,6 +343,10 @@
         value: living_room_pink_blue
     - service: input_text.set_value
       data:
+        entity_id: input_text.downstairs_toilet_scene
+        value: downstairs_toilet_mood
+    - service: input_text.set_value
+      data:
         entity_id: input_text.kitchen_scene
         value: kitchen_evening
 - alias: evening_dim_home
@@ -344,6 +380,10 @@
       data:
         entity_id: input_text.living_room_scene
         value: living_room_dull_outside
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.downstairs_toilet_scene
+        value: downstairs_toilet_bright
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
@@ -381,6 +421,10 @@
         value: upstairs_hallway_daytime
     - service: input_text.set_value
       data:
+        entity_id: input_text.downstairs_toilet_scene
+        value: downstairs_toilet_bright
+    - service: input_text.set_value
+      data:
         entity_id: input_text.kitchen_scene
         value: kitchen_evening
 - alias: evening_very_bright_home
@@ -414,6 +458,10 @@
       data:
         entity_id: input_text.upstairs_hallway_scene
         value: upstairs_hallway_evening
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.downstairs_toilet_scene
+        value: downstairs_toilet_bright
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
@@ -451,6 +499,10 @@
         value: living_room_pink_blue
     - service: input_text.set_value
       data:
+        entity_id: input_text.downstairs_toilet_scene
+        value: downstairs_toilet_mood
+    - service: input_text.set_value
+      data:
         entity_id: input_text.kitchen_scene
         value: kitchen_evening
 - alias: late_evening_dim_home
@@ -484,6 +536,10 @@
       data:
         entity_id: input_text.living_room_scene
         value: living_room_dull_outside
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.downstairs_toilet_scene
+        value: downstairs_toilet_bright
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
@@ -521,6 +577,10 @@
         value: upstairs_hallway_night
     - service: input_text.set_value
       data:
+        entity_id: input_text.downstairs_toilet_scene
+        value: downstairs_toilet_bright
+    - service: input_text.set_value
+      data:
         entity_id: input_text.kitchen_scene
         value: kitchen_evening
 - alias: late_evening_very_bright_home
@@ -554,6 +614,10 @@
       data:
         entity_id: input_text.upstairs_hallway_scene
         value: upstairs_hallway_night
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.downstairs_toilet_scene
+        value: downstairs_toilet_bright
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
@@ -591,6 +655,10 @@
         value: living_room_pink_orange
     - service: input_text.set_value
       data:
+        entity_id: input_text.downstairs_toilet_scene
+        value: downstairs_toilet_mood
+    - service: input_text.set_value
+      data:
         entity_id: input_text.kitchen_scene
         value: kitchen_early_night
 - alias: early_night_dim_home
@@ -624,6 +692,10 @@
       data:
         entity_id: input_text.living_room_scene
         value: living_room_dull_outside
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.downstairs_toilet_scene
+        value: downstairs_toilet_bright
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
@@ -661,6 +733,10 @@
         value: upstairs_hallway_night
     - service: input_text.set_value
       data:
+        entity_id: input_text.downstairs_toilet_scene
+        value: downstairs_toilet_bright
+    - service: input_text.set_value
+      data:
         entity_id: input_text.kitchen_scene
         value: kitchen_early_night
 - alias: early_night_very_bright_home
@@ -694,6 +770,10 @@
       data:
         entity_id: input_text.upstairs_hallway_scene
         value: upstairs_hallway_night
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.downstairs_toilet_scene
+        value: downstairs_toilet_bright
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
@@ -731,6 +811,10 @@
         value: living_room_pink_orange
     - service: input_text.set_value
       data:
+        entity_id: input_text.downstairs_toilet_scene
+        value: downstairs_toilet_mood
+    - service: input_text.set_value
+      data:
         entity_id: input_text.kitchen_scene
         value: kitchen_late_night
 - alias: late_night_dim_home
@@ -764,6 +848,10 @@
       data:
         entity_id: input_text.living_room_scene
         value: living_room_dull_outside
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.downstairs_toilet_scene
+        value: downstairs_toilet_bright
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
@@ -801,6 +889,10 @@
         value: upstairs_hallway_night
     - service: input_text.set_value
       data:
+        entity_id: input_text.downstairs_toilet_scene
+        value: downstairs_toilet_bright
+    - service: input_text.set_value
+      data:
         entity_id: input_text.kitchen_scene
         value: kitchen_late_night
 - alias: late_night_very_bright_home
@@ -834,6 +926,10 @@
       data:
         entity_id: input_text.upstairs_hallway_scene
         value: upstairs_hallway_night
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.downstairs_toilet_scene
+        value: downstairs_toilet_bright
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
@@ -871,6 +967,10 @@
         value: downstairs_hallway_night
     - service: input_text.set_value
       data:
+        entity_id: input_text.downstairs_toilet_scene
+        value: downstairs_toilet_mood
+    - service: input_text.set_value
+      data:
         entity_id: input_text.kitchen_scene
         value: kitchen_night
 - alias: night_dim_home
@@ -904,6 +1004,10 @@
       data:
         entity_id: input_text.upstairs_hallway_scene
         value: upstairs_hallway_night
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.downstairs_toilet_scene
+        value: downstairs_toilet_bright
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
@@ -941,6 +1045,10 @@
         value: upstairs_hallway_night
     - service: input_text.set_value
       data:
+        entity_id: input_text.downstairs_toilet_scene
+        value: downstairs_toilet_bright
+    - service: input_text.set_value
+      data:
         entity_id: input_text.kitchen_scene
         value: kitchen_night
 - alias: night_very_bright_home
@@ -974,6 +1082,10 @@
       data:
         entity_id: input_text.upstairs_hallway_scene
         value: upstairs_hallway_night
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.downstairs_toilet_scene
+        value: downstairs_toilet_bright
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
@@ -1012,6 +1124,10 @@
         value: upstairs_hallway_off
     - service: input_text.set_value
       data:
+        entity_id: input_text.downstairs_toilet_scene
+        value: downstairs_toilet_mood
+    - service: input_text.set_value
+      data:
         entity_id: input_text.kitchen_scene
         value: kitchen_away
 - alias: morning_dim_away
@@ -1045,6 +1161,10 @@
       data:
         entity_id: input_text.living_room_scene
         value: living_room_morning
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.downstairs_toilet_scene
+        value: downstairs_toilet_bright
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
@@ -1082,6 +1202,10 @@
         value: downstairs_hallway_off_away
     - service: input_text.set_value
       data:
+        entity_id: input_text.downstairs_toilet_scene
+        value: downstairs_toilet_bright
+    - service: input_text.set_value
+      data:
         entity_id: input_text.kitchen_scene
         value: kitchen_away
 - alias: morning_very_bright_away
@@ -1115,6 +1239,10 @@
       data:
         entity_id: input_text.downstairs_hallway_scene
         value: downstairs_hallway_off_away
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.downstairs_toilet_scene
+        value: downstairs_toilet_bright
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
@@ -1155,6 +1283,10 @@
         value: living_room_pink_blue
     - service: input_text.set_value
       data:
+        entity_id: input_text.downstairs_toilet_scene
+        value: downstairs_toilet_mood
+    - service: input_text.set_value
+      data:
         entity_id: input_text.kitchen_scene
         value: kitchen_away
 - alias: daytime_dim_away
@@ -1188,6 +1320,10 @@
       data:
         entity_id: input_text.living_room_scene
         value: living_room_dull_outside
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.downstairs_toilet_scene
+        value: downstairs_toilet_bright
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
@@ -1225,6 +1361,10 @@
         value: downstairs_hallway_off_away
     - service: input_text.set_value
       data:
+        entity_id: input_text.downstairs_toilet_scene
+        value: downstairs_toilet_bright
+    - service: input_text.set_value
+      data:
         entity_id: input_text.kitchen_scene
         value: kitchen_away
 - alias: daytime_very_bright_away
@@ -1258,6 +1398,10 @@
       data:
         entity_id: input_text.downstairs_hallway_scene
         value: downstairs_hallway_off_away
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.downstairs_toilet_scene
+        value: downstairs_toilet_bright
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
@@ -1295,6 +1439,10 @@
         value: living_room_pink_orange
     - service: input_text.set_value
       data:
+        entity_id: input_text.downstairs_toilet_scene
+        value: downstairs_toilet_mood
+    - service: input_text.set_value
+      data:
         entity_id: input_text.kitchen_scene
         value: kitchen_away
 - alias: evening_dim_away
@@ -1328,6 +1476,10 @@
       data:
         entity_id: input_text.living_room_scene
         value: living_room_dull_outside
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.downstairs_toilet_scene
+        value: downstairs_toilet_bright
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
@@ -1365,6 +1517,10 @@
         value: living_room_off
     - service: input_text.set_value
       data:
+        entity_id: input_text.downstairs_toilet_scene
+        value: downstairs_toilet_bright
+    - service: input_text.set_value
+      data:
         entity_id: input_text.kitchen_scene
         value: kitchen_away
 - alias: evening_very_bright_away
@@ -1398,6 +1554,10 @@
       data:
         entity_id: input_text.downstairs_hallway_scene
         value: downstairs_hallway_off_away
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.downstairs_toilet_scene
+        value: downstairs_toilet_bright
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
@@ -1435,6 +1595,10 @@
         value: living_room_pink_orange
     - service: input_text.set_value
       data:
+        entity_id: input_text.downstairs_toilet_scene
+        value: downstairs_toilet_mood
+    - service: input_text.set_value
+      data:
         entity_id: input_text.kitchen_scene
         value: kitchen_away
 - alias: late_evening_dim_away
@@ -1468,6 +1632,10 @@
       data:
         entity_id: input_text.living_room_scene
         value: living_room_dull_outside
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.downstairs_toilet_scene
+        value: downstairs_toilet_bright
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
@@ -1505,6 +1673,10 @@
         value: downstairs_hallway_off_away
     - service: input_text.set_value
       data:
+        entity_id: input_text.downstairs_toilet_scene
+        value: downstairs_toilet_bright
+    - service: input_text.set_value
+      data:
         entity_id: input_text.kitchen_scene
         value: kitchen_away
 - alias: late_evening_very_bright_away
@@ -1538,6 +1710,10 @@
       data:
         entity_id: input_text.downstairs_hallway_scene
         value: downstairs_hallway_off_away
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.downstairs_toilet_scene
+        value: downstairs_toilet_bright
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
@@ -1575,6 +1751,10 @@
         value: living_room_pink_orange
     - service: input_text.set_value
       data:
+        entity_id: input_text.downstairs_toilet_scene
+        value: downstairs_toilet_mood
+    - service: input_text.set_value
+      data:
         entity_id: input_text.kitchen_scene
         value: kitchen_away
 - alias: early_night_dim_away
@@ -1608,6 +1788,10 @@
       data:
         entity_id: input_text.living_room_scene
         value: living_room_dull_outside
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.downstairs_toilet_scene
+        value: downstairs_toilet_bright
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
@@ -1645,6 +1829,10 @@
         value: downstairs_hallway_off_away
     - service: input_text.set_value
       data:
+        entity_id: input_text.downstairs_toilet_scene
+        value: downstairs_toilet_bright
+    - service: input_text.set_value
+      data:
         entity_id: input_text.kitchen_scene
         value: kitchen_away
 - alias: early_night_very_bright_away
@@ -1678,6 +1866,10 @@
       data:
         entity_id: input_text.downstairs_hallway_scene
         value: downstairs_hallway_off_away
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.downstairs_toilet_scene
+        value: downstairs_toilet_bright
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
@@ -1715,6 +1907,10 @@
         value: living_room_pink_orange
     - service: input_text.set_value
       data:
+        entity_id: input_text.downstairs_toilet_scene
+        value: downstairs_toilet_mood
+    - service: input_text.set_value
+      data:
         entity_id: input_text.kitchen_scene
         value: kitchen_away
 - alias: late_night_dim_away
@@ -1748,6 +1944,10 @@
       data:
         entity_id: input_text.living_room_scene
         value: living_room_dull_outside
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.downstairs_toilet_scene
+        value: downstairs_toilet_bright
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
@@ -1785,6 +1985,10 @@
         value: downstairs_hallway_off_away
     - service: input_text.set_value
       data:
+        entity_id: input_text.downstairs_toilet_scene
+        value: downstairs_toilet_bright
+    - service: input_text.set_value
+      data:
         entity_id: input_text.kitchen_scene
         value: kitchen_away
 - alias: late_night_very_bright_away
@@ -1818,6 +2022,10 @@
       data:
         entity_id: input_text.downstairs_hallway_scene
         value: downstairs_hallway_off_away
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.downstairs_toilet_scene
+        value: downstairs_toilet_bright
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
@@ -1855,6 +2063,10 @@
         value: downstairs_hallway_off_away
     - service: input_text.set_value
       data:
+        entity_id: input_text.downstairs_toilet_scene
+        value: downstairs_toilet_mood
+    - service: input_text.set_value
+      data:
         entity_id: input_text.kitchen_scene
         value: kitchen_away
 - alias: night_dim_away
@@ -1888,6 +2100,10 @@
       data:
         entity_id: input_text.downstairs_hallway_scene
         value: downstairs_hallway_off_away
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.downstairs_toilet_scene
+        value: downstairs_toilet_bright
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
@@ -1925,6 +2141,10 @@
         value: downstairs_hallway_off_away
     - service: input_text.set_value
       data:
+        entity_id: input_text.downstairs_toilet_scene
+        value: downstairs_toilet_bright
+    - service: input_text.set_value
+      data:
         entity_id: input_text.kitchen_scene
         value: kitchen_away
 - alias: night_very_bright_away
@@ -1958,6 +2178,10 @@
       data:
         entity_id: input_text.downstairs_hallway_scene
         value: downstairs_hallway_off_away
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.downstairs_toilet_scene
+        value: downstairs_toilet_bright
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
@@ -2782,7 +3006,7 @@
         entity_id: input_text.ethans_room_mode
         value: scene_off
 
-- alias: Downstairs Toilet to Bright
+- alias: Downstairs Toilet Light On
   initial_state: true
   trigger:
     platform: event
@@ -2796,7 +3020,7 @@
   action:
     - service: scene.turn_on
       data_template:
-        entity_id: scene.downstairs_toilet_bright
+        entity_id: "scene.{{ states('input_text.downstairs_toilet_scene') }}"
 
 - alias: Downstairs Toilet Light Off
   initial_state: true

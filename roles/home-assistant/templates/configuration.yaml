@@ -364,6 +364,9 @@ input_text:
   snug_scene:
     name: Snug Scene
     initial: snug_off
+  downstairs_toilet_scene:
+    name: Downstairs Toilet Scene
+    initial: downstairs_toilet_bright
 
 # notify:
 #   - platform: alexa_media
