@@ -213,6 +213,8 @@ binary_sensor:
         prob_given_false: 0.5
 
 sensor:
+  - platform: uptime
+    unit_of_measurement: minutes
   - platform: min_max
     name: Outside Light Level
     entity_ids:
@@ -230,54 +232,6 @@ sensor:
       - 'time'
   - platform: template
     sensors:
-      # living_room_temperature_hive:
-      #   entity_id:
-      #   - climate.living_room_heating
-      #   friendly_name: 'Living Room Temperature'
-      #   unit_of_measurement: °C
-      #   value_template:  >
-      #     {% raw %}{{ state_attr('climate.living_room_heating', 'current_temperature') }} {% endraw %}
-
-      # bedroom_temperature_hive:
-      #   entity_id:
-      #   - climate.bedroom_heating
-      #   friendly_name: 'Bedroom Temperature'
-      #   unit_of_measurement: °C
-      #   value_template: >
-      #     {% raw %} {{ state_attr('climate.bedroom_heating', 'current_temperature') }} {% endraw %}
-
-      # ethans_room_temperature_hive:
-      #   entity_id:
-      #   - climate.ethans_room
-      #   friendly_name: 'Ethan's Room Temperature'
-      #   unit_of_measurement: °C
-      #   value_template: >
-      #     {% raw %} {{ state_attr('climate.ethans_room', 'current_temperature') }} {% endraw %}
-
-      # marcus_room_temperature_hive:
-      #   entity_id:
-      #   - climate.marcus_room
-      #   friendly_name: 'Marcus' Room Temperature'
-      #   unit_of_measurement: °C
-      #   value_template: >
-      #     {% raw %} {{ state_attr('climate.marcus_room', 'current_temperature') }} {% endraw %}
-
-      # hobby_room_temperature_hive:
-      #   entity_id:
-      #   - climate.hobby_room
-      #   friendly_name: 'Hobby Room Temperature'
-      #   unit_of_measurement: °C
-      #   value_template: >
-      #     {% raw %} {{ state_attr('climate.hobby_room', 'current_temperature') }} {% endraw %}
-
-      # kitchen_temperature_hive:
-      #   entity_id:
-      #   - climate.kitchen
-      #   friendly_name: 'Kitchen Temperature'
-      #   unit_of_measurement: °C
-      #   value_template: >
-      #     {% raw %} {{ state_attr('climate.hobby_room', 'current_temperature') }} {% endraw %}
-    
       house_mode:
         entity_id:
         - sensor.outside_light_level
@@ -286,6 +240,7 @@ sensor:
         friendly_name: 'House Mode'
         value_template: >-
 {% raw %}
+          {% if states("sensor.uptime") | float > 2 %}
           {% if now().hour | int >= 22 %}
           {% set time_slot = "early_night" %}
           {% elif now().hour | int >= 20 %}
@@ -316,6 +271,9 @@ sensor:
           {% set presence = "away" %}
           {% endif %}
           {{ time_slot }}_{{ light_slot }}_{{ presence }}
+          {% else %}
+          homeassistant_starting
+          {% endif %}
 {% endraw %}
 
 weather:

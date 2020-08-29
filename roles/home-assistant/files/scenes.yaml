@@ -558,26 +558,26 @@
     light.mushroom_lamp:
       state: on
       transition: 5
-      brightness: 141
-      xy_color: [ 0.264, 0.119 ]
+      brightness: 216
+      xy_color: [ 0.327, 0.21 ]
     light.copper_lamp:
       state: on
       transition: 5
-      brightness: 141
-      xy_color: [ 0.159, 0.241 ]
+      brightness: 211
+      xy_color: [ 0.19, 0.283 ]
     switch.living_room_main: off
 - name: Living Room Pink Orange
   entities:
     light.mushroom_lamp:
       state: on
       transition: 5
-      brightness: 82
-      xy_color: [ 0.429, 0.188 ]
+      brightness: 216
+      xy_color: [ 0.428, 0.19 ]
     light.copper_lamp:
       state: on
       transition: 5
-      brightness: 25
-      xy_color: [ 0.571, 0.345 ]
+      brightness: 211
+      xy_color: [ 0.572, 0.346 ]
     switch.living_room_main: off
 - name: Downstairs Hallway Night
   entities:
