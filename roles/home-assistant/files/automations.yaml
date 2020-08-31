@@ -71,7 +71,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.downstairs_toilet_scene
-        value: downstairs_toilet_bright
+        value: downstairs_toilet_mid
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
@@ -227,7 +227,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.downstairs_toilet_scene
-        value: downstairs_toilet_bright
+        value: downstairs_toilet_mid
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
@@ -383,7 +383,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.downstairs_toilet_scene
-        value: downstairs_toilet_bright
+        value: downstairs_toilet_mid
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
@@ -414,7 +414,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.downstairs_hallway_scene
-        value: downstairs_hallway_daytime_presence
+        value: downstairs_hallway_colourful_evening
     - service: input_text.set_value
       data:
         entity_id: input_text.upstairs_hallway_scene
@@ -539,7 +539,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.downstairs_toilet_scene
-        value: downstairs_toilet_bright
+        value: downstairs_toilet_mid
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
@@ -695,7 +695,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.downstairs_toilet_scene
-        value: downstairs_toilet_bright
+        value: downstairs_toilet_mid
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
@@ -851,7 +851,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.downstairs_toilet_scene
-        value: downstairs_toilet_bright
+        value: downstairs_toilet_mid
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
@@ -1007,7 +1007,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.downstairs_toilet_scene
-        value: downstairs_toilet_bright
+        value: downstairs_toilet_mid
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene

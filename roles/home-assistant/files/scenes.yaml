@@ -1159,6 +1159,13 @@
       transition: 0
       brightness: 254
       color_temp: 250
+- name: Downstairs Toilet Mid
+  entities:
+    light.downstairs_toilet:
+      state: on
+      transition: 0
+      brightness: 120
+      color_temp: 315
 - name: Downstairs Toilet Mood
   entities:
     light.downstairs_toilet:

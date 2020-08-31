@@ -17,7 +17,7 @@ recorder:
   purge_keep_days: 3
   exclude:
     domains:
-      - automation
+      # - automation
       - updater
     entities:
       - sensor.last_boot
@@ -160,9 +160,9 @@ media_player:
     host: 192.168.1.50
 
 zha:
-  usb_path: /dev/conbee2
+  # usb_path: /dev/conbee2
   database_path: /config/zigbee.db
-  radio_type: deconz
+  # radio_type: deconz
 
 zha_map:
 
@@ -240,7 +240,7 @@ sensor:
         friendly_name: 'House Mode'
         value_template: >-
 {% raw %}
-          {% if states("sensor.uptime") | float > 2 %}
+          {% if states("sensor.uptime") | float > 5 %}
           {% if now().hour | int >= 22 %}
           {% set time_slot = "early_night" %}
           {% elif now().hour | int >= 20 %}
@@ -256,9 +256,9 @@ sensor:
           {% elif now().hour | int >= 0 %}
           {% set time_slot = "late_night" %}
           {% endif %}
-          {% if states("sensor.outside_light_level") | float < 200 %}
+          {% if states("sensor.outside_light_level") | float < 20 %}
           {% set light_slot = "dark" %}
-          {% elif states("sensor.outside_light_level") | float  < 800 %}
+          {% elif states("sensor.outside_light_level") | float  < 600 %}
           {% set light_slot = "dim" %}
           {% elif states("sensor.outside_light_level") | float  < 3000 %}
           {% set light_slot = "bright" %}
