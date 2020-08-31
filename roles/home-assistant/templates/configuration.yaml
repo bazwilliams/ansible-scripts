@@ -185,12 +185,6 @@ binary_sensor:
         platform: state
         prob_given_true: 0
         to_state: 'armed_away'
-      - platform: template
-        value_template: >
-          {% raw %} {{((as_timestamp(now()) - as_timestamp(states.binary_sensor.kitchen_occupancy.last_changed)) < 1800)}} {% endraw %}
-
-        prob_given_true: 1
-        prob_given_false: 0.5
       - entity_id: device_tracker.74_9e_af_4f_70_94
         platform: state
         prob_given_true: 0.95
@@ -201,16 +195,6 @@ binary_sensor:
         prob_given_true: 0.95
         prob_given_false: 0.5
         to_state: 'home'
-      - entity_id: device_tracker.barrys_iphone
-        platform: state
-        to_state: 'home'
-        prob_given_true: 0.6
-        prob_given_false: 0.5
-      - entity_id: device_tracker.holly
-        platform: state
-        to_state: 'home'
-        prob_given_true: 0.6
-        prob_given_false: 0.5
 
 sensor:
   - platform: uptime
@@ -256,7 +240,7 @@ sensor:
           {% elif now().hour | int >= 0 %}
           {% set time_slot = "late_night" %}
           {% endif %}
-          {% if states("sensor.outside_light_level") | float < 20 %}
+          {% if states("sensor.outside_light_level") | float < 100 %}
           {% set light_slot = "dark" %}
           {% elif states("sensor.outside_light_level") | float  < 600 %}
           {% set light_slot = "dim" %}
