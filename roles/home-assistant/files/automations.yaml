@@ -371,7 +371,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.downstairs_hallway_scene
-        value: downstairs_hallway_daytime_presence
+        value: downstairs_hallway_colourful_evening
     - service: input_text.set_value
       data:
         entity_id: input_text.upstairs_hallway_scene
@@ -527,7 +527,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.downstairs_hallway_scene
-        value: downstairs_hallway_daytime_presence
+        value: downstairs_hallway_colourful_evening
     - service: input_text.set_value
       data:
         entity_id: input_text.upstairs_hallway_scene
@@ -2361,7 +2361,7 @@
       data:
         entity_id: scene.upstairs_spot_2_before
 
-- alias: Back Garden to Bright
+- alias: Back Garden to White
   initial_state: true
   trigger:
     platform: state
@@ -2379,6 +2379,19 @@
       entity_id: input_boolean.terrace_occupancy
     - service: scene.turn_on
       data:
+        entity_id: scene.back_garden_white
+
+- alias: Back Garden to Bright
+  initial_state: true
+  trigger:
+    platform: state
+    entity_id: input_boolean.terrace_occupancy
+    to: "on"
+    for:
+      minutes: 5
+  action:
+    - service: scene.turn_on
+      data:
         entity_id: scene.back_garden_bright
 
 - alias: Back Garden to Colour Loop
@@ -2388,7 +2401,7 @@
     entity_id: input_boolean.terrace_occupancy
     to: "on"
     for:
-      minutes: 6
+      minutes: 10
   action:
     - service: scene.turn_on
       data:

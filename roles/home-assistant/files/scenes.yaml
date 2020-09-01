@@ -326,6 +326,58 @@
       state: off
     light.hue_outdoor_spot_5:
       state: off
+- name: Back Garden White
+  entities:
+    light.terrace_light:
+      state: on
+      brightness: 255
+      color_temp: 153
+      effect: none
+    light.hue_outdoor_pedestal_1:
+      state: on
+      brightness: 255
+      color_temp: 153
+      effect: none
+    light.hue_outdoor_pedestal_2:
+      state: on
+      brightness: 255
+      color_temp: 153
+      effect: none
+    light.hue_outdoor_pedestal_3:
+      state: on
+      brightness: 255
+      color_temp: 153
+      effect: none
+    light.hue_outdoor_pedestal_4:
+      state: on
+      brightness: 255
+      color_temp: 153
+      effect: none
+    light.hue_outdoor_spot_1:
+      state: on
+      brightness: 255
+      color_temp: 153
+      effect: none
+    light.hue_outdoor_spot_2:
+      state: on
+      brightness: 255
+      color_temp: 153
+      effect: none
+    light.hue_outdoor_spot_3:
+      state: on
+      brightness: 255
+      color_temp: 153
+      effect: none
+    light.hue_outdoor_spot_4:
+      state: on
+      brightness: 255
+      color_temp: 153
+      effect: none
+    light.hue_outdoor_spot_5:
+      state: on
+      brightness: 255
+      color_temp: 153
+      effect: none
 - name: Back Garden Bright
   entities:
     light.terrace_light:
