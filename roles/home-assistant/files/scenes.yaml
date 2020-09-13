@@ -633,12 +633,6 @@
     switch.living_room_main: off
 - name: Downstairs Hallway Night
   entities:
-    light.play_left:
-      state: off
-      transition: 1
-    light.play_right:
-      state: off
-      transition: 1
     light.downstairs_hallway_1:
       state: off
       transition: 1
@@ -660,12 +654,6 @@
     switch.innr_sp_222_dce84cfe_on_off: off
 - name: Downstairs Hallway Off
   entities:
-    light.play_left:
-      state: off
-      transition: 1
-    light.play_right:
-      state: off
-      transition: 1
     light.downstairs_hallway_1:
       state: off
       transition: 1
@@ -687,8 +675,6 @@
     switch.innr_sp_222_dce84cfe_on_off: on
 - name: Downstairs Hallway Off Away
   entities:
-    light.play_left: off
-    light.play_right: off
     light.downstairs_hallway_1: off
     light.downstairs_hallway_2: off
     light.downstairs_hallway_3: off
@@ -698,20 +684,6 @@
     switch.innr_sp_222_dce84cfe_on_off: off
 - name: Downstairs Hallway Colourful Evening
   entities:
-    light.play_left:
-      state: on
-      transition: 10
-      brightness: 49
-      xy_color:
-        - 0.16
-        - 0.285
-    light.play_right:
-      state: on
-      transition: 10
-      brightness: 44
-      xy_color:
-        - 0.158
-        - 0.182
     light.downstairs_hallway_1:
       state: on
       transition: 10
@@ -757,19 +729,6 @@
     switch.innr_sp_222_dce84cfe_on_off: on
 - name: Downstairs Hallway Colourful Evening Away
   entities:
-    light.play_left:
-      state: on
-      brightness: 49
-      xy_color:
-        - 0.16
-        - 0.285
-    light.play_right: off
-    light.downstairs_hallway_1:
-      state: on
-      brightness: 89
-      xy_color:
-        - 0.202
-        - 0.434
     light.downstairs_hallway_2:
       state: on
       brightness: 94
@@ -788,20 +747,6 @@
     switch.innr_sp_222_dce84cfe_on_off: off
 - name: Downstairs Hallway Daytime Presence
   entities:
-    light.play_left:
-      state: on
-      transition: 10
-      brightness: 45
-      xy_color:
-        - 0.173
-        - 0.698
-    light.play_right:
-      state: on
-      transition: 10
-      brightness: 59
-      xy_color:
-        - 0.192
-        - 0.306
     light.downstairs_hallway_1:
       state: off
       transition: 10
@@ -831,12 +776,6 @@
     switch.innr_sp_222_dce84cfe_on_off: on
 - name: Downstairs Hallway Early Night
   entities:
-    light.play_left:
-      state: off
-      transition: 10
-    light.play_right:
-      state: off
-      transition: 10
     light.downstairs_hallway_1:
       state: off
       transition: 10
@@ -870,20 +809,6 @@
     switch.innr_sp_222_dce84cfe_on_off: on
 - name: Downstairs Hallway Late Evening
   entities:
-    light.play_left:
-      state: on
-      transition: 10
-      brightness: 31
-      xy_color:
-        - 0.473
-        - 0.331
-    light.play_right:
-      state: on
-      transition: 10
-      brightness: 30
-      xy_color:
-        - 0.473
-        - 0.331
     light.downstairs_hallway_1:
       state: on
       transition: 10
@@ -929,19 +854,6 @@
     switch.innr_sp_222_dce84cfe_on_off: on
 - name: Downstairs Hallway Late Evening Away
   entities:
-    light.play_left:
-      state: on
-      brightness: 31
-      xy_color:
-        - 0.473
-        - 0.331
-    light.play_right: off
-    light.downstairs_hallway_1:
-      state: on
-      brightness: 44
-      xy_color:
-        - 0.165
-        - 0.479
     light.downstairs_hallway_2:
       state: on
       brightness: 39
@@ -960,20 +872,6 @@
     switch.innr_sp_222_dce84cfe_on_off: off
 - name: Downstairs Hallway Morning
   entities:
-    light.play_left:
-      state: on
-      transition: 10
-      brightness: 113
-      xy_color:
-        - 0.171
-        - 0.059
-    light.play_right:
-      state: on
-      transition: 10
-      brightness: 117
-      xy_color:
-        - 0.159
-        - 0.235
     light.downstairs_hallway_1:
       state: on
       transition: 10
@@ -1019,8 +917,6 @@
     switch.innr_sp_222_dce84cfe_on_off: on
 - name: Downstairs Hallway Morning Away
   entities:
-    light.play_left: off
-    light.play_right: off
     light.downstairs_hallway_1:
       state: on
       brightness: 247
