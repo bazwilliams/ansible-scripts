@@ -628,7 +628,7 @@
     light.copper_lamp:
       state: on
       transition: 5
-      brightness: 211
+      brightness: 120
       xy_color: [ 0.572, 0.346 ]
     switch.living_room_main: off
 - name: Downstairs Hallway Night

@@ -331,8 +331,6 @@ input_text:
 #         - Downstairs
 #         - Kids Rooms
 
-roon:
-
 wake_on_lan:
 
 webostv:

@@ -77,7 +77,6 @@ garden_studio:
   entities:
     - light.play_left
     - light.play_right
-
 downstairs_toilet:
   name: Downstairs Toilet
   entities:
