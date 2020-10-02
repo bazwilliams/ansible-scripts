@@ -36,9 +36,6 @@ influxdb:
 
 http:
 
-tts:
-  - platform: google_translate
-
 group: !include groups.yaml
 automation: !include automations.yaml
 script: !include scripts.yaml
@@ -160,11 +157,9 @@ media_player:
     host: 192.168.1.50
 
 zha:
-  # usb_path: /dev/conbee2
   database_path: /config/zigbee.db
-  # radio_type: deconz
 
-zha_map:
+# zha_map:
 
 binary_sensor:
   - platform: bayesian
@@ -310,27 +305,6 @@ input_text:
     name: Downstairs Toilet Scene
     initial: downstairs_toilet_bright
 
-# notify:
-#   - platform: alexa_media
-#     name: alexa_media
-
-# alexa_media:
-#   accounts:
-#     - email: {{ alexa.email }}
-#       password: {{ alexa.password }}
-#       url: {{ alexa.region }}
-#       include_devices:
-#         - 4k Fire TV
-#         - Fire TV Stick
-#         - Bedroom
-#         - "Ethan's Room"
-#         - "Marcus' Room"
-#         - Snug Echo
-#         - Kiko Echo
-#         - Kitchen Show
-#         - Downstairs
-#         - Kids Rooms
-
 wake_on_lan:
 
 webostv:
@@ -341,10 +315,12 @@ webostv:
     data:
       mac: "44:cb:8b:f8:a7:f2"
 
-hive:
-  username: {{ hive.username }}
-  password: {{ hive.password }}
-  
+# hive:
+#   username: {{ hive.username }}
+#   password: {{ hive.password }}
+
+speedtestdotnet:
+
 # home_connect:
 #   client_id: {{ homeconnect.client_id }}
 #   client_secret: {{ homeconnect.client_secret }}
