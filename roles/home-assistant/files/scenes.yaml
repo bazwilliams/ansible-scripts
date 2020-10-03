@@ -560,10 +560,8 @@
       state: off
       transition: 1
     light.copper_lamp:
-      state: on
+      state: off
       transition: 1
-      brightness: 1
-      color_temp: 500
     switch.living_room_main:
       state: off
       transition: 1
@@ -622,12 +620,12 @@
     light.mushroom_lamp:
       state: on
       transition: 5
-      brightness: 255
+      brightness: 128
       color_temp: 497
     light.copper_lamp:
       state: on
       transition: 5
-      brightness: 255
+      brightness: 128
       color_temp: 497
     switch.living_room_main: off
 - name: Living Room Dull Outside
@@ -652,12 +650,12 @@
     light.mushroom_lamp:
       state: on
       transition: 5
-      brightness: 104
+      brightness: 52
       xy_color: [ 0.257, 0.218 ]
     light.copper_lamp:
       state: on
       transition: 5
-      brightness: 62
+      brightness: 31
       xy_color: [ 0.491, 0.415 ]
     light.snug_bookcase:
       state: off
@@ -685,12 +683,12 @@
     light.mushroom_lamp:
       state: on
       transition: 5
-      brightness: 216
+      brightness: 108
       xy_color: [ 0.327, 0.21 ]
     light.copper_lamp:
       state: on
       transition: 5
-      brightness: 211
+      brightness: 106
       xy_color: [ 0.19, 0.283 ]
     switch.living_room_main: off
     light.snug_bookcase:
@@ -718,12 +716,12 @@
     light.mushroom_lamp:
       state: on
       transition: 5
-      brightness: 216
+      brightness: 108
       xy_color: [ 0.428, 0.19 ]
     light.copper_lamp:
       state: on
       transition: 5
-      brightness: 120
+      brightness: 60
       xy_color: [ 0.572, 0.346 ]
     switch.living_room_main: off
     light.snug_bookcase:
