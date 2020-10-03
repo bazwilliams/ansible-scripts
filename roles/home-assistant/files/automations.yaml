@@ -3116,11 +3116,33 @@
         entity_id:
           - group.living_room
 
-- alias: Living Room Default Scene Changed
+- alias: Living Room Default Scene Changed While TV Is On
   initial_state: true
   trigger:
-    platform: state
-    entity_id: input_text.living_room_scene
+    - platform: state
+      entity_id: input_text.living_room_scene
+    - platform: state
+      entity_id: media_player.living_room_tv
+  condition:
+    - condition: state
+      entity_id:  media_player.living_room_tv
+      state:  "on"
+  action:
+    - service: scene.turn_on
+      data_template:
+        entity_id: "scene.{{ states('input_text.living_room_scene') }}_tv_on"
+
+- alias: Living Room Default Scene Changed While TV Is Off
+  initial_state: true
+  trigger:
+    - platform: state
+      entity_id: input_text.living_room_scene
+    - platform: state
+      entity_id: media_player.living_room_tv
+  condition:
+    - condition: state
+      entity_id:  media_player.living_room_tv
+      state:  "off"
   action:
     - service: scene.turn_on
       data_template:

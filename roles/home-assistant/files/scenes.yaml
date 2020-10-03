@@ -554,7 +554,40 @@
     light.snug_bookcase:
       state: off
       transition: 1
+- name: Living Room Off TV On
+  entities:
+    light.mushroom_lamp:
+      state: off
+      transition: 1
+    light.copper_lamp:
+      state: on
+      transition: 1
+      brightness: 1
+      color_temp: 500
+    switch.living_room_main:
+      state: off
+      transition: 1
+    light.snug_bookcase:
+      state: off
+      transition: 1
 - name: Living Room Bright
+  entities:
+    light.mushroom_lamp:
+      state: on
+      transition: 1
+      brightness: 255
+      color_temp: 156
+    light.copper_lamp:
+      state: on
+      transition: 1
+      brightness: 255
+      color_temp: 156
+    switch.living_room_main: on
+    light.snug_bookcase:
+      state: on
+      transition: 1
+      brightness: 255
+- name: Living Room Bright TV On
   entities:
     light.mushroom_lamp:
       state: on
@@ -584,6 +617,19 @@
       brightness: 255
       color_temp: 497
     switch.living_room_main: off
+- name: Living Room Morning TV On
+  entities:
+    light.mushroom_lamp:
+      state: on
+      transition: 5
+      brightness: 255
+      color_temp: 497
+    light.copper_lamp:
+      state: on
+      transition: 5
+      brightness: 255
+      color_temp: 497
+    switch.living_room_main: off
 - name: Living Room Dull Outside
   entities:
     light.mushroom_lamp:
@@ -599,7 +645,23 @@
     light.snug_bookcase:
       state: on
       transition: 5
-      brightness: 1
+      brightness: 80
+    switch.living_room_main: off
+- name: Living Room Dull Outside TV On
+  entities:
+    light.mushroom_lamp:
+      state: on
+      transition: 5
+      brightness: 104
+      xy_color: [ 0.257, 0.218 ]
+    light.copper_lamp:
+      state: on
+      transition: 5
+      brightness: 62
+      xy_color: [ 0.491, 0.415 ]
+    light.snug_bookcase:
+      state: off
+      transition: 5
     switch.living_room_main: off
 - name: Living Room Pink Blue
   entities:
@@ -617,7 +679,23 @@
     light.snug_bookcase:
       state: on
       transition: 5
-      brightness: 1
+      brightness: 150
+- name: Living Room Pink Blue TV On
+  entities:
+    light.mushroom_lamp:
+      state: on
+      transition: 5
+      brightness: 216
+      xy_color: [ 0.327, 0.21 ]
+    light.copper_lamp:
+      state: on
+      transition: 5
+      brightness: 211
+      xy_color: [ 0.19, 0.283 ]
+    switch.living_room_main: off
+    light.snug_bookcase:
+      state: off
+      transition: 5
 - name: Living Room Pink Orange
   entities:
     light.mushroom_lamp:
@@ -634,7 +712,23 @@
     light.snug_bookcase:
       state: on
       transition: 5
-      brightness: 1
+      brightness: 150
+- name: Living Room Pink Orange TV On
+  entities:
+    light.mushroom_lamp:
+      state: on
+      transition: 5
+      brightness: 216
+      xy_color: [ 0.428, 0.19 ]
+    light.copper_lamp:
+      state: on
+      transition: 5
+      brightness: 120
+      xy_color: [ 0.572, 0.346 ]
+    switch.living_room_main: off
+    light.snug_bookcase:
+      state: off
+      transition: 5
 - name: Downstairs Hallway Night
   entities:
     light.downstairs_hallway_1:
