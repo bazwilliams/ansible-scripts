@@ -72,7 +72,7 @@ homeassistant:
       friendly_name: Big Light
       icon: mdi:ceiling-light
     light.snug_bookcase:
-      friendly_name: Reading Light
+      friendly_name: Bookcase
       icon: mdi:book-open-variant
     switch.turntable:
       friendly_name: Turntable Light
