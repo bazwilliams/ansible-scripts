@@ -68,8 +68,8 @@ homeassistant:
     light.snug_main:
       friendly_name: Snug Main
       icon: mdi:ceiling-light
-    switch.living_room_main:
-      friendly_name: Big Light
+    switch.bedroom_main:
+      friendly_name: Bedroom Light
       icon: mdi:ceiling-light
     light.snug_bookcase:
       friendly_name: Bookcase
@@ -141,7 +141,6 @@ cloud:
         - light.snug
         - light.upstairs_hallway
         - media_player.epson_projector
-        - switch.living_room_main
         - switch.lava_lamp
         - light.snug_bookcase
         - switch.frog_filter

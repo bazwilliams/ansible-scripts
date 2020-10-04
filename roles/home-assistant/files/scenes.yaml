@@ -186,16 +186,12 @@
 - name: Snug Off
   entities:
     light.steampunk_lamp: off
-    light.tripod_lamp: off
     light.snug_main: off
     switch.lava_lamp: off
     switch.turntable: off
 - name: Snug Movie
   entities:
     light.steampunk_lamp:
-      state: off
-      transition: 10
-    light.tripod_lamp:
       state: off
       transition: 10
     light.snug_main: off
@@ -206,13 +202,6 @@
     light.steampunk_lamp: 
       state: off
       transition: 2
-    light.tripod_lamp:
-      state: on
-      transition: 2
-      brightness: 69
-      xy_color:
-        - 0.586
-        - 0.357
     light.snug_main: off
     switch.lava_lamp: on
     switch.turntable: off
@@ -225,13 +214,6 @@
       xy_color:
         - 0.526
         - 0.411
-    light.tripod_lamp:
-      state: on
-      transition: 2
-      brightness: 25
-      xy_color:
-        - 0.558
-        - 0.313
     light.snug_main: off
     switch.lava_lamp: on
     switch.turntable: on
@@ -244,13 +226,6 @@
       xy_color:
         - 0.608
         - 0.369
-    light.tripod_lamp:
-      state: on
-      transition: 1
-      brightness: 20
-      xy_color:
-        - 0.581
-        - 0.389
     light.snug_main: on
     switch.lava_lamp: off
     switch.turntable: off
@@ -542,13 +517,7 @@
       brightness: 254
 - name: Living Room Off
   entities:
-    light.mushroom_lamp:
-      state: off
-      transition: 1
-    light.copper_lamp:
-      state: off
-      transition: 1
-    switch.living_room_main:
+    light.tripod_lamp:
       state: off
       transition: 1
     light.snug_bookcase:
@@ -556,13 +525,7 @@
       transition: 1
 - name: Living Room Off TV On
   entities:
-    light.mushroom_lamp:
-      state: off
-      transition: 1
-    light.copper_lamp:
-      state: off
-      transition: 1
-    switch.living_room_main:
+    light.tripod_lamp:
       state: off
       transition: 1
     light.snug_bookcase:
@@ -570,72 +533,43 @@
       transition: 1
 - name: Living Room Bright
   entities:
-    light.mushroom_lamp:
+    light.tripod_lamp:
       state: on
       transition: 1
       brightness: 255
       color_temp: 156
-    light.copper_lamp:
-      state: on
-      transition: 1
-      brightness: 255
-      color_temp: 156
-    switch.living_room_main: on
     light.snug_bookcase:
       state: on
       transition: 1
       brightness: 255
 - name: Living Room Bright TV On
   entities:
-    light.mushroom_lamp:
+    light.tripod_lamp:
       state: on
       transition: 1
       brightness: 255
       color_temp: 156
-    light.copper_lamp:
-      state: on
-      transition: 1
-      brightness: 255
-      color_temp: 156
-    switch.living_room_main: on
     light.snug_bookcase:
       state: on
       transition: 1
       brightness: 255
 - name: Living Room Morning
   entities:
-    light.mushroom_lamp:
+    light.tripod_lamp:
       state: on
       transition: 5
       brightness: 255
       color_temp: 497
-    light.copper_lamp:
-      state: on
-      transition: 5
-      brightness: 255
-      color_temp: 497
-    switch.living_room_main: off
 - name: Living Room Morning TV On
   entities:
-    light.mushroom_lamp:
+    light.tripod_lamp:
       state: on
       transition: 5
       brightness: 128
       color_temp: 497
-    light.copper_lamp:
-      state: on
-      transition: 5
-      brightness: 128
-      color_temp: 497
-    switch.living_room_main: off
 - name: Living Room Dull Outside
   entities:
-    light.mushroom_lamp:
-      state: on
-      transition: 5
-      brightness: 104
-      xy_color: [ 0.257, 0.218 ]
-    light.copper_lamp:
+    light.tripod_lamp:
       state: on
       transition: 5
       brightness: 62
@@ -644,15 +578,9 @@
       state: on
       transition: 5
       brightness: 80
-    switch.living_room_main: off
 - name: Living Room Dull Outside TV On
   entities:
-    light.mushroom_lamp:
-      state: on
-      transition: 5
-      brightness: 52
-      xy_color: [ 0.257, 0.218 ]
-    light.copper_lamp:
+    light.tripod_lamp:
       state: on
       transition: 5
       brightness: 31
@@ -660,70 +588,45 @@
     light.snug_bookcase:
       state: off
       transition: 5
-    switch.living_room_main: off
 - name: Living Room Pink Blue
   entities:
-    light.mushroom_lamp:
-      state: on
-      transition: 5
-      brightness: 216
-      xy_color: [ 0.327, 0.21 ]
-    light.copper_lamp:
+    light.tripod_lamp:
       state: on
       transition: 5
       brightness: 211
       xy_color: [ 0.19, 0.283 ]
-    switch.living_room_main: off
     light.snug_bookcase:
       state: on
       transition: 5
       brightness: 150
 - name: Living Room Pink Blue TV On
   entities:
-    light.mushroom_lamp:
-      state: on
-      transition: 5
-      brightness: 108
-      xy_color: [ 0.327, 0.21 ]
-    light.copper_lamp:
+    light.tripod_lamp:
       state: on
       transition: 5
       brightness: 106
       xy_color: [ 0.19, 0.283 ]
-    switch.living_room_main: off
     light.snug_bookcase:
       state: off
       transition: 5
 - name: Living Room Pink Orange
   entities:
-    light.mushroom_lamp:
-      state: on
-      transition: 5
-      brightness: 216
-      xy_color: [ 0.428, 0.19 ]
-    light.copper_lamp:
+    light.tripod_lamp:
       state: on
       transition: 5
       brightness: 120
       xy_color: [ 0.572, 0.346 ]
-    switch.living_room_main: off
     light.snug_bookcase:
       state: on
       transition: 5
       brightness: 150
 - name: Living Room Pink Orange TV On
   entities:
-    light.mushroom_lamp:
-      state: on
-      transition: 5
-      brightness: 108
-      xy_color: [ 0.428, 0.19 ]
-    light.copper_lamp:
+    light.tripod_lamp:
       state: on
       transition: 5
       brightness: 60
       xy_color: [ 0.572, 0.346 ]
-    switch.living_room_main: off
     light.snug_bookcase:
       state: off
       transition: 5

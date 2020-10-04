@@ -52,8 +52,9 @@ bathroom:
 bedroom:
   name: Bedroom
   entities:
-    - light.bedroom_big_light
+    # - light.copper_lamp
     - light.bedside_lamp
+    - switch.bedroom_main
     - climate.bedroom_heating
 staircase:
   name: staircase
@@ -102,10 +103,11 @@ living_room:
   entities:
     - media_player.living_room_roon
     - media_player.living_room_tv
-    - light.mushroom_lamp
-    - light.copper_lamp
     - light.snug_bookcase
-    - switch.living_room_main
+    - light.tripod_lamp
+    - light.hue_color_candle_3
+    - light.hue_color_candle_5
+    - light.hue_color_candle_6
     - climate.living_room_heating
 marcuss_room:
   name: Marcus' Room

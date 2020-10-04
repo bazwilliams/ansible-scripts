@@ -2737,6 +2737,9 @@
       data:
         entity_id: input_text.bedroom_mode
         value: scene_1
+    - service: switch.turn_off
+      data:
+        entity_id: switch.bedroom_main
 
 - alias: Bedroom Scene Mode 2
   initial_state: true
@@ -2762,6 +2765,9 @@
       data:
         entity_id: input_text.bedroom_mode
         value: scene_2
+    - service: switch.turn_off
+      data:
+        entity_id: switch.bedroom_main
 
 - alias: Bedroom Scene Mode 3
   initial_state: true
@@ -2787,6 +2793,9 @@
       data:
         entity_id: input_text.bedroom_mode
         value: scene_3
+    - service: switch.turn_on
+      data:
+        entity_id: switch.bedroom_main
 
 - alias: Bedroom Lights Off
   initial_state: true
@@ -2804,6 +2813,9 @@
       data:
         entity_id:
           - group.bedroom
+    - service: switch.turn_off
+      data:
+        entity_id: switch.bedroom_main
     - service: input_text.set_value
       data:
         entity_id: input_text.bedroom_mode
@@ -3067,26 +3079,6 @@
       data_template:
         entity_id: scene.living_room_bright
 
-- alias: Living Room to Default Scene from Bright
-  initial_state: true
-  trigger:
-    platform: event
-    event_type: zha_event
-    event_data:
-      device_ieee: 00:17:88:01:04:f3:de:ed
-      unique_id: 00:17:88:01:04:f3:de:ed:1:0x0006
-      endpoint_id: 1
-      cluster_id: 6
-      command: off_with_effect
-  condition:
-    - condition: state
-      entity_id: switch.living_room_main
-      state: "on"
-  action:
-    - service: scene.turn_on
-      data_template:
-        entity_id: "scene.{{ states('input_text.living_room_scene') }}"
-
 - alias: Living Room Off
   initial_state: true
   trigger:
@@ -3098,20 +3090,8 @@
       endpoint_id: 1
       cluster_id: 6
       command: off_with_effect
-  condition:
-    - condition: state
-      entity_id: switch.living_room_main
-      state: "off"
   action:
     - service: light.turn_off
-      data:
-        entity_id:
-          - group.living_room
-    - service: switch.turn_off
-      data:
-        entity_id:
-          - group.living_room
-    - service: media_player.turn_off
       data:
         entity_id:
           - group.living_room
