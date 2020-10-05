@@ -212,7 +212,6 @@ sensor:
     sensors:
       house_mode:
         entity_id:
-        - sensor.outside_light_level
         - sensor.time
         - binary_sensor.possibly_present
         friendly_name: 'House Mode'

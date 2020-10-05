@@ -1280,7 +1280,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.living_room_scene
-        value: living_room_pink_blue
+        value: living_room_pink_blue_away
     - service: input_text.set_value
       data:
         entity_id: input_text.downstairs_toilet_scene
@@ -1319,7 +1319,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.living_room_scene
-        value: living_room_dull_outside
+        value: living_room_off
     - service: input_text.set_value
       data:
         entity_id: input_text.downstairs_toilet_scene
@@ -1436,7 +1436,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.living_room_scene
-        value: living_room_pink_orange
+        value: living_room_pink_orange_away
     - service: input_text.set_value
       data:
         entity_id: input_text.downstairs_toilet_scene
@@ -1475,7 +1475,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.living_room_scene
-        value: living_room_dull_outside
+        value: living_room_off
     - service: input_text.set_value
       data:
         entity_id: input_text.downstairs_toilet_scene
@@ -1592,7 +1592,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.living_room_scene
-        value: living_room_pink_orange
+        value: living_room_pink_orange_away
     - service: input_text.set_value
       data:
         entity_id: input_text.downstairs_toilet_scene
@@ -1631,7 +1631,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.living_room_scene
-        value: living_room_dull_outside
+        value: living_room_off
     - service: input_text.set_value
       data:
         entity_id: input_text.downstairs_toilet_scene
@@ -1748,7 +1748,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.living_room_scene
-        value: living_room_pink_orange
+        value: living_room_pink_orange_away
     - service: input_text.set_value
       data:
         entity_id: input_text.downstairs_toilet_scene
@@ -1787,7 +1787,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.living_room_scene
-        value: living_room_dull_outside
+        value: living_room_off
     - service: input_text.set_value
       data:
         entity_id: input_text.downstairs_toilet_scene
@@ -1904,7 +1904,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.living_room_scene
-        value: living_room_pink_orange
+        value: living_room_pink_orange_away
     - service: input_text.set_value
       data:
         entity_id: input_text.downstairs_toilet_scene
@@ -1943,7 +1943,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.living_room_scene
-        value: living_room_dull_outside
+        value: living_room_off
     - service: input_text.set_value
       data:
         entity_id: input_text.downstairs_toilet_scene
@@ -2271,7 +2271,7 @@
   trigger:
     - platform: numeric_state
       entity_id: sensor.kitchen_light_level
-      above: 100
+      above: 200
     - platform: state
       entity_id: binary_sensor.kitchen_occupancy
       to: "off"
@@ -2477,58 +2477,6 @@
     - service: scene.turn_on
       data_template:
         entity_id: "scene.{{ states('input_text.front_garden_scene') }}"
-
-- alias: Listening to Music (Playlist)
-  initial_state: true
-  trigger:
-    - platform: template
-      value_template: "{{ is_state_attr('media_player.hifi', 'source', 'Playlist') }}"
-      for:
-        seconds: 2
-  action:
-    - service: input_text.set_value
-      data:
-        entity_id: input_text.snug_scene
-        value: snug_music
-
-- alias: Listening to Music (Roon)
-  initial_state: true
-  trigger:
-    - platform: template
-      value_template: "{{ is_state_attr('media_player.hifi', 'source', 'Roon') }}"
-      for:
-        seconds: 2
-  action:
-    - service: input_text.set_value
-      data:
-        entity_id: input_text.snug_scene
-        value: snug_music
-
-- alias: Listening to Music (Radio)
-  initial_state: true
-  trigger:
-    - platform: template
-      value_template: "{{ is_state_attr('media_player.hifi', 'source', 'Radio') }}"
-      for:
-        seconds: 2
-  action:
-    - service: input_text.set_value
-      data:
-        entity_id: input_text.snug_scene
-        value: snug_music
-
-- alias: Listening to Records
-  initial_state: true
-  trigger:
-    - platform: template
-      value_template: "{{ is_state_attr('media_player.hifi', 'source', 'LP12') }}"
-      for:
-        seconds: 2
-  action:
-    - service: input_text.set_value
-      data:
-        entity_id: input_text.snug_scene
-        value: snug_lp12
 
 - alias: Watching the Big Screen
   initial_state: true
