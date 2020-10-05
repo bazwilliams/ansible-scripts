@@ -519,53 +519,131 @@
   entities:
     light.tripod_lamp:
       state: off
-      transition: 1
+      transition: 10
+    light.hue_color_candle_3:
+      state: off
+      transition: 10
+    light.hue_color_candle_5:
+      state: off
+      transition: 10
+    light.hue_color_candle_6:
+      state: off
+      transition: 10
     light.snug_bookcase:
       state: off
-      transition: 1
+      transition: 10
 - name: Living Room Off TV On
   entities:
     light.tripod_lamp:
       state: off
-      transition: 1
+      transition: 10
+    light.hue_color_candle_3:
+      state: off
+      transition: 10
+    light.hue_color_candle_5:
+      state: off
+      transition: 10
+    light.hue_color_candle_6:
+      state: off
+      transition: 10
     light.snug_bookcase:
       state: off
-      transition: 1
+      transition: 10
 - name: Living Room Bright
   entities:
     light.tripod_lamp:
       state: on
-      transition: 1
+      transition: 0
+      brightness: 255
+      color_temp: 156
+    light.hue_color_candle_3:
+      state: on
+      transition: 0
+      brightness: 255
+      color_temp: 156
+    light.hue_color_candle_5:
+      state: on
+      transition: 0
+      brightness: 255
+      color_temp: 156
+    light.hue_color_candle_6:
+      state: on
+      transition: 0
       brightness: 255
       color_temp: 156
     light.snug_bookcase:
       state: on
-      transition: 1
+      transition: 0
       brightness: 255
 - name: Living Room Bright TV On
   entities:
     light.tripod_lamp:
       state: on
-      transition: 1
+      transition: 0
+      brightness: 255
+      color_temp: 156
+    light.hue_color_candle_3:
+      state: on
+      transition: 0
+      brightness: 255
+      color_temp: 156
+    light.hue_color_candle_5:
+      state: on
+      transition: 0
+      brightness: 255
+      color_temp: 156
+    light.hue_color_candle_6:
+      state: on
+      transition: 0
       brightness: 255
       color_temp: 156
     light.snug_bookcase:
       state: on
-      transition: 1
+      transition: 0
       brightness: 255
 - name: Living Room Morning
   entities:
     light.tripod_lamp:
       state: on
       transition: 5
-      brightness: 255
+      brightness: 128
+      color_temp: 497
+    light.hue_color_candle_3:
+      state: on
+      transition: 5
+      brightness: 32
+      color_temp: 497
+    light.hue_color_candle_5:
+      state: on
+      transition: 5
+      brightness: 32
+      color_temp: 497
+    light.hue_color_candle_6:
+      state: on
+      transition: 5
+      brightness: 32
       color_temp: 497
 - name: Living Room Morning TV On
   entities:
     light.tripod_lamp:
       state: on
       transition: 5
-      brightness: 128
+      brightness: 64
+      color_temp: 497
+    light.hue_color_candle_3:
+      state: on
+      transition: 5
+      brightness: 64
+      color_temp: 497
+    light.hue_color_candle_5:
+      state: on
+      transition: 5
+      brightness: 64
+      color_temp: 497
+    light.hue_color_candle_6:
+      state: on
+      transition: 5
+      brightness: 64
       color_temp: 497
 - name: Living Room Dull Outside
   entities:
@@ -574,6 +652,21 @@
       transition: 5
       brightness: 62
       xy_color: [ 0.491, 0.415 ]
+    light.hue_color_candle_3:
+      state: on
+      transition: 5
+      brightness: 25
+      color_temp: 246
+    light.hue_color_candle_5:
+      state: on
+      transition: 5
+      brightness: 28
+      xy_color: [ 0.491, 0.415 ]
+    light.hue_color_candle_6:
+      state: on
+      transition: 5
+      brightness: 25
+      color_temp: 156
     light.snug_bookcase:
       state: on
       transition: 5
@@ -585,51 +678,129 @@
       transition: 5
       brightness: 31
       xy_color: [ 0.491, 0.415 ]
-    light.snug_bookcase:
-      state: off
+    light.hue_color_candle_3:
+      state: on
       transition: 5
+      brightness: 12
+      color_temp: 246
+    light.hue_color_candle_5:
+      state: on
+      transition: 5
+      brightness: 14
+      xy_color: [ 0.491, 0.415 ]
+    light.hue_color_candle_6:
+      state: on
+      transition: 5
+      brightness: 12
+      color_temp: 156
+    light.snug_bookcase:
+      state: on
+      transition: 5
+      brightness: 1
 - name: Living Room Pink Blue
   entities:
     light.tripod_lamp:
       state: on
       transition: 5
-      brightness: 211
-      xy_color: [ 0.19, 0.283 ]
+      brightness: 128
+      xy_color: [ 0.194, 0.089 ]
+    light.hue_color_candle_3:
+      state: on
+      transition: 5
+      brightness: 128
+      xy_color: [ 0.158, 0.182 ]
+    light.hue_color_candle_5:
+      state: on
+      transition: 5
+      brightness: 128
+      xy_color: [ 0.278, 0.138 ]
+    light.hue_color_candle_6:
+      state: on
+      transition: 5
+      brightness: 128
+      xy_color: [ 0.181, 0.434 ]
     light.snug_bookcase:
       state: on
       transition: 5
-      brightness: 150
+      brightness: 187
 - name: Living Room Pink Blue TV On
   entities:
     light.tripod_lamp:
       state: on
       transition: 5
-      brightness: 106
-      xy_color: [ 0.19, 0.283 ]
-    light.snug_bookcase:
-      state: off
+      brightness: 64
+      xy_color: [ 0.194, 0.089 ]
+    light.hue_color_candle_3:
+      state: on
       transition: 5
+      brightness: 64
+      xy_color: [ 0.158, 0.182 ]
+    light.hue_color_candle_5:
+      state: on
+      transition: 5
+      brightness: 64
+      xy_color: [ 0.278, 0.138 ]
+    light.hue_color_candle_6:
+      state: on
+      transition: 5
+      brightness: 64
+      xy_color: [ 0.181, 0.434 ]
+    light.snug_bookcase:
+      state: on
+      transition: 5
+      brightness: 1
 - name: Living Room Pink Orange
   entities:
     light.tripod_lamp:
       state: on
       transition: 5
-      brightness: 120
-      xy_color: [ 0.572, 0.346 ]
+      brightness: 82
+      xy_color: [ 0.429, 0.188 ]
+    light.hue_color_candle_3:
+      state: on
+      transition: 5
+      brightness: 25
+      xy_color: [ 0.571, 0.345 ]
+    light.hue_color_candle_5:
+      state: on
+      transition: 5
+      brightness: 25
+      xy_color: [ 0.571, 0.345 ]
+    light.hue_color_candle_6:
+      state: on
+      transition: 5
+      brightness: 25
+      xy_color: [ 0.429, 0.188 ]
     light.snug_bookcase:
       state: on
       transition: 5
-      brightness: 150
+      brightness: 108
 - name: Living Room Pink Orange TV On
   entities:
     light.tripod_lamp:
       state: on
       transition: 5
-      brightness: 60
-      xy_color: [ 0.572, 0.346 ]
-    light.snug_bookcase:
-      state: off
+      brightness: 41
+      xy_color: [ 0.429, 0.188 ]
+    light.hue_color_candle_3:
+      state: on
       transition: 5
+      brightness: 12
+      xy_color: [ 0.571, 0.345 ]
+    light.hue_color_candle_5:
+      state: on
+      transition: 5
+      brightness: 12
+      xy_color: [ 0.571, 0.345 ]
+    light.hue_color_candle_6:
+      state: on
+      transition: 5
+      brightness: 12
+      xy_color: [ 0.429, 0.188 ]
+    light.snug_bookcase:
+      state: on
+      transition: 5
+      brightness: 1
 - name: Downstairs Hallway Night
   entities:
     light.downstairs_hallway_1:
