@@ -617,6 +617,9 @@
     light.hue_color_candle_6:
       state: off
       transition: 5
+    light.snug_bookcase:
+      state: off
+      transition: 5
 - name: Living Room Morning TV On
   entities:
     light.tripod_lamp:
@@ -631,6 +634,9 @@
       state: off
       transition: 5
     light.hue_color_candle_6:
+      state: off
+      transition: 5
+    light.snug_bookcase:
       state: off
       transition: 5
 - name: Living Room Dull Outside
