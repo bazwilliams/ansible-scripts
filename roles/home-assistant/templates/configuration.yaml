@@ -121,6 +121,9 @@ homeassistant:
     media_player.living_room_tv:
       friendly_name: Television
       icon: mdi:television
+    input_boolean.bfl:
+      friendly_name: Big Light
+      icon: mdi:ceiling-light
         
 cloud:
   alexa:
@@ -147,6 +150,7 @@ cloud:
         - climate.bedroom_heating
         - climate.living_room_heating
         - media_player.living_room_tv
+        - input_boolean.bfl
 
 # discovery:
 
@@ -260,6 +264,9 @@ weather:
 input_boolean:
   terrace_occupancy:
     name: Motion detected in the garden
+    initial: off
+  bfl:
+    name: Living Room should be bright
     initial: off
 
 input_text:

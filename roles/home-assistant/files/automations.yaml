@@ -2865,10 +2865,6 @@
       data:
         entity_id:
           - group.marcuss_room
-    - service: media_player.turn_off
-      data:
-        entity_id:
-          - group.marcuss_room
     - service: input_text.set_value
       data:
         entity_id: input_text.marcuss_room_mode
@@ -2970,111 +2966,247 @@
       data:
         entity_id:
           - group.ethans_room
-    - service: media_player.turn_off
-      data:
-        entity_id:
-          - group.ethans_room
     - service: input_text.set_value
       data:
         entity_id: input_text.ethans_room_mode
         value: scene_off
 
 - alias: Downstairs Toilet Light On
-  initial_state: true
+  mode: single
   trigger:
-    platform: event
-    event_type: zha_event
-    event_data:
-      device_ieee: 00:17:88:01:08:07:64:47
-      unique_id: 00:17:88:01:08:07:64:47:1:0x0006
-      endpoint_id: 1
-      cluster_id: 6
-      command: "on"
+  - device_id: fc9b779ca9f04cbe934e078fe39622cc
+    domain: zha
+    platform: device
+    type: remote_button_short_press
+    subtype: turn_on
   action:
-    - service: scene.turn_on
-      data_template:
-        entity_id: "scene.{{ states('input_text.downstairs_toilet_scene') }}"
+  - service: scene.turn_on
+    data_template:
+      entity_id: "scene.{{ states('input_text.downstairs_toilet_scene') }}"
 
 - alias: Downstairs Toilet Light Off
-  initial_state: true
+  mode: single
   trigger:
-    platform: event
-    event_type: zha_event
-    event_data:
-      device_ieee: 00:17:88:01:08:07:64:47
-      unique_id: 00:17:88:01:08:07:64:47:1:0x0006
-      endpoint_id: 1
-      cluster_id: 6
-      command: off_with_effect
-  action:
-    - service: scene.turn_on
-      data_template:
-        entity_id: scene.downstairs_toilet_off
-
-- alias: Living Room to Bright
-  initial_state: true
-  trigger:
-    platform: event
-    event_type: zha_event
-    event_data:
-      device_ieee: 00:17:88:01:04:f3:de:ed
-      unique_id: 00:17:88:01:04:f3:de:ed:1:0x0006
-      endpoint_id: 1
-      cluster_id: 6
-      command: "on"
-  action:
-    - service: scene.turn_on
-      data_template:
-        entity_id: scene.living_room_bright
-
-- alias: Living Room Off
-  initial_state: true
-  trigger:
-    platform: event
-    event_type: zha_event
-    event_data:
-      device_ieee: 00:17:88:01:04:f3:de:ed
-      unique_id: 00:17:88:01:04:f3:de:ed:1:0x0006
-      endpoint_id: 1
-      cluster_id: 6
-      command: off_with_effect
+  - device_id: fc9b779ca9f04cbe934e078fe39622cc
+    domain: zha
+    platform: device
+    type: remote_button_short_press
+    subtype: turn_off
   action:
     - service: light.turn_off
-      data:
-        entity_id:
-          - group.living_room
+      data_template:
+        entity_id: light.downstairs_toilet
 
-- alias: Living Room Default Scene Changed While TV Is On
-  initial_state: true
+- alias: Downstairs Toilet Light Dim Up
+  mode: single
+  trigger:
+  - device_id: fc9b779ca9f04cbe934e078fe39622cc
+    domain: zha
+    platform: device
+    type: remote_button_long_press
+    subtype: dim_up
+  action:
+    - service: light.turn_on
+      data_template:
+        entity_id: light.downstairs_toilet
+        brightness_step_pct: 10
+
+- alias: Downstairs Toilet Light Dim Down
+  mode: single
+  trigger:
+  - device_id: fc9b779ca9f04cbe934e078fe39622cc
+    domain: zha
+    platform: device
+    type: remote_button_long_press
+    subtype: dim_down
+  action:
+    - service: light.turn_on
+      data_template:
+        entity_id: light.downstairs_toilet
+        brightness_step_pct: -10
+
+- alias: Downstairs Toilet Light On
+  mode: single
+  trigger:
+  - device_id: fc9b779ca9f04cbe934e078fe39622cc
+    domain: zha
+    platform: device
+    type: remote_button_short_press
+    subtype: turn_on
+  action:
+  - service: scene.turn_on
+    data_template:
+      entity_id: "scene.{{ states('input_text.downstairs_toilet_scene') }}"
+
+- alias: Living Room Dimmer Turn On While Normal
+  mode: single
+  trigger:
+  - device_id: 6d9999e2b43145d9a8d4b6b2a4201a13
+    domain: zha
+    platform: device
+    type: remote_button_short_press
+    subtype: turn_on
+  condition:
+  - condition: state
+    entity_id: light.living_room
+    state:  "on"
+  - condition: state
+    entity_id: input_boolean.bfl
+    state:  "off"
+  action:
+  - service: input_boolean.turn_on
+    data:
+      entity_id: input_boolean.bfl
+
+- alias: Living Room Dimmer Turn On While Dark
+  mode: single
+  trigger:
+  - device_id: 6d9999e2b43145d9a8d4b6b2a4201a13
+    domain: zha
+    platform: device
+    type: remote_button_short_press
+    subtype: turn_on
+  condition:
+  - condition: state
+    entity_id: light.living_room
+    state:  "off"
+  action:
+  - service: scene.turn_on
+    data_template:
+      entity_id: "scene.{{ states('input_text.living_room_scene') }}"
+
+- alias: Living Room Dimmer Turn Off While BFL
+  mode: single
+  trigger:
+  - device_id: 6d9999e2b43145d9a8d4b6b2a4201a13
+    domain: zha
+    platform: device
+    type: remote_button_short_press
+    subtype: turn_off
+  condition:
+  - condition: state
+    entity_id: input_boolean.bfl
+    state:  "on"
+  action:
+  - service: input_boolean.turn_off
+    data:
+      entity_id: input_boolean.bfl
+
+- alias: Living Room Dimmer Turn Off While Normal
+  mode: single
+  trigger:
+  - device_id: 6d9999e2b43145d9a8d4b6b2a4201a13
+    domain: zha
+    platform: device
+    type: remote_button_short_press
+    subtype: turn_off
+  condition:
+  - condition: state
+    entity_id: input_boolean.bfl
+    state:  "off"
+  action:
+    - scene: scene.living_room_off
+
+- alias: Living Room Dimmer Long Press Turn Off
+  mode: single
+  trigger:
+  - device_id: 6d9999e2b43145d9a8d4b6b2a4201a13
+    domain: zha
+    platform: device
+    type: remote_button_long_press
+    subtype: turn_off
+  condition:
+  - condition: state
+    entity_id: input_boolean.bfl
+    state:  "off"
+  action:
+  - scene: scene.living_room_off
+  - service: light.turn_off
+    data:
+      entity_id: group.living_room
+  - service: media_player.turn_off
+    data:
+      entity_id:
+      - media_player.living_room_roon
+      - media_player.living_room_tv
+
+- alias: Living Room Dimmer Dim Up
+  mode: single
+  trigger:
+  - device_id: 6d9999e2b43145d9a8d4b6b2a4201a13
+    domain: zha
+    platform: device
+    type: remote_button_long_press
+    subtype: dim_up
+  action:
+  - service: light.turn_on
+    data_template:
+      entity_id: light.living_room
+      brightness_step_pct: 10
+
+- alias: Living Room Dimmer Dim Down
+  mode: single
+  trigger:
+  - device_id: 6d9999e2b43145d9a8d4b6b2a4201a13
+    domain: zha
+    platform: device
+    type: remote_button_long_press
+    subtype: dim_down
+  action:
+  - service: light.turn_on
+    data_template:
+      entity_id: light.living_room
+      brightness_step_pct: -10
+
+- alias: Living Room Bright
+  trigger:
+    - platform: state
+      entity_id: input_boolean.bfl
+      to: "on"
+  action:
+  - scene: scene.living_room_bright
+
+- alias: Living Room Default Scene Changed While TV Is On and not BFL
   trigger:
     - platform: state
       entity_id: input_text.living_room_scene
     - platform: state
       entity_id: media_player.living_room_tv
+    - platform: state
+      entity_id: input_boolean.bfl
+      to: "off"
   condition:
-    - condition: state
-      entity_id:  media_player.living_room_tv
-      state:  "on"
+  - condition: state
+    entity_id:  media_player.living_room_tv
+    state:  "on"
+  - condition: state
+    entity_id: input_boolean.bfl
+    state:  "off"
   action:
-    - service: scene.turn_on
-      data_template:
-        entity_id: "scene.{{ states('input_text.living_room_scene') }}_tv_on"
+  - service: scene.turn_on
+    data_template:
+      entity_id: "scene.{{ states('input_text.living_room_scene') }}_tv_on"
 
-- alias: Living Room Default Scene Changed While TV Is Off
-  initial_state: true
+- alias: Living Room Default Scene Changed While TV Is Off and not BFL
   trigger:
-    - platform: state
-      entity_id: input_text.living_room_scene
-    - platform: state
-      entity_id: media_player.living_room_tv
+  - platform: state
+    entity_id: input_text.living_room_scene
+  - platform: state
+    entity_id: media_player.living_room_tv
+  - platform: state
+    entity_id: input_boolean.bfl
+    to: "off"
   condition:
-    - condition: state
-      entity_id:  media_player.living_room_tv
-      state:  "off"
+  - condition: state
+    entity_id:  media_player.living_room_tv
+    state:  "off"
+  - condition: state
+    entity_id: input_boolean.bfl
+    state:  "off"
   action:
-    - service: scene.turn_on
-      data_template:
-        entity_id: "scene.{{ states('input_text.living_room_scene') }}"
+  - service: scene.turn_on
+    data_template:
+      entity_id: "scene.{{ states('input_text.living_room_scene') }}"
 
 - alias: Downstairs Hallway Default Scene Changed
   initial_state: true
@@ -3135,11 +3267,17 @@
     entity_id: binary_sensor.possibly_present
     to: "off"
   action:
-    - service: scene.turn_on
+    - service: switch.turn_off
       data:
         entity_id:
-        - scene.snug_off
-        - scene.downstairs_toilet_off
+        - group.snug
+    - service: light.turn_off
+      data:
+        entity_id:
+        - group.snug
+        - group.downstairs_toilet
+        - group.ethans_room
+        - group.marcuss_room
     - service: media_player.turn_off
       data:
         entity_id:

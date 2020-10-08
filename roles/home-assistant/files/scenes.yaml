@@ -1327,8 +1327,3 @@
       transition: 0
       brightness: 28
       color_temp: 380
-- name: Downstairs Toilet Off
-  entities:
-    light.downstairs_toilet:
-      transition: 1
-      state: off
