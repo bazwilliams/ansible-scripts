@@ -53,3 +53,7 @@
   homebrew_cask:
     name: zoom
     state: latest
+- name: Install Calibre
+  homebrew_cask:
+    name: calibre
+    state: latest
