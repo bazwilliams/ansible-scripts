@@ -3047,12 +3047,19 @@
     type: remote_button_short_press
     subtype: turn_on
   condition:
-  - condition: state
-    entity_id: light.living_room
-    state:  "on"
-  - condition: state
-    entity_id: input_boolean.bfl
-    state:  "off"
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: input_boolean.bfl
+        state:  "off"
+      - condition: or
+        conditions:
+        - condition: state
+          entity_id: light.living_room
+          state:  "on"
+        - condition: state
+          entity_id: input_text.living_room_scene
+          state:  "living_room_off"
   action:
   - service: input_boolean.turn_on
     data:
