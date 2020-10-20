@@ -529,6 +529,12 @@
     light.hue_color_candle_6:
       state: off
       transition: 10
+    light.hue_color_candle_7:
+      state: off
+      transition: 10
+    light.hue_color_candle_8:
+      state: off
+      transition: 10
     light.snug_bookcase:
       state: off
       transition: 10
@@ -544,6 +550,12 @@
       state: off
       transition: 10
     light.hue_color_candle_6:
+      state: off
+      transition: 10
+    light.hue_color_candle_7:
+      state: off
+      transition: 10
+    light.hue_color_candle_8:
       state: off
       transition: 10
     light.snug_bookcase:
@@ -567,6 +579,16 @@
       brightness: 255
       color_temp: 156
     light.hue_color_candle_6:
+      state: on
+      transition: 0
+      brightness: 255
+      color_temp: 156
+    light.hue_color_candle_7:
+      state: on
+      transition: 0
+      brightness: 255
+      color_temp: 156
+    light.hue_color_candle_8:
       state: on
       transition: 0
       brightness: 255
@@ -597,6 +619,16 @@
       transition: 0
       brightness: 255
       color_temp: 156
+    light.hue_color_candle_7:
+      state: on
+      transition: 0
+      brightness: 255
+      color_temp: 156
+    light.hue_color_candle_8:
+      state: on
+      transition: 0
+      brightness: 255
+      color_temp: 156
     light.snug_bookcase:
       state: on
       transition: 0
@@ -617,6 +649,12 @@
     light.hue_color_candle_6:
       state: off
       transition: 5
+    light.hue_color_candle_7:
+      state: off
+      transition: 5
+    light.hue_color_candle_8:
+      state: off
+      transition: 5
     light.snug_bookcase:
       state: off
       transition: 5
@@ -634,6 +672,12 @@
       state: off
       transition: 5
     light.hue_color_candle_6:
+      state: off
+      transition: 5
+    light.hue_color_candle_7:
+      state: off
+      transition: 5
+    light.hue_color_candle_8:
       state: off
       transition: 5
     light.snug_bookcase:
@@ -661,6 +705,16 @@
       transition: 5
       brightness: 25
       color_temp: 156
+    light.hue_color_candle_7:
+      state: on
+      transition: 5
+      brightness: 25
+      xy_color: [  0.259, 0.186 ]
+    light.hue_color_candle_8:
+      state: on
+      transition: 5
+      brightness: 30
+      xy_color: [  0.267, 0.218 ]
     light.snug_bookcase:
       state: on
       transition: 5
@@ -687,6 +741,16 @@
       transition: 5
       brightness: 12
       color_temp: 156
+    light.hue_color_candle_7:
+      state: on
+      transition: 5
+      brightness: 12
+      xy_color: [  0.259, 0.186 ]
+    light.hue_color_candle_8:
+      state: on
+      transition: 5
+      brightness: 15
+      xy_color: [  0.267, 0.218 ]
     light.snug_bookcase:
       state: on
       transition: 5
@@ -709,6 +773,12 @@
       transition: 5
       brightness: 49
       xy_color: [ 0.181, 0.434 ]
+    light.hue_color_candle_7:
+      state: off
+      transition: 5
+    light.hue_color_candle_8:
+      state: off
+      transition: 5
     light.snug_bookcase:
       state: off
       transition: 5
@@ -734,6 +804,16 @@
       transition: 5
       brightness: 128
       xy_color: [ 0.181, 0.434 ]
+    light.hue_color_candle_7:
+      state: on
+      transition: 5
+      brightness: 128
+      xy_color: [ 0.357, 0.261 ]
+    light.hue_color_candle_8:
+      state: on
+      transition: 5
+      brightness: 128
+      xy_color: [ 0.429, 0.192 ]
     light.snug_bookcase:
       state: on
       transition: 5
@@ -760,6 +840,16 @@
       transition: 5
       brightness: 64
       xy_color: [ 0.181, 0.434 ]
+    light.hue_color_candle_7:
+      state: on
+      transition: 5
+      brightness: 64
+      xy_color: [ 0.357, 0.261 ]
+    light.hue_color_candle_8:
+      state: on
+      transition: 5
+      brightness: 64
+      xy_color: [ 0.429, 0.192 ]
     light.snug_bookcase:
       state: on
       transition: 5
@@ -786,6 +876,16 @@
       transition: 5
       brightness: 25
       xy_color: [ 0.429, 0.188 ]
+    light.hue_color_candle_7:
+      state: on
+      transition: 5
+      brightness: 25
+      xy_color: [ 0.504, 0.389 ]
+    light.hue_color_candle_8:
+      state: on
+      transition: 5
+      brightness: 25
+      xy_color: [ 0.546, 0.341 ]
     light.snug_bookcase:
       state: on
       transition: 5
@@ -806,6 +906,12 @@
       brightness: 25
       xy_color: [ 0.571, 0.345 ]
     light.hue_color_candle_6:
+      state: off
+      transition: 5
+    light.hue_color_candle_7:
+      state: off
+      transition: 5
+    light.hue_color_candle_8:
       state: off
       transition: 5
     light.snug_bookcase:
@@ -833,6 +939,16 @@
       transition: 5
       brightness: 12
       xy_color: [ 0.429, 0.188 ]
+    light.hue_color_candle_7:
+      state: on
+      transition: 5
+      brightness: 12
+      xy_color: [ 0.504, 0.389 ]
+    light.hue_color_candle_8:
+      state: on
+      transition: 5
+      brightness: 12
+      xy_color: [ 0.546, 0.341 ]
     light.snug_bookcase:
       state: on
       transition: 5

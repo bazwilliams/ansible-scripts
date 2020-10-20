@@ -108,6 +108,8 @@ living_room:
     - light.hue_color_candle_3
     - light.hue_color_candle_5
     - light.hue_color_candle_6
+    - light.hue_color_candle_7
+    - light.hue_color_candle_8
     - climate.living_room_heating
 marcuss_room:
   name: Marcus' Room
