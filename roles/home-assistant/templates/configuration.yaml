@@ -87,8 +87,6 @@ homeassistant:
       icon: mdi:floor-lamp-variant
     light.steampunk_lamp:
       icon: mdi:desk-lamp
-    climate.bedroom_heating:
-      friendly_name: Upstairs Heating
     climate.living_room_heating:
       friendly_name: Downstairs Heating
     switch.innr_sp_222_dce84cfe_on_off:
@@ -320,9 +318,9 @@ webostv:
     data:
       mac: "44:cb:8b:f8:a7:f2"
 
-# hive:
-#   username: {{ hive.username }}
-#   password: {{ hive.password }}
+hive:
+  username: {{ hive.username }}
+  password: {{ hive.password }}
 
 speedtestdotnet:
 

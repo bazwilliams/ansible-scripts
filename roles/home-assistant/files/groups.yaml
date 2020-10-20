@@ -19,9 +19,6 @@ front_garden:
     - sensor.front_garden_light_level
     - sensor.front_garden_temperature
     - light.outside_light
-    - binary_sensor.front_door_motion
-    - sensor.front_door_last_motion
-    - camera.front_door
 terrace:
   name: Terrace
   entities:
@@ -42,20 +39,17 @@ back_garden:
     - light.hue_outdoor_pedestal_2
     - light.hue_outdoor_pedestal_3
     - light.hue_outdoor_pedestal_4
-driveway:
-    - camera.driveway
-    - binary_sensor.driveway_motion
 bathroom:
   name: Bathroom
   entities:
-    - light.bathroom
+    - sensor.lumi_lumi_weather_ff938804_humidity
+    - sensor.lumi_lumi_weather_ff938804_temperature
 bedroom:
   name: Bedroom
   entities:
-    # - light.copper_lamp
+    - climate.bedroom
     - light.bedside_lamp
     - switch.bedroom_main
-    - climate.bedroom_heating
 staircase:
   name: staircase
   entities:
@@ -73,11 +67,15 @@ downstairs_hallway:
     - light.downstairs_hallway_5
     - light.downstairs_hallway_6
     - switch.innr_sp_222_dce84cfe_on_off
+    - sensor.lumi_lumi_weather_a19c5c04_humidity
+    - sensor.lumi_lumi_weather_a19c5c04_temperature
 garden_studio:
   name: Garden Studio
   entities:
     - light.play_left
     - light.play_right
+    - sensor.studio_sensor_temperature
+    - sensor.studio_sensor_humidity
 downstairs_toilet:
   name: Downstairs Toilet
   entities:
@@ -89,18 +87,21 @@ ensuite:
 guest_room:
   name: Guest Room
   entities:
-    - climate.hobby_room
+    - climate.guest_room
     - light.silver_lamp
     - light.guest_big_light
 ethans_room:
   name: Ethan's Room
   entities:
     - climate.ethans_room
-    - light.ethans_big_light
+    - light.hue_color_spot_1
+    - light.hue_color_spot_2
+    - light.hue_color_spot_3
     - light.ethans_globe
 living_room:
   name: Living Room
   entities:
+    - climate.living_room_heating
     - media_player.living_room_roon
     - media_player.living_room_tv
     - light.snug_bookcase
@@ -110,7 +111,6 @@ living_room:
     - light.hue_color_candle_6
     - light.hue_color_candle_7
     - light.hue_color_candle_8
-    - climate.living_room_heating
 marcuss_room:
   name: Marcus' Room
   entities:
@@ -131,6 +131,7 @@ snug:
 upstairs_hallway:
   name: Upstairs Hallway
   entities:
+    - climate.upstairs_heating
     - light.upstairs_hallway
     - binary_sensor.upstairs_cupboard_door
     - binary_sensor.upstairs_hallway_motion
