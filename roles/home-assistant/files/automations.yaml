@@ -2493,17 +2493,82 @@
       data_template:
         entity_id: "scene.{{ states('input_text.front_garden_scene') }}"
 
-# - alias: Watching the Big Screen
-#   mode: single
-#   trigger:
-#     - platform: state
-#       entity_id: media_player.epson_projector
-#       to: "on"
-#   action:
-#     - service: input_text.set_value
-#       data:
-#         entity_id: input_text.snug_scene
-#         value: snug_movie
+- alias: Watching the Big Screen
+  initial_state: true
+  trigger:
+    - platform: state
+      entity_id: media_player.epson_projector
+      to: "on"
+  action:
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.snug_scene
+        value: snug_movie
+
+- alias: Snug Lights On
+  initial_state: true
+  trigger:
+    platform: event
+    event_type: zha_event
+    event_data:
+      device_ieee: 00:17:88:01:08:0d:00:be
+      unique_id: 00:17:88:01:08:0d:00:be:1:0x0006
+      endpoint_id: 1
+      cluster_id: 6
+      command: "on"
+  action:
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.snug_scene
+        value: snug_on
+
+- alias: Snug Lights Off
+  initial_state: true
+  trigger:
+    platform: event
+    event_type: zha_event
+    event_data:
+      device_ieee: 00:17:88:01:08:0d:00:be
+      unique_id: 00:17:88:01:08:0d:00:be:1:0x0006
+      endpoint_id: 1
+      cluster_id: 6
+      command: off_with_effect
+  action:
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.snug_scene
+        value: snug_off
+
+- alias: Snug All Off
+  initial_state: true
+  trigger:
+    platform: event
+    event_type: zha_event
+    event_data:
+      device_ieee: 00:17:88:01:08:0d:00:be
+      unique_id: 00:17:88:01:08:0d:00:be:1:0x0006
+      endpoint_id: 1
+      cluster_id: 6
+      command: off_with_effect
+  condition:
+    - condition: state
+      entity_id: input_text.snug_scene
+      state: "snug_off"
+  action:
+    - service: homeassistant.turn_off
+      data:
+        entity_id:
+          - group.snug
+
+- alias: Snug Scene Changed
+  initial_state: true
+  trigger:
+    platform: state
+    entity_id: input_text.snug_scene
+  action:
+    - service: scene.turn_on
+      data_template:
+        entity_id: "scene.{{ states('input_text.snug_scene') }}"
 
 - alias: Bedroom Scene Mode 1
   mode: single
