@@ -57,3 +57,7 @@
   homebrew_cask:
     name: calibre
     state: latest
+- name: Install VLC
+  homebrew_cask:
+    name: vlc
+    state: latest
