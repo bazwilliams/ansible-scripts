@@ -10,5 +10,6 @@
     # - minimserver
     # - plex
     # - roon
+    #  - deconz
      - home-assistant
     # - sabnzbd

@@ -1,0 +1,50 @@
+---
+    - name: Create config directory
+      become: yes
+      file:
+        path: /opt/docker/data/deconz
+        state: directory
+    
+    # - name: Upload configuration
+    #   become: yes
+    #   copy:
+    #     src: ???
+    #     dest: /opt/docker/data/deconz
+    
+    - name: Tear down existing service
+      docker_compose:
+        project_name: deconz
+        state: absent
+        definition:
+            version: "2"
+            services:
+                deconz:
+                    image: ""
+    
+    - name: Start service
+      docker_compose:
+        project_name: deconz
+        remove_orphans: yes
+        state: present
+        definition:
+          version: "2"
+          services:
+            deconz:
+              image: marthoc/deconz
+              container_name: deconz
+              network_mode: host
+              restart: always
+              volumes:
+                - /opt/docker/data/deconz:/root/.local/share/dresden-elektronik/deCONZ
+              devices:
+                - "/dev/serial/by-id/usb-dresden_elektronik_ingenieurtechnik_GmbH_ConBee_II_DE2153131-if00:/dev/ttyACM0"
+              environment:
+                - DECONZ_WEB_PORT=8124
+                - DECONZ_WS_PORT=4443
+                - DECONZ_VNC_MODE=1
+                - DEBUG_INFO=1
+                - DEBUG_APS=0
+                - DEBUG_ZCL=0
+                - DEBUG_ZDP=0
+                - DEBUG_OTAU=0
+    

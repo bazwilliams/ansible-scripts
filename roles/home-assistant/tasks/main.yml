@@ -132,8 +132,6 @@
                   - REQUESTS_CA_BUNDLE=/etc/ssl/certs/ca-certificates.crt
                 network_mode: host
                 restart: unless-stopped
-                devices:
-                - "/dev/serial/by-id/usb-dresden_elektronik_ingenieurtechnik_GmbH_ConBee_II_DE2153131-if00:/dev/conbee2"
 
 - name: Cleanup
   file:

@@ -92,11 +92,11 @@ homeassistant:
     switch.innr_sp_222_dce84cfe_on_off:
       friendly_name: Diffuser
       icon: mdi:air-purifier
-    sensor.upstairs_hallway_light_level:
+    sensor.upstairs_hallway_motion:
       friendly_name: Upstairs Hallway Light Level
-    sensor.kitchen_temperature:
+    sensor.kitchen_motion:
       friendly_name: Kitchen Temperature
-    sensor.kitchen_light_level:
+    sensor.kitchen_motion_2:
       friendly_name: Kitchen Light Level
     binary_sensor.kitchen_occupancy:
       friendly_name: Kitchen Motion
@@ -157,8 +157,8 @@ media_player:
   - platform: epson
     host: 192.168.1.50
 
-zha:
-  database_path: /config/zigbee.db
+# zha:
+#   database_path: /config/zigbee.db
 
 # zha_map:
 

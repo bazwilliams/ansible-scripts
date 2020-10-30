@@ -3,11 +3,11 @@ kitchen:
   entities:
     - climate.kitchen
     - binary_sensor.kitchen_occupancy
-    - sensor.kitchen_light_level
-    - sensor.kitchen_temperature
-    - light.kitchen_worktop_cooker_left
-    - light.kitchen_worktop_cooker_right
-    - light.kitchen_worktop_tumble_dryer
+    - sensor.kitchen_motion_2
+    - sensor.kitchen_motion
+    - light.worktop_left
+    - light.worktop_right
+    - light.worktop_tumble_dryer
     - light.kitchen_main
     - light.kitchen_under_cupboards
     - light.kitchen_under_tall_cupboards
