@@ -9,7 +9,7 @@
     # - grafana
     # - minimserver
     # - plex
-    - roon
-    #  - deconz
-    #  - home-assistant
+    # - roon
+    # - deconz
+     - home-assistant
     # - sabnzbd
