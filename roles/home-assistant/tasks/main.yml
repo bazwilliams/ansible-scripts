@@ -68,12 +68,6 @@
     src: custom_components/
     dest: /opt/docker/data/home-assistant/config/custom_components
 
-- name: Upload custom lovelace assets
-  become: yes
-  copy:
-    src: www/
-    dest: /opt/docker/data/home-assistant/config/www
-
 - name: Tear down existing service
   docker_compose:
     project_name: home-assistant

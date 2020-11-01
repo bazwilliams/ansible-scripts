@@ -3,4 +3,3 @@
   roles:
     - homeassistant-alexa-update
     - homeassistant-securitasdirect-update
-    - homeassistant-zha_map-update
