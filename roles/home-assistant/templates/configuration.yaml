@@ -17,7 +17,6 @@ recorder:
   purge_keep_days: 3
   exclude:
     domains:
-      # - automation
       - updater
     entities:
       - sensor.last_boot
@@ -52,17 +51,9 @@ homeassistant:
     media_player.epson_projector:
       friendly_name: Projector
       icon: mdi:projector
-    media_player.hifi_roon:
-      friendly_name: HiFi
-    media_player.living_room_roon:
-      friendly_name: Living Room Music
     light.dining_table:
       friendly_name: Dining Table
       icon: mdi:vanity-light
-    device_tracker.74_9e_af_4f_70_94:
-      friendly_name: Barry's iPhone
-    device_tracker.80_82_23_6a_ef_fc:
-      friendly_name: Louise's iPhone
     alarm_control_panel.securitas_260178:
       friendly_name: Alarm
     light.snug_main:
@@ -71,7 +62,7 @@ homeassistant:
     switch.bedroom_main:
       friendly_name: Bedroom Light
       icon: mdi:ceiling-light
-    light.snug_bookcase:
+    light.bookcase:
       friendly_name: Bookcase
       icon: mdi:book-open-variant
     switch.turntable:
@@ -87,32 +78,10 @@ homeassistant:
       icon: mdi:floor-lamp-variant
     light.steampunk_lamp:
       icon: mdi:desk-lamp
-    climate.living_room_heating:
-      friendly_name: Downstairs Heating
-    switch.innr_sp_222_dce84cfe_on_off:
+    switch.diffuser:
       friendly_name: Diffuser
       icon: mdi:air-purifier
-    sensor.upstairs_hallway_motion:
-      friendly_name: Upstairs Hallway Light Level
-    sensor.kitchen_motion:
-      friendly_name: Kitchen Temperature
-    sensor.kitchen_motion_2:
-      friendly_name: Kitchen Light Level
-    binary_sensor.kitchen_occupancy:
-      friendly_name: Kitchen Motion
-    binary_sensor.front_garden_occupancy:
-      friendly_name: Front Garden Motion
-    sensor.front_garden_light_level:
-      friendly_name: Front Garden Light Level
-    sensor.front_garden_temperature:
-      friendly_name: Front Garden Temperature
-    sensor.philips_sml002_61de4606_illuminance:
-      friendly_name: Back Garden Light Level
-    binary_sensor.philips_sml002_61de4606_occupancy:
-      friendly_name: Back Garden Motion
-    sensor.philips_sml002_61de4606_temperature:
-      friendly_name: Back Garden Temperature
-    light.downstairs_toilet:
+    light.downstairs_toilet_main:
       friendly_name: Downstairs Toilet
     light.bathroom:
       friendly_name: Bathroom
@@ -122,6 +91,44 @@ homeassistant:
     input_boolean.bfl:
       friendly_name: Big Light
       icon: mdi:ceiling-light
+    sensor.upstairs_hallway_motion:
+      friendly_name: Upstairs Hallway Light Level
+    sensor.kitchen_motion:
+      friendly_name: Kitchen Temperature
+    sensor.kitchen_motion_2:
+      friendly_name: Kitchen Light Level
+    binary_sensor.kitchen_motion:
+      friendly_name: Kitchen Motion
+    binary_sensor.front_garden_motion:
+      friendly_name: Front Garden Motion
+    sensor.front_garden_temperature:
+      friendly_name: Front Garden Temperature
+    sensor.front_garden_temperature_2:
+      friendly_name: Front Garden Light Level
+    binary_sensor.back_garden_motion:
+      friendly_name: Back Garden Motion
+    sensor.back_garden_motion:
+      friendly_name: Back Garden Temperature
+    sensor.back_garden_motion_2:
+      friendly_name: Back Garden Light Level      
+    sensor.bathroom_environment:
+      friendly_name: Bathroom Temperature
+    sensor.bathroom_environment_2:
+      friendly_name: Bathroom Humidity
+    sensor.bathroom_environment_3:
+      friendly_name: Bathroom Pressure
+    sensor.studio_environment:
+      friendly_name: Studio Temperature
+    sensor.studio_environment_2:
+      friendly_name: Studio Humidity
+    sensor.studio_environment_3:
+      friendly_name: Studio Pressure
+    sensor.downstairs_hallway_environment:
+      friendly_name: Downstairs Hallway Temperature
+    sensor.downstairs_hallway_environment_2:
+      friendly_name: Downstairs Hallway Humidity
+    sensor.downstairs_hallway_environment_3:
+      friendly_name: Downstairs Hallway Pressure
         
 cloud:
   alexa:
@@ -137,60 +144,18 @@ cloud:
         - light.ethans_room
         - light.living_room
         - light.marcuss_room
-        - media_player.hifi_roon
-        - media_player.living_room_roon
         - light.snug
         - light.upstairs_hallway
         - media_player.epson_projector
         - switch.lava_lamp
-        - light.snug_bookcase
+        - light.bookcase
         - switch.frog_filter
-        - climate.bedroom_heating
-        - climate.living_room_heating
         - media_player.living_room_tv
         - input_boolean.bfl
 
-# discovery:
-
 media_player:
-#   - platform: openhome
   - platform: epson
     host: 192.168.1.50
-
-# zha:
-#   database_path: /config/zigbee.db
-
-# zha_map:
-
-binary_sensor:
-  - platform: bayesian
-    prior: 0.5
-    probability_threshold: 0.6
-    name: Possibly Present
-    device_class: presence
-    observations:
-      - entity_id: alarm_control_panel.securitas_260178
-        platform: state
-        prob_given_true: 1
-        to_state: 'armed_night'
-      - entity_id: alarm_control_panel.securitas_260178
-        platform: state
-        prob_given_true: 0
-        to_state: 'armed_home'
-      - entity_id: alarm_control_panel.securitas_260178
-        platform: state
-        prob_given_true: 0
-        to_state: 'armed_away'
-      - entity_id: device_tracker.74_9e_af_4f_70_94
-        platform: state
-        prob_given_true: 0.95
-        prob_given_false: 0.5
-        to_state: 'home'
-      - entity_id: device_tracker.80_82_23_6a_ef_fc
-        platform: state
-        prob_given_true: 0.95
-        prob_given_false: 0.5
-        to_state: 'home'
 
 sensor:
   - platform: uptime
@@ -198,14 +163,14 @@ sensor:
   - platform: min_max
     name: Outside Light Level
     entity_ids:
-    - sensor.front_garden_light_level
-    - sensor.philips_sml002_61de4606_illuminance
+    - sensor.front_garden_temperature_2
+    - sensor.back_garden_temperature_2
     type: min
   - platform: min_max
     name: Outside Temperature
     entity_ids:
     - sensor.front_garden_temperature
-    - sensor.philips_sml002_61de4606_temperature
+    - sensor.back_garden_temperature
     type: min
   - platform: time_date
     display_options:
@@ -244,10 +209,10 @@ sensor:
           {% else %}
           {% set light_slot = "very_bright" %}
           {% endif %}
-          {% if is_state("binary_sensor.possibly_present", "on") %}
-          {% set presence = "home" %}
-          {% else %}
+          {% if is_state("alarm_control_panel.securitas_260178", "armed_home") or is_state("alarm_control_panel.securitas_260178", "armed_away")%}
           {% set presence = "away" %}
+          {% else %}
+          {% set presence = "home" %}
           {% endif %}
           {{ time_slot }}_{{ light_slot }}_{{ presence }}
           {% else %}
@@ -334,10 +299,10 @@ securitas_direct:
   code: {{ alarm.code }}
   country: GB
 
-opnsense:
-  url: {{ opnsense.url }}
-  api_secret: {{ opnsense.api_secret }}
-  api_key: {{ opnsense.api_key }}
-  tracker_interfaces:
-    - LAN
-  verify_ssl: true
+# opnsense:
+#   url: {{ opnsense.url }}
+#   api_secret: {{ opnsense.api_secret }}
+#   api_key: {{ opnsense.api_key }}
+#   tracker_interfaces:
+#     - LAN
+#   verify_ssl: true

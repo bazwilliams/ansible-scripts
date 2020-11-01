@@ -2,7 +2,7 @@ kitchen:
   name: Kitchen
   entities:
     - climate.kitchen
-    - binary_sensor.kitchen_occupancy
+    - binary_sensor.kitchen_motion
     - sensor.kitchen_motion_2
     - sensor.kitchen_motion
     - light.worktop_left
@@ -15,9 +15,9 @@ kitchen:
 front_garden:
   name: Front Garden
   entities:
-    - binary_sensor.front_garden_occupancy
-    - sensor.front_garden_light_level
-    - sensor.front_garden_temperature
+    - binary_sensor.front_garden_motion
+    - sensor.front_garden_motion
+    - sensor.front_garden_motion_2
     - light.outside_light
 terrace:
   name: Terrace
@@ -26,24 +26,25 @@ terrace:
 back_garden:
   name: Back Garden
   entities:
-    - binary_sensor.philips_sml002_61de4606_occupancy
-    - sensor.philips_sml002_61de4606_illuminance
-    - sensor.philips_sml002_61de4606_temperature
-    - light.terrace_light
+    - binary_sensor.back_garden_motion
+    - sensor.back_garden_motion
+    - sensor.back_garden_motion_2
+    - light.back_garden_light
     - light.hue_outdoor_spot_1
     - light.hue_outdoor_spot_2
     - light.hue_outdoor_spot_3
     - light.hue_outdoor_spot_4
     - light.hue_outdoor_spot_5
-    - light.hue_outdoor_pedestal_1
-    - light.hue_outdoor_pedestal_2
-    - light.hue_outdoor_pedestal_3
-    - light.hue_outdoor_pedestal_4
+    - light.path_end
+    - light.path_middle
+    - light.path_gate
+    - light.utility
 bathroom:
   name: Bathroom
   entities:
-    - sensor.lumi_lumi_weather_ff938804_humidity
-    - sensor.lumi_lumi_weather_ff938804_temperature
+    - sensor.bathroom_environment
+    - sensor.bathroom_environment_2
+    - sensor.bathroom_environment_3
 bedroom:
   name: Bedroom
   entities:
@@ -53,10 +54,10 @@ bedroom:
 staircase:
   name: staircase
   entities:
-    - light.stairs_1
-    - light.stairs_2
-    - light.stairs_3
-    - light.stairs_spot
+    - light.stair_1
+    - light.stair_2
+    - light.stair_3
+    - light.stair_spot
 downstairs_hallway:
   name: Downstairs Hallway
   entities:
@@ -66,20 +67,22 @@ downstairs_hallway:
     - light.downstairs_hallway_4
     - light.downstairs_hallway_5
     - light.downstairs_hallway_6
-    - switch.innr_sp_222_dce84cfe_on_off
-    - sensor.lumi_lumi_weather_a19c5c04_humidity
-    - sensor.lumi_lumi_weather_a19c5c04_temperature
+    - switch.diffuser
+    - sensor.downstairs_hallway_environment
+    - sensor.downstairs_hallway_environment_2
+    - sensor.downstairs_hallway_environment_3
 garden_studio:
   name: Garden Studio
   entities:
     - light.play_left
     - light.play_right
-    - sensor.studio_sensor_temperature
-    - sensor.studio_sensor_humidity
+    - sensor.studio_environment
+    - sensor.studio_environment_2
+    - sensor.studio_environment_3
 downstairs_toilet:
   name: Downstairs Toilet
   entities:
-    - light.downstairs_toilet
+    - light.downstairs_toilet_main
 ensuite:
   name: Ensuite
   entities:
@@ -102,9 +105,8 @@ living_room:
   name: Living Room
   entities:
     - climate.living_room_heating
-    - media_player.living_room_roon
     - media_player.living_room_tv
-    - light.snug_bookcase
+    - light.bookcase
     - light.tripod_lamp
     - light.hue_color_candle_3
     - light.hue_color_candle_5
@@ -122,7 +124,6 @@ snug:
   entities:
     - climate.snug
     - media_player.epson_projector
-    - media_player.hifi_roon
     - light.steampunk_lamp
     - light.tripod_lamp
     - switch.lava_lamp
@@ -133,5 +134,5 @@ upstairs_hallway:
   entities:
     - climate.upstairs_heating
     - light.upstairs_hallway
-    - binary_sensor.upstairs_cupboard_door
+    - binary_sensor.upstairs_cupboard
     - binary_sensor.upstairs_hallway_motion

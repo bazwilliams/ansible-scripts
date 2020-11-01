@@ -1,5 +1,5 @@
 - alias: morning_dark_home
-  initial_state: true
+  mode: single
   trigger:
     platform: state
     entity_id: sensor.house_mode
@@ -38,7 +38,7 @@
         entity_id: input_text.kitchen_scene
         value: kitchen_morning
 - alias: morning_dim_home
-  initial_state: true
+  mode: single
   trigger:
     platform: state
     entity_id: sensor.house_mode
@@ -77,7 +77,7 @@
         entity_id: input_text.kitchen_scene
         value: kitchen_morning
 - alias: morning_bright_home
-  initial_state: true
+  mode: single
   trigger:
     platform: state
     entity_id: sensor.house_mode
@@ -116,7 +116,7 @@
         entity_id: input_text.kitchen_scene
         value: kitchen_morning
 - alias: morning_very_bright_home
-  initial_state: true
+  mode: single
   trigger:
     platform: state
     entity_id: sensor.house_mode
@@ -155,7 +155,7 @@
         entity_id: input_text.kitchen_scene
         value: kitchen_morning
 - alias: daytime_dark_home
-  initial_state: true
+  mode: single
   trigger:
     platform: state
     entity_id: sensor.house_mode
@@ -194,7 +194,7 @@
         entity_id: input_text.kitchen_scene
         value: kitchen_daytime
 - alias: daytime_dim_home
-  initial_state: true
+  mode: single
   trigger:
     platform: state
     entity_id: sensor.house_mode
@@ -233,7 +233,7 @@
         entity_id: input_text.kitchen_scene
         value: kitchen_daytime
 - alias: daytime_bright_home
-  initial_state: true
+  mode: single
   trigger:
     platform: state
     entity_id: sensor.house_mode
@@ -272,7 +272,7 @@
         entity_id: input_text.kitchen_scene
         value: kitchen_daytime
 - alias: daytime_very_bright_home
-  initial_state: true
+  mode: single
   trigger:
     platform: state
     entity_id: sensor.house_mode
@@ -311,7 +311,7 @@
         entity_id: input_text.kitchen_scene
         value: kitchen_daytime
 - alias: evening_dark_home
-  initial_state: true
+  mode: single
   trigger:
     platform: state
     entity_id: sensor.house_mode
@@ -350,7 +350,7 @@
         entity_id: input_text.kitchen_scene
         value: kitchen_evening
 - alias: evening_dim_home
-  initial_state: true
+  mode: single
   trigger:
     platform: state
     entity_id: sensor.house_mode
@@ -389,7 +389,7 @@
         entity_id: input_text.kitchen_scene
         value: kitchen_evening
 - alias: evening_bright_home
-  initial_state: true
+  mode: single
   trigger:
     platform: state
     entity_id: sensor.house_mode
@@ -428,7 +428,7 @@
         entity_id: input_text.kitchen_scene
         value: kitchen_evening
 - alias: evening_very_bright_home
-  initial_state: true
+  mode: single
   trigger:
     platform: state
     entity_id: sensor.house_mode
@@ -467,7 +467,7 @@
         entity_id: input_text.kitchen_scene
         value: kitchen_evening
 - alias: late_evening_dark_home
-  initial_state: true
+  mode: single
   trigger:
     platform: state
     entity_id: sensor.house_mode
@@ -506,7 +506,7 @@
         entity_id: input_text.kitchen_scene
         value: kitchen_evening
 - alias: late_evening_dim_home
-  initial_state: true
+  mode: single
   trigger:
     platform: state
     entity_id: sensor.house_mode
@@ -545,7 +545,7 @@
         entity_id: input_text.kitchen_scene
         value: kitchen_evening
 - alias: late_evening_bright_home
-  initial_state: true
+  mode: single
   trigger:
     platform: state
     entity_id: sensor.house_mode
@@ -584,7 +584,7 @@
         entity_id: input_text.kitchen_scene
         value: kitchen_evening
 - alias: late_evening_very_bright_home
-  initial_state: true
+  mode: single
   trigger:
     platform: state
     entity_id: sensor.house_mode
@@ -623,7 +623,7 @@
         entity_id: input_text.kitchen_scene
         value: kitchen_evening
 - alias: early_night_dark_home
-  initial_state: true
+  mode: single
   trigger:
     platform: state
     entity_id: sensor.house_mode
@@ -662,7 +662,7 @@
         entity_id: input_text.kitchen_scene
         value: kitchen_early_night
 - alias: early_night_dim_home
-  initial_state: true
+  mode: single
   trigger:
     platform: state
     entity_id: sensor.house_mode
@@ -701,7 +701,7 @@
         entity_id: input_text.kitchen_scene
         value: kitchen_early_night
 - alias: early_night_bright_home
-  initial_state: true
+  mode: single
   trigger:
     platform: state
     entity_id: sensor.house_mode
@@ -740,7 +740,7 @@
         entity_id: input_text.kitchen_scene
         value: kitchen_early_night
 - alias: early_night_very_bright_home
-  initial_state: true
+  mode: single
   trigger:
     platform: state
     entity_id: sensor.house_mode
@@ -779,7 +779,7 @@
         entity_id: input_text.kitchen_scene
         value: kitchen_early_night
 - alias: late_night_dark_home
-  initial_state: true
+  mode: single
   trigger:
     platform: state
     entity_id: sensor.house_mode
@@ -818,7 +818,7 @@
         entity_id: input_text.kitchen_scene
         value: kitchen_late_night
 - alias: late_night_dim_home
-  initial_state: true
+  mode: single
   trigger:
     platform: state
     entity_id: sensor.house_mode
@@ -857,7 +857,7 @@
         entity_id: input_text.kitchen_scene
         value: kitchen_late_night
 - alias: late_night_bright_home
-  initial_state: true
+  mode: single
   trigger:
     platform: state
     entity_id: sensor.house_mode
@@ -896,7 +896,7 @@
         entity_id: input_text.kitchen_scene
         value: kitchen_late_night
 - alias: late_night_very_bright_home
-  initial_state: true
+  mode: single
   trigger:
     platform: state
     entity_id: sensor.house_mode
@@ -935,7 +935,7 @@
         entity_id: input_text.kitchen_scene
         value: kitchen_late_night
 - alias: night_dark_home
-  initial_state: true
+  mode: single
   trigger:
     platform: state
     entity_id: sensor.house_mode
@@ -974,7 +974,7 @@
         entity_id: input_text.kitchen_scene
         value: kitchen_night
 - alias: night_dim_home
-  initial_state: true
+  mode: single
   trigger:
     platform: state
     entity_id: sensor.house_mode
@@ -1013,7 +1013,7 @@
         entity_id: input_text.kitchen_scene
         value: kitchen_night
 - alias: night_bright_home
-  initial_state: true
+  mode: single
   trigger:
     platform: state
     entity_id: sensor.house_mode
@@ -1052,7 +1052,7 @@
         entity_id: input_text.kitchen_scene
         value: kitchen_night
 - alias: night_very_bright_home
-  initial_state: true
+  mode: single
   trigger:
     platform: state
     entity_id: sensor.house_mode
@@ -1092,7 +1092,7 @@
         value: kitchen_night
 
 - alias: morning_dark_away
-  initial_state: true
+  mode: single
   trigger:
     platform: state
     entity_id: sensor.house_mode
@@ -1131,7 +1131,7 @@
         entity_id: input_text.kitchen_scene
         value: kitchen_away
 - alias: morning_dim_away
-  initial_state: true
+  mode: single
   trigger:
     platform: state
     entity_id: sensor.house_mode
@@ -1170,7 +1170,7 @@
         entity_id: input_text.kitchen_scene
         value: kitchen_away
 - alias: morning_bright_away
-  initial_state: true
+  mode: single
   trigger:
     platform: state
     entity_id: sensor.house_mode
@@ -1209,7 +1209,7 @@
         entity_id: input_text.kitchen_scene
         value: kitchen_away
 - alias: morning_very_bright_away
-  initial_state: true
+  mode: single
   trigger:
     platform: state
     entity_id: sensor.house_mode
@@ -1248,7 +1248,7 @@
         entity_id: input_text.kitchen_scene
         value: kitchen_away
 - alias: daytime_dark_away
-  initial_state: true
+  mode: single
   trigger:
     platform: state
     entity_id: sensor.house_mode
@@ -1290,7 +1290,7 @@
         entity_id: input_text.kitchen_scene
         value: kitchen_away
 - alias: daytime_dim_away
-  initial_state: true
+  mode: single
   trigger:
     platform: state
     entity_id: sensor.house_mode
@@ -1329,7 +1329,7 @@
         entity_id: input_text.kitchen_scene
         value: kitchen_away
 - alias: daytime_bright_away
-  initial_state: true
+  mode: single
   trigger:
     platform: state
     entity_id: sensor.house_mode
@@ -1368,7 +1368,7 @@
         entity_id: input_text.kitchen_scene
         value: kitchen_away
 - alias: daytime_very_bright_away
-  initial_state: true
+  mode: single
   trigger:
     platform: state
     entity_id: sensor.house_mode
@@ -1407,7 +1407,7 @@
         entity_id: input_text.kitchen_scene
         value: kitchen_away
 - alias: evening_dark_away
-  initial_state: true
+  mode: single
   trigger:
     platform: state
     entity_id: sensor.house_mode
@@ -1446,7 +1446,7 @@
         entity_id: input_text.kitchen_scene
         value: kitchen_away
 - alias: evening_dim_away
-  initial_state: true
+  mode: single
   trigger:
     platform: state
     entity_id: sensor.house_mode
@@ -1485,7 +1485,7 @@
         entity_id: input_text.kitchen_scene
         value: kitchen_away
 - alias: evening_bright_away
-  initial_state: true
+  mode: single
   trigger:
     platform: state
     entity_id: sensor.house_mode
@@ -1524,7 +1524,7 @@
         entity_id: input_text.kitchen_scene
         value: kitchen_away
 - alias: evening_very_bright_away
-  initial_state: true
+  mode: single
   trigger:
     platform: state
     entity_id: sensor.house_mode
@@ -1563,7 +1563,7 @@
         entity_id: input_text.kitchen_scene
         value: kitchen_away
 - alias: late_evening_dark_away
-  initial_state: true
+  mode: single
   trigger:
     platform: state
     entity_id: sensor.house_mode
@@ -1602,7 +1602,7 @@
         entity_id: input_text.kitchen_scene
         value: kitchen_away
 - alias: late_evening_dim_away
-  initial_state: true
+  mode: single
   trigger:
     platform: state
     entity_id: sensor.house_mode
@@ -1641,7 +1641,7 @@
         entity_id: input_text.kitchen_scene
         value: kitchen_away
 - alias: late_evening_bright_away
-  initial_state: true
+  mode: single
   trigger:
     platform: state
     entity_id: sensor.house_mode
@@ -1680,7 +1680,7 @@
         entity_id: input_text.kitchen_scene
         value: kitchen_away
 - alias: late_evening_very_bright_away
-  initial_state: true
+  mode: single
   trigger:
     platform: state
     entity_id: sensor.house_mode
@@ -1719,7 +1719,7 @@
         entity_id: input_text.kitchen_scene
         value: kitchen_away
 - alias: early_night_dark_away
-  initial_state: true
+  mode: single
   trigger:
     platform: state
     entity_id: sensor.house_mode
@@ -1758,7 +1758,7 @@
         entity_id: input_text.kitchen_scene
         value: kitchen_away
 - alias: early_night_dim_away
-  initial_state: true
+  mode: single
   trigger:
     platform: state
     entity_id: sensor.house_mode
@@ -1797,7 +1797,7 @@
         entity_id: input_text.kitchen_scene
         value: kitchen_away
 - alias: early_night_bright_away
-  initial_state: true
+  mode: single
   trigger:
     platform: state
     entity_id: sensor.house_mode
@@ -1836,7 +1836,7 @@
         entity_id: input_text.kitchen_scene
         value: kitchen_away
 - alias: early_night_very_bright_away
-  initial_state: true
+  mode: single
   trigger:
     platform: state
     entity_id: sensor.house_mode
@@ -1875,7 +1875,7 @@
         entity_id: input_text.kitchen_scene
         value: kitchen_away
 - alias: late_night_dark_away
-  initial_state: true
+  mode: single
   trigger:
     platform: state
     entity_id: sensor.house_mode
@@ -1914,7 +1914,7 @@
         entity_id: input_text.kitchen_scene
         value: kitchen_away
 - alias: late_night_dim_away
-  initial_state: true
+  mode: single
   trigger:
     platform: state
     entity_id: sensor.house_mode
@@ -1953,7 +1953,7 @@
         entity_id: input_text.kitchen_scene
         value: kitchen_away
 - alias: late_night_bright_away
-  initial_state: true
+  mode: single
   trigger:
     platform: state
     entity_id: sensor.house_mode
@@ -1992,7 +1992,7 @@
         entity_id: input_text.kitchen_scene
         value: kitchen_away
 - alias: late_night_very_bright_away
-  initial_state: true
+  mode: single
   trigger:
     platform: state
     entity_id: sensor.house_mode
@@ -2031,7 +2031,7 @@
         entity_id: input_text.kitchen_scene
         value: kitchen_away
 - alias: night_dark_away
-  initial_state: true
+  mode: single
   trigger:
     platform: state
     entity_id: sensor.house_mode
@@ -2070,7 +2070,7 @@
         entity_id: input_text.kitchen_scene
         value: kitchen_away
 - alias: night_dim_away
-  initial_state: true
+  mode: single
   trigger:
     platform: state
     entity_id: sensor.house_mode
@@ -2109,7 +2109,7 @@
         entity_id: input_text.kitchen_scene
         value: kitchen_away
 - alias: night_bright_away
-  initial_state: true
+  mode: single
   trigger:
     platform: state
     entity_id: sensor.house_mode
@@ -2148,7 +2148,7 @@
         entity_id: input_text.kitchen_scene
         value: kitchen_away
 - alias: night_very_bright_away
-  initial_state: true
+  mode: single
   trigger:
     platform: state
     entity_id: sensor.house_mode
@@ -2188,7 +2188,7 @@
         value: kitchen_away
 
 - alias: Wakeup
-  initial_state: true
+  mode: single
   trigger:
     - platform: time
       at: "06:00:00"
@@ -2208,7 +2208,7 @@
           - media_player.marcus_room
 
 - alias: Frog Filter On
-  initial_state: true
+  mode: single
   trigger:
     platform: time
     at: "02:00:00"
@@ -2219,7 +2219,7 @@
           - switch.frog_filter
 
 - alias: Frog Filter Off
-  initial_state: true
+  mode: single
   trigger:
     platform: time
     at: "08:00:00"
@@ -2230,7 +2230,7 @@
           - switch.frog_filter
 
 - alias: Kitchen Lights On Due to Motion
-  initial_state: true
+  mode: single
   condition:
     - condition: state
       entity_id: light.kitchen
@@ -2249,7 +2249,7 @@
         entity_id: "scene.{{ states('input_text.kitchen_scene') }}"
 
 - alias: Kitchen Lights On Due to Brightness with Motion
-  initial_state: true
+  mode: single
   condition:
     - condition: state
       entity_id: light.kitchen
@@ -2267,7 +2267,7 @@
         entity_id: "scene.{{ states('input_text.kitchen_scene') }}"
 
 - alias: Kitchen Lights Off
-  initial_state: true
+  mode: single
   trigger:
     - platform: numeric_state
       entity_id: sensor.kitchen_motion_2
@@ -2284,7 +2284,7 @@
           - group.kitchen
 
 - alias: Upstairs Hallway Motion
-  initial_state: true
+  mode: single
   condition:
     - condition: numeric_state
       entity_id: sensor.upstairs_hallway_motion
@@ -2308,7 +2308,7 @@
         entity_id: "scene.{{ states('input_text.upstairs_hallway_scene') }}"
 
 - alias: Upstairs Hallway No Motion
-  initial_state: true
+  mode: single
   trigger:
     - platform: state
       entity_id: binary_sensor.upstairs_hallway_motion
@@ -2324,7 +2324,7 @@
         entity_id: scene.upstairs_hallway_off
 
 - alias: Upstairs Hallway Default Scene Changed to Off
-  initial_state: true
+  mode: single
   trigger:
     platform: state
     entity_id: input_text.upstairs_hallway_scene
@@ -2335,10 +2335,10 @@
         entity_id: scene.upstairs_hallway_off
 
 - alias: Upstairs Hallway Cupboard Door Open
-  initial_state: true
+  mode: single
   trigger:
     - platform: state
-      entity_id: binary_sensor.upstairs_cupboard_door
+      entity_id: binary_sensor.upstairs_cupboard
       to: "on"
   action:
     - service: scene.create
@@ -2351,10 +2351,10 @@
         entity_id: scene.upstairs_cupboard_open
 
 - alias: Upstairs Hallway Cupboard Door Closed
-  initial_state: true
+  mode: single
   trigger:
     - platform: state
-      entity_id: binary_sensor.upstairs_cupboard_door
+      entity_id: binary_sensor.upstairs_cupboard
       to: "off"
   action:
     - service: scene.turn_on
@@ -2362,10 +2362,10 @@
         entity_id: scene.upstairs_spot_2_before
 
 - alias: Back Garden to White
-  initial_state: true
+  mode: single
   trigger:
     platform: state
-    entity_id: binary_sensor.philips_sml002_61de4606_occupancy
+    entity_id: binary_sensor.back_garden_motion
     to: "on"
   condition:
     - condition: state
@@ -2382,7 +2382,7 @@
         entity_id: scene.back_garden_white
 
 - alias: Back Garden to Bright
-  initial_state: true
+  mode: single
   trigger:
     platform: state
     entity_id: input_boolean.terrace_occupancy
@@ -2394,28 +2394,28 @@
       data:
         entity_id: scene.back_garden_bright
 
-- alias: Back Garden to Colour Loop
-  initial_state: true
-  trigger:
-    platform: state
-    entity_id: input_boolean.terrace_occupancy
-    to: "on"
-    for:
-      minutes: 10
-  action:
-    - service: scene.turn_on
-      data:
-        entity_id: scene.back_garden_colour_loop
+# - alias: Back Garden to Colour Loop
+#   mode: single
+#   trigger:
+#     platform: state
+#     entity_id: input_boolean.terrace_occupancy
+#     to: "on"
+#     for:
+#       minutes: 10
+#   action:
+#     - service: scene.turn_on
+#       data:
+#         entity_id: scene.back_garden_colour_loop
 
 - alias: Back Garden to Default Scene
-  initial_state: true
+  mode: single
   condition:
     - condition: numeric_state
       entity_id: sensor.outside_light_level
       below: 50
   trigger:
     platform: state
-    entity_id: binary_sensor.philips_sml002_61de4606_occupancy
+    entity_id: binary_sensor.back_garden_motion
     to: "off"
     for:
       minutes: 5
@@ -2427,7 +2427,7 @@
       entity_id: input_boolean.terrace_occupancy
 
 - alias: Back Garden Default Scene Changed
-  initial_state: true
+  mode: single
   trigger:
     platform: state
     entity_id: input_text.back_garden_scene
@@ -2436,228 +2436,62 @@
       data_template:
         entity_id: "scene.{{ states('input_text.back_garden_scene') }}"
 
-- alias: Front Garden to Bright
-  initial_state: true
-  trigger:
-    platform: state
-    entity_id: binary_sensor.front_garden_occupancy
-    to: "on"
-  condition:
-    - condition: numeric_state
-      entity_id: sensor.outside_light_level
-      below: 50
-  action:
-    - service: scene.turn_on
-      data:
-        entity_id: scene.front_garden_bright
+# - alias: Front Garden to Bright
+#   mode: single
+#   trigger:
+#     platform: state
+#     entity_id: binary_sensor.front_garden_occupancy
+#     to: "on"
+#   condition:
+#     - condition: numeric_state
+#       entity_id: sensor.outside_light_level
+#       below: 50
+#   action:
+#     - service: scene.turn_on
+#       data:
+#         entity_id: scene.front_garden_bright
 
-- alias: Front Garden to Default Scene
-  initial_state: true
-  condition:
-    - condition: numeric_state
-      entity_id: sensor.outside_light_level
-      below: 50
-  trigger:
-    platform: state
-    entity_id: binary_sensor.front_garden_occupancy
-    to: "off"
-    for:
-      minutes: 2
-  action:
-    - service: scene.turn_on
-      data_template:
-        entity_id: "scene.{{ states('input_text.front_garden_scene') }}"
+# - alias: Front Garden to Default Scene
+#   mode: single
+#   condition:
+#     - condition: numeric_state
+#       entity_id: sensor.outside_light_level
+#       below: 50
+#   trigger:
+#     platform: state
+#     entity_id: binary_sensor.front_garden_occupancy
+#     to: "off"
+#     for:
+#       minutes: 2
+#   action:
+#     - service: scene.turn_on
+#       data_template:
+#         entity_id: "scene.{{ states('input_text.front_garden_scene') }}"
 
-- alias: Front Garden Default Scene Changed
-  initial_state: true
-  trigger:
-    platform: state
-    entity_id: input_text.front_garden_scene
-  action:
-    - service: scene.turn_on
-      data_template:
-        entity_id: "scene.{{ states('input_text.front_garden_scene') }}"
+# - alias: Front Garden Default Scene Changed
+#   mode: single
+#   trigger:
+#     platform: state
+#     entity_id: input_text.front_garden_scene
+#   action:
+#     - service: scene.turn_on
+#       data_template:
+#         entity_id: "scene.{{ states('input_text.front_garden_scene') }}"
 
-- alias: Watching the Big Screen
-  initial_state: true
-  trigger:
-    - platform: state
-      entity_id: media_player.epson_projector
-      to: "on"
-  action:
-    - service: input_text.set_value
-      data:
-        entity_id: input_text.snug_scene
-        value: snug_movie
-
-- alias: Snug Lights On
-  initial_state: true
-  trigger:
-    platform: event
-    event_type: zha_event
-    event_data:
-      device_ieee: 00:17:88:01:08:0d:00:be
-      unique_id: 00:17:88:01:08:0d:00:be:1:0x0006
-      endpoint_id: 1
-      cluster_id: 6
-      command: "on"
-  action:
-    - service: input_text.set_value
-      data:
-        entity_id: input_text.snug_scene
-        value: snug_on
-
-- alias: Snug Lights Off
-  initial_state: true
-  trigger:
-    platform: event
-    event_type: zha_event
-    event_data:
-      device_ieee: 00:17:88:01:08:0d:00:be
-      unique_id: 00:17:88:01:08:0d:00:be:1:0x0006
-      endpoint_id: 1
-      cluster_id: 6
-      command: off_with_effect
-  action:
-    - service: input_text.set_value
-      data:
-        entity_id: input_text.snug_scene
-        value: snug_off
-
-- alias: Snug All Off
-  initial_state: true
-  trigger:
-    platform: event
-    event_type: zha_event
-    event_data:
-      device_ieee: 00:17:88:01:08:0d:00:be
-      unique_id: 00:17:88:01:08:0d:00:be:1:0x0006
-      endpoint_id: 1
-      cluster_id: 6
-      command: off_with_effect
-  condition:
-    - condition: state
-      entity_id: input_text.snug_scene
-      state: "snug_off"
-  action:
-    - service: homeassistant.turn_off
-      data:
-        entity_id:
-          - group.snug
-
-- alias: Snug Scene Changed
-  initial_state: true
-  trigger:
-    platform: state
-    entity_id: input_text.snug_scene
-  action:
-    - service: scene.turn_on
-      data_template:
-        entity_id: "scene.{{ states('input_text.snug_scene') }}"
-
-- alias: Guest Room Scene Mode 1
-  initial_state: true
-  condition:
-    condition: or
-    conditions:
-      - condition: state
-        entity_id: input_text.guest_room_mode
-        state: scene_off
-      - condition: state
-        entity_id: input_text.guest_room_mode
-        state: scene_3
-  trigger:
-    platform: event
-    event_type: zha_event
-    event_data:
-      device_ieee: 00:17:88:01:10:49:e1:d2
-      unique_id: 00:17:88:01:10:49:e1:d2:1:0x0006
-      endpoint_id: 1
-      cluster_id: 6
-      command: "on"
-  action:
-    - service: hue.hue_activate_scene
-      data:
-        group_name: Guest Room
-        scene_name: Dim lamp
-    - service: input_text.set_value
-      data:
-        entity_id: input_text.guest_room_mode
-        value: scene_1
-
-- alias: Guest Room Scene Mode 2
-  initial_state: true
-  condition:
-    - condition: state
-      entity_id: input_text.guest_room_mode
-      state: "scene_1"
-  trigger:
-    platform: event
-    event_type: zha_event
-    event_data:
-      device_ieee: 00:17:88:01:10:49:e1:d2
-      unique_id: 00:17:88:01:10:49:e1:d2:1:0x0006
-      endpoint_id: 1
-      cluster_id: 6
-      command: "on"
-  action:
-    - service: hue.hue_activate_scene
-      data:
-        group_name: Guest Room
-        scene_name: Mid bright
-    - service: input_text.set_value
-      data:
-        entity_id: input_text.guest_room_mode
-        value: scene_2
-
-- alias: Guest Room Scene Mode 3
-  initial_state: true
-  condition:
-    - condition: state
-      entity_id: input_text.guest_room_mode
-      state: "scene_2"
-  trigger:
-    platform: event
-    event_type: zha_event
-    event_data:
-      device_ieee: 00:17:88:01:10:49:e1:d2
-      unique_id: 00:17:88:01:10:49:e1:d2:1:0x0006
-      endpoint_id: 1
-      cluster_id: 6
-      command: "on"
-  action:
-    - service: hue.hue_activate_scene
-      data:
-        group_name: Guest Room
-        scene_name: Energize
-    - service: input_text.set_value
-      data:
-        entity_id: input_text.guest_room_mode
-        value: scene_3
-
-- alias: Guest Room Lights Off
-  initial_state: true
-  trigger:
-    platform: event
-    event_type: zha_event
-    event_data:
-      device_ieee: 00:17:88:01:10:49:e1:d2
-      unique_id: 00:17:88:01:10:49:e1:d2:1:0x0006
-      endpoint_id: 1
-      cluster_id: 6
-      command: off_with_effect
-  action:
-    - service: light.turn_off
-      data:
-        entity_id:
-          - group.guest_room
-    - service: input_text.set_value
-      data:
-        entity_id: input_text.guest_room_mode
-        value: scene_off
+# - alias: Watching the Big Screen
+#   mode: single
+#   trigger:
+#     - platform: state
+#       entity_id: media_player.epson_projector
+#       to: "on"
+#   action:
+#     - service: input_text.set_value
+#       data:
+#         entity_id: input_text.snug_scene
+#         value: snug_movie
 
 - alias: Bedroom Scene Mode 1
-  initial_state: true
+  mode: single
   condition:
     condition: or
     conditions:
@@ -2668,14 +2502,11 @@
         entity_id: input_text.bedroom_mode
         state: scene_3
   trigger:
-    platform: event
-    event_type: zha_event
-    event_data:
-      device_ieee: 00:17:88:01:08:07:fc:d2
-      unique_id: 00:17:88:01:08:07:fc:d2:1:0x0006
-      endpoint_id: 1
-      cluster_id: 6
-      command: "on"
+    device_id: 60e301ea1bc711ebb126a7fc0eb6ed92
+    domain: deconz
+    platform: device
+    type: remote_button_short_release
+    subtype: turn_on
   action:
     - service: hue.hue_activate_scene
       data:
@@ -2690,20 +2521,17 @@
         entity_id: switch.bedroom_main
 
 - alias: Bedroom Scene Mode 2
-  initial_state: true
+  mode: single
   condition:
     - condition: state
       entity_id: input_text.bedroom_mode
       state: "scene_1"
   trigger:
-    platform: event
-    event_type: zha_event
-    event_data:
-      device_ieee: 00:17:88:01:08:07:fc:d2
-      unique_id: 00:17:88:01:08:07:fc:d2:1:0x0006
-      endpoint_id: 1
-      cluster_id: 6
-      command: "on"
+    device_id: 60e301ea1bc711ebb126a7fc0eb6ed92
+    domain: deconz
+    platform: device
+    type: remote_button_short_release
+    subtype: turn_on
   action:
     - service: hue.hue_activate_scene
       data:
@@ -2718,20 +2546,17 @@
         entity_id: switch.bedroom_main
 
 - alias: Bedroom Scene Mode 3
-  initial_state: true
+  mode: single
   condition:
     - condition: state
       entity_id: input_text.bedroom_mode
       state: "scene_2"
   trigger:
-    platform: event
-    event_type: zha_event
-    event_data:
-      device_ieee: 00:17:88:01:08:07:fc:d2
-      unique_id: 00:17:88:01:08:07:fc:d2:1:0x0006
-      endpoint_id: 1
-      cluster_id: 6
-      command: "on"
+    device_id: 60e301ea1bc711ebb126a7fc0eb6ed92
+    domain: deconz
+    platform: device
+    type: remote_button_short_release
+    subtype: turn_on
   action:
     - service: hue.hue_activate_scene
       data:
@@ -2746,16 +2571,15 @@
         entity_id: switch.bedroom_main
 
 - alias: Bedroom Lights Off
-  initial_state: true
+  mode: single
   trigger:
-    platform: event
-    event_type: zha_event
-    event_data:
-      device_ieee: 00:17:88:01:08:07:fc:d2
-      unique_id: 00:17:88:01:08:07:fc:d2:1:0x0006
-      endpoint_id: 1
-      cluster_id: 6
-      command: off_with_effect
+    device_id: 60e301ea1bc711ebb126a7fc0eb6ed92
+    domain: deconz
+    platform: device
+    type: remote_button_short_release
+    subtype: turn_off
+
+    
   action:
     - service: light.turn_off
       data:
@@ -2769,78 +2593,106 @@
         entity_id: input_text.bedroom_mode
         value: scene_off
 
-# - alias: Downstairs Toilet Light On
-#   mode: single
-#   trigger:
-#   - device_id: fc9b779ca9f04cbe934e078fe39622cc
-#     domain: zha
-#     platform: device
-#     type: remote_button_short_press
-#     subtype: turn_on
-#   action:
-#   - service: scene.turn_on
-#     data_template:
-#       entity_id: "scene.{{ states('input_text.downstairs_toilet_scene') }}"
+- alias: Bedroom Light Dim Up
+  mode: single
+  trigger:
+  - device_id: 60e301ea1bc711ebb126a7fc0eb6ed92
+    domain: deconz
+    platform: device
+    type: remote_button_long_press
+    subtype: dim_up
+  action:
+    - service: light.turn_on
+      data_template:
+        entity_id: light.bedroom
+        brightness_step_pct: 10
 
-# - alias: Downstairs Toilet Light Off
-#   mode: single
-#   trigger:
-#   - device_id: fc9b779ca9f04cbe934e078fe39622cc
-#     domain: zha
-#     platform: device
-#     type: remote_button_short_press
-#     subtype: turn_off
-#   action:
-#     - service: light.turn_off
-#       data_template:
-#         entity_id: light.downstairs_toilet
+- alias: Bedroom Light Dim Down
+  mode: single
+  trigger:
+  - device_id: 60e301ea1bc711ebb126a7fc0eb6ed92
+    domain: deconz
+    platform: device
+    type: remote_button_long_press
+    subtype: dim_down
+  action:
+    - service: light.turn_on
+      data_template:
+        entity_id: light.bedroom
+        brightness_step_pct: -10
 
-# - alias: Downstairs Toilet Light Dim Up
-#   mode: single
-#   trigger:
-#   - device_id: fc9b779ca9f04cbe934e078fe39622cc
-#     domain: zha
-#     platform: device
-#     type: remote_button_long_press
-#     subtype: dim_up
-#   action:
-#     - service: light.turn_on
-#       data_template:
-#         entity_id: light.downstairs_toilet
-#         brightness_step_pct: 10
+- alias: Downstairs Toilet Light On
+  mode: single
+  trigger:
+  - device_id: 60e2fa551bc711eb84e3ff5904f2d7ba
+    domain: deconz
+    platform: device
+    type: remote_button_short_press
+    subtype: turn_on
+  action:
+  - service: scene.turn_on
+    data_template:
+      entity_id: "scene.{{ states('input_text.downstairs_toilet_scene') }}"
 
-# - alias: Downstairs Toilet Light Dim Down
-#   mode: single
-#   trigger:
-#   - device_id: fc9b779ca9f04cbe934e078fe39622cc
-#     domain: zha
-#     platform: device
-#     type: remote_button_long_press
-#     subtype: dim_down
-#   action:
-#     - service: light.turn_on
-#       data_template:
-#         entity_id: light.downstairs_toilet
-#         brightness_step_pct: -10
+- alias: Downstairs Toilet Light Off
+  mode: single
+  trigger:
+  - device_id: 60e2fa551bc711eb84e3ff5904f2d7ba
+    domain: deconz
+    platform: device
+    type: remote_button_short_press
+    subtype: turn_off
+  action:
+    - service: light.turn_off
+      data_template:
+        entity_id: light.downstairs_toilet_main
 
-# - alias: Downstairs Toilet Light On
-#   mode: single
-#   trigger:
-#   - device_id: fc9b779ca9f04cbe934e078fe39622cc
-#     domain: zha
-#     platform: device
-#     type: remote_button_short_press
-#     subtype: turn_on
-#   action:
-#   - service: scene.turn_on
-#     data_template:
-#       entity_id: "scene.{{ states('input_text.downstairs_toilet_scene') }}"
+- alias: Downstairs Toilet Light Dim Up
+  mode: single
+  trigger:
+  - device_id: 60e2fa551bc711eb84e3ff5904f2d7ba
+    domain: deconz
+    platform: device
+    type: remote_button_long_press
+    subtype: dim_up
+  action:
+    - service: light.turn_on
+      data_template:
+        entity_id: light.downstairs_toilet_main
+        brightness_step_pct: 10
+
+- alias: Downstairs Toilet Light Dim Down
+  mode: single
+  trigger:
+  - device_id: 60e2fa551bc711eb84e3ff5904f2d7ba
+    domain: deconz
+    platform: device
+    type: remote_button_long_press
+    subtype: dim_down
+  action:
+    - service: light.turn_on
+      data_template:
+        entity_id: light.downstairs_toilet_main
+        brightness_step_pct: -10
+
+- alias: Downstairs Toilet Light On
+  mode: single
+  trigger:
+  - device_id: 60e2fa551bc711eb84e3ff5904f2d7ba
+    domain: deconz
+    platform: device
+    type: remote_button_short_press
+    subtype: turn_on
+  action:
+  - service: scene.turn_on
+    data_template:
+      entity_id: "scene.{{ states('input_text.downstairs_toilet_scene') }}"
 
 - alias: Living Room Dimmer Turn On While Normal
   mode: single
   trigger:
-  - device_id: 6d9999e2b43145d9a8d4b6b2a4201a13
-    domain: zha
+  - device_id: 60e2f1e61bc711eb8b1ec5ef3b41f95e
+    domain: deconz
     platform: device
     type: remote_button_short_press
     subtype: turn_on
@@ -2866,8 +2718,8 @@
 - alias: Living Room Dimmer Turn On While Dark
   mode: single
   trigger:
-  - device_id: 6d9999e2b43145d9a8d4b6b2a4201a13
-    domain: zha
+  - device_id: 60e2f1e61bc711eb8b1ec5ef3b41f95e
+    domain: deconz
     platform: device
     type: remote_button_short_press
     subtype: turn_on
@@ -2883,8 +2735,8 @@
 - alias: Living Room Dimmer Turn Off While BFL
   mode: single
   trigger:
-  - device_id: 6d9999e2b43145d9a8d4b6b2a4201a13
-    domain: zha
+  - device_id: 60e2f1e61bc711eb8b1ec5ef3b41f95e
+    domain: deconz
     platform: device
     type: remote_button_short_press
     subtype: turn_off
@@ -2900,8 +2752,8 @@
 - alias: Living Room Dimmer Turn Off While Normal
   mode: single
   trigger:
-  - device_id: 6d9999e2b43145d9a8d4b6b2a4201a13
-    domain: zha
+  - device_id: 60e2f1e61bc711eb8b1ec5ef3b41f95e
+    domain: deconz
     platform: device
     type: remote_button_short_press
     subtype: turn_off
@@ -2915,8 +2767,8 @@
 - alias: Living Room Dimmer Long Press Turn Off
   mode: single
   trigger:
-  - device_id: 6d9999e2b43145d9a8d4b6b2a4201a13
-    domain: zha
+  - device_id: 60e2f1e61bc711eb8b1ec5ef3b41f95e
+    domain: deconz
     platform: device
     type: remote_button_long_press
     subtype: turn_off
@@ -2932,14 +2784,13 @@
   - service: media_player.turn_off
     data:
       entity_id:
-      - media_player.living_room_roon
       - media_player.living_room_tv
 
 - alias: Living Room Dimmer Dim Up
   mode: single
   trigger:
-  - device_id: 6d9999e2b43145d9a8d4b6b2a4201a13
-    domain: zha
+  - device_id: 60e2f1e61bc711eb8b1ec5ef3b41f95e
+    domain: deconz
     platform: device
     type: remote_button_long_press
     subtype: dim_up
@@ -2952,8 +2803,8 @@
 - alias: Living Room Dimmer Dim Down
   mode: single
   trigger:
-  - device_id: 6d9999e2b43145d9a8d4b6b2a4201a13
-    domain: zha
+  - device_id: 60e2f1e61bc711eb8b1ec5ef3b41f95e
+    domain: deconz
     platform: device
     type: remote_button_long_press
     subtype: dim_down
@@ -3014,7 +2865,7 @@
       entity_id: "scene.{{ states('input_text.living_room_scene') }}"
 
 - alias: Downstairs Hallway Default Scene Changed
-  initial_state: true
+  mode: single
   trigger:
     platform: state
     entity_id: input_text.downstairs_hallway_scene
@@ -3024,7 +2875,7 @@
         entity_id: "scene.{{ states('input_text.downstairs_hallway_scene') }}"
 
 - alias: Staircase or Upstairs Hallway Motion
-  initial_state: true
+  mode: single
   trigger:
     - platform: state
       entity_id: sensor.house_mode
@@ -3042,7 +2893,7 @@
         entity_id: "scene.{{ states('input_text.staircase_scene') }}"
 
 - alias: Staircase No Motion
-  initial_state: true
+  mode: single
   trigger:
     - platform: state
       entity_id: binary_sensor.downstairs_hallway_motion
@@ -3055,7 +2906,7 @@
         entity_id: scene.stairs_off
 
 - alias: Staircase Default Scene Changed to Off
-  initial_state: true
+  mode: single
   trigger:
     platform: state
     entity_id: input_text.staircase_scene
@@ -3064,33 +2915,3 @@
     - service: scene.turn_on
       data:
         entity_id: scene.stairs_off
-
-- alias: Away Mode
-  initial_state: true
-  trigger:
-    platform: state
-    entity_id: binary_sensor.possibly_present
-    to: "off"
-  action:
-    - service: switch.turn_off
-      data:
-        entity_id:
-        - group.snug
-    - service: light.turn_off
-      data:
-        entity_id:
-        - group.snug
-        - group.downstairs_toilet
-        - group.ethans_room
-        - group.marcuss_room
-    - service: media_player.turn_off
-      data:
-        entity_id:
-        - media_player.hifi_roon
-        - media_player.living_room_roon
-        - media_player.living_room_tv
-    - service: media_player.media_pause
-      data:
-        entity_id:
-          - media_player.ethan_s_room
-          - media_player.marcus_room

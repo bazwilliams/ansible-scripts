@@ -246,11 +246,11 @@
       color_temp: 153
 - name: Back Garden Off
   entities:
-    light.terrace_light: off
-    light.hue_outdoor_pedestal_1: off
-    light.hue_outdoor_pedestal_2: off
-    light.hue_outdoor_pedestal_3: off
-    light.hue_outdoor_pedestal_4: off
+    light.back_garden_light: off
+    light.path_end: off
+    light.path_middle: off
+    light.path_gate: off
+    light.utility: off
     light.hue_outdoor_spot_1: off
     light.hue_outdoor_spot_2: off
     light.hue_outdoor_spot_3: off
@@ -258,20 +258,20 @@
     light.hue_outdoor_spot_5: off
 - name: Back Garden Dimmed
   entities:
-    light.terrace_light: off
-    light.hue_outdoor_pedestal_1:
+    light.back_garden_light: off
+    light.path_end:
       state: on
       brightness: 20
       xy_color: [0.526, 0.411]
       effect: none
-    light.hue_outdoor_pedestal_2:
+    light.path_middle:
       state: off
-    light.hue_outdoor_pedestal_3:
+    light.path_gate:
       state: on
       brightness: 20
       xy_color: [0.526, 0.411]
       effect: none
-    light.hue_outdoor_pedestal_4:
+    light.utility:
       state: on
       brightness: 20
       xy_color: [0.526, 0.411]
@@ -288,27 +288,27 @@
       state: off
 - name: Back Garden White
   entities:
-    light.terrace_light:
+    light.back_garden_light:
       state: on
       brightness: 255
       color_temp: 153
       effect: none
-    light.hue_outdoor_pedestal_1:
+    light.path_end:
       state: on
       brightness: 255
       color_temp: 153
       effect: none
-    light.hue_outdoor_pedestal_2:
+    light.path_middle:
       state: on
       brightness: 255
       color_temp: 153
       effect: none
-    light.hue_outdoor_pedestal_3:
+    light.path_gate:
       state: on
       brightness: 255
       color_temp: 153
       effect: none
-    light.hue_outdoor_pedestal_4:
+    light.utility:
       state: on
       brightness: 255
       color_temp: 153
@@ -340,27 +340,27 @@
       effect: none
 - name: Back Garden Bright
   entities:
-    light.terrace_light:
+    light.back_garden_light:
       state: on
       brightness: 224
       xy_color: [0.26, 0.1]
       effect: none
-    light.hue_outdoor_pedestal_1:
+    light.path_end:
       state: on
       brightness: 255
       xy_color: [0.435, 0.201]
       effect: none
-    light.hue_outdoor_pedestal_2:
+    light.path_middle:
       state: on
       brightness: 255
       xy_color: [0.499, 0.415]
       effect: none
-    light.hue_outdoor_pedestal_3:
+    light.path_gate:
       state: on
       brightness: 255
       xy_color: [0.435, 0.201]
       effect: none
-    light.hue_outdoor_pedestal_4:
+    light.utility:
       state: on
       brightness: 255
       xy_color: [0.435, 0.201]
@@ -392,23 +392,23 @@
       effect: none
 - name: Back Garden Colour Loop
   entities:
-    light.terrace_light:
+    light.back_garden_light:
       state: on
       brightness: 224
       effect: colorloop
-    light.hue_outdoor_pedestal_1:
+    light.path_end:
       state: on
       brightness: 255
       effect: colorloop
-    light.hue_outdoor_pedestal_2:
+    light.path_middle:
       state: on
       brightness: 255
       effect: colorloop
-    light.hue_outdoor_pedestal_3:
+    light.path_gate:
       state: on
       brightness: 255
       effect: colorloop
-    light.hue_outdoor_pedestal_4:
+    light.utility:
       state: on
       brightness: 255
       effect: colorloop
@@ -535,7 +535,7 @@
     light.hue_color_candle_8:
       state: off
       transition: 10
-    light.snug_bookcase:
+    light.bookcase:
       state: off
       transition: 10
 - name: Living Room Off TV On
@@ -558,7 +558,7 @@
     light.hue_color_candle_8:
       state: off
       transition: 10
-    light.snug_bookcase:
+    light.bookcase:
       state: off
       transition: 10
 - name: Living Room Bright
@@ -593,7 +593,7 @@
       transition: 0
       brightness: 255
       color_temp: 156
-    light.snug_bookcase:
+    light.bookcase:
       state: on
       transition: 0
       brightness: 255
@@ -629,7 +629,7 @@
       transition: 0
       brightness: 255
       color_temp: 156
-    light.snug_bookcase:
+    light.bookcase:
       state: on
       transition: 0
       brightness: 255
@@ -655,7 +655,7 @@
     light.hue_color_candle_8:
       state: off
       transition: 5
-    light.snug_bookcase:
+    light.bookcase:
       state: off
       transition: 5
 - name: Living Room Morning TV On
@@ -680,7 +680,7 @@
     light.hue_color_candle_8:
       state: off
       transition: 5
-    light.snug_bookcase:
+    light.bookcase:
       state: off
       transition: 5
 - name: Living Room Dull Outside
@@ -715,7 +715,7 @@
       transition: 5
       brightness: 30
       xy_color: [  0.267, 0.218 ]
-    light.snug_bookcase:
+    light.bookcase:
       state: on
       transition: 5
       brightness: 80
@@ -751,7 +751,7 @@
       transition: 5
       brightness: 15
       xy_color: [  0.267, 0.218 ]
-    light.snug_bookcase:
+    light.bookcase:
       state: on
       transition: 5
       brightness: 1
@@ -779,7 +779,7 @@
     light.hue_color_candle_8:
       state: off
       transition: 5
-    light.snug_bookcase:
+    light.bookcase:
       state: off
       transition: 5
 - name: Living Room Pink Blue
@@ -814,7 +814,7 @@
       transition: 5
       brightness: 128
       xy_color: [ 0.429, 0.192 ]
-    light.snug_bookcase:
+    light.bookcase:
       state: on
       transition: 5
       brightness: 187
@@ -850,7 +850,7 @@
       transition: 5
       brightness: 64
       xy_color: [ 0.429, 0.192 ]
-    light.snug_bookcase:
+    light.bookcase:
       state: on
       transition: 5
       brightness: 1
@@ -886,7 +886,7 @@
       transition: 5
       brightness: 25
       xy_color: [ 0.546, 0.341 ]
-    light.snug_bookcase:
+    light.bookcase:
       state: on
       transition: 5
       brightness: 108
@@ -914,7 +914,7 @@
     light.hue_color_candle_8:
       state: off
       transition: 5
-    light.snug_bookcase:
+    light.bookcase:
       state: off
       transition: 5
 - name: Living Room Pink Orange TV On
@@ -949,7 +949,7 @@
       transition: 5
       brightness: 12
       xy_color: [ 0.546, 0.341 ]
-    light.snug_bookcase:
+    light.bookcase:
       state: on
       transition: 5
       brightness: 1
@@ -973,7 +973,7 @@
     light.downstairs_hallway_6:
       state: off
       transition: 1
-    switch.innr_sp_222_dce84cfe_on_off: off
+    switch.diffuser: off
 - name: Downstairs Hallway Off
   entities:
     light.downstairs_hallway_1:
@@ -994,7 +994,7 @@
     light.downstairs_hallway_6:
       state: off
       transition: 1
-    switch.innr_sp_222_dce84cfe_on_off: on
+    switch.diffuser: on
 - name: Downstairs Hallway Off Away
   entities:
     light.downstairs_hallway_1: off
@@ -1003,7 +1003,7 @@
     light.downstairs_hallway_4: off
     light.downstairs_hallway_5: off
     light.downstairs_hallway_6: off
-    switch.innr_sp_222_dce84cfe_on_off: off
+    switch.diffuser: off
 - name: Downstairs Hallway Colourful Evening
   entities:
     light.downstairs_hallway_1:
@@ -1048,7 +1048,7 @@
       xy_color:
         - 0.282
         - 0.12
-    switch.innr_sp_222_dce84cfe_on_off: on
+    switch.diffuser: on
 - name: Downstairs Hallway Colourful Evening Away
   entities:
     light.downstairs_hallway_2:
@@ -1066,7 +1066,7 @@
     light.downstairs_hallway_4: off
     light.downstairs_hallway_5: off
     light.downstairs_hallway_6: off
-    switch.innr_sp_222_dce84cfe_on_off: off
+    switch.diffuser: off
 - name: Downstairs Hallway Daytime Presence
   entities:
     light.downstairs_hallway_1:
@@ -1095,7 +1095,7 @@
       xy_color:
         - 0.314
         - 0.331
-    switch.innr_sp_222_dce84cfe_on_off: on
+    switch.diffuser: on
 - name: Downstairs Hallway Early Night
   entities:
     light.downstairs_hallway_1:
@@ -1128,7 +1128,7 @@
       xy_color:
         - 0.464
         - 0.277
-    switch.innr_sp_222_dce84cfe_on_off: on
+    switch.diffuser: on
 - name: Downstairs Hallway Late Evening
   entities:
     light.downstairs_hallway_1:
@@ -1173,7 +1173,7 @@
       xy_color:
         - 0.579
         - 0.256
-    switch.innr_sp_222_dce84cfe_on_off: on
+    switch.diffuser: on
 - name: Downstairs Hallway Late Evening Away
   entities:
     light.downstairs_hallway_2:
@@ -1191,7 +1191,7 @@
     light.downstairs_hallway_4: off
     light.downstairs_hallway_5: off
     light.downstairs_hallway_6: off
-    switch.innr_sp_222_dce84cfe_on_off: off
+    switch.diffuser: off
 - name: Downstairs Hallway Morning
   entities:
     light.downstairs_hallway_1:
@@ -1236,7 +1236,7 @@
       xy_color:
         - 0.526
         - 0.411
-    switch.innr_sp_222_dce84cfe_on_off: on
+    switch.diffuser: on
 - name: Downstairs Hallway Morning Away
   entities:
     light.downstairs_hallway_1:
@@ -1260,185 +1260,185 @@
     light.downstairs_hallway_4: off
     light.downstairs_hallway_5: off
     light.downstairs_hallway_6: off
-    switch.innr_sp_222_dce84cfe_on_off: off
+    switch.diffuser: off
 - name: Stairs Off
   entities:
-    light.stairs_1:
+    light.stair_1:
       state: off
       transition: 5
-    light.stairs_2:
+    light.stair_2:
       state: off
       transition: 5
-    light.stairs_3:
+    light.stair_3:
       state: off
       transition: 5
-    light.stairs_spot:
+    light.stair_spot:
       state: off
       transition: 5
 - name: Stairs Morning
   entities:
-    light.stairs_1:
+    light.stair_1:
       state: on
       transition: 1
       brightness: 10
       color_temp: 158
-    light.stairs_2:
+    light.stair_2:
       state: on
       transition: 1
       brightness: 10
       color_temp: 367
-    light.stairs_3:
+    light.stair_3:
       state: on
       transition: 1
       brightness: 10
       color_temp: 244
-    light.stairs_spot:
+    light.stair_spot:
       state: on
       transition: 1
       brightness: 29
       color_temp: 379
 - name: Stairs Colourful
   entities:
-    light.stairs_1:
+    light.stair_1:
       state: on
       transition: 1
       brightness: 105
       xy_color:
         - 0.181
         - 0.429
-    light.stairs_2:
+    light.stair_2:
       state: on
       transition: 1
       brightness: 105
       xy_color:
         - 0.427
         - 0.222
-    light.stairs_3:
+    light.stair_3:
       state: on
       transition: 1
       brightness: 105
       xy_color:
         - 0.183
         - 0.106
-    light.stairs_spot:
+    light.stair_spot:
       state: on
       transition: 1
       brightness: 116
       color_temp: 156
 - name: Stairs Colourful Dimmed
   entities:
-    light.stairs_1:
+    light.stair_1:
       state: on
       transition: 1
       brightness: 1
       xy_color:
         - 0.181
         - 0.429
-    light.stairs_2:
+    light.stair_2:
       state: on
       transition: 1
       brightness: 1
       xy_color:
         - 0.427
         - 0.222
-    light.stairs_3:
+    light.stair_3:
       state: on
       transition: 1
       brightness: 1
       xy_color:
         - 0.183
         - 0.106
-    light.stairs_spot:
+    light.stair_spot:
       state: on
       transition: 1
       brightness: 1
       color_temp: 428
 - name: Stairs Late Night
   entities:
-    light.stairs_1:
+    light.stair_1:
       state: on
       transition: 1
       brightness: 1
       xy_color:
         - 0.216
         - 0.113
-    light.stairs_2:
+    light.stair_2:
       state: on
       transition: 1
       brightness: 1
       xy_color:
         - 0.162
         - 0.271
-    light.stairs_3:
+    light.stair_3:
       state: on
       transition: 1
       brightness: 1
       xy_color:
         - 0.158
         - 0.087
-    light.stairs_spot:
+    light.stair_spot:
       state: on
       transition: 1
       brightness: 1
       color_temp: 428
 - name: Stairs Night
   entities:
-    light.stairs_1:
+    light.stair_1:
       state: off
       transition: 1
-    light.stairs_2:
+    light.stair_2:
       state: on
       transition: 1
       brightness: 1
       xy_color:
         - 0.678
         - 0.31
-    light.stairs_3: off
-    light.stairs_spot: off
+    light.stair_3: off
+    light.stair_spot: off
 - name: Stairs Decorative Pastel
   entities:
-    light.stairs_1:
+    light.stair_1:
       state: on
       transition: 1
       brightness: 30
       xy_color:
         - 0.31
         - 0.29
-    light.stairs_2:
+    light.stair_2:
       state: on
       transition: 1
       brightness: 30
       xy_color:
         - 0.22
         - 0.274
-    light.stairs_3:
+    light.stair_3:
       state: on
       transition: 1
       brightness: 30
       xy_color:
         - 0.259
         - 0.177
-    light.stairs_spot:
+    light.stair_spot:
       state: on
       brightness: 1
       color_temp: 156
 - name: Downstairs Toilet Bright
   entities:
-    light.downstairs_toilet:
+    light.downstairs_toilet_main:
       state: on
       transition: 0
       brightness: 254
       color_temp: 250
 - name: Downstairs Toilet Mid
   entities:
-    light.downstairs_toilet:
+    light.downstairs_toilet_main:
       state: on
       transition: 0
       brightness: 120
       color_temp: 315
 - name: Downstairs Toilet Mood
   entities:
-    light.downstairs_toilet:
+    light.downstairs_toilet_main:
       state: on
       transition: 0
       brightness: 28
