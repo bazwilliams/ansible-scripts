@@ -91,6 +91,8 @@ homeassistant:
     input_boolean.bfl:
       friendly_name: Big Light
       icon: mdi:ceiling-light
+    binary_sensor.upstairs_hallway_motion:
+      friendly_name: Upstairs Hallway Motion
     sensor.upstairs_hallway_motion:
       friendly_name: Upstairs Hallway Light Level
     sensor.kitchen_motion:
@@ -129,6 +131,10 @@ homeassistant:
       friendly_name: Downstairs Hallway Humidity
     sensor.downstairs_hallway_environment_3:
       friendly_name: Downstairs Hallway Pressure
+    binary_sensor.downstairs_hallway_motion:
+      friendly_name: Stairs Motion
+    sensor.downstairs_hallway_motion:
+      friendly_name: Stairs Light Level
         
 cloud:
   alexa:
@@ -163,14 +169,14 @@ sensor:
   - platform: min_max
     name: Outside Light Level
     entity_ids:
-    - sensor.front_garden_temperature_2
-    - sensor.back_garden_temperature_2
+    - sensor.front_garden_motion_2
+    - sensor.back_garden_motion_2
     type: min
   - platform: min_max
     name: Outside Temperature
     entity_ids:
-    - sensor.front_garden_temperature
-    - sensor.back_garden_temperature
+    - sensor.front_garden_motion
+    - sensor.back_garden_motion
     type: min
   - platform: time_date
     display_options:
