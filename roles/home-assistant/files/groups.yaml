@@ -130,7 +130,7 @@ snug:
     - light.tripod_lamp
     - switch.lava_lamp
     - light.snug_main
-    - switch.turntable
+    - switch.turntable_light
 upstairs_hallway:
   name: Upstairs Hallway
   entities:

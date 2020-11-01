@@ -65,7 +65,7 @@ homeassistant:
     light.bookcase:
       friendly_name: Bookcase
       icon: mdi:book-open-variant
-    switch.turntable:
+    switch.turntable_light:
       friendly_name: Turntable Light
       icon: mdi:record-player
     switch.lava_lamp:
@@ -161,7 +161,7 @@ cloud:
 
 media_player:
   - platform: epson
-    host: 192.168.1.50
+    host: 192.168.178.65
 
 sensor:
   - platform: uptime
@@ -282,7 +282,7 @@ input_text:
 wake_on_lan:
 
 webostv:
-  host: 192.168.1.53
+  host: 192.168.178.51
   name: Living Room TV
   turn_on_action:
     service: wake_on_lan.send_magic_packet

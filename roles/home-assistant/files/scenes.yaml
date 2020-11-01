@@ -188,7 +188,7 @@
     light.steampunk_lamp: off
     light.snug_main: off
     switch.lava_lamp: off
-    switch.turntable: off
+    switch.turntable_light: off
 - name: Snug Movie
   entities:
     light.steampunk_lamp:
@@ -196,7 +196,7 @@
       transition: 10
     light.snug_main: off
     switch.lava_lamp: off
-    switch.turntable: off
+    switch.turntable_light: off
 - name: Snug Music
   entities:
     light.steampunk_lamp: 
@@ -204,7 +204,7 @@
       transition: 2
     light.snug_main: off
     switch.lava_lamp: on
-    switch.turntable: off
+    switch.turntable_light: off
 - name: Snug LP12
   entities:
     light.steampunk_lamp:
@@ -216,7 +216,7 @@
         - 0.411
     light.snug_main: off
     switch.lava_lamp: on
-    switch.turntable: on
+    switch.turntable_light: on
 - name: Snug On
   entities:
     light.steampunk_lamp:
@@ -228,7 +228,7 @@
         - 0.369
     light.snug_main: on
     switch.lava_lamp: off
-    switch.turntable: off
+    switch.turntable_light: off
 - name: Front Garden Off
   entities:
     light.outside_light: off
