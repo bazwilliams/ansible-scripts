@@ -61,3 +61,23 @@
   homebrew_cask:
     name: vlc
     state: latest
+- name: Install Spotify
+  homebrew_cask:
+    name: spotify
+    state: latest
+- name: Corretto
+  homebrew_cask:
+    name: corretto
+    state: latest
+- name: Install IntelliJ
+  homebrew_cask:
+    name: intellij-idea-ce
+    state: latest
+- name: Install Gradle
+  homebrew:
+    name: gradle
+    state: latest
+- name: Install Micronaut
+  homebrew_cask:
+    name: micronaut-projects/tap/micronaut
+    state: latest
