@@ -1129,7 +1129,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
-        value: kitchen_away
+        value: kitchen_alarm_active
 - alias: morning_dim_away
   mode: single
   trigger:
@@ -1168,7 +1168,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
-        value: kitchen_away
+        value: kitchen_alarm_active
 - alias: morning_bright_away
   mode: single
   trigger:
@@ -1207,7 +1207,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
-        value: kitchen_away
+        value: kitchen_alarm_active
 - alias: morning_very_bright_away
   mode: single
   trigger:
@@ -1246,7 +1246,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
-        value: kitchen_away
+        value: kitchen_alarm_active
 - alias: daytime_dark_away
   mode: single
   trigger:
@@ -1288,7 +1288,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
-        value: kitchen_away
+        value: kitchen_alarm_active
 - alias: daytime_dim_away
   mode: single
   trigger:
@@ -1327,7 +1327,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
-        value: kitchen_away
+        value: kitchen_alarm_active
 - alias: daytime_bright_away
   mode: single
   trigger:
@@ -1366,7 +1366,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
-        value: kitchen_away
+        value: kitchen_alarm_active
 - alias: daytime_very_bright_away
   mode: single
   trigger:
@@ -1405,7 +1405,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
-        value: kitchen_away
+        value: kitchen_alarm_active
 - alias: evening_dark_away
   mode: single
   trigger:
@@ -1444,7 +1444,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
-        value: kitchen_away
+        value: kitchen_alarm_active
 - alias: evening_dim_away
   mode: single
   trigger:
@@ -1483,7 +1483,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
-        value: kitchen_away
+        value: kitchen_alarm_active
 - alias: evening_bright_away
   mode: single
   trigger:
@@ -1522,7 +1522,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
-        value: kitchen_away
+        value: kitchen_alarm_active
 - alias: evening_very_bright_away
   mode: single
   trigger:
@@ -1561,7 +1561,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
-        value: kitchen_away
+        value: kitchen_alarm_active
 - alias: late_evening_dark_away
   mode: single
   trigger:
@@ -1600,7 +1600,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
-        value: kitchen_away
+        value: kitchen_alarm_active
 - alias: late_evening_dim_away
   mode: single
   trigger:
@@ -1639,7 +1639,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
-        value: kitchen_away
+        value: kitchen_alarm_active
 - alias: late_evening_bright_away
   mode: single
   trigger:
@@ -1678,7 +1678,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
-        value: kitchen_away
+        value: kitchen_alarm_active
 - alias: late_evening_very_bright_away
   mode: single
   trigger:
@@ -1717,7 +1717,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
-        value: kitchen_away
+        value: kitchen_alarm_active
 - alias: early_night_dark_away
   mode: single
   trigger:
@@ -1756,7 +1756,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
-        value: kitchen_away
+        value: kitchen_alarm_active
 - alias: early_night_dim_away
   mode: single
   trigger:
@@ -1795,7 +1795,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
-        value: kitchen_away
+        value: kitchen_alarm_active
 - alias: early_night_bright_away
   mode: single
   trigger:
@@ -1834,7 +1834,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
-        value: kitchen_away
+        value: kitchen_alarm_active
 - alias: early_night_very_bright_away
   mode: single
   trigger:
@@ -1873,7 +1873,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
-        value: kitchen_away
+        value: kitchen_alarm_active
 - alias: late_night_dark_away
   mode: single
   trigger:
@@ -1912,7 +1912,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
-        value: kitchen_away
+        value: kitchen_alarm_active
 - alias: late_night_dim_away
   mode: single
   trigger:
@@ -1951,7 +1951,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
-        value: kitchen_away
+        value: kitchen_alarm_active
 - alias: late_night_bright_away
   mode: single
   trigger:
@@ -1990,7 +1990,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
-        value: kitchen_away
+        value: kitchen_alarm_active
 - alias: late_night_very_bright_away
   mode: single
   trigger:
@@ -2029,7 +2029,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
-        value: kitchen_away
+        value: kitchen_alarm_active
 - alias: night_dark_away
   mode: single
   trigger:
@@ -2068,7 +2068,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
-        value: kitchen_away
+        value: kitchen_alarm_active
 - alias: night_dim_away
   mode: single
   trigger:
@@ -2107,7 +2107,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
-        value: kitchen_away
+        value: kitchen_alarm_active
 - alias: night_bright_away
   mode: single
   trigger:
@@ -2146,7 +2146,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
-        value: kitchen_away
+        value: kitchen_alarm_active
 - alias: night_very_bright_away
   mode: single
   trigger:
@@ -2185,7 +2185,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.kitchen_scene
-        value: kitchen_away
+        value: kitchen_alarm_active
 
 - alias: Wakeup
   mode: single
@@ -2228,6 +2228,21 @@
       data:
         entity_id:
           - switch.frog_filter
+
+
+- alias: Kitchen Lights On Alarm State Change
+  mode: single
+  condition:
+  - condition: numeric_state
+    entity_id: sensor.kitchen_motion_2
+    below: 100
+  trigger:
+    - platform: state
+      entity_id: alarm_control_panel.securitas_260178
+  action:
+    - service: scene.turn_on
+      data_template:
+        entity_id: "scene.{{ states('input_text.kitchen_scene') }}"
 
 - alias: Kitchen Lights On Due to Motion
   mode: single
@@ -2468,15 +2483,15 @@
 #       data_template:
 #         entity_id: "scene.{{ states('input_text.front_garden_scene') }}"
 
-# - alias: Front Garden Default Scene Changed
-#   mode: single
-#   trigger:
-#     platform: state
-#     entity_id: input_text.front_garden_scene
-#   action:
-#     - service: scene.turn_on
-#       data_template:
-#         entity_id: "scene.{{ states('input_text.front_garden_scene') }}"
+- alias: Front Garden Default Scene Changed
+  mode: single
+  trigger:
+    platform: state
+    entity_id: input_text.front_garden_scene
+  action:
+    - service: scene.turn_on
+      data_template:
+        entity_id: "scene.{{ states('input_text.front_garden_scene') }}"
 
 # - alias: Watching the Big Screen
 #   mode: single

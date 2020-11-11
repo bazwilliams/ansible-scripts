@@ -52,7 +52,7 @@ bedroom:
     - light.bedside_lamp
     - switch.bedroom_main
 staircase:
-  name: staircase
+  name: Staircase
   entities:
     - binary_sensor.downstairs_hallway_motion
     - sensor.downstairs_hallway_motion
@@ -127,7 +127,6 @@ snug:
     - climate.snug
     - media_player.epson_projector
     - light.steampunk_lamp
-    - light.tripod_lamp
     - switch.lava_lamp
     - light.snug_main
     - switch.turntable_light

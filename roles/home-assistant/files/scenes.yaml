@@ -1,4 +1,4 @@
-- name: Kitchen Away
+- name: Kitchen Alarm Active
   entities:
     light.worktop_left: off
     light.worktop_right: off
@@ -6,16 +6,19 @@
     light.dining_table: off
     light.kitchen_main:
       state: on
-      xy_color: [ 0.447, 0.408 ]
-      brightness: 63
+      xy_color: [ 0.689, 0.309 ]
+      brightness: 255
+      transition: 0
     light.kitchen_under_cupboards:
       state: on
-      xy_color: [ 0.447, 0.408 ]
-      brightness: 63
+      xy_color: [ 0.689, 0.309 ]
+      brightness: 255
+      transition: 0
     light.kitchen_under_tall_cupboards:
       state: on
-      xy_color: [ 0.447, 0.408 ]
-      brightness: 63
+      xy_color: [ 0.689, 0.309 ]
+      brightness: 255
+      transition: 0
 - name: Kitchen Night
   entities:
     light.worktop_left: 
