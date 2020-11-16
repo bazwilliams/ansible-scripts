@@ -2229,21 +2229,6 @@
         entity_id:
           - switch.frog_filter
 
-
-- alias: Kitchen Lights On Alarm State Change
-  mode: single
-  condition:
-  - condition: numeric_state
-    entity_id: sensor.kitchen_motion_2
-    below: 100
-  trigger:
-    - platform: state
-      entity_id: alarm_control_panel.securitas_260178
-  action:
-    - service: scene.turn_on
-      data_template:
-        entity_id: "scene.{{ states('input_text.kitchen_scene') }}"
-
 - alias: Kitchen Lights On Due to Motion
   mode: single
   condition:
@@ -2508,14 +2493,11 @@
 - alias: Snug Lights On
   initial_state: true
   trigger:
-    platform: event
-    event_type: zha_event
-    event_data:
-      device_ieee: 00:17:88:01:08:0d:00:be
-      unique_id: 00:17:88:01:08:0d:00:be:1:0x0006
-      endpoint_id: 1
-      cluster_id: 6
-      command: "on"
+    device_id: 60e3093f1bc711eb8ed3111b40abb545
+    domain: deconz
+    platform: device
+    type: remote_button_short_release
+    subtype: turn_on
   action:
     - service: input_text.set_value
       data:
@@ -2523,42 +2505,17 @@
         value: snug_on
 
 - alias: Snug Lights Off
-  initial_state: true
   trigger:
-    platform: event
-    event_type: zha_event
-    event_data:
-      device_ieee: 00:17:88:01:08:0d:00:be
-      unique_id: 00:17:88:01:08:0d:00:be:1:0x0006
-      endpoint_id: 1
-      cluster_id: 6
-      command: off_with_effect
+    device_id: 60e3093f1bc711eb8ed3111b40abb545
+    domain: deconz
+    platform: device
+    type: remote_button_short_release
+    subtype: turn_off
   action:
     - service: input_text.set_value
       data:
         entity_id: input_text.snug_scene
         value: snug_off
-
-- alias: Snug All Off
-  initial_state: true
-  trigger:
-    platform: event
-    event_type: zha_event
-    event_data:
-      device_ieee: 00:17:88:01:08:0d:00:be
-      unique_id: 00:17:88:01:08:0d:00:be:1:0x0006
-      endpoint_id: 1
-      cluster_id: 6
-      command: off_with_effect
-  condition:
-    - condition: state
-      entity_id: input_text.snug_scene
-      state: "snug_off"
-  action:
-    - service: homeassistant.turn_off
-      data:
-        entity_id:
-          - group.snug
 
 - alias: Snug Scene Changed
   initial_state: true
@@ -2658,8 +2615,6 @@
     platform: device
     type: remote_button_short_release
     subtype: turn_off
-
-    
   action:
     - service: light.turn_off
       data:

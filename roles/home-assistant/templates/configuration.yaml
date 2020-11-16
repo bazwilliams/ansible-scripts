@@ -59,16 +59,16 @@ homeassistant:
     light.snug_main:
       friendly_name: Snug Main
       icon: mdi:ceiling-light
-    switch.bedroom_main:
+    light.bedroom_main:
       friendly_name: Bedroom Light
       icon: mdi:ceiling-light
     light.bookcase:
       friendly_name: Bookcase
       icon: mdi:book-open-variant
-    switch.turntable_light:
+    light.turntable_light:
       friendly_name: Turntable Light
       icon: mdi:record-player
-    switch.lava_lamp:
+    light.lava_lamp:
       friendly_name: Lava Lamp
       icon: mdi:lava-lamp
     switch.frog_filter:
@@ -158,6 +158,17 @@ cloud:
         - switch.frog_filter
         - media_player.living_room_tv
         - input_boolean.bfl
+
+light:
+  - platform: switch
+    name: Lava Lamp
+    entity_id: switch.lava_lamp
+  - platform: switch
+    name: Bedroom Main
+    entity_id: switch.bedroom_main
+  - platform: switch
+    name: Turntable Light
+    entity_id: switch.turntable_light
 
 media_player:
   - platform: epson

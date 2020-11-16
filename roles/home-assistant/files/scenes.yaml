@@ -3,22 +3,21 @@
     light.worktop_left: off
     light.worktop_right: off
     light.worktop_tumble_dryer: off
-    light.dining_table: off
+    light.dining_table:
+      state: on
+      brightness: 254
     light.kitchen_main:
       state: on
-      xy_color: [ 0.689, 0.309 ]
-      brightness: 255
-      transition: 0
+      xy_color: [ 0.526, 0.411 ]
+      brightness: 114
     light.kitchen_under_cupboards:
       state: on
-      xy_color: [ 0.689, 0.309 ]
-      brightness: 255
-      transition: 0
+      xy_color: [ 0.526, 0.411 ]
+      brightness: 114
     light.kitchen_under_tall_cupboards:
       state: on
-      xy_color: [ 0.689, 0.309 ]
-      brightness: 255
-      transition: 0
+      xy_color: [ 0.526, 0.411 ]
+      brightness: 114
 - name: Kitchen Night
   entities:
     light.worktop_left: 
@@ -520,9 +519,9 @@
       brightness: 254
 - name: Living Room Off
   entities:
-    light.tripod_lamp:
-      state: off
-      transition: 10
+    # light.tripod_lamp:
+    #   state: off
+    #   transition: 10
     light.hue_color_candle_3:
       state: off
       transition: 10
@@ -543,9 +542,9 @@
       transition: 10
 - name: Living Room Off TV On
   entities:
-    light.tripod_lamp:
-      state: off
-      transition: 10
+    # light.tripod_lamp:
+    #   state: off
+    #   transition: 10
     light.hue_color_candle_3:
       state: off
       transition: 10
@@ -566,11 +565,11 @@
       transition: 10
 - name: Living Room Bright
   entities:
-    light.tripod_lamp:
-      state: on
-      transition: 0
-      brightness: 255
-      color_temp: 156
+    # light.tripod_lamp:
+    #   state: on
+    #   transition: 0
+    #   brightness: 255
+    #   color_temp: 156
     light.hue_color_candle_3:
       state: on
       transition: 0
@@ -602,11 +601,11 @@
       brightness: 255
 - name: Living Room Bright TV On
   entities:
-    light.tripod_lamp:
-      state: on
-      transition: 0
-      brightness: 255
-      color_temp: 156
+    # light.tripod_lamp:
+    #   state: on
+    #   transition: 0
+    #   brightness: 255
+    #   color_temp: 156
     light.hue_color_candle_3:
       state: on
       transition: 0
@@ -638,11 +637,11 @@
       brightness: 255
 - name: Living Room Morning
   entities:
-    light.tripod_lamp:
-      state: on
-      transition: 5
-      brightness: 128
-      color_temp: 497
+    # light.tripod_lamp:
+    #   state: on
+    #   transition: 5
+    #   brightness: 128
+    #   color_temp: 497
     light.hue_color_candle_3:
       state: off
       transition: 5
@@ -663,11 +662,11 @@
       transition: 5
 - name: Living Room Morning TV On
   entities:
-    light.tripod_lamp:
-      state: on
-      transition: 5
-      brightness: 64
-      color_temp: 497
+    # light.tripod_lamp:
+    #   state: on
+    #   transition: 5
+    #   brightness: 64
+    #   color_temp: 497
     light.hue_color_candle_3:
       state: off
       transition: 5
@@ -688,11 +687,11 @@
       transition: 5
 - name: Living Room Dull Outside
   entities:
-    light.tripod_lamp:
-      state: on
-      transition: 5
-      brightness: 62
-      xy_color: [ 0.491, 0.415 ]
+    # light.tripod_lamp:
+    #   state: on
+    #   transition: 5
+    #   brightness: 62
+    #   xy_color: [ 0.491, 0.415 ]
     light.hue_color_candle_3:
       state: on
       transition: 5
@@ -724,11 +723,11 @@
       brightness: 80
 - name: Living Room Dull Outside TV On
   entities:
-    light.tripod_lamp:
-      state: on
-      transition: 5
-      brightness: 31
-      xy_color: [ 0.491, 0.415 ]
+    # light.tripod_lamp:
+    #   state: on
+    #   transition: 5
+    #   brightness: 31
+    #   xy_color: [ 0.491, 0.415 ]
     light.hue_color_candle_3:
       state: on
       transition: 5
@@ -760,11 +759,11 @@
       brightness: 1
 - name: Living Room Pink Blue Away
   entities:
-    light.tripod_lamp:
-      state: on
-      transition: 5
-      brightness: 128
-      xy_color: [ 0.194, 0.089 ]
+    # light.tripod_lamp:
+    #   state: on
+    #   transition: 5
+    #   brightness: 128
+    #   xy_color: [ 0.194, 0.089 ]
     light.hue_color_candle_3:
       state: off
       transition: 5
@@ -787,11 +786,11 @@
       transition: 5
 - name: Living Room Pink Blue
   entities:
-    light.tripod_lamp:
-      state: on
-      transition: 5
-      brightness: 128
-      xy_color: [ 0.194, 0.089 ]
+    # light.tripod_lamp:
+    #   state: on
+    #   transition: 5
+    #   brightness: 128
+    #   xy_color: [ 0.194, 0.089 ]
     light.hue_color_candle_3:
       state: on
       transition: 5
@@ -823,11 +822,11 @@
       brightness: 187
 - name: Living Room Pink Blue TV On
   entities:
-    light.tripod_lamp:
-      state: on
-      transition: 5
-      brightness: 64
-      xy_color: [ 0.194, 0.089 ]
+    # light.tripod_lamp:
+    #   state: on
+    #   transition: 5
+    #   brightness: 64
+    #   xy_color: [ 0.194, 0.089 ]
     light.hue_color_candle_3:
       state: on
       transition: 5
@@ -859,11 +858,11 @@
       brightness: 1
 - name: Living Room Pink Orange
   entities:
-    light.tripod_lamp:
-      state: on
-      transition: 5
-      brightness: 82
-      xy_color: [ 0.429, 0.188 ]
+    # light.tripod_lamp:
+    #   state: on
+    #   transition: 5
+    #   brightness: 82
+    #   xy_color: [ 0.429, 0.188 ]
     light.hue_color_candle_3:
       state: on
       transition: 5
@@ -895,11 +894,11 @@
       brightness: 108
 - name: Living Room Pink Orange Away
   entities:
-    light.tripod_lamp:
-      state: on
-      transition: 5
-      brightness: 82
-      xy_color: [ 0.428, 0.19 ]
+    # light.tripod_lamp:
+    #   state: on
+    #   transition: 5
+    #   brightness: 82
+    #   xy_color: [ 0.428, 0.19 ]
     light.hue_color_candle_3:
       state: off
       transition: 5
@@ -922,11 +921,11 @@
       transition: 5
 - name: Living Room Pink Orange TV On
   entities:
-    light.tripod_lamp:
-      state: on
-      transition: 5
-      brightness: 41
-      xy_color: [ 0.429, 0.188 ]
+    # light.tripod_lamp:
+    #   state: on
+    #   transition: 5
+    #   brightness: 41
+    #   xy_color: [ 0.429, 0.188 ]
     light.hue_color_candle_3:
       state: on
       transition: 5

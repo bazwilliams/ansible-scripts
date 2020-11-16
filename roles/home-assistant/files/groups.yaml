@@ -50,7 +50,7 @@ bedroom:
   entities:
     - climate.bedroom
     - light.bedside_lamp
-    - switch.bedroom_main
+    - light.bedroom_main
 staircase:
   name: Staircase
   entities:
@@ -78,6 +78,7 @@ garden_studio:
   entities:
     - light.play_left
     - light.play_right
+    - light.tripod_lamp
     - sensor.studio_environment
     - sensor.studio_environment_2
     - sensor.studio_environment_3
@@ -109,7 +110,6 @@ living_room:
     - climate.living_room_heating
     - media_player.living_room_tv
     - light.bookcase
-    - light.tripod_lamp
     - light.hue_color_candle_3
     - light.hue_color_candle_5
     - light.hue_color_candle_6
@@ -127,9 +127,9 @@ snug:
     - climate.snug
     - media_player.epson_projector
     - light.steampunk_lamp
-    - switch.lava_lamp
+    - light.lava_lamp
     - light.snug_main
-    - switch.turntable_light
+    - light.turntable_light
 upstairs_hallway:
   name: Upstairs Hallway
   entities:
