@@ -1,24 +1,24 @@
 ---
-- name: Create home assistant temp directory
-  tempfile:
-    state: directory
-    suffix: .homeassistant
-  register: buildcontext
+# - name: Create home assistant temp directory
+#   tempfile:
+#     state: directory
+#     suffix: .homeassistant
+#   register: buildcontext
 
-- name: Upload Dockerfile
-  copy:
-    src: Dockerfile
-    dest: "{{ buildcontext.path }}"
+# - name: Upload Dockerfile
+#   copy:
+#     src: Dockerfile
+#     dest: "{{ buildcontext.path }}"
 
-- name: Upload Intermediate CA
-  copy:
-    src: opnsense-intermediate-ca.crt
-    dest: "{{ buildcontext.path }}"
+# - name: Upload Intermediate CA
+#   copy:
+#     src: opnsense-intermediate-ca.crt
+#     dest: "{{ buildcontext.path }}"
 
-- name: Upload Root CA
-  copy:
-    src: opnsense-root-ca.crt
-    dest: "{{ buildcontext.path }}"
+# - name: Upload Root CA
+#   copy:
+#     src: opnsense-root-ca.crt
+#     dest: "{{ buildcontext.path }}"
 
 - name: Create data directory
   become: yes
@@ -117,7 +117,7 @@
         services:
             home-assistant:
                 container_name: home-assistant
-                build: "{{ buildcontext.path }}"
+                image: homeassistant/home-assistant:0.117.6
                 volumes:
                   - /opt/docker/data/home-assistant/config:/config
                   - /etc/localtime:/etc/localtime:ro
@@ -127,8 +127,8 @@
                 network_mode: host
                 restart: unless-stopped
 
-- name: Cleanup
-  file:
-    path: "{{ buildcontext.path }}"
-    state: absent
-  when: buildcontext.path is defined
+# - name: Cleanup
+#   file:
+#     path: "{{ buildcontext.path }}"
+#     state: absent
+#   when: buildcontext.path is defined
