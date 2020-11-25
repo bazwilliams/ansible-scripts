@@ -2187,26 +2187,6 @@
         entity_id: input_text.kitchen_scene
         value: kitchen_alarm_active
 
-- alias: Wakeup
-  mode: single
-  trigger:
-    - platform: time
-      at: "06:00:00"
-    - platform: numeric_state
-      entity_id: sensor.outside_light_level
-      above: 60
-  action:
-    - service: light.turn_off
-      data:
-        entity_id:
-          - group.ethans_room
-          - group.marcuss_room
-    - service: media_player.media_pause
-      data:
-        entity_id:
-          - media_player.ethan_s_room
-          - media_player.marcus_room
-
 - alias: Frog Filter On
   mode: single
   trigger:
@@ -2381,31 +2361,18 @@
       data:
         entity_id: scene.back_garden_white
 
-- alias: Back Garden to Bright
+- alias: Back Garden Active Lights
   mode: single
   trigger:
     platform: state
     entity_id: input_boolean.terrace_occupancy
     to: "on"
     for:
-      minutes: 5
+      minutes: 10
   action:
     - service: scene.turn_on
       data:
         entity_id: scene.back_garden_bright
-
-# - alias: Back Garden to Colour Loop
-#   mode: single
-#   trigger:
-#     platform: state
-#     entity_id: input_boolean.terrace_occupancy
-#     to: "on"
-#     for:
-#       minutes: 10
-#   action:
-#     - service: scene.turn_on
-#       data:
-#         entity_id: scene.back_garden_colour_loop
 
 - alias: Back Garden to Default Scene
   mode: single
@@ -2477,18 +2444,6 @@
     - service: scene.turn_on
       data_template:
         entity_id: "scene.{{ states('input_text.front_garden_scene') }}"
-
-- alias: Watching the Big Screen
-  initial_state: true
-  trigger:
-    - platform: state
-      entity_id: media_player.epson_projector
-      to: "on"
-  action:
-    - service: input_text.set_value
-      data:
-        entity_id: input_text.snug_scene
-        value: snug_movie
 
 - alias: Snug Lights On
   initial_state: true
@@ -2857,40 +2812,21 @@
   action:
   - scene: scene.living_room_bright
 
-- alias: Living Room Default Scene Changed While TV Is On and not BFL
+- alias: Living Room BFL Off
   trigger:
-    - platform: state
-      entity_id: input_text.living_room_scene
-    - platform: state
-      entity_id: media_player.living_room_tv
-    - platform: state
-      entity_id: input_boolean.bfl
-      to: "off"
-  condition:
-  - condition: state
-    entity_id:  media_player.living_room_tv
-    state:  "on"
-  - condition: state
-    entity_id: input_boolean.bfl
-    state:  "off"
-  action:
-  - service: scene.turn_on
-    data_template:
-      entity_id: "scene.{{ states('input_text.living_room_scene') }}_tv_on"
-
-- alias: Living Room Default Scene Changed While TV Is Off and not BFL
-  trigger:
-  - platform: state
-    entity_id: input_text.living_room_scene
-  - platform: state
-    entity_id: media_player.living_room_tv
   - platform: state
     entity_id: input_boolean.bfl
     to: "off"
+  action:
+  - service: scene.turn_on
+    data_template:
+      entity_id: "scene.{{ states('input_text.living_room_scene') }}"
+
+- alias: Living Room Default Scene Changed While not BFL
+  trigger:
+    - platform: state
+      entity_id: input_text.living_room_scene
   condition:
-  - condition: state
-    entity_id:  media_player.living_room_tv
-    state:  "off"
   - condition: state
     entity_id: input_boolean.bfl
     state:  "off"
