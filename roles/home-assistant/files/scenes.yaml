@@ -819,42 +819,42 @@
     light.downstairs_hallway_1:
       state: on
       transition: 10
-      brightness: 89
+      brightness: 45
       xy_color:
         - 0.202
         - 0.434
     light.downstairs_hallway_2:
       state: on
       transition: 10
-      brightness: 94
+      brightness: 47
       xy_color:
         - 0.191
         - 0.11
     light.downstairs_hallway_3:
       state: on
       transition: 10
-      brightness: 143
+      brightness: 71
       xy_color:
         - 0.255
         - 0.137
     light.downstairs_hallway_4:
       state: on
       transition: 10
-      brightness: 116
+      brightness: 58
       xy_color:
         - 0.17
         - 0.249
     light.downstairs_hallway_5:
       state: on
       transition: 10
-      brightness: 182
+      brightness: 91
       xy_color:
         - 0.171
         - 0.2
     light.downstairs_hallway_6:
       state: on
       transition: 10
-      brightness: 179
+      brightness: 89
       xy_color:
         - 0.282
         - 0.12
@@ -863,13 +863,13 @@
   entities:
     light.downstairs_hallway_2:
       state: on
-      brightness: 94
+      brightness: 45
       xy_color:
         - 0.191
         - 0.11
     light.downstairs_hallway_3:
       state: on
-      brightness: 143
+      brightness: 71
       xy_color:
         - 0.255
         - 0.137
