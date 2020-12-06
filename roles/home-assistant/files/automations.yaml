@@ -2886,3 +2886,37 @@
     - service: scene.turn_on
       data:
         entity_id: scene.stairs_off
+
+- alias: Christmas Tree On
+  trigger:
+    - platform: time
+      after: '7:00:00'
+    - platform: time
+      after: '16:00:00'
+  action:
+    service: switch.turn_on
+    entity_id: switch.socket
+
+- alias: Christmas Tree Off
+  trigger:
+    - platform: time
+      after: '00:30:00'
+  action:
+    service: switch.turn_off
+    entity_id: switch.socket
+
+- alias: Christmas Tree Off During the Weekday
+  trigger:
+    platform: time
+    after: '09:00:00'
+  condition:
+  - condition: time
+    weekday:
+      - mon
+      - tue
+      - wed
+      - thu
+      - fri
+  action:
+    service: switch.turn_off
+    entity_id: switch.socket

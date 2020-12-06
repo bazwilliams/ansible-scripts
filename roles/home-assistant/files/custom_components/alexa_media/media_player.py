@@ -493,7 +493,7 @@ class AlexaClient(MediaPlayerDevice, AlexaMedia):
                 self._last_called_timestamp = self.hass.data[DATA_ALEXAMEDIA][
                     "accounts"
                 ][self._login.email]["last_called"]["timestamp"]
-            if skip_api:
+            if skip_api and self.hass:
                 self.async_write_ha_state()
                 return
             if "MUSIC_SKILL" in self._capabilities:
@@ -1197,6 +1197,19 @@ class AlexaClient(MediaPlayerDevice, AlexaMedia):
         elif media_type == "image":
             _LOGGER.debug("%s:Setting background to %s", self, media_id)
             await self.alexa_api.set_background(media_id)
+        elif media_type == "custom":
+            _LOGGER.debug(
+                '%s:Running custom command: "%s" with queue_delay %s',
+                self,
+                media_id,
+                queue_delay,
+            )
+            await self.alexa_api.run_custom(
+                media_id,
+                customer_id=self._customer_id,
+                queue_delay=queue_delay,
+                **kwargs,
+            )
         else:
             _LOGGER.debug(
                 "%s:Playing music %s on %s with queue_delay %s",

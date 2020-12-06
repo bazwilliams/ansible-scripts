@@ -42,6 +42,7 @@ back_garden:
 bathroom:
   name: Bathroom
   entities:
+    - light.bathroom
     - sensor.bathroom_environment
     - sensor.bathroom_environment_2
     - sensor.bathroom_environment_3
@@ -78,7 +79,6 @@ garden_studio:
   entities:
     - light.play_left
     - light.play_right
-    - light.tripod_lamp
     - sensor.studio_environment
     - sensor.studio_environment_2
     - sensor.studio_environment_3
