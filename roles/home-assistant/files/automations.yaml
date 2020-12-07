@@ -2923,3 +2923,30 @@
     service: switch.turn_off
     data:
       entity_id: switch.socket
+
+- alias: Daytime Studio Heating On
+  trigger:
+    platform: time
+    at: '08:00:00'
+  - condition: time
+    weekday:
+      - mon
+      - tue
+      - wed
+      - thu
+      - fri
+  action:
+    service: climate.set_preset_mode
+    data:
+      entity_id: climate.studio
+      preset_mode: none
+
+- alias: Daytime Studio Heating Away Mode
+  trigger:
+    platform: time
+    at: '16:30:00'
+  action:
+    service: climate.set_preset_mode
+    data:
+      entity_id: climate.studio
+      preset_mode: away
