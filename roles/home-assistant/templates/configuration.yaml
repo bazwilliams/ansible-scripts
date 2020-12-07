@@ -295,6 +295,17 @@ hive:
   username: {{ hive.username }}
   password: {{ hive.password }}
 
+climate:
+  - platform: generic_thermostat
+    name: Studio
+    heater: switch.studio_heater
+    target_sensor: sensor.studio_environment
+    away_temp: 12
+    min_temp: 15
+    max_temp: 22
+    min_cycle_duration:
+      minutes: 1
+
 speedtestdotnet:
 
 # home_connect:
