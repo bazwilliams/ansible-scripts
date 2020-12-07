@@ -2890,25 +2890,27 @@
 - alias: Christmas Tree On
   trigger:
     - platform: time
-      after: '7:00:00'
+      at: '7:00:00'
     - platform: time
-      after: '16:00:00'
+      at: '16:00:00'
   action:
     service: switch.turn_on
-    entity_id: switch.socket
+    data:
+      entity_id: switch.socket
 
 - alias: Christmas Tree Off
   trigger:
-    - platform: time
-      after: '00:30:00'
+    platform: time
+    at: '00:30:00'
   action:
     service: switch.turn_off
-    entity_id: switch.socket
+    data:
+      entity_id: switch.socket
 
 - alias: Christmas Tree Off During the Weekday
   trigger:
     platform: time
-    after: '09:00:00'
+    at: '09:00:00'
   condition:
   - condition: time
     weekday:
@@ -2919,4 +2921,5 @@
       - fri
   action:
     service: switch.turn_off
-    entity_id: switch.socket
+    data:
+      entity_id: switch.socket

@@ -135,11 +135,15 @@ homeassistant:
       friendly_name: Stairs Motion
     sensor.downstairs_hallway_motion:
       friendly_name: Stairs Light Level
+    switch.socket:
+      friendly_name: Christmas Tree
         
 cloud:
   alexa:
     filter:
       include_entities:
+        - vacuum.kryten
+        - switch.socket
         - light.kitchen
         - light.worktop_lights
         - light.dining_table
@@ -169,10 +173,6 @@ light:
   - platform: switch
     name: Turntable Light
     entity_id: switch.turntable_light
-
-media_player:
-  - platform: epson
-    host: 192.168.178.65
 
 sensor:
   - platform: uptime

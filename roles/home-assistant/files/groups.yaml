@@ -79,6 +79,7 @@ garden_studio:
   entities:
     - light.play_left
     - light.play_right
+    - switch.studio_heater
     - sensor.studio_environment
     - sensor.studio_environment_2
     - sensor.studio_environment_3
