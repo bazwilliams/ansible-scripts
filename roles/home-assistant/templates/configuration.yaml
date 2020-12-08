@@ -300,7 +300,7 @@ climate:
     name: Studio
     heater: switch.studio_heater
     target_sensor: sensor.studio_environment
-    away_temp: 12
+    away_temp: 7
     min_cycle_duration:
       minutes: 1
 
