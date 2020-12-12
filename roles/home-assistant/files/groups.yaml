@@ -71,9 +71,6 @@ downstairs_hallway:
     - light.downstairs_hallway_5
     - light.downstairs_hallway_6
     - switch.diffuser
-    - sensor.downstairs_hallway_environment
-    - sensor.downstairs_hallway_environment_2
-    - sensor.downstairs_hallway_environment_3
 garden_studio:
   name: Garden Studio
   entities:
