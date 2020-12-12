@@ -16,9 +16,7 @@ The following custom components exist in the home-assistant role's files folder.
 
 These are copied from
 * https://github.com/custom-components/alexa_media_player
-* https://github.com/segalion/securitasdirect
-* https://github.com/zha-ng/zha-map
-* https://github.com/Nimmsis/roon-hass
+* https://github.com/nragon/securitasdirect
 
 Custom lovelace card downloaded from
 * https://github.com/dmulcahey/zha-network-visualization-card

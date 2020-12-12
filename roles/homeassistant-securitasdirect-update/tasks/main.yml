@@ -9,7 +9,7 @@
 - name: Pull Securitas Direct Custom Component
   delegate_to: 127.0.0.1
   git:
-    repo: 'https://github.com/segalion/securitasdirect'
+    repo: 'https://github.com/nragon/securitasdirect'
     dest: "{{ tempdir.path }}"
 
 - name: Copy latest custom component to home-assistant role
