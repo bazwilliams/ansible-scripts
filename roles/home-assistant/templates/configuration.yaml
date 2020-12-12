@@ -308,9 +308,9 @@ climate:
     min_cycle_duration:
       minutes: 1
 
-# home_connect:
-#   client_id: {{ homeconnect.client_id }}
-#   client_secret: {{ homeconnect.client_secret }}
+home_connect:
+  client_id: {{ homeconnect.client_id }}
+  client_secret: {{ homeconnect.client_secret }}
 
 securitas_direct:
   username: {{ verisure.username }}
@@ -318,11 +318,3 @@ securitas_direct:
   installation: {{ verisure.installation }}
   code: {{ alarm.code }}
   country: GB
-
-# opnsense:
-#   url: {{ opnsense.url }}
-#   api_secret: {{ opnsense.api_secret }}
-#   api_key: {{ opnsense.api_key }}
-#   tracker_interfaces:
-#     - LAN
-#   verify_ssl: true
