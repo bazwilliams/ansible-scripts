@@ -1,0 +1,26 @@
+---
+- name: Create Temporary HA-Hive direct directory
+  delegate_to: 127.0.0.1
+  tempfile:
+    state: directory
+    suffix: ha-hive
+  register: tempdir
+
+- name: Pull HA-Hive Custom Component
+  delegate_to: 127.0.0.1
+  git:
+    repo: 'https://github.com/Pyhive/HA-Hive-Custom-Component'
+    dest: "{{ tempdir.path }}"
+
+- name: Copy latest custom component to home-assistant role
+  delegate_to: 127.0.0.1
+  copy:
+    src: "{{ tempdir.path }}/custom_components/hive"
+    dest: ./roles/home-assistant/files/custom_components
+
+- name: Cleanup
+  delegate_to: 127.0.0.1
+  file:
+    path: "{{ tempdir.path }}"
+    state: absent
+  when: tempdir.path is defined

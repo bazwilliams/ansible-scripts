@@ -2,4 +2,5 @@
 - hosts: localhost
   roles:
     - homeassistant-alexa-update
+    - homeassistant-hive-update
     - homeassistant-securitasdirect-update
