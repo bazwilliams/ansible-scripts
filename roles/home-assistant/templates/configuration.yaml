@@ -54,7 +54,7 @@ homeassistant:
     light.dining_table:
       friendly_name: Dining Table
       icon: mdi:vanity-light
-    alarm_control_panel.securitas_260178:
+    alarm_control_panel.unnamed_device:
       friendly_name: Alarm
     light.snug_main:
       friendly_name: Snug Main
@@ -125,12 +125,12 @@ homeassistant:
       friendly_name: Studio Humidity
     sensor.studio_environment_3:
       friendly_name: Studio Pressure
-    sensor.downstairs_hallway_environment:
-      friendly_name: Downstairs Hallway Temperature
-    sensor.downstairs_hallway_environment_2:
-      friendly_name: Downstairs Hallway Humidity
-    sensor.downstairs_hallway_environment_3:
-      friendly_name: Downstairs Hallway Pressure
+    sensor.food_store_environment:
+      friendly_name: Food Store Temperature
+    sensor.food_store_environment_2:
+      friendly_name: Food Store Humidity
+    sensor.food_store_environment_3:
+      friendly_name: Food Store Pressure
     binary_sensor.downstairs_hallway_motion:
       friendly_name: Stairs Motion
     sensor.downstairs_hallway_motion:
@@ -226,7 +226,7 @@ sensor:
           {% else %}
           {% set light_slot = "very_bright" %}
           {% endif %}
-          {% if is_state("alarm_control_panel.securitas_260178", "armed_home") or is_state("alarm_control_panel.securitas_260178", "armed_away")%}
+          {% if is_state("alarm_control_panel.unnamed_device", "armed_home") or is_state("alarm_control_panel.unnamed_device", "armed_away")%}
           {% set presence = "away" %}
           {% else %}
           {% set presence = "home" %}
@@ -315,6 +315,7 @@ climate:
 securitas_direct:
   username: {{ verisure.username }}
   password: {{ verisure.password }}
+  installation: {{ verisure.installation }}
   code: {{ alarm.code }}
   country: GB
 
