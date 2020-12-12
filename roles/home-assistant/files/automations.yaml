@@ -2446,9 +2446,9 @@
         entity_id: "scene.{{ states('input_text.front_garden_scene') }}"
 
 - alias: Snug Lights On
-  initial_state: true
+  mode: single
   trigger:
-    device_id: 60e3093f1bc711eb8ed3111b40abb545
+    device_id: 87f6d70fdd03fb9d519cd8678340b44e
     domain: deconz
     platform: device
     type: remote_button_short_release
@@ -2460,8 +2460,9 @@
         value: snug_on
 
 - alias: Snug Lights Off
+  mode: single
   trigger:
-    device_id: 60e3093f1bc711eb8ed3111b40abb545
+    device_id: 87f6d70fdd03fb9d519cd8678340b44e
     domain: deconz
     platform: device
     type: remote_button_short_release
@@ -2473,7 +2474,7 @@
         value: snug_off
 
 - alias: Snug Scene Changed
-  initial_state: true
+  mode: single
   trigger:
     platform: state
     entity_id: input_text.snug_scene
@@ -2494,7 +2495,7 @@
         entity_id: input_text.bedroom_mode
         state: scene_3
   trigger:
-    device_id: 60e301ea1bc711ebb126a7fc0eb6ed92
+    device_id: ae5f864d87529d6ac791a30452121c14
     domain: deconz
     platform: device
     type: remote_button_short_release
@@ -2519,7 +2520,7 @@
       entity_id: input_text.bedroom_mode
       state: "scene_1"
   trigger:
-    device_id: 60e301ea1bc711ebb126a7fc0eb6ed92
+    device_id: ae5f864d87529d6ac791a30452121c14
     domain: deconz
     platform: device
     type: remote_button_short_release
@@ -2544,7 +2545,7 @@
       entity_id: input_text.bedroom_mode
       state: "scene_2"
   trigger:
-    device_id: 60e301ea1bc711ebb126a7fc0eb6ed92
+    device_id: ae5f864d87529d6ac791a30452121c14
     domain: deconz
     platform: device
     type: remote_button_short_release
@@ -2565,7 +2566,7 @@
 - alias: Bedroom Lights Off
   mode: single
   trigger:
-    device_id: 60e301ea1bc711ebb126a7fc0eb6ed92
+    device_id: ae5f864d87529d6ac791a30452121c14
     domain: deconz
     platform: device
     type: remote_button_short_release
@@ -2586,7 +2587,7 @@
 - alias: Bedroom Light Dim Up
   mode: single
   trigger:
-  - device_id: 60e301ea1bc711ebb126a7fc0eb6ed92
+    device_id: ae5f864d87529d6ac791a30452121c14
     domain: deconz
     platform: device
     type: remote_button_long_press
@@ -2600,7 +2601,7 @@
 - alias: Bedroom Light Dim Down
   mode: single
   trigger:
-  - device_id: 60e301ea1bc711ebb126a7fc0eb6ed92
+    device_id: ae5f864d87529d6ac791a30452121c14
     domain: deconz
     platform: device
     type: remote_button_long_press
@@ -2614,7 +2615,7 @@
 - alias: Downstairs Toilet Light On
   mode: single
   trigger:
-  - device_id: 60e2fa551bc711eb84e3ff5904f2d7ba
+  - device_id: edc0facd191a52458dcad5b869bc1d45
     domain: deconz
     platform: device
     type: remote_button_short_press
@@ -2627,7 +2628,7 @@
 - alias: Downstairs Toilet Light Off
   mode: single
   trigger:
-  - device_id: 60e2fa551bc711eb84e3ff5904f2d7ba
+  - device_id: edc0facd191a52458dcad5b869bc1d45
     domain: deconz
     platform: device
     type: remote_button_short_press
@@ -2640,7 +2641,7 @@
 - alias: Downstairs Toilet Light Dim Up
   mode: single
   trigger:
-  - device_id: 60e2fa551bc711eb84e3ff5904f2d7ba
+  - device_id: edc0facd191a52458dcad5b869bc1d45
     domain: deconz
     platform: device
     type: remote_button_long_press
@@ -2654,7 +2655,7 @@
 - alias: Downstairs Toilet Light Dim Down
   mode: single
   trigger:
-  - device_id: 60e2fa551bc711eb84e3ff5904f2d7ba
+  - device_id: edc0facd191a52458dcad5b869bc1d45
     domain: deconz
     platform: device
     type: remote_button_long_press
@@ -2668,7 +2669,7 @@
 - alias: Downstairs Toilet Light On
   mode: single
   trigger:
-  - device_id: 60e2fa551bc711eb84e3ff5904f2d7ba
+  - device_id: edc0facd191a52458dcad5b869bc1d45
     domain: deconz
     platform: device
     type: remote_button_short_press
@@ -2681,7 +2682,7 @@
 - alias: Living Room Dimmer Turn On While Normal
   mode: single
   trigger:
-  - device_id: 60e2f1e61bc711eb8b1ec5ef3b41f95e
+  - device_id: c2a46f997f9c45209b4cb19072495073
     domain: deconz
     platform: device
     type: remote_button_short_press
@@ -2708,7 +2709,7 @@
 - alias: Living Room Dimmer Turn On While Dark
   mode: single
   trigger:
-  - device_id: 60e2f1e61bc711eb8b1ec5ef3b41f95e
+  - device_id: c2a46f997f9c45209b4cb19072495073
     domain: deconz
     platform: device
     type: remote_button_short_press
@@ -2725,7 +2726,7 @@
 - alias: Living Room Dimmer Turn Off While BFL
   mode: single
   trigger:
-  - device_id: 60e2f1e61bc711eb8b1ec5ef3b41f95e
+  - device_id: c2a46f997f9c45209b4cb19072495073
     domain: deconz
     platform: device
     type: remote_button_short_press
@@ -2742,7 +2743,7 @@
 - alias: Living Room Dimmer Turn Off While Normal
   mode: single
   trigger:
-  - device_id: 60e2f1e61bc711eb8b1ec5ef3b41f95e
+  - device_id: c2a46f997f9c45209b4cb19072495073
     domain: deconz
     platform: device
     type: remote_button_short_press
@@ -2757,7 +2758,7 @@
 - alias: Living Room Dimmer Long Press Turn Off
   mode: single
   trigger:
-  - device_id: 60e2f1e61bc711eb8b1ec5ef3b41f95e
+  - device_id: c2a46f997f9c45209b4cb19072495073
     domain: deconz
     platform: device
     type: remote_button_long_press
@@ -2779,7 +2780,7 @@
 - alias: Living Room Dimmer Dim Up
   mode: single
   trigger:
-  - device_id: 60e2f1e61bc711eb8b1ec5ef3b41f95e
+  - device_id: c2a46f997f9c45209b4cb19072495073
     domain: deconz
     platform: device
     type: remote_button_long_press
@@ -2793,7 +2794,7 @@
 - alias: Living Room Dimmer Dim Down
   mode: single
   trigger:
-  - device_id: 60e2f1e61bc711eb8b1ec5ef3b41f95e
+  - device_id: c2a46f997f9c45209b4cb19072495073
     domain: deconz
     platform: device
     type: remote_button_long_press
@@ -2805,6 +2806,7 @@
       brightness_step_pct: -10
 
 - alias: Living Room Bright
+  mode: single
   trigger:
     - platform: state
       entity_id: input_boolean.bfl
@@ -2813,6 +2815,7 @@
   - scene: scene.living_room_bright
 
 - alias: Living Room BFL Off
+  mode: single
   trigger:
   - platform: state
     entity_id: input_boolean.bfl
@@ -2823,6 +2826,7 @@
       entity_id: "scene.{{ states('input_text.living_room_scene') }}"
 
 - alias: Living Room Default Scene Changed While not BFL
+  mode: single
   trigger:
     - platform: state
       entity_id: input_text.living_room_scene
@@ -2888,6 +2892,7 @@
         entity_id: scene.stairs_off
 
 - alias: Christmas Tree On
+  mode: single
   trigger:
     - platform: time
       at: '7:00:00'
@@ -2908,6 +2913,7 @@
       entity_id: switch.socket
 
 - alias: Christmas Tree Off During the Weekday
+  mode: single
   trigger:
     platform: time
     at: '09:00:00'
@@ -2925,6 +2931,7 @@
       entity_id: switch.socket
 
 - alias: Daytime Studio Heating On
+  mode: single
   trigger:
     platform: time
     at: '08:00:00'
@@ -2943,6 +2950,7 @@
       preset_mode: none
 
 - alias: Daytime Studio Heating Away Mode
+  mode: single
   trigger:
     platform: time
     at: '16:30:00'
