@@ -215,7 +215,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.downstairs_hallway_scene
-        value: downstairs_hallway_daytime_presence
+        value: downstairs_hallway_dull_outside
     - service: input_text.set_value
       data:
         entity_id: input_text.upstairs_hallway_scene

@@ -195,9 +195,7 @@ sensor:
   - platform: template
     sensors:
       house_mode:
-        entity_id:
-        - sensor.time
-        - binary_sensor.possibly_present
+        unique_id: house_mode
         friendly_name: 'House Mode'
         value_template: >-
 {% raw %}
@@ -236,10 +234,6 @@ sensor:
           homeassistant_starting
           {% endif %}
 {% endraw %}
-
-weather:
-  - platform: darksky
-    api_key: {{ darksky.api_key }}
 
 input_boolean:
   terrace_occupancy:

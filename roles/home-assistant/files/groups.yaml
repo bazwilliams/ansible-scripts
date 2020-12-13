@@ -80,6 +80,12 @@ garden_studio:
     - sensor.studio_environment
     - sensor.studio_environment_2
     - sensor.studio_environment_3
+food_store:
+  name: Food Store
+  entities:
+    - sensor.food_store_environment
+    - sensor.food_store_environment_2
+    - sensor.food_store_environment_3
 downstairs_toilet:
   name: Downstairs Toilet
   entities:
