@@ -285,9 +285,9 @@ webostv:
     data:
       mac: "44:cb:8b:f8:a7:f2"
 
-hive:
-  username: {{ hive.username }}
-  password: {{ hive.password }}
+# hive:
+#   username: {{ hive.username }}
+#   password: {{ hive.password }}
 
 climate:
   - platform: generic_thermostat
