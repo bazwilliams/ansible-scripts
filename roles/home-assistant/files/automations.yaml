@@ -2403,37 +2403,43 @@
       data_template:
         entity_id: "scene.{{ states('input_text.back_garden_scene') }}"
 
-# - alias: Front Garden to Bright
-#   mode: single
-#   trigger:
-#     platform: state
-#     entity_id: binary_sensor.front_garden_occupancy
-#     to: "on"
-#   condition:
-#     - condition: numeric_state
-#       entity_id: sensor.outside_light_level
-#       below: 50
-#   action:
-#     - service: scene.turn_on
-#       data:
-#         entity_id: scene.front_garden_bright
+- alias: Front Garden to Bright
+  mode: single
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.front_garden_motion
+      to: "on"
+    - platform: state
+      entity_id: binary_sensor.front_door_motion
+      to: "on"
+    - platform: state
+      entity_id: binary_sensor.front_door_ding
+      to: "on"
+  condition:
+    - condition: numeric_state
+      entity_id: sensor.outside_light_level
+      below: 50
+  action:
+    - service: scene.turn_on
+      data:
+        entity_id: scene.front_garden_bright
 
-# - alias: Front Garden to Default Scene
-#   mode: single
-#   condition:
-#     - condition: numeric_state
-#       entity_id: sensor.outside_light_level
-#       below: 50
-#   trigger:
-#     platform: state
-#     entity_id: binary_sensor.front_garden_occupancy
-#     to: "off"
-#     for:
-#       minutes: 2
-#   action:
-#     - service: scene.turn_on
-#       data_template:
-#         entity_id: "scene.{{ states('input_text.front_garden_scene') }}"
+- alias: Front Garden to Default Scene
+  mode: single
+  condition:
+    - condition: numeric_state
+      entity_id: sensor.outside_light_level
+      below: 50
+  trigger:
+    platform: state
+    entity_id: binary_sensor.front_garden_motion
+    to: "off"
+    for:
+      minutes: 1
+  action:
+    - service: scene.turn_on
+      data_template:
+        entity_id: "scene.{{ states('input_text.front_garden_scene') }}"
 
 - alias: Front Garden Default Scene Changed
   mode: single
@@ -2959,3 +2965,11 @@
     data:
       entity_id: climate.studio
       preset_mode: away
+
+- alias: Update house mode
+  trigger:
+    - platform: time_pattern
+      minutes: /2
+  action:
+    - service: homeassistant.update_entity
+      entity_id: sensor.house_mode

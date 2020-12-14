@@ -20,7 +20,6 @@ recorder:
       - updater
     entities:
       - sensor.last_boot
-      - sensor.time
 
 logger:
   default: warning
@@ -31,7 +30,6 @@ influxdb:
       - updater
     entities:
       - sensor.last_boot
-      - sensor.time
 
 http:
 
@@ -175,8 +173,6 @@ light:
     entity_id: switch.turntable_light
 
 sensor:
-  - platform: uptime
-    unit_of_measurement: minutes
   - platform: min_max
     name: Outside Light Level
     entity_ids:
@@ -189,9 +185,6 @@ sensor:
     - sensor.front_garden_motion
     - sensor.back_garden_motion
     type: min
-  - platform: time_date
-    display_options:
-      - 'time'
   - platform: template
     sensors:
       house_mode:
@@ -199,7 +192,6 @@ sensor:
         friendly_name: 'House Mode'
         value_template: >-
 {% raw %}
-          {% if states("sensor.uptime") | float > 5 %}
           {% if now().hour | int >= 22 %}
           {% set time_slot = "early_night" %}
           {% elif now().hour | int >= 20 %}
@@ -230,9 +222,6 @@ sensor:
           {% set presence = "home" %}
           {% endif %}
           {{ time_slot }}_{{ light_slot }}_{{ presence }}
-          {% else %}
-          homeassistant_starting
-          {% endif %}
 {% endraw %}
 
 input_boolean:

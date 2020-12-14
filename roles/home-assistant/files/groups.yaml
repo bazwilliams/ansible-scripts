@@ -134,11 +134,14 @@ snug:
     - light.lava_lamp
     - light.snug_main
     - light.turntable_light
+    - light.snug_ceiling_strip_1
 upstairs_hallway:
   name: Upstairs Hallway
   entities:
     - climate.upstairs_heating
-    - light.upstairs_hallway
+    - light.upstairs_spot_1
+    - light.upstairs_spot_2
+    - light.upstairs_spot_3
     - binary_sensor.upstairs_cupboard
     - binary_sensor.upstairs_hallway_motion
     - sensor.upstairs_hallway_motion
