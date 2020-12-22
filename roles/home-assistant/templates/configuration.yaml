@@ -140,7 +140,11 @@ cloud:
   alexa:
     filter:
       include_entities:
-        - vacuum.kryten
+        - script.vacuum_hallway
+        - script.vacuum_kitchen
+        - script.vacuum_living_room
+        - script.vacuum_stop
+        - script.vacuum_toilet
         - switch.socket
         - light.kitchen
         - light.worktop_lights
@@ -171,7 +175,11 @@ light:
   - platform: switch
     name: Turntable Light
     entity_id: switch.turntable_light
-
+  - platform: group
+    name: Snug Ceiling Strip
+    entities:
+      - light.snug_ceiling_strip_1
+      - light.snug_ceiling_strip_2
 sensor:
   - platform: min_max
     name: Outside Light Level

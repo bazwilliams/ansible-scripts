@@ -2463,7 +2463,7 @@
     - service: input_text.set_value
       data:
         entity_id: input_text.snug_scene
-        value: snug_on
+        value: snug_bright
 
 - alias: Snug Lights Off
   mode: single

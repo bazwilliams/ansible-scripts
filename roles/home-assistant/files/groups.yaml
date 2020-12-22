@@ -134,7 +134,12 @@ snug:
     - light.lava_lamp
     - light.snug_main
     - light.turntable_light
-    - light.snug_ceiling_strip_1
+    - light.snug_ceiling_strip
+    - scene.snug_movie
+    - scene.snug_music
+    - scene.snug_lp12
+    - scene.snug_bright
+    - scene.snug_chill
 upstairs_hallway:
   name: Upstairs Hallway
   entities:

@@ -171,20 +171,31 @@
   entities:
     light.steampunk_lamp: off
     light.snug_main: off
+    light.snug_ceiling_strip: off
     switch.lava_lamp: off
     switch.turntable_light: off
 - name: Snug Movie
   entities:
-    light.steampunk_lamp:
-      state: off
+    light.steampunk_lamp: off
     light.snug_main: off
+    light.snug_ceiling_strip:
+      state: on
+      brightness: 5
+      xy_color:
+        - 0.701
+        - 0.299
     switch.lava_lamp: off
     switch.turntable_light: off
 - name: Snug Music
   entities:
-    light.steampunk_lamp: 
-      state: off
+    light.steampunk_lamp: off
     light.snug_main: off
+    light.snug_ceiling_strip:
+      state: on
+      brightness: 15
+      xy_color:
+        - 0.138
+        - 0.07
     switch.lava_lamp: on
     switch.turntable_light: off
 - name: Snug LP12
@@ -196,18 +207,40 @@
         - 0.526
         - 0.411
     light.snug_main: off
+    light.snug_ceiling_strip:
+      state: on
+      brightness: 15
+      xy_color:
+        - 0.138
+        - 0.07
     switch.lava_lamp: on
     switch.turntable_light: on
-- name: Snug On
+- name: Snug Bright
+  entities:
+    light.steampunk_lamp: off
+    light.snug_ceiling_strip:
+      state: on
+      brightness: 255
+      color_temp: 153
+    light.snug_main: off
+    switch.lava_lamp: off
+    switch.turntable_light: off
+- name: Snug Chill
   entities:
     light.steampunk_lamp:
       state: on
-      brightness: 19
+      brightness: 13
       xy_color:
-        - 0.608
-        - 0.369
+        - 0.588
+        - 0.343
+    light.snug_ceiling_strip:
+      state: on
+      brightness: 82
+      xy_color:
+      - 0.675
+      - 0.32
     light.snug_main: on
-    switch.lava_lamp: off
+    switch.lava_lamp: on
     switch.turntable_light: off
 - name: Front Garden Off
   entities:
