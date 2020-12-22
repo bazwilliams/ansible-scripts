@@ -1,0 +1,47 @@
+vacuum_hallway:
+  alias: Clean the hall
+  mode: single
+  sequence:
+    - service: neato.custom_cleaning
+      data:
+        entity_id: vacuum.kryten
+        mode: 2
+        navigation: 3
+        zone: Hallway
+vacuum_kitchen:
+  alias: Clean the kitchen
+  mode: single
+  sequence:
+    - service: neato.custom_cleaning
+      data:
+        entity_id: vacuum.kryten
+        mode: 2
+        navigation: 3
+        zone: Kitchen
+vacuum_living_room:
+  alias: Clean the living room
+  mode: single
+  sequence:
+    - service: neato.custom_cleaning
+      data:
+        entity_id: vacuum.kryten
+        mode: 2
+        navigation: 3
+        zone: Living Room
+vacuum_toilet:
+  alias: Clean the toilet
+  mode: single
+  sequence:
+    - service: neato.custom_cleaning
+      data:
+        entity_id: vacuum.kryten
+        mode: 2
+        navigation: 3
+        zone: Toilet
+vacuum_stop:
+  alias: Stop cleaning
+  mode: single
+  sequence:
+    - service: vacuum.return_to_base
+      data:
+        entity_id: vacuum.kryten
