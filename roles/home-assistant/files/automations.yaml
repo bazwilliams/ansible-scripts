@@ -2886,7 +2886,7 @@
       data:
         entity_id: scene.stairs_off
 
-- alias: Staircase Default Scene Changed to Off
+- alias: Staircase Default Scene Changed to Off  
   mode: single
   trigger:
     platform: state
@@ -2896,45 +2896,6 @@
     - service: scene.turn_on
       data:
         entity_id: scene.stairs_off
-
-- alias: Christmas Tree On
-  mode: single
-  trigger:
-    - platform: time
-      at: '7:00:00'
-    - platform: time
-      at: '16:00:00'
-  action:
-    service: switch.turn_on
-    data:
-      entity_id: switch.socket
-
-- alias: Christmas Tree Off
-  trigger:
-    platform: time
-    at: '00:30:00'
-  action:
-    service: switch.turn_off
-    data:
-      entity_id: switch.socket
-
-- alias: Christmas Tree Off During the Weekday
-  mode: single
-  trigger:
-    platform: time
-    at: '09:00:00'
-  condition:
-  - condition: time
-    weekday:
-      - mon
-      - tue
-      - wed
-      - thu
-      - fri
-  action:
-    service: switch.turn_off
-    data:
-      entity_id: switch.socket
 
 - alias: Daytime Studio Heating On
   mode: single
